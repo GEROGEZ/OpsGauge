@@ -1,0 +1,64 @@
+services:
+  main:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      native-api:
+        condition: service_healthy
+    environment:
+      NATIVE_API_URL: http://native-api:8080
+      PROMETHEUS_URL: http://native-api:8080
+    networks: [default, query]
+  native-api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    depends_on:
+      prometheus:
+        condition: service_healthy
+    volumes:
+      - ./data:/data:ro
+      - ./audit:/audit
+    environment:
+      NATIVE_AUDIT_PATH: /audit/queries.jsonl
+    networks: [query, backend]
+    healthcheck:
+      test: ["CMD", "python3", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8080/health')"]
+      interval: 2s
+      timeout: 3s
+      retries: 60
+  prometheus-init:
+    image: prom/prometheus:v3.10.0
+    user: "0"
+    entrypoint: ["/bin/sh", "-ec"]
+    command:
+      - >-
+        promtool tsdb create-blocks-from openmetrics /data/metrics.openmetrics /prometheus &&
+        chown -R 65534:65534 /prometheus
+    volumes:
+      - ./metrics.openmetrics:/data/metrics.openmetrics:ro
+      - prometheus-data:/prometheus
+    networks: [backend]
+  prometheus:
+    image: prom/prometheus:v3.10.0
+    depends_on:
+      prometheus-init:
+        condition: service_completed_successfully
+    command: ["--config.file=/etc/prometheus/prometheus.yml", "--storage.tsdb.path=/prometheus", "--storage.tsdb.retention.time=3650d"]
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus-data:/prometheus
+    networks: [backend]
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://localhost:9090/-/ready"]
+      interval: 2s
+      timeout: 3s
+      retries: 60
+networks:
+  query:
+    internal: true
+  backend:
+    internal: true
+volumes:
+  prometheus-data:

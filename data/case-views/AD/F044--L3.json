@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F044--L3",
+  "task": "AD",
+  "source_case_id": "F044",
+  "family_id": "F044",
+  "bundle_id": null,
+  "source_level": "IL1",
+  "level": 3,
+  "slice": "L3-S4",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F044--L3--shell_raw",
+      "instruction": "请调查 rm-j6c3l32c730ti37ur 在 2026-09-01T15:12:04+08:00 至 2026-09-01T15:26:12+08:00 期间的业务异常。目标：判断哪些业务在等待、哪些业务维持着阻塞，并据此给出处置对象和影响范围。 请给出可核查证据，并明确无法确认的部分。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n",
+      "original_instruction_sha256": "3791c14b5f097a101604338b6503997be215e572afb387d210b9d1d87049d2d6",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "149c5f0bbb4d725bb40eef92c3ac9bf7a5368f7f27f8313f9d1f41d930823456"
+      },
+      "instruction_sha256": "3791c14b5f097a101604338b6503997be215e572afb387d210b9d1d87049d2d6"
+    },
+    "native_raw": {
+      "task_id": "AD--F044--L3--native_raw",
+      "instruction": "请调查 rm-j6c3l32c730ti37ur 在 2026-09-01T15:12:04+08:00 至 2026-09-01T15:26:12+08:00 期间的业务异常。目标：判断哪些业务在等待、哪些业务维持着阻塞，并据此给出处置对象和影响范围。 请给出可核查证据，并明确无法确认的部分。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "298c1287494fa5cfcb466d5bdd04f3a9bd00c6e311e9fc84cb48d2d15b605d2d",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "149c5f0bbb4d725bb40eef92c3ac9bf7a5368f7f27f8313f9d1f41d930823456"
+      },
+      "instruction_sha256": "298c1287494fa5cfcb466d5bdd04f3a9bd00c6e311e9fc84cb48d2d15b605d2d"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F044--L3--umodel_semantic",
+      "instruction": "请调查 rm-j6c3l32c730ti37ur 在 2026-09-01T15:12:04+08:00 至 2026-09-01T15:26:12+08:00 期间的业务异常。目标：判断哪些业务在等待、哪些业务维持着阻塞，并据此给出处置对象和影响范围。 请给出可核查证据，并明确无法确认的部分。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "012a836406e39ab7fda23d9392706b5362d85c4a7f2f88ea823c245b9c018ea8",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "149c5f0bbb4d725bb40eef92c3ac9bf7a5368f7f27f8313f9d1f41d930823456"
+      },
+      "instruction_sha256": "012a836406e39ab7fda23d9392706b5362d85c4a7f2f88ea823c245b9c018ea8"
+    }
+  },
+  "analysis_cluster_id": "F044"
+}

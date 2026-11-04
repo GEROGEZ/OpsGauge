@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F024--L3",
+  "task": "AD",
+  "source_case_id": "F024",
+  "family_id": "F024",
+  "bundle_id": null,
+  "source_level": "IL1",
+  "level": 3,
+  "slice": "L3-S6",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F024--L3--shell_raw",
+      "instruction": "请调查 rm-j6c3l32c730ti37ur 在 2026-08-31T20:42:48+08:00 至 2026-08-31T20:55:42+08:00 期间的业务异常。目标：核实数据库相关失败对应的业务结果，给出可确认的失败范围及仍需核对的结果。 请给出可核查证据，并明确无法确认的部分。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n",
+      "original_instruction_sha256": "d0d3ecfa34b4a99ca99739550dbf3485ed7faca29dd9a15a617f16ed319220c5",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "0b2b5514e190a9e6657715707c9a76248ad65914256561805857367d5b409a62"
+      },
+      "instruction_sha256": "d0d3ecfa34b4a99ca99739550dbf3485ed7faca29dd9a15a617f16ed319220c5"
+    },
+    "native_raw": {
+      "task_id": "AD--F024--L3--native_raw",
+      "instruction": "请调查 rm-j6c3l32c730ti37ur 在 2026-08-31T20:42:48+08:00 至 2026-08-31T20:55:42+08:00 期间的业务异常。目标：核实数据库相关失败对应的业务结果，给出可确认的失败范围及仍需核对的结果。 请给出可核查证据，并明确无法确认的部分。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "e290fd4e50de5e6acaf07bc944c38547e6f51bdb320d8106dc3ee390fc263c24",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "0b2b5514e190a9e6657715707c9a76248ad65914256561805857367d5b409a62"
+      },
+      "instruction_sha256": "e290fd4e50de5e6acaf07bc944c38547e6f51bdb320d8106dc3ee390fc263c24"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F024--L3--umodel_semantic",
+      "instruction": "请调查 rm-j6c3l32c730ti37ur 在 2026-08-31T20:42:48+08:00 至 2026-08-31T20:55:42+08:00 期间的业务异常。目标：核实数据库相关失败对应的业务结果，给出可确认的失败范围及仍需核对的结果。 请给出可核查证据，并明确无法确认的部分。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "c07f9a8364e78db7a5c6502d5064630cae355fa273ae53989fb2900b398e9a8f",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "0b2b5514e190a9e6657715707c9a76248ad65914256561805857367d5b409a62"
+      },
+      "instruction_sha256": "c07f9a8364e78db7a5c6502d5064630cae355fa273ae53989fb2900b398e9a8f"
+    }
+  },
+  "analysis_cluster_id": "F024"
+}

@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F015--L2",
+  "task": "AD",
+  "source_case_id": "F015",
+  "family_id": "F015",
+  "bundle_id": null,
+  "source_level": "IL2",
+  "level": 2,
+  "slice": "L3-S2",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F015--L2--shell_raw",
+      "instruction": "请复核 rca-benchmark 中 search 在 2026年08月28日 17:10:03 至 17:16:28（北京时间）期间的业务异常。判断服务是否仍具备多数请求可用性、故障范围是否可限定，并说明是否已有证据宣布完全恢复和最终业务结果有效。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n可使用 /scene/SCOPE-MAP.json 获取中性的调查范围信息；其中不包含因果边、根因或正确判断。\n",
+      "original_instruction_sha256": "ebb284829c0cf9102e947fb6e03bc133e17c7329b6e2d15f410ee2703a7b2e9e",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "cb02bcf670f26b5995efc4c5f5ae2aff79e64205ac30c414064057412a53bc01"
+      },
+      "instruction_sha256": "ebb284829c0cf9102e947fb6e03bc133e17c7329b6e2d15f410ee2703a7b2e9e"
+    },
+    "native_raw": {
+      "task_id": "AD--F015--L2--native_raw",
+      "instruction": "请复核 rca-benchmark 中 search 在 2026年08月28日 17:10:03 至 17:16:28（北京时间）期间的业务异常。判断服务是否仍具备多数请求可用性、故障范围是否可限定，并说明是否已有证据宣布完全恢复和最终业务结果有效。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method. Public investigation guidance is available in `/scene/SCOPE-MAP.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "b9da8a72f1261b3c2080ebf93fd6a5378e61283514a9f0b8a8f920825ec6a4f2",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "cb02bcf670f26b5995efc4c5f5ae2aff79e64205ac30c414064057412a53bc01"
+      },
+      "instruction_sha256": "b9da8a72f1261b3c2080ebf93fd6a5378e61283514a9f0b8a8f920825ec6a4f2"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F015--L2--umodel_semantic",
+      "instruction": "请复核 rca-benchmark 中 search 在 2026年08月28日 17:10:03 至 17:16:28（北京时间）期间的业务异常。判断服务是否仍具备多数请求可用性、故障范围是否可限定，并说明是否已有证据宣布完全恢复和最终业务结果有效。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`. Public investigation guidance is available in `/scene/SCOPE-MAP.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "dc8e82a4e3618258d6052b09f3190b40b76ffa8ddf3749e32c65c532af6fe9cc",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "cb02bcf670f26b5995efc4c5f5ae2aff79e64205ac30c414064057412a53bc01"
+      },
+      "instruction_sha256": "dc8e82a4e3618258d6052b09f3190b40b76ffa8ddf3749e32c65c532af6fe9cc"
+    }
+  },
+  "analysis_cluster_id": "F015"
+}

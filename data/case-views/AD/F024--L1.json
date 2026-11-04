@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F024--L1",
+  "task": "AD",
+  "source_case_id": "F024",
+  "family_id": "F024",
+  "bundle_id": null,
+  "source_level": "IL3",
+  "level": 1,
+  "slice": "L3-S6",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F024--L1--shell_raw",
+      "instruction": "请复核 rca-benchmark 中 rm-j6c3l32c730ti37ur 在 2026年08月31日 20:42:48 至 20:55:42（北京时间）期间的异常。区分数据库锁等待与入口拒绝两个阶段，判断延迟和吞吐改善是否代表业务恢复，并明确最终业务结果边界。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n可使用 /scene/SCOPE-MAP.json 与 /scene/EVIDENCE-PATH.json；其中仅提供调查阶段和证据归组，不包含根因、机制答案或正确判断。\n",
+      "original_instruction_sha256": "351fb50684044c83db4dc0cb37b10a99266c4c689904db9226ee8317619521bb",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "0b2b5514e190a9e6657715707c9a76248ad65914256561805857367d5b409a62"
+      },
+      "instruction_sha256": "351fb50684044c83db4dc0cb37b10a99266c4c689904db9226ee8317619521bb"
+    },
+    "native_raw": {
+      "task_id": "AD--F024--L1--native_raw",
+      "instruction": "请复核 rca-benchmark 中 rm-j6c3l32c730ti37ur 在 2026年08月31日 20:42:48 至 20:55:42（北京时间）期间的异常。区分数据库锁等待与入口拒绝两个阶段，判断延迟和吞吐改善是否代表业务恢复，并明确最终业务结果边界。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method. Public investigation guidance is available in `/scene/SCOPE-MAP.json` and `/scene/EVIDENCE-PATH.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "3f0a92e5bef481693511bdaa92dc1f43a38561f3686cabda8b18977c9b9472cd",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "0b2b5514e190a9e6657715707c9a76248ad65914256561805857367d5b409a62"
+      },
+      "instruction_sha256": "3f0a92e5bef481693511bdaa92dc1f43a38561f3686cabda8b18977c9b9472cd"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F024--L1--umodel_semantic",
+      "instruction": "请复核 rca-benchmark 中 rm-j6c3l32c730ti37ur 在 2026年08月31日 20:42:48 至 20:55:42（北京时间）期间的异常。区分数据库锁等待与入口拒绝两个阶段，判断延迟和吞吐改善是否代表业务恢复，并明确最终业务结果边界。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`. Public investigation guidance is available in `/scene/SCOPE-MAP.json` and `/scene/EVIDENCE-PATH.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "e9bd2fa024f719c84b79a1e7dd58b62d4ef382c5c75755bf45d23fb8591e84d3",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "0b2b5514e190a9e6657715707c9a76248ad65914256561805857367d5b409a62"
+      },
+      "instruction_sha256": "e9bd2fa024f719c84b79a1e7dd58b62d4ef382c5c75755bf45d23fb8591e84d3"
+    }
+  },
+  "analysis_cluster_id": "F024"
+}

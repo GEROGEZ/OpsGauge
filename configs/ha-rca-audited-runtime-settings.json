@@ -1,0 +1,182 @@
+{
+  "records": [
+    {
+      "task": "HA",
+      "harness": "claude-code",
+      "model_id": "glm-5.3",
+      "profile": "native_raw",
+      "harness_version": "2.1.302",
+      "agent_timeout_sec": 1800.0,
+      "cpus": 2,
+      "memory_mb": 4096,
+      "audited_execution_records": 531
+    },
+    {
+      "task": "HA",
+      "harness": "claude-code",
+      "model_id": "qwen3.8-max",
+      "profile": "native_raw",
+      "harness_version": "2.1.302",
+      "agent_timeout_sec": 1800.0,
+      "cpus": 2,
+      "memory_mb": 4096,
+      "audited_execution_records": 531
+    },
+    {
+      "task": "HA",
+      "harness": "codex",
+      "model_id": "glm-5.3",
+      "profile": "native_raw",
+      "harness_version": "0.160.0",
+      "agent_timeout_sec": 1800.0,
+      "cpus": 2,
+      "memory_mb": 4096,
+      "audited_execution_records": 531
+    },
+    {
+      "task": "HA",
+      "harness": "codex",
+      "model_id": "qwen3.8-max",
+      "profile": "native_raw",
+      "harness_version": "0.160.0",
+      "agent_timeout_sec": 1800.0,
+      "cpus": 2,
+      "memory_mb": 4096,
+      "audited_execution_records": 531
+    },
+    {
+      "task": "RCA",
+      "harness": "claude-code",
+      "model_id": "glm-5.3",
+      "profile": "native_raw",
+      "harness_version": "2.1.302",
+      "agent_timeout_sec": 1800.0,
+      "cpus": 2,
+      "memory_mb": 4096,
+      "audited_execution_records": 384
+    },
+    {
+      "task": "RCA",
+      "harness": "claude-code",
+      "model_id": "glm-5.3",
+      "profile": "shell_raw",
+      "harness_version": "2.1.302",
+      "agent_timeout_sec": 2700.0,
+      "cpus": 2,
+      "memory_mb": 4096,
+      "audited_execution_records": 384
+    },
+    {
+      "task": "RCA",
+      "harness": "claude-code",
+      "model_id": "glm-5.3",
+      "profile": "umodel_semantic",
+      "harness_version": "2.1.302",
+      "agent_timeout_sec": 2700.0,
+      "cpus": 2,
+      "memory_mb": 4096,
+      "audited_execution_records": 384
+    },
+    {
+      "task": "RCA",
+      "harness": "claude-code",
+      "model_id": "qwen3.8-max",
+      "profile": "native_raw",
+      "harness_version": "2.1.302",
+      "agent_timeout_sec": 1800.0,
+      "cpus": 2,
+      "memory_mb": 4096,
+      "audited_execution_records": 384
+    },
+    {
+      "task": "RCA",
+      "harness": "claude-code",
+      "model_id": "qwen3.8-max",
+      "profile": "shell_raw",
+      "harness_version": "2.1.302",
+      "agent_timeout_sec": 2700.0,
+      "cpus": 2,
+      "memory_mb": 4096,
+      "audited_execution_records": 384
+    },
+    {
+      "task": "RCA",
+      "harness": "claude-code",
+      "model_id": "qwen3.8-max",
+      "profile": "umodel_semantic",
+      "harness_version": "2.1.302",
+      "agent_timeout_sec": 2700.0,
+      "cpus": 2,
+      "memory_mb": 4096,
+      "audited_execution_records": 384
+    },
+    {
+      "task": "RCA",
+      "harness": "codex",
+      "model_id": "glm-5.3",
+      "profile": "native_raw",
+      "harness_version": "0.160.0",
+      "agent_timeout_sec": 1800.0,
+      "cpus": 2,
+      "memory_mb": 4096,
+      "audited_execution_records": 384
+    },
+    {
+      "task": "RCA",
+      "harness": "codex",
+      "model_id": "glm-5.3",
+      "profile": "shell_raw",
+      "harness_version": "0.160.0",
+      "agent_timeout_sec": 1800.0,
+      "cpus": 2,
+      "memory_mb": 4096,
+      "audited_execution_records": 384
+    },
+    {
+      "task": "RCA",
+      "harness": "codex",
+      "model_id": "glm-5.3",
+      "profile": "umodel_semantic",
+      "harness_version": "0.160.0",
+      "agent_timeout_sec": 1800.0,
+      "cpus": 2,
+      "memory_mb": 4096,
+      "audited_execution_records": 384
+    },
+    {
+      "task": "RCA",
+      "harness": "codex",
+      "model_id": "qwen3.8-max",
+      "profile": "native_raw",
+      "harness_version": "0.160.0",
+      "agent_timeout_sec": 1800.0,
+      "cpus": 2,
+      "memory_mb": 4096,
+      "audited_execution_records": 384
+    },
+    {
+      "task": "RCA",
+      "harness": "codex",
+      "model_id": "qwen3.8-max",
+      "profile": "shell_raw",
+      "harness_version": "0.160.0",
+      "agent_timeout_sec": 1800.0,
+      "cpus": 2,
+      "memory_mb": 4096,
+      "audited_execution_records": 384
+    },
+    {
+      "task": "RCA",
+      "harness": "codex",
+      "model_id": "qwen3.8-max",
+      "profile": "umodel_semantic",
+      "harness_version": "0.160.0",
+      "agent_timeout_sec": 1800.0,
+      "cpus": 2,
+      "memory_mb": 4096,
+      "audited_execution_records": 384
+    }
+  ],
+  "scope": "Actual selected/current records available in the runtime audit; historical entries with missing trial mappings are not inferred. Counts here are audit records, not benchmark denominators.",
+  "historical_missing_trial_records_not_reconstructed": 4248
+}

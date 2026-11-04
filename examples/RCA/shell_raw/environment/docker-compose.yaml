@@ -1,0 +1,5 @@
+services:
+  main:
+    build: .
+    volumes:
+      - ./scene:/scene:ro

@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F037--L2",
+  "task": "AD",
+  "source_case_id": "F037",
+  "family_id": "F037",
+  "bundle_id": null,
+  "source_level": "IL2",
+  "level": 2,
+  "slice": "L3-S6",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F037--L2--shell_raw",
+      "instruction": "请复核 rca-benchmark 中 order-routing 在 2026年08月06日 22:48:07 至 22:51:58（北京时间）期间的异常。判断 APM 健康是否足以排除服务端问题，明确配置不匹配影响的调用范围，并说明何时可以结束处置。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n可使用 /scene/SCOPE-MAP.json 获取中性的调查范围信息；其中不包含因果边、根因或正确判断。\n",
+      "original_instruction_sha256": "0acacad42bc090a8304cde73cec6d8b6d7b7c298a7455bf03e78fe086a388476",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "5cce73fd1105d6e999bd99b60c92c16395e0aa168529f7ac048dac1a768a956f"
+      },
+      "instruction_sha256": "0acacad42bc090a8304cde73cec6d8b6d7b7c298a7455bf03e78fe086a388476"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F037--L2--umodel_semantic",
+      "instruction": "请复核 rca-benchmark 中 order-routing 在 2026年08月06日 22:48:07 至 22:51:58（北京时间）期间的异常。判断 APM 健康是否足以排除服务端问题，明确配置不匹配影响的调用范围，并说明何时可以结束处置。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`. Public investigation guidance is available in `/scene/SCOPE-MAP.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "3607a3b3e0132842a853ebea4614559fa3f5070057acabf8e412bc68dae85ea9",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "5cce73fd1105d6e999bd99b60c92c16395e0aa168529f7ac048dac1a768a956f"
+      },
+      "instruction_sha256": "3607a3b3e0132842a853ebea4614559fa3f5070057acabf8e412bc68dae85ea9"
+    },
+    "native_raw": {
+      "task_id": "AD--F037--L2--native_raw",
+      "instruction": "请复核 rca-benchmark 中 order-routing 在 2026年08月06日 22:48:07 至 22:51:58（北京时间）期间的异常。判断 APM 健康是否足以排除服务端问题，明确配置不匹配影响的调用范围，并说明何时可以结束处置。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method. Public investigation guidance is available in `/scene/SCOPE-MAP.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "c7c343d3be4e9bc1d5d436bc1cc909dff060a40dbd00fbb656f63dd94cabbcfa",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "5cce73fd1105d6e999bd99b60c92c16395e0aa168529f7ac048dac1a768a956f"
+      },
+      "instruction_sha256": "c7c343d3be4e9bc1d5d436bc1cc909dff060a40dbd00fbb656f63dd94cabbcfa"
+    }
+  },
+  "analysis_cluster_id": "F037"
+}

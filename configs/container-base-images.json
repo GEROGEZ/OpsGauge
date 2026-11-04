@@ -1,0 +1,1169 @@
+{
+  "images": {
+    "opsgauge-replay-base:2026.10.27": [
+      {
+        "task_id": "DR--L2-P01--L1--umodel_semantic",
+        "file": "environment/gateway/Dockerfile",
+        "sha256": "40cab3a26d768952c9c167c6b59b1171b7870b1c2dd768f0a12a3844df776be8"
+      },
+      {
+        "task_id": "DR--L2-P01--L1--shell_raw",
+        "file": "environment/main/Dockerfile",
+        "sha256": "98a5b3a25d4a2c8301b0e9356641b150c1f98929c8042f160e0275d9193a6a70"
+      },
+      {
+        "task_id": "DR--L2-P01--L1--native_raw",
+        "file": "environment/gateway/Dockerfile",
+        "sha256": "5632ac8c6344b6cdb90cf5a7520207fc656f68e3b1fa1dbcdfa9f4dbcd134977"
+      }
+    ],
+    "python:3.11-slim": [
+      {
+        "task_id": "DR--L2-P01--L1--umodel_semantic",
+        "file": "environment/main/Dockerfile",
+        "sha256": "10354496229c2f82df2ccf19c587531e233c983c3baa9c83f0b4fe9d2abaf016"
+      },
+      {
+        "task_id": "DR--L2-P01--L1--native_raw",
+        "file": "environment/main/Dockerfile",
+        "sha256": "4d97e4a23613d48baa21f7e16c3c2de1ae2a73ec7a2ee1bb7c0c5aac1715fcfc"
+      },
+      {
+        "task_id": "AD--F038--L2--shell_raw",
+        "file": "environment/main/Dockerfile",
+        "sha256": "94399eaeffa0af0746e163f62f6d12b5bee7bd56755c08eb87db9705f400e9f6"
+      },
+      {
+        "task_id": "AD--F038--L1--shell_raw",
+        "file": "environment/main/Dockerfile",
+        "sha256": "5010ef275520d0566369107f6d99dae2aea7e312463286fc3790f42031756f28"
+      },
+      {
+        "task_id": "AD--F047--L3--shell_raw",
+        "file": "environment/main/Dockerfile",
+        "sha256": "42ff1ae3203b4816d82d38c4595e6782e037e5aacbc7f4f224d872743e8b1367"
+      },
+      {
+        "task_id": "AD--F003--L3--shell_raw",
+        "file": "environment/main/Dockerfile",
+        "sha256": "7c12f02f33b9d6c9c00ebaa79083909dd90dee031f8744dcde4c3249b15c6239"
+      },
+      {
+        "task_id": "AD--F008--L1--shell_raw",
+        "file": "environment/main/Dockerfile",
+        "sha256": "796ac91a011faddee4ac51d94497dc7a8300e7861dfc2b2e0ec155da87dba2ad"
+      },
+      {
+        "task_id": "AD--F009--L2--shell_raw",
+        "file": "environment/main/Dockerfile",
+        "sha256": "500cc6690c45c5d022f5a045a1dea6e04d561ea4504be2306c89b9f67978d2fb"
+      },
+      {
+        "task_id": "AD--F013--L1--umodel_semantic",
+        "file": "environment/main/Dockerfile",
+        "sha256": "71f5c4dfc7a866056982d8ec43899dcb71b5562c49b3d1f4bec5db4e7aeed757"
+      },
+      {
+        "task_id": "HA--case-8172fe895e468df8fa49--L1--shell_raw",
+        "file": "environment/Dockerfile",
+        "sha256": "0002bebba6d9621d0f14d46a557fdb15b02483e5461e0c7632fd230f2c88e23f"
+      },
+      {
+        "task_id": "HA--case-8172fe895e468df8fa49--L1--native_raw",
+        "file": "environment/Dockerfile",
+        "sha256": "f0071562d33eaacd8d51d0572c253b3fb84d5d72f5f981debb6bf963e37da43b"
+      },
+      {
+        "task_id": "HA--case-8172fe895e468df8fa49--L1--native_raw",
+        "file": "environment/Dockerfile.api",
+        "sha256": "fc933abeb74979383dadf42c8d8a419079e0849037d950ebc16321d9b061a29f"
+      },
+      {
+        "task_id": "HA--case-8172fe895e468df8fa49--L1--umodel_semantic",
+        "file": "environment/Dockerfile.main",
+        "sha256": "b8c7c3738099efdab0baf1bd6fcfd255211dc8ab7339a79fbb7c4831593b3a6f"
+      },
+      {
+        "task_id": "HA--case-8172fe895e468df8fa49--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "c63a8fdaea4c598cf69c643c66ef6c546f298d8f1e58628b8711a1491a850305"
+      },
+      {
+        "task_id": "RCA--case-6a633ab060a920625c1b--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "596cbe0b7d84d95587a5d01899a76917f1fd2fda30598a3a44eef4d963855a29"
+      },
+      {
+        "task_id": "HA--case-ea8f3a4fbe77a88e1f06--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "be8b5f02672077ca43fb6f17cfd5a81bb558bc944a18ee1b8df542fef37e35b1"
+      },
+      {
+        "task_id": "RCA--case-eb06b5cd773f397636a6--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "a5651184dc3e209aa6adcc4c451e36ac6c56ab3908816b899c4dd97a0fdf7a80"
+      },
+      {
+        "task_id": "HA--case-7a740468ec96c35dcfc1--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "7ca39499c20b1e0c688a9bafa3ec36a83fc57cb05b547608ce54a2d750f73cbd"
+      },
+      {
+        "task_id": "RCA--case-334bce3f20d6755af0d7--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "18c2770216bd9d382aa3ce8a624e6440a867ee0e43a6d75cea272392b15ada2c"
+      },
+      {
+        "task_id": "HA--case-07036cd1a8fb2e00601b--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "4c86ba0d1bfe172a27bb3c4c540676f3300a15c303d484a7263152101203091a"
+      },
+      {
+        "task_id": "RCA--case-3e2b6a14e7a0698ceffb--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "abbc4d2cad4eca6eea56b6188e181598f5254d0981733c0c36594cc1129895fb"
+      },
+      {
+        "task_id": "RCA--case-6518a3079c71c436ff40--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "8fd228cfb26f7adfcb7533dfb1b9cbb88fb1824a3be8c63ac9765c088a858b54"
+      },
+      {
+        "task_id": "RCA--case-73a6bc7591ee8fcc9701--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "30b3685c8557dcb69b21be1647bc805b8e78645410b2c5afa37d7798e36aa01d"
+      },
+      {
+        "task_id": "RCA--case-5c93fd3383954ae00c54--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "daaab7788fbe333c5e1e111e12b96316539933f74ce77db7164ce148eeafc3b2"
+      },
+      {
+        "task_id": "HA--case-a750bf65eac25e98e95d--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "3b7651b7dd3f4725b928816940825d9805e1c4048c59049b016f51b0d2421064"
+      },
+      {
+        "task_id": "HA--case-ab646788e9369c6362b0--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "804c65d83af2ed77b40fdb44ed1808cef66de44f7974906b580a36965239fe51"
+      },
+      {
+        "task_id": "RCA--case-a5dd3254fae5194111cf--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "82da9714e46cc7f2e89f92783bd5b872a3dee6e7aad39aa186f52499b2c12dc0"
+      },
+      {
+        "task_id": "RCA--case-3fb87d5d7dd3fc4b0913--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "2780e3c54a1f9818e0ccd7a8265993aea192a8e64d88e9c69504d635dfe487f9"
+      },
+      {
+        "task_id": "RCA--case-077936fb06c5b4933617--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "8bc140f456f1cf25e94f3f8173c319bcc4d4ffc064728c0417158ddf7ce30038"
+      },
+      {
+        "task_id": "RCA--case-13b81b090daf5efcaa67--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "4ae5a56d19e13273edcae0f0012297da4bfe9456b916c590e7f6d14c972436f4"
+      },
+      {
+        "task_id": "RCA--case-e382fd412cd5ecceb5ef--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "45813b42427709b899fc502017fa659b0def8f7577f9436bad3be281797a9408"
+      },
+      {
+        "task_id": "HA--case-1060e77962e4ccdc0131--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "6158602201139de4c2f88c33be1a1ba7fe22ecaaaf22a0a5d519f94b53fbfe28"
+      },
+      {
+        "task_id": "HA--case-b880afdef878ee1c32ea--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "50aa26d9e99fa758f222924cd48f012a306f6163931b8a7ebea5621fa6236015"
+      },
+      {
+        "task_id": "HA--case-04f5adf46f36292d5acc--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "8ffda120efd1ede837ed2a6de8ad6ecc9f53fcc11d2f23c7268014ce864823ab"
+      },
+      {
+        "task_id": "HA--case-acbcb8ca89b476490453--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "ca73977198379175d1cb9dbf170c7f09aff99f4585463d06cf716a76ee176e04"
+      },
+      {
+        "task_id": "HA--case-da91b1dd8ae4edf134ce--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "ad44cd3ae5794035612ea474cc0dde8c769c824431678aa4a89a4978ea6a252f"
+      },
+      {
+        "task_id": "HA--case-da8e0dc0d626a674e660--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "6475248bf1af9534f6a80d4f7af9f989d5b4a225bfa2f47dec9bd15b22039b5a"
+      },
+      {
+        "task_id": "RCA--case-4fe76830ce44655c0190--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "055690bb8fcf0280340aa98706f455f0eab9c596c3cc452149f27e16fbc8105c"
+      },
+      {
+        "task_id": "RCA--case-c0c93ce3d62661d42b0e--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "ff0a8ccc1b5976eb51ad7275489962ef2ba1159b61b7ba80541c27440473d230"
+      },
+      {
+        "task_id": "HA--case-0873e80ccb2eadbd9a11--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "1b36c4e385838b3a0a6ca9357df81ece0442e3addb579f093fbb2ae166caedb3"
+      },
+      {
+        "task_id": "HA--case-248a45a72599ec859f0b--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "483500ac57c8f2f6fa90f8cd08be0e755ccc59cabef00950f3cffe896ad8b5d3"
+      },
+      {
+        "task_id": "HA--case-28ab1b9e64f75aefea78--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "322a21e08beb341d27c6461619da5b777b67cc602d9de09984d9792015a08e9c"
+      },
+      {
+        "task_id": "RCA--case-9ba81d1cac3b4ea901fb--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "859ef18ddc5bef0426278932a0dbb11615a1236f2494c05f63f3e1b641165a69"
+      },
+      {
+        "task_id": "HA--case-ec9f2da06ea351046c53--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "02577501b0619625c73ee4793ea4138726ba326f80e7e876ca45fd282939d578"
+      },
+      {
+        "task_id": "HA--case-07fcc82844653ff5ad8b--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "205982055b32bb6c19330127da82d5c476bd3d385685ac5adb02c4d253ad757e"
+      },
+      {
+        "task_id": "HA--case-ef55699e8b4cf0b11683--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "98b65fd2415b78e7dfb893e5263c11a1eee2891da687fe9e9f2313a1d774f123"
+      },
+      {
+        "task_id": "RCA--case-10d92bfbd7e2809d65e5--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "0905730814f1d2bb03aaa59653f2aa00973cbc03c7034e5d587062fc394c9127"
+      },
+      {
+        "task_id": "HA--case-f93c052773fe982be0b4--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "87f741c92fbf32ae637ff5f0e8bca63eb93a4a45ad19d780b20e8e71dc6ff270"
+      },
+      {
+        "task_id": "HA--case-972e71e1a2acab7d9827--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "e3140d85e6fb5886987e96167b17fac530d84b0b36188917fdf79210ffcb85af"
+      },
+      {
+        "task_id": "HA--case-b34c31a19d9888be5310--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "a3c05d32e3a9cb76b1bd860cc12136b38f451df1834cff58894b40c12e1bad99"
+      },
+      {
+        "task_id": "HA--case-9e8d7298d82815bc0348--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "d446f61b335a5f760b34bd858e5910b9a935ca501f3bff2af983264b3631299f"
+      },
+      {
+        "task_id": "RCA--case-16f2fa9b03d034fb6ecc--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "7df6dd339192427c021388f8215ffdf3ff8cfc4328bea200fcf248b6f0e93275"
+      },
+      {
+        "task_id": "HA--case-617512764ca4b3fea1bf--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "4d697ceb27f10c86ba05598db0a6dde44a2c6568519659fecc1dee91b7df1a85"
+      },
+      {
+        "task_id": "HA--case-e405d4c3adff9f8e14d2--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "5d010b9b1c6db37bd8e4d27524f2b0502ca6b7583d61f1a679b9e410d6ace3fe"
+      },
+      {
+        "task_id": "RCA--case-d0b06838effb07f7b5d8--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "07b38ba4a195c49378f93252a13deda2f39afb7b780ab63b7f695b904d6e42ca"
+      },
+      {
+        "task_id": "HA--case-649e908b579a6a024706--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "bc72c4a7886edd815568d20b17d7bb4e769ce3a05597bb9e1e1c732efe6ec8c6"
+      },
+      {
+        "task_id": "HA--case-3179a32a00cc8b1cd80a--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "f84f9242ab1051a6dfdaff1d5d1ab53a6341e0dbd9db746ec13c2dcd747e9666"
+      },
+      {
+        "task_id": "HA--case-ba0ae8c13b114a3b1db2--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "8f4b7e7a972e8a019f672a1a4ee3077ec5e9332c6022a55a3f70059a7d60300f"
+      },
+      {
+        "task_id": "RCA--case-bdc8fbaa32f553952189--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "0fde823fbe47af0b559d5398e286ba580b64eec679e5b700884a36823e40e8d4"
+      },
+      {
+        "task_id": "HA--case-06bf3447d453cb14639e--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "ed1aaebd1e5e97320f6ab439e9c9d23f6227546e84ee411056ba3e0c42959cae"
+      },
+      {
+        "task_id": "HA--case-ea367b0258e9f447eb04--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "9d49806b36212da4d3415b18359444572dc9b707613b0f65f65d307df653c0e3"
+      },
+      {
+        "task_id": "RCA--case-c55ca6ceaf29d4cf96d5--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "17619bb8b7407d272854c24d839d4acc18ced17976559b20c0635bc4b108992e"
+      },
+      {
+        "task_id": "RCA--case-b405ae935753614167b5--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "6c398933b5c75f5704c863f1484a5546ab69a1b2192b676bb0532ecc239cf6ad"
+      },
+      {
+        "task_id": "HA--case-996b60e92463e6567495--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "ed9396d4bf65b8408cfc1ac49108ed90d62b09543b69c128f98636a867004bf6"
+      },
+      {
+        "task_id": "HA--case-89bed4f6041349b2fa01--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "fc1460d03ed4a58f6c98732bbe3736a9ffa20d1a97098cb7bd8ebb19368883ae"
+      },
+      {
+        "task_id": "RCA--case-727e591061bf3eb4a281--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "4890290da2b9ba6f07b771d183378a6c418ff07060a208be52ade9f974f2b742"
+      },
+      {
+        "task_id": "HA--case-845e2841ec6f59c01f17--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "0d3160ffbefec755b743aab4f4870bb59eff7a14da73bbd56ef8f09dae7625a7"
+      },
+      {
+        "task_id": "HA--case-73405127a98882b6fa32--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "344cabc88af0c15c0f3091992b57f014a709e4f927936c69d76ffa01294c87ab"
+      },
+      {
+        "task_id": "HA--case-cb685d688bb7aef31b8e--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "f13a42173fa9ee58d1db0f9c7c995669f73ce6f975a5ec8baa5bbe0c596b4cb6"
+      },
+      {
+        "task_id": "HA--case-af8ae117fbc06309df43--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "7e9b78d0fb6b223f5bd8274cf925e2ddd33db242e3731c6e96a9b6ca20981dac"
+      },
+      {
+        "task_id": "RCA--case-619f8640ac25eda534ed--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "acc0d38e97d6201e3c9a0ae42e8573b8918238d8f3540124956b7091ee6103be"
+      },
+      {
+        "task_id": "HA--case-0c65c72c9b38e2033a4c--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "3eba4342c1657d8f20b3c1bd482c0d9b8b08caa0027bcf98ccc85179336fbc69"
+      },
+      {
+        "task_id": "HA--case-3756a86757a27f70c3e9--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "8f51394d0d581491d74db534ac0ffc0a10795b9a7f140abb37652135e855588b"
+      },
+      {
+        "task_id": "RCA--case-ab02732e2108abf23f07--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "b6b132447ed159c51422f710097b8a649800518c644c8ad4d64d80ab8f84f39c"
+      },
+      {
+        "task_id": "HA--case-ab1fb3dbb4a3d3b8cef8--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "fcbc2f6638ac8f4d4423b4b9edc346d75ead22054f59bde8fa229003968bde84"
+      },
+      {
+        "task_id": "HA--case-97b4491351d9ebd9bb90--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "9eed7c50cae30fc61b3b89478c6981ee05d4772630a2f9e651bb496d7f5660c6"
+      },
+      {
+        "task_id": "RCA--case-2d7b596a043142a9fe46--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "44550c8e0c45672d5f38e854f504026fee770634b86908e6089d870f1031a3e0"
+      },
+      {
+        "task_id": "HA--case-d0f0052cbf61a0f4eccb--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "42d2f09520d8f46b4d44be86e040d684dee063656f769ac717ba33f8541c0f41"
+      },
+      {
+        "task_id": "RCA--case-d96ba8f105d597fb9c34--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "ef22e38c2a8361e3fd1ce768b8a561b17478c2747a1885028e609bac68f98311"
+      },
+      {
+        "task_id": "HA--case-498eed27594e1289bbcc--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "1be149db7d0b92eb425a630cd22e41537695a6d3eabdc4788a985fd4cfd89dcd"
+      },
+      {
+        "task_id": "RCA--case-29ceaf294bdd42163669--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "ceb0d0ecc51021f2c6cedb862f1d6d487060691f11157f0c691e680e07c8ab9b"
+      },
+      {
+        "task_id": "HA--case-22fc970605b1c4b52a04--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "445cddf6ae721ee45508b5311022c6f99ef5a225314f97506258bad2c0f89aaa"
+      },
+      {
+        "task_id": "HA--case-98b50ff3dd6369bc53aa--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "df265aced725cb15ca09c3b93eac442199f977f22747331480c7290d6859857e"
+      },
+      {
+        "task_id": "HA--case-be922aad950969e8c09b--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "6ee3835ee7ec857a5d27b2945a9b2de01b4946b25685c8e7d2b7d01176cd9de9"
+      },
+      {
+        "task_id": "HA--case-f1802bbc47955d0edc38--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "ce6e1c93039592209fe3a4a3f9140f00b152d32202a36327cb7afeeefe945939"
+      },
+      {
+        "task_id": "HA--case-5c4951fbb08d454cb34d--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "465a87d152e91fe461086708651f2fe5672920f292106065b62487030f3ad83a"
+      },
+      {
+        "task_id": "HA--case-1ba49be0a68fe4a4f9fb--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "d5f6b9dd7de62d4aff4c1a88a78d29b8715272d6d18cc19bdb64c276e1bab2a6"
+      },
+      {
+        "task_id": "RCA--case-557b2f052b9202f17a04--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "90eb13ca7b2f9e359a0bced7f17cdd96dd37f90379962d2ae2a35e0930900580"
+      },
+      {
+        "task_id": "RCA--case-90d21b279b60023ca2e6--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "675ae1e375f0b7e3d9a7dc41d154cb3572cfa6e4d4eacd284175b3216edb4997"
+      },
+      {
+        "task_id": "HA--case-57fa8c8ccb1561be77da--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "960785afcafa9615f16701d8fd01d86e81a545d1b4622d053cd665c9363325e7"
+      },
+      {
+        "task_id": "RCA--case-27f0494820bb34295d1c--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "e20b65fac2bfaa2e4c6eebdf7df72168f13f679505e4fced9fc814bc5f738467"
+      },
+      {
+        "task_id": "HA--case-c88908256625eb979023--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "fad5a514bc91f929925ad07e6b156719f41b039e04c32fd6279624f9c03ab571"
+      },
+      {
+        "task_id": "RCA--case-7d3e87e8acacb442339d--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "ab20060d9a78378375fb27189c898e0d45a45167c5cfa49a413934d20c48ad13"
+      },
+      {
+        "task_id": "HA--case-573b96ee1a9664ef1a33--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "a75ff3faf17d490c8323965d1bf6e288234f34404e434b686b1b82d872bb6ed4"
+      },
+      {
+        "task_id": "RCA--case-b8d94d9588171babee43--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "f37ebb21da606490d6ff9d87f2c1583322cf47450b1d3b4afa42fd34eab35c12"
+      },
+      {
+        "task_id": "RCA--case-d9afb65f5ba87849c717--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "fed3fe3e609eff5c3aacecced598728dd1313ad2b982c4426d36ce6dec46eb4b"
+      },
+      {
+        "task_id": "RCA--case-eb82b2f73d09e2cfcc4f--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "b0845df03ab77cad680424050a2bd645107070641c99faef44e80f15e37356c8"
+      },
+      {
+        "task_id": "RCA--case-0c9b06f7abba2c377951--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "f170f61497041ac534f7497f0a37777ae4ec78826535d3be16150083a8dbadcc"
+      },
+      {
+        "task_id": "HA--case-6f75998e137d47863358--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "d7acc56c778baaa00f9d0587ddb441584ca03f63f3fbdeca09efef94b7e96631"
+      },
+      {
+        "task_id": "RCA--case-23a36c2ed86503019adf--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "5f44a37a2a37bd2fc0700dc282789ad5a919a3d113f4603024194ac2c5f3f905"
+      },
+      {
+        "task_id": "RCA--case-4c93b5d36f1aa27d19ea--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "0f01741becc03185ffa56ed43d80eac6f920929d577133ffa4a08d83f6c9e11a"
+      },
+      {
+        "task_id": "HA--case-36e2234710124565c8e7--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "89113900c347c47687d9ebbb3a441e4ad7efcd30305f78815e09d25695c066bc"
+      },
+      {
+        "task_id": "RCA--case-96ff525afc4dd4d19331--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "5c2863314ffd0c5eb93645b2e78275d9a1ee1279f6ef90af6458056c2479c968"
+      },
+      {
+        "task_id": "RCA--case-a9c3cd8a0855cd589d4a--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "e4273d6524ca360aa95c6d5e677da15b7b1f9109d67450d7a30409f466fc7fc8"
+      },
+      {
+        "task_id": "HA--case-e42dd814dcd6be4701fd--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "197d7a7d4e479762d613275c0ce16e583d0e1fe75ae46365686e9da782149f2e"
+      },
+      {
+        "task_id": "HA--case-2607ab12059c17c713ce--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "d40f4f09aa7480b837ba21859ee3c7793268ec26769979f3cf87ac3730bbbd75"
+      },
+      {
+        "task_id": "RCA--case-b2672ca231b4f69b6883--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "8f26b76984905c3fc8cdbbffdd8da0acc1feb1f873b763e0024b35ad5e120bdd"
+      },
+      {
+        "task_id": "HA--case-ebf1eefda8e989f5fe28--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "7b584f4547ca0eea5961346c5f12e1095afebe8deb3c1e9c3570d73c80963744"
+      },
+      {
+        "task_id": "HA--case-1446f7a76a1fc820c3e4--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "1325ca92e9d863f252046a777ffc7a66273b907f2135464954ef56f8f738d5ea"
+      },
+      {
+        "task_id": "HA--case-9eb298c46622ce114122--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "3beca5b6e38b28be013f6b09d37ca2ca9098f3c930ffeb24809d459609e88f84"
+      },
+      {
+        "task_id": "HA--case-0f5e0522c80d4875a8e1--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "feabd01d506351b729b2e878eb67e58b8716069701582e0fdcea52e860502b79"
+      },
+      {
+        "task_id": "HA--case-294d3b4e0c439242ab17--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "4521d9e95d3531ed3970d77ece7cba6f9f893d0e01b812910b91f0ef9164b123"
+      },
+      {
+        "task_id": "HA--case-2edaa9c47bc7e004c0de--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "e8cf86de2dc487d937e92b779e8b6eff99442cfb95861a1fa37587e76b352512"
+      },
+      {
+        "task_id": "HA--case-d5dba4be29cbed7c3f33--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "754566986a37ba1b269f146622f31bfb720e0c28b085a7579e04d9f3920d7a24"
+      },
+      {
+        "task_id": "RCA--case-dd7744f7d866f78447c8--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "2a03b83dada160a61a76ac742cc2e3fc5ef10265d83bc9165ec2e660a5d11dc6"
+      },
+      {
+        "task_id": "HA--case-bf75cb8697e885902c61--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "771afac571f29acd2f2c43786d44b16ba7382f2e3b7d9529d53d0c9ca9549827"
+      },
+      {
+        "task_id": "RCA--case-8c89e0564886316c200d--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "5a1b583ea2e447841fa0b8d846ef8792aa70b4ebb429753ade4a6bb9d40149af"
+      },
+      {
+        "task_id": "HA--case-5e2261b03c3880341133--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "86fb6cc8b7c1cced9f9b75797db30658f45ca4703dbdfa9515e2658fc8383732"
+      },
+      {
+        "task_id": "HA--case-40024fa4c9d3758a7e71--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "70c5f8024796d0baf4decb228b30fe4682b7bd51fd31fa0f54e573fe6998d67f"
+      },
+      {
+        "task_id": "RCA--case-858504178fc4652db568--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "6442c64475cb3695653025b1ff0e4a2230b95a496a531b41fc58543b4d721bdb"
+      },
+      {
+        "task_id": "HA--case-73d873076815ab810059--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "46d3dfe5b05e94bd5793ddaa326e61fedaec252b8e786ef22d918e38074a637b"
+      },
+      {
+        "task_id": "RCA--case-6f39df490f5275b9fc75--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "0934635ad0bcd4f51cbd7288d790d549ff1637f9d85481026c3797e2c05747ae"
+      },
+      {
+        "task_id": "HA--case-40aeb03c6b0274499a4b--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "4932b7873a28065b0b6a07e3f86c5708d3acf21eb865a85027826a7ff29446d0"
+      },
+      {
+        "task_id": "HA--case-fda4725304331dfb56b6--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "e9ada8e600230725984e5929c3c4db6e8cace87a55a847b998dd5eb6d73ead27"
+      },
+      {
+        "task_id": "HA--case-c8ce85c92f31d9164c11--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "6c7f866caaa7871ba2516966fe30b11609b1403f3f7b5f2376fc8a4153ecb988"
+      },
+      {
+        "task_id": "HA--case-2c54b0c8c368f0990f39--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "7e8aec08eca011eec77a0be146c981123c3bec41868cf9d20f10a13525ea3221"
+      },
+      {
+        "task_id": "RCA--case-1645033dde8f8c5ab5ef--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "9646fe31036c444cc0968f66ed5fd05aaae149f1b2665dd1f24a8044d8edfd3b"
+      },
+      {
+        "task_id": "RCA--case-39eb62a3dd1e999509bd--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "586f013b6eec9df713c1a3a5de4235e3cecdd3076251e2fa7b0357747a25bda0"
+      },
+      {
+        "task_id": "RCA--case-07036290060641699e18--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "709f59ef3b514fbba17a9ea45c970ab3fbf8beb0e369e8a63ed5aadad189f7b4"
+      },
+      {
+        "task_id": "HA--case-35dc1586ac5989a0b1a4--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "bfc332b35aaca3657db726f273cf8433305479f1e2b99e14d5515e3250f9759a"
+      },
+      {
+        "task_id": "HA--case-1619a4b25e1a65840eac--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "d5875e0bf7a5181f54d26a34cbbae64b439aeb9d2ba1342655ee18bc335ce2db"
+      },
+      {
+        "task_id": "RCA--case-bdf2f51967996270f37d--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "87466139ec6539dfd8c7aeef003531594031eb7201b17330a148e35c104aec3e"
+      },
+      {
+        "task_id": "HA--case-3063f3dc452aa7e5e048--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "8ada7ba1114624f76d14309d77b7bf50a9927d8977d011ae9d2b8b491406a562"
+      },
+      {
+        "task_id": "RCA--case-c4f6f4f66731572f09c1--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "3da2d8761b3c634c43ed271ddb923db58ee8795d8584e1585a1d2022eb123127"
+      },
+      {
+        "task_id": "RCA--case-3b793b173afc46462923--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "8227885499403ab66076ea070b2960f51fe2f7eb011fb78a65aa325d48aac348"
+      },
+      {
+        "task_id": "RCA--case-7fca381f295f74785272--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "3246b759028ecc97373eadb8fd7ead2a430851a27142efcdba437ca0678300c1"
+      },
+      {
+        "task_id": "RCA--case-3d623d6543f0c81d8940--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "c918f388e337ebc8ebbabfa16d6c215eb6a9687acc73e0d267b58952385572ba"
+      },
+      {
+        "task_id": "HA--case-1ffb0f8e95598ecf4912--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "f8596e2de4f8a39679e3488660f0675ac2b11f3c64b8839587091963a0efad26"
+      },
+      {
+        "task_id": "HA--case-54643d0a8959ec76e368--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "ed89ff96314b67e4c7938ae34f7c996e41eaac17a5167e59defd1850b3ed9d36"
+      },
+      {
+        "task_id": "HA--case-7e9a465a6de06857352b--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "9016dddcd096e30f1fb145e358a6c26b0ed4077cd585fac23fd8c90cee9fa850"
+      },
+      {
+        "task_id": "RCA--case-28060f28878fb2b73869--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "84ebbd2a1a68a78e75419bd57b8687b95410a8f991b6a3c69931667146647626"
+      },
+      {
+        "task_id": "RCA--case-794a117d1154152e5644--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "989958507acea4db7d928afe586220ea22d20afb5b6683031812d7a400ad885d"
+      },
+      {
+        "task_id": "HA--case-f3a249a5f599142ada55--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "2fe041c56bcbba53574f5b84b05af4621bd1ebdda9be7ca0166eae90ecd7f25d"
+      },
+      {
+        "task_id": "RCA--case-31db9b6d40f122756260--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "3678f79b981563a22beee17f658ddb797d1c784a6497b12d750fb83b2ce318e0"
+      },
+      {
+        "task_id": "RCA--case-b6eff64cce8eaa4eba8f--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "607e5f3a31c8eb591cb04cf02616d984febe7fb99483ffdb783088927a2328c7"
+      },
+      {
+        "task_id": "HA--case-3e41722aef4994832db5--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "7443b5da2162a77cb7cf8d4f8b18edc4309fc0dd07a445a980129ca8ec2c684b"
+      },
+      {
+        "task_id": "RCA--case-ab6506364cb8bc4f4d67--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "d852a3e5e5cf6934faaeb5c863f5651bd94e0fa360d8a087aacaa37e3a632c74"
+      },
+      {
+        "task_id": "HA--case-9a8af2e9a1cf0f3f7867--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "d2571c4aab08eebddbbccce6c59617079f4f0ec60cedb25d236820bbf7b23752"
+      },
+      {
+        "task_id": "HA--case-086813f2bbff44aaf89a--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "166d00c08e272fa6d505f7036be3f289f479ecf3b58b0f7d178054e9ff2a9ef0"
+      },
+      {
+        "task_id": "HA--case-4346f37a949327dc8eff--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "0759580eac18fc5870cffa60ff07f7c7c74c8db32e617576b71105680d599fe1"
+      },
+      {
+        "task_id": "HA--case-87d9b5bb48b089328074--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "4801a874c64604c74bee29557268f189d5391cb2676325a017585ff9d939d4e0"
+      },
+      {
+        "task_id": "HA--case-a39df1364b7715bea5f6--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "104fd84bcadb261c8fb39dcb8fabe777dbf909685015b65eb2c9e3014129a001"
+      },
+      {
+        "task_id": "HA--case-836382989dfcb81bc1a7--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "7b4f266506e3c04b5f87538be1b9e51093c717e8dccd35ff95dc1a192c908420"
+      },
+      {
+        "task_id": "RCA--case-fbcd8bf054b96fd95e75--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "2148fa49a186e298a683c1f8ec9684b0b31b9161c94933d45605e584e2c4bc14"
+      },
+      {
+        "task_id": "HA--case-6e819d5f88c5e9bef697--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "ed91fdce7be51107ebbdf0b868d58c0d1dca8f6d8c07db412acf122d7cb022d7"
+      },
+      {
+        "task_id": "RCA--case-5c8c181af0c4c2f3e431--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "34712bed4a3de3d75316901767ac62fdd7ffb2a4726323c9de6a392aa1ddede8"
+      },
+      {
+        "task_id": "HA--case-cc7b6626aeb022724ae4--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "a0f0bfa673e838cef909eefa0fe953df086018b9979b38b4942cff1108ee8988"
+      },
+      {
+        "task_id": "HA--case-92e1c841319f15e00d3d--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "2310a2453ec75aac3c6f5665b8a353114fcee2aa2858da2e083d7a0477e25ce5"
+      },
+      {
+        "task_id": "HA--case-2aeac842d99de554587c--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "550ea11a7b4c8177cddc5e257cd31be2b9d1892ad6ea6a3fcf4e5e4f869dd445"
+      },
+      {
+        "task_id": "HA--case-118e6294bc00e0fada7a--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "da6389c7107c7a0c2b3a80e86c1541de47bfd36d31bef4d097643d781e2017ff"
+      },
+      {
+        "task_id": "HA--case-eadd9da2845a9469e9d9--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "8adae2c5144f359372966d8fafd5b131f0283b558389ab370e6fbd67303e9ac6"
+      },
+      {
+        "task_id": "HA--case-c15655dcc1913d9f2fde--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "7abbd7072a0b9cf0f48464add392fe60be45b0672bbcb198c747715173fd23d3"
+      },
+      {
+        "task_id": "HA--case-4ac0bb6cae0a748bc77f--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "e0fdfc49c512f72df3406f2b6e454a9375e80e6ec043a765a01b74604e16abe9"
+      },
+      {
+        "task_id": "RCA--case-8884b4390788088f6720--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "9a1df260f63499e0cae6d0b27a41e4588a0e128b02cec8fea7ea47d4104bf4c6"
+      },
+      {
+        "task_id": "RCA--case-aec0b7825abdff92c1fa--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "ef04865a8b0ce7fca382c6e58a21e467371b3815352e941c247b213d0fa31c67"
+      },
+      {
+        "task_id": "HA--case-05fa19dd13ce3e48e661--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "afa01344c8128d3d152b00455632315aee74343d5d76495b4253043935e9ec4b"
+      },
+      {
+        "task_id": "RCA--case-60ad1b42ef75967188ea--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "5592a457d957e850532131f2e442f395723e0a7615111a5dbe02547d512d2e1e"
+      },
+      {
+        "task_id": "HA--case-63e76755cdca8413c945--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "9c2b2868602d9f816dd11f08fd26f4149bf65f291e5713fa6a71ba30e44b6d8c"
+      },
+      {
+        "task_id": "RCA--case-35a9ae57f1a7ea86536c--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "f9b8af8d1a606400bb8668b476e878a157efaa0546a1732ba8d8664c00347ba3"
+      },
+      {
+        "task_id": "RCA--case-a04e17dd1835da8571ac--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "247a8c3bd6c05ba57871b50ae12188e018a87cffd52a8961df41f2ae768e9af2"
+      },
+      {
+        "task_id": "RCA--case-b1eeb8221eebf4547e1d--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "ea83a666889c969270b2246e9603201375d2a50f75e590065ad5c6684af4360f"
+      },
+      {
+        "task_id": "HA--case-7148bb6859106b886b77--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "f387dae4423f344237ee5ad3e6d20d8b4d8e7399ffa183851fe20823fa4c71f4"
+      },
+      {
+        "task_id": "HA--case-91656fed2a8a10e83a13--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "ed928b8dae76f1b21dfcc86359c9a5e1559865a99c2d698a13bca5436e79acad"
+      },
+      {
+        "task_id": "RCA--case-0edff8f093b473e65f31--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "d4a13698c3b9581aa061c69d309036c75acd8ebba3f15ef27a40e59403e51bed"
+      },
+      {
+        "task_id": "HA--case-478531b9823811474216--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "a2878a49a4ec13f0f1f8923adedae44bcde41b5a483255b62270d33dd1e091a8"
+      },
+      {
+        "task_id": "HA--case-821d58cc906e2c3cb7b9--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "0bade9488ad871bc82595790c472c1a858eca36307c14936ef7cacccaaaeb951"
+      },
+      {
+        "task_id": "HA--case-0011238cbee0854b3466--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "8788c7cfe7fcb9c1eb41f8ca15e55bbba512027643604bf30e9547afcbabad77"
+      },
+      {
+        "task_id": "HA--case-cca8c635f12fd6048171--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "a6174d2016955762df0180a543758af498c0a1962762c3c72bb72594dac59dea"
+      },
+      {
+        "task_id": "HA--case-819fc195c6a318eaebcd--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "e9cdc50d33d031e32fe9b89ca49424fa264bca0de4d90f21ecc0c70a8320da1a"
+      },
+      {
+        "task_id": "RCA--case-d5a4a4659dd40ba0b2bc--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "701754c52e392f32beeb40ac7fe4a03e4a6058a90918d81b7a8ea8a6a5eddcac"
+      },
+      {
+        "task_id": "HA--case-87f9abb0526e222cff36--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "55962c60f248a23099ee8b2513fce1f3565925fef60b41a0fe05e5f25729b2ad"
+      },
+      {
+        "task_id": "HA--case-f58ba8fb1d984f389bec--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "b2da50b2b19642653890161f666ca67edaffe94518857c74e0a00a1a25825aa4"
+      },
+      {
+        "task_id": "RCA--case-75db4d7af94d0b734d0c--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "7b5569b5403493e3c27648958e10e46af220a1590f1352c9eab3a7df6323b526"
+      },
+      {
+        "task_id": "HA--case-c952d12987c9a539d6b1--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "83041791ee888b36acaa9c7071c7aadef214c509db28546e9f46b30e80168c84"
+      },
+      {
+        "task_id": "HA--case-c7f7dce096123ef3446f--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "c7a01f22e1a1ca4ee40218aac3a31bdd655330c2a92b508f075144abb9c3e56d"
+      },
+      {
+        "task_id": "HA--case-69aab50bb414c464b685--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "a47efd5145b7bf2ff11af21f758f1cec56a05b3f6c8fbe02b67492c5064f535e"
+      },
+      {
+        "task_id": "HA--case-8bf8c7703ba94b9b7080--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "b397db499f010c200b22e732e6109524ea8ce40f5a6e46db132a9c78c66fa750"
+      },
+      {
+        "task_id": "HA--case-c4fac669563f98b7f577--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "c393795c2add2388591b12aa2ab42c4a6650285a5f4a63d853edf69eb280476d"
+      },
+      {
+        "task_id": "HA--case-f68d52b759d044cfc8a7--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "9edb65fca36b84354e28ea25331a658399e7a9fa5a4fcfc30f52b1d9e88e122f"
+      },
+      {
+        "task_id": "HA--case-d502f05610f20452bfae--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "1de4370ed6bd77e7c3a5d98848d0203ba077277a5504e3e8178193218b2e22bd"
+      },
+      {
+        "task_id": "HA--case-023c775fadf50600871e--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "277841dc564c5fa57a7dd2ef32ef22606481bdb597b490fb2f20ae79d5366022"
+      },
+      {
+        "task_id": "HA--case-6479541bb0204a60437b--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "0a2acdbe0091bf9e0d8cf2477401b542466bced55635acdb93dbaf5d1410d115"
+      },
+      {
+        "task_id": "RCA--case-ca07306ebacb4e6b0021--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "a13e9161fa6523e1a0a7f28431de4102bfe14f0c10ab13d73c8c0370c9543362"
+      },
+      {
+        "task_id": "RCA--case-0c9b9e02cfe79f402d2e--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "67b4ce49d2ee49bd1dfcce248893550103ad24807eb0c4621226d49c68d8b79a"
+      },
+      {
+        "task_id": "HA--case-97ea538be024965f5d22--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "2ab5e539ae84096c819825ff842653d04677c6629a768bf387a77e4543f155e8"
+      },
+      {
+        "task_id": "RCA--case-8ea7c2ccec69a11b4158--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "92058f42981bf9a78d1cc2167c0579637c78b6059c83da524e3eb455282ad93a"
+      },
+      {
+        "task_id": "HA--case-9fd1525f69c0c21cec6f--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "4598b348e0034ae6cc3e8b622ec42d451454162cb1876bed7250ccf18fbc2cfc"
+      },
+      {
+        "task_id": "HA--case-5b003dae79907b73f6c6--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "1dc2c65ebb4a576d334f3dd4d28ff1fba598b1cc46eb2aedeb7cc1d392e50bf6"
+      },
+      {
+        "task_id": "RCA--case-cb002f16b5f941647427--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "b99ac75b2e64371515d428f6e4e1e11092d69c02cbca917a6c193bb7130e754c"
+      },
+      {
+        "task_id": "HA--case-4255e8e04f1c7e9896d5--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "06ab3b3e249c87416ec6878b3225d9d9dffd2ac8df222fc45e0b25653bf34abf"
+      },
+      {
+        "task_id": "HA--case-45ba1d5f9709e3503420--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "53a98df5a9483627ff919b6cbd54522e3584b9c6b396cf3db358d0018cd77351"
+      },
+      {
+        "task_id": "HA--case-b9751704d108ec22cf9b--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "cc88174b370af8d726010a4c1076d0e40a18c91fc08d4a2c5a7f8ca3d9c5c398"
+      },
+      {
+        "task_id": "HA--case-adc0cc15e9da02dd4cb2--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "e544f69225a5a315f5468b6d918059682a588207da7510cbfd8fb616e536d0e7"
+      },
+      {
+        "task_id": "HA--case-01d8d111d6797b657db2--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "2f7df95f85fcb65e721516f4552284f9058f9e0d9c4c9ec6cc1ad34cb7641bda"
+      },
+      {
+        "task_id": "RCA--case-81ecd01f8b00c26906bd--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "caa45aee9ef87d0cc0c10089340eb61f22d9bf22194620de89e710c59602da56"
+      },
+      {
+        "task_id": "RCA--case-a529d734e53c612558b1--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "1bac37914357cf207a752cc8986d52b09dca04e26a7a1928192c89ed67ba6561"
+      },
+      {
+        "task_id": "RCA--case-b78dd356ca12368f0072--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "c83701b9ec7fac093cb9b71c9b718eba44bbde4ee008c3b2370b2fc9cc8dac18"
+      },
+      {
+        "task_id": "HA--case-995b33d9d571816f1659--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "c19df24d745c4311d9adc75438b07296ac88f90bce8ebb95c33d2273d7a0a9d7"
+      },
+      {
+        "task_id": "RCA--case-ea706174cd58456eb3a9--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "f8deb2ab401513779eb7597fb392207696c23a2dade47cd9eb9ce7eb6792268c"
+      },
+      {
+        "task_id": "HA--case-59f9296d68847e36c614--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "71cedd2bddd78a5fcc159883f291d3ac3f02b550034a6094dd285ac9c5bcc7bc"
+      },
+      {
+        "task_id": "RCA--case-563710aa1fc7ca047e30--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "a13e4c129af23b02df75c0df461ad678f054cc1da6439e8a166cd7141cf50c82"
+      },
+      {
+        "task_id": "RCA--case-24b9df6f4b460bda7703--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "bda0afb01dce9562c40db8ea49197ccf40fc91df6017be06f9cd3151295c1088"
+      },
+      {
+        "task_id": "RCA--case-a725b62240b602050e60--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "3ec0d04ac4581f2601eaaa0b59f4bff35d26206821ee0571469d3f0397b30123"
+      },
+      {
+        "task_id": "HA--case-a42a753c23fb94844038--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "3d87d3004907dcb135b91811508448ae21b94c913712e94cbe3ad0b8e37d5309"
+      },
+      {
+        "task_id": "RCA--case-8a0c2baa86d6b00f2b59--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "b2ac562bed3147d0b68998117c15e41a0a543e4cb957d6bab7fb5ccc4a11930d"
+      },
+      {
+        "task_id": "RCA--case-9ac33d8ac9db5b8bfa09--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "04c21fa99f7f7a630b2ea94616b7ab4b62a7b9b8bd7e4d7c09fc3c44bc90cdad"
+      },
+      {
+        "task_id": "RCA--case-abc9afe50b07e000fd77--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "f16a313f2478a6bc28b5adc4cd0ba41cdc3a54679bc6b4fec3c46f7a7f6ed2f8"
+      },
+      {
+        "task_id": "RCA--case-9034d37614bd5471c188--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "f8d7cfcdda1bbce041cc65864e8ce4fe62bfedabced3cc6b1c9970de2d0f0698"
+      },
+      {
+        "task_id": "HA--case-68cd67701775b4d03dcc--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "422b6f27bfe4bf951feaedb1d8bdacd905ee47b470726d9c9197ec47ce6b77c7"
+      },
+      {
+        "task_id": "RCA--case-cf9fe5db249a36a5e07f--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "e3b3c4fc3243d4ace66e67cc5e336e902489d48b489535568c94583f6f02fe14"
+      },
+      {
+        "task_id": "HA--case-d05746c1dc77666be168--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "a553fc71ee7ec198a8ff9fa90b3589bc2ecc2d970aab4ca869aece4e7bda77f2"
+      },
+      {
+        "task_id": "HA--case-0615f942d64f4d1593eb--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "fc6d4008f6165468e2682232b22b23103159c3fc8e519f4a69ad947a729a450a"
+      },
+      {
+        "task_id": "HA--case-030b9a150ef328e13681--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "f0f65b937f1d9b5a735250df1eeec4f28a100a3ccc3a79518fb5d317e610ff33"
+      },
+      {
+        "task_id": "RCA--case-1288bb7815aaa94d480d--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "7e2be8107deab40b4d7b29daee0fbba2117db304ee2a706748fdce3b45790ccd"
+      },
+      {
+        "task_id": "RCA--case-a8067983c3d0d7b0258f--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "33e3e97621dbb08749f6a0634bd7ca175ad7fcc0fdaa692a61d6b32231448cb4"
+      },
+      {
+        "task_id": "RCA--case-b7fb19e36ffadc7edbb2--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "5861b8cb417139e3dfeb89ac1324d7e848e6c31d6269f83670a68e04a3cc18d4"
+      },
+      {
+        "task_id": "HA--case-2b8dc784dc90f46284e9--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "bc9ce319ad220d46497f52218dd8eff39d778ca2a7db84d0cadeebec58d685a6"
+      },
+      {
+        "task_id": "HA--case-8da98056844211590d2b--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "835ad3ade2a6b2b40366141b6a42489470416af968618a3c9026e09f1f8e8101"
+      },
+      {
+        "task_id": "RCA--case-9bacd06cc4371a5e4fc5--L1--umodel_semantic",
+        "file": "environment/Dockerfile.umodel",
+        "sha256": "188bb84b7f13fc2f695be35ab1fa33bd3cf941c9bc9f38c6fbfd8eba8ed9909a"
+      }
+    ]
+  },
+  "scope": "FROM references in frozen task Dockerfiles; availability/rebuild verification is separate."
+}

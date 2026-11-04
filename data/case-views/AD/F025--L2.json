@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F025--L2",
+  "task": "AD",
+  "source_case_id": "F025",
+  "family_id": "F025",
+  "bundle_id": null,
+  "source_level": "IL2",
+  "level": 2,
+  "slice": "L3-S4",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F025--L2--shell_raw",
+      "instruction": "请复核 rca-benchmark 中 inventory::/api/v1/inventory/{productId} 在 2026年08月31日 19:44:53 至 19:58:57（北京时间）期间的异常。区分前后两个阶段的拒绝与延迟形态，判断单一原因能否解释全部表现，并说明交付人口的证据边界。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n可使用 /scene/SCOPE-MAP.json 获取中性的调查范围信息；其中不包含因果边、根因或正确判断。\n",
+      "original_instruction_sha256": "da390c184840c6aee03d776c8758d442e56623c7eb2bbf575d05b46c69f760a7",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "775d3bc7bf76a261e43bdeeff82b64fd1f80b46dcef1060413797951062213b0"
+      },
+      "instruction_sha256": "da390c184840c6aee03d776c8758d442e56623c7eb2bbf575d05b46c69f760a7"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F025--L2--umodel_semantic",
+      "instruction": "请复核 rca-benchmark 中 inventory::/api/v1/inventory/{productId} 在 2026年08月31日 19:44:53 至 19:58:57（北京时间）期间的异常。区分前后两个阶段的拒绝与延迟形态，判断单一原因能否解释全部表现，并说明交付人口的证据边界。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`. Public investigation guidance is available in `/scene/SCOPE-MAP.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "8f1c4b172bac982021a97544cf6d704c06af848ef1e6e7c7259c22b43f5e2a80",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "775d3bc7bf76a261e43bdeeff82b64fd1f80b46dcef1060413797951062213b0"
+      },
+      "instruction_sha256": "8f1c4b172bac982021a97544cf6d704c06af848ef1e6e7c7259c22b43f5e2a80"
+    },
+    "native_raw": {
+      "task_id": "AD--F025--L2--native_raw",
+      "instruction": "请复核 rca-benchmark 中 inventory::/api/v1/inventory/{productId} 在 2026年08月31日 19:44:53 至 19:58:57（北京时间）期间的异常。区分前后两个阶段的拒绝与延迟形态，判断单一原因能否解释全部表现，并说明交付人口的证据边界。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method. Public investigation guidance is available in `/scene/SCOPE-MAP.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "7051a345e62aaebabfd419bcbbacb6ec98c91104d4f31fcbe489ba63650ceed8",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "775d3bc7bf76a261e43bdeeff82b64fd1f80b46dcef1060413797951062213b0"
+      },
+      "instruction_sha256": "7051a345e62aaebabfd419bcbbacb6ec98c91104d4f31fcbe489ba63650ceed8"
+    }
+  },
+  "analysis_cluster_id": "F025"
+}

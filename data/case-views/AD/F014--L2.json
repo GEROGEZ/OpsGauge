@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F014--L2",
+  "task": "AD",
+  "source_case_id": "F014",
+  "family_id": "F014",
+  "bundle_id": null,
+  "source_level": "IL2",
+  "level": 2,
+  "slice": "L3-S6",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F014--L2--shell_raw",
+      "instruction": "请复核 rca-benchmark 中 /api/v1/inventory 在 2026年09月01日 09:55:02 至 10:19:30（北京时间）期间的业务异常。评估告警面是否完整覆盖了处理受阻机制，以及现有证据是否足以判断无关业务也受影响；说明处置范围应否拆分。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n可使用 /scene/SCOPE-MAP.json 获取中性的调查范围信息；其中不包含因果边、根因或正确判断。\n",
+      "original_instruction_sha256": "272e6a2d72b5f65742fa47260c7b60cc5edf66d25899d23b9cab726f006d4aad",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "df3a22939fb5d4ca7ee453153ecf5e17cc96ab52193897d8a375951b2fa9aa42"
+      },
+      "instruction_sha256": "272e6a2d72b5f65742fa47260c7b60cc5edf66d25899d23b9cab726f006d4aad"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F014--L2--umodel_semantic",
+      "instruction": "请复核 rca-benchmark 中 /api/v1/inventory 在 2026年09月01日 09:55:02 至 10:19:30（北京时间）期间的业务异常。评估告警面是否完整覆盖了处理受阻机制，以及现有证据是否足以判断无关业务也受影响；说明处置范围应否拆分。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`. Public investigation guidance is available in `/scene/SCOPE-MAP.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "d81af2375f658db36389bb170a4215e2d2e7832004e6428b44b30aa8f57a13b1",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "df3a22939fb5d4ca7ee453153ecf5e17cc96ab52193897d8a375951b2fa9aa42"
+      },
+      "instruction_sha256": "d81af2375f658db36389bb170a4215e2d2e7832004e6428b44b30aa8f57a13b1"
+    },
+    "native_raw": {
+      "task_id": "AD--F014--L2--native_raw",
+      "instruction": "请复核 rca-benchmark 中 /api/v1/inventory 在 2026年09月01日 09:55:02 至 10:19:30（北京时间）期间的业务异常。评估告警面是否完整覆盖了处理受阻机制，以及现有证据是否足以判断无关业务也受影响；说明处置范围应否拆分。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method. Public investigation guidance is available in `/scene/SCOPE-MAP.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "4c7867d0236099319ebc7c3d91acaa6377ff4dfe8f83f30fbd1d17a81933da58",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "df3a22939fb5d4ca7ee453153ecf5e17cc96ab52193897d8a375951b2fa9aa42"
+      },
+      "instruction_sha256": "4c7867d0236099319ebc7c3d91acaa6377ff4dfe8f83f30fbd1d17a81933da58"
+    }
+  },
+  "analysis_cluster_id": "F014"
+}

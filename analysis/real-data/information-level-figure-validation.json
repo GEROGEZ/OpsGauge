@@ -1,0 +1,19 @@
+{
+  "source": "canonical-results.json",
+  "profile": "File-based",
+  "scored_cases": 5148,
+  "matched_family_configuration_groups": 1716,
+  "points": 48,
+  "AD_raw_to_paper_levels": {
+    "IL3": 1,
+    "IL2": 2,
+    "IL1": 3
+  },
+  "all_levels_have_same_families": true,
+  "y_axis_range": [
+    40,
+    100
+  ],
+  "y_axis_range_shared_across_tasks": true,
+  "synthetic": false
+}

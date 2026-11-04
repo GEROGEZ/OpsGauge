@@ -1,0 +1,3 @@
+{"harbor": {"version": "0.21.0", "location": "/root/repos/harbor-dsh-agent/.venv/lib/python3.14/site-packages", "direct_url": null}, "pydantic": {"version": "2.13.4", "location": "/root/repos/harbor-dsh-agent/.venv/lib/python3.14/site-packages", "direct_url": null}, "httpx": {"version": "0.28.1", "location": "/root/repos/harbor-dsh-agent/.venv/lib/python3.14/site-packages", "direct_url": null}, "litellm": {"version": "1.97.0", "location": "/root/repos/harbor-dsh-agent/.venv/lib/python3.14/site-packages", "direct_url": null}}
+
+

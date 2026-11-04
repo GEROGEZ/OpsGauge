@@ -1,0 +1,3 @@
+# Native API access
+
+`NATIVE_API_URL` is a read-only HTTP service. Start with `GET /v1/catalog`. Metric values use the proxied Prometheus endpoints `/api/v1/query`, `/api/v1/query_range`, `/api/v1/series`, and metadata endpoints. Entity identities are also in `/scene/entities.jsonl`; topology observations are in `/scene/topology.jsonl`. Event, Trace, and Log use `/v1/events`, `/v1/traces`, and `/v1/logs`; resources use `/v1/resources`. Follow `next_offset` until null. Preserve returned record references, timestamps, units, labels, and entity IDs. PromQL and these Native HTTP endpoints are one Native access method.

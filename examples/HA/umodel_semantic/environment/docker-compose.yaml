@@ -1,0 +1,39 @@
+services:
+  main:
+    build:
+      context: .
+      dockerfile: Dockerfile.main
+    depends_on:
+      umodel:
+        condition: service_healthy
+    environment:
+      UMODEL_URL: http://umodel:8080
+      UMODEL_ENVIRONMENT_ID: harbor-bundle-a901bfe7465a08a8acdc
+      UMODEL_WORKSPACE: rca-benchmark
+      UMODEL_REGION_ID: cn-hongkong
+    volumes:
+      - ./API.md:/scene/API.md:ro
+      - ./scene/answer-schema.json:/scene/answer-schema.json:ro
+      - umodel-trace:/shared
+      - ./mission-contract.json:/scene/mission-contract.json:ro
+
+
+  umodel:
+    build:
+      context: .
+      dockerfile: Dockerfile.umodel
+    environment:
+      BUNDLE_ID: bundle-a901bfe7465a08a8acdc
+      ENVIRONMENT_ID: harbor-bundle-a901bfe7465a08a8acdc
+    volumes:
+      - umodel-logs:/logs
+      - umodel-trace:/shared
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8080/v1/health')"]
+      interval: 2s
+      timeout: 2s
+      retries: 60
+
+volumes:
+  umodel-logs: {}
+  umodel-trace: {}

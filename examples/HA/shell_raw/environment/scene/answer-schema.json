@@ -1,0 +1,202 @@
+{
+  "$defs": {
+    "EvidenceCitation": {
+      "additionalProperties": false,
+      "properties": {
+        "attributes": {
+          "additionalProperties": true,
+          "title": "Attributes",
+          "type": "object"
+        },
+        "entity_ids": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Entity Ids",
+          "type": "array"
+        },
+        "evidence_id": {
+          "minLength": 1,
+          "title": "Evidence Id",
+          "type": "string"
+        },
+        "modality": {
+          "$ref": "#/$defs/ReplayModality"
+        },
+        "observed_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Observed At"
+        },
+        "record_refs": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Record Refs",
+          "type": "array"
+        },
+        "signal": {
+          "minLength": 1,
+          "title": "Signal",
+          "type": "string"
+        },
+        "unit": {
+          "default": "",
+          "title": "Unit",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {},
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        }
+      },
+      "required": [
+        "evidence_id",
+        "modality",
+        "signal",
+        "entity_ids",
+        "record_refs"
+      ],
+      "title": "EvidenceCitation",
+      "type": "object"
+    },
+    "MissionFinding": {
+      "additionalProperties": false,
+      "properties": {
+        "entity_ids": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Entity Ids",
+          "type": "array"
+        },
+        "evidence_ids": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "finding_id": {
+          "minLength": 1,
+          "title": "Finding Id",
+          "type": "string"
+        },
+        "phenomenon": {
+          "description": "Canonical label selected from the public Case answer_contract.allowed_phenomena.",
+          "minLength": 1,
+          "title": "Phenomenon",
+          "type": "string"
+        },
+        "summary": {
+          "minLength": 1,
+          "title": "Summary",
+          "type": "string"
+        },
+        "verdict": {
+          "default": "occurred",
+          "enum": [
+            "occurred",
+            "not_occurred"
+          ],
+          "title": "Verdict",
+          "type": "string"
+        }
+      },
+      "required": [
+        "finding_id",
+        "phenomenon",
+        "entity_ids",
+        "evidence_ids",
+        "summary"
+      ],
+      "title": "MissionFinding",
+      "type": "object"
+    },
+    "ReplayModality": {
+      "enum": [
+        "metric",
+        "log",
+        "trace",
+        "event",
+        "topology"
+      ],
+      "title": "ReplayModality",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "conclusion": {
+      "minLength": 1,
+      "title": "Conclusion",
+      "type": "string"
+    },
+    "evidence": {
+      "items": {
+        "$ref": "#/$defs/EvidenceCitation"
+      },
+      "title": "Evidence",
+      "type": "array"
+    },
+    "findings": {
+      "items": {
+        "$ref": "#/$defs/MissionFinding"
+      },
+      "title": "Findings",
+      "type": "array"
+    },
+    "health_verdict": {
+      "anyOf": [
+        {
+          "enum": [
+            "actionable_findings_present",
+            "no_actionable_finding"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Explicit health determination for the contract scope; required as no_actionable_finding when findings is empty.",
+      "title": "Health Verdict"
+    },
+    "schema_version": {
+      "const": "mission_inspection_answer_v1",
+      "default": "mission_inspection_answer_v1",
+      "title": "Schema Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "findings",
+    "evidence",
+    "conclusion"
+  ],
+  "title": "MissionInspectionAnswer",
+  "type": "object"
+}

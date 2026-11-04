@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F026--L3",
+  "task": "AD",
+  "source_case_id": "F026",
+  "family_id": "F026",
+  "bundle_id": null,
+  "source_level": "IL1",
+  "level": 3,
+  "slice": "L3-S4",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F026--L3--shell_raw",
+      "instruction": "请调查 frontend::DELETE /api/cart 在 2026-08-10T16:40:38+08:00 至 2026-08-10T16:56:00+08:00 期间的业务异常。目标：核实这次缓存异常期间业务状态是否一致，说明仅凭请求结果能够判断哪些业务已经完成。 请给出可核查证据，并明确无法确认的部分。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n",
+      "original_instruction_sha256": "ed9c38e98ee830d28c44b00def1f6ab51595010f21e0d713217822071d3fdca4",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "ecd04f3813962053240bd842ed16f96542b11c23daf61d38de95efd9a23d20e0"
+      },
+      "instruction_sha256": "ed9c38e98ee830d28c44b00def1f6ab51595010f21e0d713217822071d3fdca4"
+    },
+    "native_raw": {
+      "task_id": "AD--F026--L3--native_raw",
+      "instruction": "请调查 frontend::DELETE /api/cart 在 2026-08-10T16:40:38+08:00 至 2026-08-10T16:56:00+08:00 期间的业务异常。目标：核实这次缓存异常期间业务状态是否一致，说明仅凭请求结果能够判断哪些业务已经完成。 请给出可核查证据，并明确无法确认的部分。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "43a5a7f5361d1c0022864f4b3e24682d00e0c5d5e4b72dc10442305f6203f1c4",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "ecd04f3813962053240bd842ed16f96542b11c23daf61d38de95efd9a23d20e0"
+      },
+      "instruction_sha256": "43a5a7f5361d1c0022864f4b3e24682d00e0c5d5e4b72dc10442305f6203f1c4"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F026--L3--umodel_semantic",
+      "instruction": "请调查 frontend::DELETE /api/cart 在 2026-08-10T16:40:38+08:00 至 2026-08-10T16:56:00+08:00 期间的业务异常。目标：核实这次缓存异常期间业务状态是否一致，说明仅凭请求结果能够判断哪些业务已经完成。 请给出可核查证据，并明确无法确认的部分。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "0a341d67afc0cae7b177798e31732a7c6b9c3f7f5a56a2c48be4fb4047cb41ea",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "ecd04f3813962053240bd842ed16f96542b11c23daf61d38de95efd9a23d20e0"
+      },
+      "instruction_sha256": "0a341d67afc0cae7b177798e31732a7c6b9c3f7f5a56a2c48be4fb4047cb41ea"
+    }
+  },
+  "analysis_cluster_id": "F026"
+}

@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F048--L3",
+  "task": "AD",
+  "source_case_id": "F048",
+  "family_id": "F048",
+  "bundle_id": null,
+  "source_level": "IL1",
+  "level": 3,
+  "slice": "L3-S3",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F048--L3--shell_raw",
+      "instruction": "请调查 frontend::DELETE /api/cart 在 2026-08-10T06:19:49+08:00 至 2026-08-10T06:25:04+08:00 期间的业务异常。目标：评估这次异常是否遗留了需要清理或恢复的业务状态，并给出可确认的对象范围。 请给出可核查证据，并明确无法确认的部分。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n",
+      "original_instruction_sha256": "7b5ed0dcd30293c1500b9ca35f7b8feedf061c7063067e81c653c77b185e4c5b",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "2fe8904c1f060a1d0e12a4d009b4afa5637a1a2dd6c515855fe530c097a30211"
+      },
+      "instruction_sha256": "7b5ed0dcd30293c1500b9ca35f7b8feedf061c7063067e81c653c77b185e4c5b"
+    },
+    "native_raw": {
+      "task_id": "AD--F048--L3--native_raw",
+      "instruction": "请调查 frontend::DELETE /api/cart 在 2026-08-10T06:19:49+08:00 至 2026-08-10T06:25:04+08:00 期间的业务异常。目标：评估这次异常是否遗留了需要清理或恢复的业务状态，并给出可确认的对象范围。 请给出可核查证据，并明确无法确认的部分。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "7d0dbf698bb1f913e66b5eceb918c8d8ffcd3db3ff1cc3a907d8ef7d7ac67994",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "2fe8904c1f060a1d0e12a4d009b4afa5637a1a2dd6c515855fe530c097a30211"
+      },
+      "instruction_sha256": "7d0dbf698bb1f913e66b5eceb918c8d8ffcd3db3ff1cc3a907d8ef7d7ac67994"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F048--L3--umodel_semantic",
+      "instruction": "请调查 frontend::DELETE /api/cart 在 2026-08-10T06:19:49+08:00 至 2026-08-10T06:25:04+08:00 期间的业务异常。目标：评估这次异常是否遗留了需要清理或恢复的业务状态，并给出可确认的对象范围。 请给出可核查证据，并明确无法确认的部分。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "eef7081a97edeecd99d33a322e22422d4e6b6cefb2b441e95ca4367616524d07",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "2fe8904c1f060a1d0e12a4d009b4afa5637a1a2dd6c515855fe530c097a30211"
+      },
+      "instruction_sha256": "eef7081a97edeecd99d33a322e22422d4e6b6cefb2b441e95ca4367616524d07"
+    }
+  },
+  "analysis_cluster_id": "F048"
+}

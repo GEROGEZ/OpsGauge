@@ -1,0 +1,14 @@
+version = "1.0"
+[metadata]
+author_name = "benchmark-factory"
+author_email = "noreply@example.com"
+category = "l2"
+[agent]
+timeout_sec = 900.0
+[verifier]
+timeout_sec = 120.0
+[environment]
+build_timeout_sec = 600.0
+cpus = 2
+memory = "4G"
+storage = "4G"

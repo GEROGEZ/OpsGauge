@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F025--L3",
+  "task": "AD",
+  "source_case_id": "F025",
+  "family_id": "F025",
+  "bundle_id": null,
+  "source_level": "IL1",
+  "level": 3,
+  "slice": "L3-S4",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F025--L3--shell_raw",
+      "instruction": "请调查 inventory::/api/v1/inventory/{productId} 在 2026-08-31T19:44:53+08:00 至 2026-08-31T19:58:57+08:00 期间的业务异常。目标：判断响应表现改善是否代表业务恢复，并说明实际交付与拒绝范围是否发生变化。 请给出可核查证据，并明确无法确认的部分。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n",
+      "original_instruction_sha256": "e93b8b3222cc057e520417bb2b9388bdb85d84f8cce12f322febb17bc58df6e1",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "775d3bc7bf76a261e43bdeeff82b64fd1f80b46dcef1060413797951062213b0"
+      },
+      "instruction_sha256": "e93b8b3222cc057e520417bb2b9388bdb85d84f8cce12f322febb17bc58df6e1"
+    },
+    "native_raw": {
+      "task_id": "AD--F025--L3--native_raw",
+      "instruction": "请调查 inventory::/api/v1/inventory/{productId} 在 2026-08-31T19:44:53+08:00 至 2026-08-31T19:58:57+08:00 期间的业务异常。目标：判断响应表现改善是否代表业务恢复，并说明实际交付与拒绝范围是否发生变化。 请给出可核查证据，并明确无法确认的部分。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "9309c129e8d9aee433f3bad90fab4d5976929bcf0f4d63bde60ae2f7d294986b",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "775d3bc7bf76a261e43bdeeff82b64fd1f80b46dcef1060413797951062213b0"
+      },
+      "instruction_sha256": "9309c129e8d9aee433f3bad90fab4d5976929bcf0f4d63bde60ae2f7d294986b"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F025--L3--umodel_semantic",
+      "instruction": "请调查 inventory::/api/v1/inventory/{productId} 在 2026-08-31T19:44:53+08:00 至 2026-08-31T19:58:57+08:00 期间的业务异常。目标：判断响应表现改善是否代表业务恢复，并说明实际交付与拒绝范围是否发生变化。 请给出可核查证据，并明确无法确认的部分。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "639316d358fb1374cd3d0cfcac9caa543204006cc3a7788e1b53a4dfdca1bbb6",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "775d3bc7bf76a261e43bdeeff82b64fd1f80b46dcef1060413797951062213b0"
+      },
+      "instruction_sha256": "639316d358fb1374cd3d0cfcac9caa543204006cc3a7788e1b53a4dfdca1bbb6"
+    }
+  },
+  "analysis_cluster_id": "F025"
+}

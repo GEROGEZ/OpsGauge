@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F032--L2",
+  "task": "AD",
+  "source_case_id": "F032",
+  "family_id": "F032",
+  "bundle_id": null,
+  "source_level": "IL2",
+  "level": 2,
+  "slice": "L3-S2",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F032--L2--shell_raw",
+      "instruction": "请复核 rca-benchmark 中 /api/v1/inventory/{productId} 在 2026年09月03日 10:10:25 至 10:15:43（北京时间）期间的异常。判断版本变化是否影响全部接口，确定回退或保留范围，并说明历史失败业务的结果边界。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n可使用 /scene/SCOPE-MAP.json 获取中性的调查范围信息；其中不包含因果边、根因或正确判断。\n",
+      "original_instruction_sha256": "25fb3288beba306ab183ac6a2a7b81fc12f08ab8f9f14f51ef96974635806757",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "3edf18bd68d5056d70ffa088a47f14936b0cda2516472a549821ff459f9b57e0"
+      },
+      "instruction_sha256": "25fb3288beba306ab183ac6a2a7b81fc12f08ab8f9f14f51ef96974635806757"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F032--L2--umodel_semantic",
+      "instruction": "请复核 rca-benchmark 中 /api/v1/inventory/{productId} 在 2026年09月03日 10:10:25 至 10:15:43（北京时间）期间的异常。判断版本变化是否影响全部接口，确定回退或保留范围，并说明历史失败业务的结果边界。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`. Public investigation guidance is available in `/scene/SCOPE-MAP.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "9f93dc48d4e0e44a5072eca0a62956c039e9e2b6778c8bfa85bb51cd5ea65dfb",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "3edf18bd68d5056d70ffa088a47f14936b0cda2516472a549821ff459f9b57e0"
+      },
+      "instruction_sha256": "9f93dc48d4e0e44a5072eca0a62956c039e9e2b6778c8bfa85bb51cd5ea65dfb"
+    },
+    "native_raw": {
+      "task_id": "AD--F032--L2--native_raw",
+      "instruction": "请复核 rca-benchmark 中 /api/v1/inventory/{productId} 在 2026年09月03日 10:10:25 至 10:15:43（北京时间）期间的异常。判断版本变化是否影响全部接口，确定回退或保留范围，并说明历史失败业务的结果边界。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method. Public investigation guidance is available in `/scene/SCOPE-MAP.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "0cf3657073a3253f4871cd5972317f9513d8ccafc31b43a7423b9d93d3c9de1d",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "3edf18bd68d5056d70ffa088a47f14936b0cda2516472a549821ff459f9b57e0"
+      },
+      "instruction_sha256": "0cf3657073a3253f4871cd5972317f9513d8ccafc31b43a7423b9d93d3c9de1d"
+    }
+  },
+  "analysis_cluster_id": "F032"
+}

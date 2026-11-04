@@ -1,0 +1,40 @@
+{
+  "case_id": "DR--L2-P28--L1",
+  "task": "DR",
+  "source_case_id": "L2-P28",
+  "family_id": "L2-P28",
+  "bundle_id": "bundle-acc101ee3691dfb4662a",
+  "source_level": "TD1",
+  "level": 1,
+  "slice": "metric.retrieve-cpu-peaks",
+  "access_profiles": {
+    "umodel_semantic": {
+      "task_id": "DR--L2-P28--L1--umodel_semantic",
+      "instruction": "帮我回看 rca-benchmark 工作空间，cms-demo，2026-06-11T06:35:31+08:00—2026-06-11T07:06:31+08:00 内 shipping，在最后一段副本连续配齐期间，这个时间窗口内新拉起的实例中 CPU 使用率与 CPU 上限占比分别最高的实例是哪些？按各自峰值给出结果、峰值首次出现时间和依据，只算实例运行期间的采样。\n\n## 已知条件\n\n本题给定的比较阶段为 `2026-06-11T07:04:31+08:00`—`2026-06-11T07:04:31+08:00`（北京时间，包含两端采样）。\n\n以下为参与比较的候选实例，以及它们在给定阶段内的有效运行区间（北京时间，左闭右开）：\n- `shipping-7567957cb5-ngjrx`：[`2026-06-11T07:04:31+08:00`, `2026-06-11T07:04:41+08:00`)\n- `shipping-7567957cb5-qv4sq`：[`2026-06-11T07:04:31+08:00`, `2026-06-11T07:04:41+08:00`)\n- `shipping-7567957cb5-wdcs9`：[`2026-06-11T07:04:31+08:00`, `2026-06-11T07:04:41+08:00`)\n\nCPU使用率使用信号 `pod_cpu_usage_rate`；CPU上限占比使用信号 `pod_cpu_usage_rate_vs_limit`。\n对每个候选实例，仅统计同时位于给定阶段和该实例有效运行区间内的采样；停止事件发生时刻起不再计入。先求每个实例在两个信号上的峰值及其首次出现时间，再分别比较实例。\n\n# 接口\n\n# 查询接口\n\n运行时提供 `UMODEL_URL`、`UMODEL_ENVIRONMENT_ID`、`UMODEL_WORKSPACE`、`UMODEL_REGION_ID`。使用提供的API读取冻结观测数据，不修改环境。\n\n- `GET /v1/health`：健康状态。\n- `GET /v1/capabilities`：能力与分页上限。\n- `POST /v1/entities/search`：实体目录。至少提供query（名称关键词）、entity_types（类型列表）、attributes（属性匹配）中的一项非空条件。\n- `POST /v1/signals`：信号目录，entity_selector选择范围，modalities选择模态。\n- `POST /v1/query`：观测查询。\n\nPOST公共字段：environment_id、workspace、region_id，使用对应环境变量值。\n\n```json\n{\n  \"request_id\": \"<逻辑查询标识>\",\n  \"environment_id\": \"<环境标识>\",\n  \"workspace\": \"<工作空间>\",\n  \"region_id\": \"<区域>\",\n  \"time_range\": {\"start\":\"<带时区时间>\",\"end\":\"<带时区时间>\"},\n  \"entity_selector\": {\"entity_types\":[\"<实体类型>\"]},\n  \"query\": {\"kind\":\"<模态>\"},\n  \"page_size\": 1000\n}\n```\n\nentity_selector也支持entity_ids。query参数：\n\n```json\n{\"kind\":\"metric\",\"metric_name\":\"<信号名>\",\"stat\":\"series\"}\n{\"kind\":\"log\",\"text\":\"\",\"filters\":{},\"order\":\"asc\"}\n{\"kind\":\"trace\",\"trace_id\":\"\",\"service_name\":\"\",\"operation_name\":\"\",\"status\":\"\",\"attributes\":{}}\n{\"kind\":\"event\",\"event_type\":\"\",\"status\":\"\",\"rule_id\":\"\",\"attributes\":{}}\n{\"kind\":\"topology\",\"direction\":\"both\",\"max_depth\":2}\n```\n\n空字符串表示不指定该过滤条件。业务字段在attributes中；记录用record_ref引用。时间过滤包含两端。\n\n响应含results和page；将page.next_cursor作为下一请求顶层cursor，其余参数不变，直至next_cursor为null。新逻辑查询使用新的request_id，不使用offset。\n\n通用数据字段见`/scene/DATA_DICTIONARY.md`。\n\n# 交付\n\n把答案保存到`/app/answer.json`，使用UTF-8 JSON：\n```json\n{\"selected_period\":{\"first_met_sample\":\"<带时区时间>\",\"last_met_sample\":\"<带时区时间>\"},\"cpu_usage\":{\"instance\":\"\",\"value\":0.0,\"time\":\"<带时区时间>\"},\"cpu_limit_pressure\":{\"instance\":\"\",\"value\":0.0,\"time\":\"<带时区时间>\"}}\n```\n可选的工作证据格式见`/scene/EVIDENCE_FORMAT.md`。\n",
+      "original_instruction_sha256": "3a8c4aad53c05ffcd05966774b51e7a0f08e470bd9352731a6b9e69cc6ba6f67",
+      "reference_artifact_sha256": {
+        "tests/private/contract.json": "6bbeec80d350521e242036428ac96f0767b652c5c4b7a6c78e8ffa6adee65748"
+      },
+      "instruction_sha256": "3a8c4aad53c05ffcd05966774b51e7a0f08e470bd9352731a6b9e69cc6ba6f67"
+    },
+    "shell_raw": {
+      "task_id": "DR--L2-P28--L1--shell_raw",
+      "instruction": "帮我回看 rca-benchmark 工作空间，cms-demo，2026-06-11T06:35:31+08:00—2026-06-11T07:06:31+08:00 内 shipping，在最后一段副本连续配齐期间，这个时间窗口内新拉起的实例中 CPU 使用率与 CPU 上限占比分别最高的实例是哪些？按各自峰值给出结果、峰值首次出现时间和依据，只算实例运行期间的采样。\n\n## 已知条件\n\n本题给定的比较阶段为 `2026-06-11T07:04:31+08:00`—`2026-06-11T07:04:31+08:00`（北京时间，包含两端采样）。\n\n以下为参与比较的候选实例，以及它们在给定阶段内的有效运行区间（北京时间，左闭右开）：\n- `shipping-7567957cb5-ngjrx`：[`2026-06-11T07:04:31+08:00`, `2026-06-11T07:04:41+08:00`)\n- `shipping-7567957cb5-qv4sq`：[`2026-06-11T07:04:31+08:00`, `2026-06-11T07:04:41+08:00`)\n- `shipping-7567957cb5-wdcs9`：[`2026-06-11T07:04:31+08:00`, `2026-06-11T07:04:41+08:00`)\n\nCPU使用率使用信号 `pod_cpu_usage_rate`；CPU上限占比使用信号 `pod_cpu_usage_rate_vs_limit`。\n对每个候选实例，仅统计同时位于给定阶段和该实例有效运行区间内的采样；停止事件发生时刻起不再计入。先求每个实例在两个信号上的峰值及其首次出现时间，再分别比较实例。\n\n# 接口\n\n# Shell raw access\n\nThe frozen scene is `/scene/replay.duckdb`. Use shell commands and Python with `duckdb` to query the read-only `entities` and `records` tables. `records.modality` distinguishes metric, event, trace, log, and topology. Preserve `record_ref`, timestamps, units, dimensions, and entity IDs. `/scene/SCHEMA.md` documents columns. Do not modify the database.\n\n# 交付\n\n把答案保存到`/app/answer.json`，使用UTF-8 JSON：\n```json\n{\"selected_period\":{\"first_met_sample\":\"<带时区时间>\",\"last_met_sample\":\"<带时区时间>\"},\"cpu_usage\":{\"instance\":\"\",\"value\":0.0,\"time\":\"<带时区时间>\"},\"cpu_limit_pressure\":{\"instance\":\"\",\"value\":0.0,\"time\":\"<带时区时间>\"}}\n```\n可选的工作证据格式见`/scene/EVIDENCE_FORMAT.md`。\n",
+      "original_instruction_sha256": "6e9ff40b882ea1f2bb743a4216170e11400189aa975fc4256e1be2595384cb75",
+      "reference_artifact_sha256": {
+        "tests/private/contract.json": "6bbeec80d350521e242036428ac96f0767b652c5c4b7a6c78e8ffa6adee65748"
+      },
+      "instruction_sha256": "6e9ff40b882ea1f2bb743a4216170e11400189aa975fc4256e1be2595384cb75"
+    },
+    "native_raw": {
+      "task_id": "DR--L2-P28--L1--native_raw",
+      "instruction": "帮我回看 rca-benchmark 工作空间，cms-demo，2026-06-11T06:35:31+08:00—2026-06-11T07:06:31+08:00 内 shipping，在最后一段副本连续配齐期间，这个时间窗口内新拉起的实例中 CPU 使用率与 CPU 上限占比分别最高的实例是哪些？按各自峰值给出结果、峰值首次出现时间和依据，只算实例运行期间的采样。\n\n## 已知条件\n\n本题给定的比较阶段为 `2026-06-11T07:04:31+08:00`—`2026-06-11T07:04:31+08:00`（北京时间，包含两端采样）。\n\n以下为参与比较的候选实例，以及它们在给定阶段内的有效运行区间（北京时间，左闭右开）：\n- `shipping-7567957cb5-ngjrx`：[`2026-06-11T07:04:31+08:00`, `2026-06-11T07:04:41+08:00`)\n- `shipping-7567957cb5-qv4sq`：[`2026-06-11T07:04:31+08:00`, `2026-06-11T07:04:41+08:00`)\n- `shipping-7567957cb5-wdcs9`：[`2026-06-11T07:04:31+08:00`, `2026-06-11T07:04:41+08:00`)\n\nCPU使用率使用信号 `pod_cpu_usage_rate`；CPU上限占比使用信号 `pod_cpu_usage_rate_vs_limit`。\n对每个候选实例，仅统计同时位于给定阶段和该实例有效运行区间内的采样；停止事件发生时刻起不再计入。先求每个实例在两个信号上的峰值及其首次出现时间，再分别比较实例。\n\n# 接口\n\n# Native API access\n\n`NATIVE_API_URL` is a read-only HTTP service. Start with `GET /v1/catalog`. Metric values use the proxied Prometheus endpoints `/api/v1/query`, `/api/v1/query_range`, `/api/v1/series`, and metadata endpoints. Entity identities are also in `/scene/entities.jsonl`; topology observations are in `/scene/topology.jsonl`. Event, Trace, and Log use `/v1/events`, `/v1/traces`, and `/v1/logs`; resources use `/v1/resources`. Follow `next_offset` until null. Preserve returned record references, timestamps, units, labels, and entity IDs. PromQL and these Native HTTP endpoints are one Native access method.\n\n# 交付\n\n把答案保存到`/app/answer.json`，使用UTF-8 JSON：\n```json\n{\"selected_period\":{\"first_met_sample\":\"<带时区时间>\",\"last_met_sample\":\"<带时区时间>\"},\"cpu_usage\":{\"instance\":\"\",\"value\":0.0,\"time\":\"<带时区时间>\"},\"cpu_limit_pressure\":{\"instance\":\"\",\"value\":0.0,\"time\":\"<带时区时间>\"}}\n```\n可选的工作证据格式见`/scene/EVIDENCE_FORMAT.md`。\n",
+      "original_instruction_sha256": "c4c0ff7503bd14f069416f2c92fda9777bc86a51f38df8a29080f39e11512cec",
+      "reference_artifact_sha256": {
+        "tests/private/contract.json": "6bbeec80d350521e242036428ac96f0767b652c5c4b7a6c78e8ffa6adee65748"
+      },
+      "instruction_sha256": "c4c0ff7503bd14f069416f2c92fda9777bc86a51f38df8a29080f39e11512cec"
+    }
+  },
+  "analysis_cluster_id": "bundle-acc101ee3691dfb4662a"
+}

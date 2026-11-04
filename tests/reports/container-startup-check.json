@@ -1,0 +1,131 @@
+{
+  "image": "opsgauge-replay-base:2026.10.27",
+  "expected_image_id": "sha256:8aec63feb081882edcb25a7d68ddce2a76ba9761a5599c3c1e082601763e62f5",
+  "example_environments": 12,
+  "tasks": [
+    {
+      "task": "DR",
+      "profile": "shell_raw"
+    },
+    {
+      "task": "DR",
+      "profile": "native_raw"
+    },
+    {
+      "task": "DR",
+      "profile": "umodel_semantic"
+    },
+    {
+      "task": "AD",
+      "profile": "shell_raw"
+    },
+    {
+      "task": "AD",
+      "profile": "native_raw"
+    },
+    {
+      "task": "AD",
+      "profile": "umodel_semantic"
+    },
+    {
+      "task": "HA",
+      "profile": "shell_raw"
+    },
+    {
+      "task": "HA",
+      "profile": "native_raw"
+    },
+    {
+      "task": "HA",
+      "profile": "umodel_semantic"
+    },
+    {
+      "task": "RCA",
+      "profile": "shell_raw"
+    },
+    {
+      "task": "RCA",
+      "profile": "native_raw"
+    },
+    {
+      "task": "RCA",
+      "profile": "umodel_semantic"
+    }
+  ],
+  "agent_runs": 0,
+  "model_calls": 0,
+  "scope": "Image import and Python dependency import; Docker Compose build/start/readiness of each example. Does not establish full agent execution or scoring correctness.",
+  "passed": true,
+  "image_id_verified": true,
+  "image_runtime_imports_passed": true,
+  "checks": [
+    {
+      "task": "DR",
+      "profile": "shell_raw",
+      "passed": true
+    },
+    {
+      "task": "DR",
+      "profile": "native_raw",
+      "passed": true
+    },
+    {
+      "task": "DR",
+      "profile": "umodel_semantic",
+      "passed": true
+    },
+    {
+      "task": "AD",
+      "profile": "shell_raw",
+      "passed": true
+    },
+    {
+      "task": "AD",
+      "profile": "native_raw",
+      "passed": true
+    },
+    {
+      "task": "AD",
+      "profile": "umodel_semantic",
+      "passed": true
+    },
+    {
+      "task": "HA",
+      "profile": "shell_raw",
+      "passed": true
+    },
+    {
+      "task": "HA",
+      "profile": "native_raw",
+      "passed": true
+    },
+    {
+      "task": "HA",
+      "profile": "umodel_semantic",
+      "passed": true
+    },
+    {
+      "task": "RCA",
+      "profile": "shell_raw",
+      "passed": true
+    },
+    {
+      "task": "RCA",
+      "profile": "native_raw",
+      "passed": true
+    },
+    {
+      "task": "RCA",
+      "profile": "umodel_semantic",
+      "passed": true
+    }
+  ],
+  "docker_executed": true,
+  "finished_utc": "2026-10-27T06:04:56.359766+00:00",
+  "external_prerequisites": [
+    "Existing benchmark-claude-runtime:2.1.309-v1 image on validation host; not included in release archive.",
+    "Public base images and package registries reachable during builds."
+  ],
+  "clean_host_installation_verified": false,
+  "test_containers_cleaned_up": true
+}

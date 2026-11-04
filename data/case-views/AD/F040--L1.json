@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F040--L1",
+  "task": "AD",
+  "source_case_id": "F040",
+  "family_id": "F040",
+  "bundle_id": null,
+  "source_level": "IL3",
+  "level": 1,
+  "slice": "L3-S5",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F040--L1--shell_raw",
+      "instruction": "请复核 rca-benchmark 中 frontend::GET /api/products/{productId} 在 2026年07月07日 09:43:00 至 09:45:47（北京时间）期间的异常。区分 product-catalog 文件卷与 inventory 线程池两条链，判断入口慢调用归属，并说明可交付业务结果边界。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n可使用 /scene/SCOPE-MAP.json 与 /scene/EVIDENCE-PATH.json；其中仅提供调查阶段和证据归组，不包含根因、机制答案或正确判断。\n",
+      "original_instruction_sha256": "c63262ddbdbb97ae4090ff7eb0a6e539ab9d0e85a8edd00bf4db10b79cb5941a",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "ef23a37bdb773d8778aabe9d2f2b4a33200e52f3aa1c85cae1922cc6175847a8"
+      },
+      "instruction_sha256": "c63262ddbdbb97ae4090ff7eb0a6e539ab9d0e85a8edd00bf4db10b79cb5941a"
+    },
+    "native_raw": {
+      "task_id": "AD--F040--L1--native_raw",
+      "instruction": "请复核 rca-benchmark 中 frontend::GET /api/products/{productId} 在 2026年07月07日 09:43:00 至 09:45:47（北京时间）期间的异常。区分 product-catalog 文件卷与 inventory 线程池两条链，判断入口慢调用归属，并说明可交付业务结果边界。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method. Public investigation guidance is available in `/scene/SCOPE-MAP.json` and `/scene/EVIDENCE-PATH.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "6478b18550bcf3f66512c73081f850c9d0daa0b4b1b6a610bd6e6807a3a92553",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "ef23a37bdb773d8778aabe9d2f2b4a33200e52f3aa1c85cae1922cc6175847a8"
+      },
+      "instruction_sha256": "6478b18550bcf3f66512c73081f850c9d0daa0b4b1b6a610bd6e6807a3a92553"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F040--L1--umodel_semantic",
+      "instruction": "请复核 rca-benchmark 中 frontend::GET /api/products/{productId} 在 2026年07月07日 09:43:00 至 09:45:47（北京时间）期间的异常。区分 product-catalog 文件卷与 inventory 线程池两条链，判断入口慢调用归属，并说明可交付业务结果边界。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`. Public investigation guidance is available in `/scene/SCOPE-MAP.json` and `/scene/EVIDENCE-PATH.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "fdfbe7446c0b701cd72d1a977939ad608a2654e46313c4148a872e58d134af2f",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "ef23a37bdb773d8778aabe9d2f2b4a33200e52f3aa1c85cae1922cc6175847a8"
+      },
+      "instruction_sha256": "fdfbe7446c0b701cd72d1a977939ad608a2654e46313c4148a872e58d134af2f"
+    }
+  },
+  "analysis_cluster_id": "F040"
+}

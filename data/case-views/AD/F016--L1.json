@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F016--L1",
+  "task": "AD",
+  "source_case_id": "F016",
+  "family_id": "F016",
+  "bundle_id": null,
+  "source_level": "IL3",
+  "level": 1,
+  "slice": "L3-S7",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F016--L1--shell_raw",
+      "instruction": "请复核 rca-benchmark 中 checkout 在 2026年09月02日 22:51:41 至 22:55:30（北京时间）期间的业务异常。评估发布涉及的实际范围，判断回滚对象与回滚充分性，并说明仍不能确认的业务状态。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n可使用 /scene/SCOPE-MAP.json 与 /scene/EVIDENCE-PATH.json；其中仅提供调查阶段和证据归组，不包含根因、机制答案或正确判断。\n",
+      "original_instruction_sha256": "d729c9e61a9ecde57d40e1e220e064bd5025cd940dd16f6e85bb79d9c17e8be2",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "800808d3ce9e97f570aa2205781c1a696e86a35cb7981d199e2ee44a7f85b3fd"
+      },
+      "instruction_sha256": "d729c9e61a9ecde57d40e1e220e064bd5025cd940dd16f6e85bb79d9c17e8be2"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F016--L1--umodel_semantic",
+      "instruction": "请复核 rca-benchmark 中 checkout 在 2026年09月02日 22:51:41 至 22:55:30（北京时间）期间的业务异常。评估发布涉及的实际范围，判断回滚对象与回滚充分性，并说明仍不能确认的业务状态。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`. Public investigation guidance is available in `/scene/SCOPE-MAP.json` and `/scene/EVIDENCE-PATH.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "64f5fa190fc5c1977df009cde69e201f0a3c8afcac394f5575b810a0ec31f74e",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "800808d3ce9e97f570aa2205781c1a696e86a35cb7981d199e2ee44a7f85b3fd"
+      },
+      "instruction_sha256": "64f5fa190fc5c1977df009cde69e201f0a3c8afcac394f5575b810a0ec31f74e"
+    },
+    "native_raw": {
+      "task_id": "AD--F016--L1--native_raw",
+      "instruction": "请复核 rca-benchmark 中 checkout 在 2026年09月02日 22:51:41 至 22:55:30（北京时间）期间的业务异常。评估发布涉及的实际范围，判断回滚对象与回滚充分性，并说明仍不能确认的业务状态。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method. Public investigation guidance is available in `/scene/SCOPE-MAP.json` and `/scene/EVIDENCE-PATH.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "6f95bde07f8004e85e3c75820fc9a7aa1efd5d95d1a4f6f5d322ce646362b168",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "800808d3ce9e97f570aa2205781c1a696e86a35cb7981d199e2ee44a7f85b3fd"
+      },
+      "instruction_sha256": "6f95bde07f8004e85e3c75820fc9a7aa1efd5d95d1a4f6f5d322ce646362b168"
+    }
+  },
+  "analysis_cluster_id": "F016"
+}

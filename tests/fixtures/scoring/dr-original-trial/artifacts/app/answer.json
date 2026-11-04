@@ -1,0 +1,16 @@
+{
+  "selected_period": {
+    "first_met_sample": "2026-06-02T18:54:16+08:00",
+    "last_met_sample": "2026-06-02T19:21:46+08:00"
+  },
+  "cpu_usage": {
+    "instance": "recommendation-658bc44546-9tk7l",
+    "value": 0.03274984104434451,
+    "time": "2026-06-02T19:15:46+08:00"
+  },
+  "cpu_limit_pressure": {
+    "instance": "recommendation-658bc44546-9tk7l",
+    "value": 16.37492052217225,
+    "time": "2026-06-02T19:15:46+08:00"
+  }
+}

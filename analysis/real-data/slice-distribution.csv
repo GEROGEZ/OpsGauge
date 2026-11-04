@@ -1,0 +1,29 @@
+task,slice_id,slice,label,families,percent
+DR,S1,metric.retrieve-cpu-peaks,Retrieve CPU peaks,29,39.189189189189186
+DR,S2,metric.compare-independent-rankings,Compare CPU rankings,13,17.56756756756757
+DR,S3,event.reconstruct-transaction-state,Reconstruct alert states,8,10.81081081081081
+DR,S4,event.aggregate-cross-rule-state,Aggregate alerts across rules,8,10.81081081081081
+DR,S5,trace.rank-failure-volume-rate,Rank APIs by failure count and rate,8,10.81081081081081
+DR,S6,event-trace.align-intervals,Measure calls at container stops,8,10.81081081081081
+AD,S1,L3-S1,Identify affected business objects,7,14.0
+AD,S2,L3-S2,Locate and bound business impact,8,16.0
+AD,S3,L3-S3,Distinguish progress from completion,7,14.0
+AD,S4,L3-S4,Reassess anomalies across phases,7,14.0
+AD,S5,L3-S5,Distinguish linked and independent anomalies,8,16.0
+AD,S6,L3-S6,Verify service availability,7,14.0
+AD,S7,L3-S7,Verify business recovery,6,12.0
+HA,S1,mission.latency,Identify latency degradation,28,15.819209039548022
+HA,S2,mission.errors,Identify elevated errors,25,14.124293785310735
+HA,S3,mission.saturation,Identify capacity saturation,74,41.80790960451977
+HA,S4,mission.state_flow,Identify state or flow anomalies,9,5.084745762711864
+HA,S5,mission.multi_request,Report multiple request-signal findings,10,5.649717514124294
+HA,S6,mission.multi_request_capacity,Report request and capacity findings,22,12.429378531073446
+HA,S7,mission.multi_state_change,Report mixed findings involving state,8,4.519774011299435
+HA,S8,mission.healthy_confirmation,Confirm a healthy scope,1,0.5649717514124294
+RCA,S1,rca.capacity_load,Diagnose capacity and load problems,34,26.5625
+RCA,S2,rca.service_execution,Diagnose service execution failures,25,19.53125
+RCA,S3,rca.instance_lifecycle,Diagnose instance lifecycle failures,20,15.625
+RCA,S4,rca.routing_connectivity,Diagnose routing and connectivity failures,20,15.625
+RCA,S5,rca.data_access,Diagnose data-access failures,10,7.8125
+RCA,S6,rca.async_messaging,Diagnose asynchronous messaging failures,4,3.125
+RCA,S7,rca.concurrent_causes,Separate concurrent causes,15,11.71875

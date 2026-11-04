@@ -1,0 +1,25 @@
+{
+  "access_profile": "shell_raw",
+  "bundle_id": "bundle-075983241d62665df086",
+  "case_id": "case-fcc6fc7eeb9b447df39f",
+  "classification": {
+    "axis": "capability",
+    "dimensions": {
+      "fault_ids": [
+        "F112-redisSlowCommand"
+      ],
+      "root_count": 1
+    },
+    "labels": [
+      "rca.data_access"
+    ],
+    "schema_version": "benchmark_case_classification_v2",
+    "taxonomy_id": "operations_capability_slices",
+    "taxonomy_version": "2"
+  },
+  "difficulty": "hard",
+  "distribution_labels": [],
+  "schema_version": "harbor_access_profile_v1",
+  "shared_task_truth": true,
+  "task_type": "rca"
+}

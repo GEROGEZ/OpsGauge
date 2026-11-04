@@ -1,0 +1,14 @@
+{
+  "schema_version": "info150_access_cell_v1",
+  "date": "2026-10-23",
+  "cell_id": "F035-IL1-umodel_semantic",
+  "family_key": "F035",
+  "level": "IL1",
+  "profile": "umodel_semantic",
+  "source_question_sha256": "929beb0bc10d9ead4a9105c683e9b015c7c4a555d0bb79d2a03c7e2abe8de5f1",
+  "source_evidence_sha256": "0831030b1d728c875af0456bfbbb9a74fc1f901ac474a9d4695097fae0ff2fe2",
+  "replay_sha256": "def828eb88aeff0f68d78af7584a6ad937084ac7911b0e930e1214aa61dc54f9",
+  "gt_sha256": "805db886f401d1311c1b751125e1889518bfbc097e1a194964c0b34adb3c5e9d",
+  "scorer_sha256": "94a94c4e3e1a34ff9def0b058d4fa9c5d30a272d2764857df25232f92241098c",
+  "case_config_sha256": "1bc2570811007df495be802468a7ceffeaf114b78bc0dce71b302eee020c6159"
+}

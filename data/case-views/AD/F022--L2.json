@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F022--L2",
+  "task": "AD",
+  "source_case_id": "F022",
+  "family_id": "F022",
+  "bundle_id": null,
+  "source_level": "IL2",
+  "level": 2,
+  "slice": "L3-S5",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F022--L2--shell_raw",
+      "instruction": "请复核 rca-benchmark 中 cart::POST /oteldemo.CartService/EmptyCart 在 2026年08月10日 18:14:22 至 19:12:00（北京时间）期间的异常。判断连通性变化与Redis慢命令是否为同一条链，明确分别需要恢复的范围及端到端结果边界。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n可使用 /scene/SCOPE-MAP.json 获取中性的调查范围信息；其中不包含因果边、根因或正确判断。\n",
+      "original_instruction_sha256": "ea464b231fc7239ff583236890bf760fce182bc95c35c56740e07f68b50a5a08",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "c1a40638bfda39e24fc0b4216ba17976c0aa669cbe32de21eb46fa30d2e0f715"
+      },
+      "instruction_sha256": "ea464b231fc7239ff583236890bf760fce182bc95c35c56740e07f68b50a5a08"
+    },
+    "native_raw": {
+      "task_id": "AD--F022--L2--native_raw",
+      "instruction": "请复核 rca-benchmark 中 cart::POST /oteldemo.CartService/EmptyCart 在 2026年08月10日 18:14:22 至 19:12:00（北京时间）期间的异常。判断连通性变化与Redis慢命令是否为同一条链，明确分别需要恢复的范围及端到端结果边界。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method. Public investigation guidance is available in `/scene/SCOPE-MAP.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "10b747a5e7e3b7b3ac084c03f3b53d1ea3a2fbbc85351c8d5da7b0fa2fc4ee51",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "c1a40638bfda39e24fc0b4216ba17976c0aa669cbe32de21eb46fa30d2e0f715"
+      },
+      "instruction_sha256": "10b747a5e7e3b7b3ac084c03f3b53d1ea3a2fbbc85351c8d5da7b0fa2fc4ee51"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F022--L2--umodel_semantic",
+      "instruction": "请复核 rca-benchmark 中 cart::POST /oteldemo.CartService/EmptyCart 在 2026年08月10日 18:14:22 至 19:12:00（北京时间）期间的异常。判断连通性变化与Redis慢命令是否为同一条链，明确分别需要恢复的范围及端到端结果边界。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`. Public investigation guidance is available in `/scene/SCOPE-MAP.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "70a51a664565edc78081843dfd3e77faf43f37c8217adeaa9c204a0cac0ec7e9",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "c1a40638bfda39e24fc0b4216ba17976c0aa669cbe32de21eb46fa30d2e0f715"
+      },
+      "instruction_sha256": "70a51a664565edc78081843dfd3e77faf43f37c8217adeaa9c204a0cac0ec7e9"
+    }
+  },
+  "analysis_cluster_id": "F022"
+}

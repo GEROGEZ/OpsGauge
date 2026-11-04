@@ -1,0 +1,9 @@
+{
+  "status": "reviewed_no_sensitive_file_content_identified",
+  "occurrences": 8,
+  "database_objects": 3,
+  "distinct_trace_spans": 1,
+  "context": "Same frontend HTTP request operation name stored across records.signal, payload and attributes; no AWS configuration file contents or credentials in the reviewed records.",
+  "action": "Retain observed request path. User accepted the context review.",
+  "limitation": "Request origin and intent not established."
+}

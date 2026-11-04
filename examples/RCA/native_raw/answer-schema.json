@@ -1,0 +1,245 @@
+{
+  "$defs": {
+    "EvidenceCitation": {
+      "additionalProperties": false,
+      "properties": {
+        "attributes": {
+          "additionalProperties": true,
+          "title": "Attributes",
+          "type": "object"
+        },
+        "entity_ids": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Entity Ids",
+          "type": "array"
+        },
+        "evidence_id": {
+          "minLength": 1,
+          "title": "Evidence Id",
+          "type": "string"
+        },
+        "modality": {
+          "$ref": "#/$defs/ReplayModality"
+        },
+        "observed_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Observed At"
+        },
+        "record_refs": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Record Refs",
+          "type": "array"
+        },
+        "signal": {
+          "minLength": 1,
+          "title": "Signal",
+          "type": "string"
+        },
+        "unit": {
+          "default": "",
+          "title": "Unit",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {},
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        }
+      },
+      "required": [
+        "evidence_id",
+        "modality",
+        "signal",
+        "entity_ids",
+        "record_refs"
+      ],
+      "title": "EvidenceCitation",
+      "type": "object"
+    },
+    "RcaCausalStepAnswer": {
+      "additionalProperties": false,
+      "properties": {
+        "description": {
+          "minLength": 1,
+          "title": "Description",
+          "type": "string"
+        },
+        "entity_ids": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Entity Ids",
+          "type": "array"
+        },
+        "evidence_ids": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "step": {
+          "minimum": 1,
+          "title": "Step",
+          "type": "integer"
+        },
+        "step_type": {
+          "enum": [
+            "cause",
+            "propagation",
+            "impact",
+            "conclusion"
+          ],
+          "title": "Step Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "step",
+        "step_type",
+        "entity_ids",
+        "evidence_ids",
+        "description"
+      ],
+      "title": "RcaCausalStepAnswer",
+      "type": "object"
+    },
+    "RcaRootCauseAnswer": {
+      "additionalProperties": false,
+      "properties": {
+        "conclusion": {
+          "minLength": 1,
+          "title": "Conclusion",
+          "type": "string"
+        },
+        "entity_ids": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Entity Ids",
+          "type": "array"
+        },
+        "evidence_ids": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "fault_id": {
+          "description": "Canonical fault label selected from and copied exactly as one entry of the release-wide fault vocabulary exposed at `/scene/fault-taxonomy.json` (also inlined in the task instruction); not free text.",
+          "minLength": 1,
+          "title": "Fault Id",
+          "type": "string"
+        },
+        "rc_id": {
+          "minLength": 1,
+          "title": "Rc Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "rc_id",
+        "fault_id",
+        "entity_ids",
+        "evidence_ids",
+        "conclusion"
+      ],
+      "title": "RcaRootCauseAnswer",
+      "type": "object"
+    },
+    "ReplayModality": {
+      "enum": [
+        "metric",
+        "log",
+        "trace",
+        "event",
+        "topology"
+      ],
+      "title": "ReplayModality",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "causal_chain": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/RcaCausalStepAnswer"
+      },
+      "title": "Causal Chain",
+      "type": "array"
+    },
+    "conclusion": {
+      "minLength": 1,
+      "title": "Conclusion",
+      "type": "string"
+    },
+    "evidence": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/EvidenceCitation"
+      },
+      "title": "Evidence",
+      "type": "array"
+    },
+    "root_causes": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/RcaRootCauseAnswer"
+      },
+      "title": "Root Causes",
+      "type": "array"
+    },
+    "schema_version": {
+      "const": "rca_answer_v1",
+      "default": "rca_answer_v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "completed",
+        "insufficient_evidence"
+      ],
+      "title": "Status",
+      "type": "string"
+    }
+  },
+  "required": [
+    "status",
+    "conclusion"
+  ],
+  "title": "RcaAnswer",
+  "type": "object"
+}

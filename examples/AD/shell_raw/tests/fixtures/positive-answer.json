@@ -1,0 +1,36 @@
+{
+  "state": "final",
+  "summary": "fixture",
+  "claims": [
+    {
+      "id": "fixed_product_hotspot",
+      "status": "supported",
+      "evidence_refs": [
+        "c049-e01",
+        "c049-e02",
+        "c049-e04"
+      ]
+    },
+    {
+      "id": "global_capacity_shortage",
+      "status": "not_established",
+      "evidence_refs": [
+        "c049-e06"
+      ]
+    },
+    {
+      "id": "all_products_affected",
+      "status": "not_established",
+      "evidence_refs": [
+        "c049-e06"
+      ]
+    },
+    {
+      "id": "unique_business_impact_population",
+      "status": "not_established",
+      "evidence_refs": [
+        "c049-e07"
+      ]
+    }
+  ]
+}

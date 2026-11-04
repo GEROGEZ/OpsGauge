@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F026--L2",
+  "task": "AD",
+  "source_case_id": "F026",
+  "family_id": "F026",
+  "bundle_id": null,
+  "source_level": "IL2",
+  "level": 2,
+  "slice": "L3-S4",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F026--L2--shell_raw",
+      "instruction": "请复核 rca-benchmark 中 frontend::DELETE /api/cart 在 2026年08月10日 16:40:38 至 16:56:00（北京时间）期间的异常。区分前后两波错误型和延迟型异常，判断请求成功或零错误是否足以证明业务状态一致，并明确处置边界。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n可使用 /scene/SCOPE-MAP.json 获取中性的调查范围信息；其中不包含因果边、根因或正确判断。\n",
+      "original_instruction_sha256": "308e41d6207d212b936bd682aee80a3a5e61c0dfd6d207e0128f5d48f7dc4cf4",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "ecd04f3813962053240bd842ed16f96542b11c23daf61d38de95efd9a23d20e0"
+      },
+      "instruction_sha256": "308e41d6207d212b936bd682aee80a3a5e61c0dfd6d207e0128f5d48f7dc4cf4"
+    },
+    "native_raw": {
+      "task_id": "AD--F026--L2--native_raw",
+      "instruction": "请复核 rca-benchmark 中 frontend::DELETE /api/cart 在 2026年08月10日 16:40:38 至 16:56:00（北京时间）期间的异常。区分前后两波错误型和延迟型异常，判断请求成功或零错误是否足以证明业务状态一致，并明确处置边界。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method. Public investigation guidance is available in `/scene/SCOPE-MAP.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "4ee073289b7e5a891c6a43497c2369ff5ed0c67214862561e563d081e1c81c3a",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "ecd04f3813962053240bd842ed16f96542b11c23daf61d38de95efd9a23d20e0"
+      },
+      "instruction_sha256": "4ee073289b7e5a891c6a43497c2369ff5ed0c67214862561e563d081e1c81c3a"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F026--L2--umodel_semantic",
+      "instruction": "请复核 rca-benchmark 中 frontend::DELETE /api/cart 在 2026年08月10日 16:40:38 至 16:56:00（北京时间）期间的异常。区分前后两波错误型和延迟型异常，判断请求成功或零错误是否足以证明业务状态一致，并明确处置边界。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`. Public investigation guidance is available in `/scene/SCOPE-MAP.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "9596eef3582329840a8517490087bc8ef9f44747ab08a8b86ee990b93ab26734",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "ecd04f3813962053240bd842ed16f96542b11c23daf61d38de95efd9a23d20e0"
+      },
+      "instruction_sha256": "9596eef3582329840a8517490087bc8ef9f44747ab08a8b86ee990b93ab26734"
+    }
+  },
+  "analysis_cluster_id": "F026"
+}

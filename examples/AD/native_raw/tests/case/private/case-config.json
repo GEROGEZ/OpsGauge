@@ -1,0 +1,50 @@
+{
+  "schema_version": "information_level_case_config_v2",
+  "candidate_id": "C049",
+  "date": "2026-10-22",
+  "question_sha256": "56a05f7348d8c2350ba3e7669d03caad71c6136fe872eee8a22b60f7ccb2c144",
+  "claims": [
+    {
+      "id": "fixed_product_hotspot",
+      "status": "supported",
+      "required_groups": [
+        "traffic",
+        "product_catalog",
+        "frontend"
+      ],
+      "weight": 15
+    },
+    {
+      "id": "global_capacity_shortage",
+      "status": "not_established",
+      "required_groups": [
+        "scope"
+      ],
+      "weight": 15
+    },
+    {
+      "id": "all_products_affected",
+      "status": "not_established",
+      "required_groups": [
+        "scope"
+      ],
+      "weight": 15
+    },
+    {
+      "id": "unique_business_impact_population",
+      "status": "not_established",
+      "required_groups": [
+        "business"
+      ],
+      "weight": 15
+    }
+  ],
+  "process_max": 40,
+  "result_max": 60,
+  "composite": "process*0.4+result*0.6",
+  "unverified": 0,
+  "process_requirements": {
+    "min_unique_refs": 3,
+    "min_groups": 2
+  }
+}

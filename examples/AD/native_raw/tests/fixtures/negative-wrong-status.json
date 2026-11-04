@@ -1,0 +1,36 @@
+{
+  "state": "final",
+  "summary": "wrong status",
+  "claims": [
+    {
+      "id": "fixed_product_hotspot",
+      "status": "refuted",
+      "evidence_refs": [
+        "c049-e01",
+        "c049-e02",
+        "c049-e04"
+      ]
+    },
+    {
+      "id": "global_capacity_shortage",
+      "status": "supported",
+      "evidence_refs": [
+        "c049-e06"
+      ]
+    },
+    {
+      "id": "all_products_affected",
+      "status": "supported",
+      "evidence_refs": [
+        "c049-e06"
+      ]
+    },
+    {
+      "id": "unique_business_impact_population",
+      "status": "supported",
+      "evidence_refs": [
+        "c049-e07"
+      ]
+    }
+  ]
+}

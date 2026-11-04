@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "harness": "Codex",
+      "example": "AD File-based",
+      "exception_absent": true,
+      "agent_execution_not_started": true,
+      "agent_setup_finished": true,
+      "agent_version": "0.160.0"
+    },
+    {
+      "harness": "Claude Code",
+      "example": "HA Semantic-query",
+      "exception_absent": true,
+      "agent_execution_not_started": true,
+      "agent_setup_finished": true,
+      "agent_version": "2.1.309"
+    }
+  ],
+  "agent_runs": 0,
+  "model_calls": 0,
+  "scope": "Harbor custom adapter commands with --install-only and version arguments on Linux amd64. Environment/agent setup only; no model execution or grading."
+}

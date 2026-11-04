@@ -1,0 +1,40 @@
+{
+  "case_id": "DR--L2-P74--L3",
+  "task": "DR",
+  "source_case_id": "L2-P74",
+  "family_id": "L2-P74",
+  "bundle_id": "bundle-ead27ade033e7f318847",
+  "source_level": "TD3",
+  "level": 3,
+  "slice": "event-trace.align-intervals",
+  "access_profiles": {
+    "umodel_semantic": {
+      "task_id": "DR--L2-P74--L3--umodel_semantic",
+      "instruction": "帮我核对 rca-benchmark 工作空间，cms-demo，2026-07-16T17:25:50+08:00—2026-07-16T17:47:45+08:00 内 settlement 的一笔时间账：窗口里第一次出现 settlement 业务容器停止记录时，哪些调用（全部观测操作）已经开始、但还没有结束？只看起止都在这个窗口里有记录的调用。按接口给出数量、这些调用落在该时点之后的累计耗时，并列出最后结束的那笔调用。累计的是各次调用耗时，不是并行调用合并后的墙钟时间。\n\n# 接口\n\n# 查询接口\n\n运行时提供 `UMODEL_URL`、`UMODEL_ENVIRONMENT_ID`、`UMODEL_WORKSPACE`、`UMODEL_REGION_ID`。使用提供的API读取冻结观测数据，不修改环境。\n\n- `GET /v1/health`：健康状态。\n- `GET /v1/capabilities`：能力与分页上限。\n- `POST /v1/entities/search`：实体目录。至少提供query（名称关键词）、entity_types（类型列表）、attributes（属性匹配）中的一项非空条件。\n- `POST /v1/signals`：信号目录，entity_selector选择范围，modalities选择模态。\n- `POST /v1/query`：观测查询。\n\nPOST公共字段：environment_id、workspace、region_id，使用对应环境变量值。\n\n```json\n{\n  \"request_id\": \"<逻辑查询标识>\",\n  \"environment_id\": \"<环境标识>\",\n  \"workspace\": \"<工作空间>\",\n  \"region_id\": \"<区域>\",\n  \"time_range\": {\"start\":\"<带时区时间>\",\"end\":\"<带时区时间>\"},\n  \"entity_selector\": {\"entity_types\":[\"<实体类型>\"]},\n  \"query\": {\"kind\":\"<模态>\"},\n  \"page_size\": 1000\n}\n```\n\nentity_selector也支持entity_ids。query参数：\n\n```json\n{\"kind\":\"metric\",\"metric_name\":\"<信号名>\",\"stat\":\"series\"}\n{\"kind\":\"log\",\"text\":\"\",\"filters\":{},\"order\":\"asc\"}\n{\"kind\":\"trace\",\"trace_id\":\"\",\"service_name\":\"\",\"operation_name\":\"\",\"status\":\"\",\"attributes\":{}}\n{\"kind\":\"event\",\"event_type\":\"\",\"status\":\"\",\"rule_id\":\"\",\"attributes\":{}}\n{\"kind\":\"topology\",\"direction\":\"both\",\"max_depth\":2}\n```\n\n空字符串表示不指定该过滤条件。业务字段在attributes中；记录用record_ref引用。时间过滤包含两端。\n\n响应含results和page；将page.next_cursor作为下一请求顶层cursor，其余参数不变，直至next_cursor为null。新逻辑查询使用新的request_id，不使用offset。\n\n通用数据字段见`/scene/DATA_DICTIONARY.md`。\n\n# 交付\n\n把答案保存到`/app/answer.json`，使用UTF-8 JSON：\n```json\n{\"marker_time\":\"<带时区时间>\",\"marker_evidence_refs\":[],\"results\":[{\"operation\":\"\",\"call_count\":0,\"after_marker_total_ms\":0.0,\"last_completed_calls\":[{\"trace_id\":\"\",\"span_id\":\"\",\"end\":\"<带时区时间>\",\"record_ref\":\"\"}]}]}\n```\n可选的工作证据格式见`/scene/EVIDENCE_FORMAT.md`。\n",
+      "original_instruction_sha256": "200fc65196907992add37a3bd2271646938bf758e20cf5fb7d4da1a81c28634c",
+      "reference_artifact_sha256": {
+        "tests/private/contract.json": "4167a5614650d512e618d762eac56eeeeb279d5703f75d5b3b2e4f04550ea78e"
+      },
+      "instruction_sha256": "200fc65196907992add37a3bd2271646938bf758e20cf5fb7d4da1a81c28634c"
+    },
+    "shell_raw": {
+      "task_id": "DR--L2-P74--L3--shell_raw",
+      "instruction": "帮我核对 rca-benchmark 工作空间，cms-demo，2026-07-16T17:25:50+08:00—2026-07-16T17:47:45+08:00 内 settlement 的一笔时间账：窗口里第一次出现 settlement 业务容器停止记录时，哪些调用（全部观测操作）已经开始、但还没有结束？只看起止都在这个窗口里有记录的调用。按接口给出数量、这些调用落在该时点之后的累计耗时，并列出最后结束的那笔调用。累计的是各次调用耗时，不是并行调用合并后的墙钟时间。\n\n# 接口\n\n# Shell raw access\n\nThe frozen scene is `/scene/replay.duckdb`. Use shell commands and Python with `duckdb` to query the read-only `entities` and `records` tables. `records.modality` distinguishes metric, event, trace, log, and topology. Preserve `record_ref`, timestamps, units, dimensions, and entity IDs. `/scene/SCHEMA.md` documents columns. Do not modify the database.\n\n# 交付\n\n把答案保存到`/app/answer.json`，使用UTF-8 JSON：\n```json\n{\"marker_time\":\"<带时区时间>\",\"marker_evidence_refs\":[],\"results\":[{\"operation\":\"\",\"call_count\":0,\"after_marker_total_ms\":0.0,\"last_completed_calls\":[{\"trace_id\":\"\",\"span_id\":\"\",\"end\":\"<带时区时间>\",\"record_ref\":\"\"}]}]}\n```\n可选的工作证据格式见`/scene/EVIDENCE_FORMAT.md`。\n",
+      "original_instruction_sha256": "fbaab0532fd6b724adaafd3657f86069758217c44c9f1fcf0db42cdd6d47a444",
+      "reference_artifact_sha256": {
+        "tests/private/contract.json": "4167a5614650d512e618d762eac56eeeeb279d5703f75d5b3b2e4f04550ea78e"
+      },
+      "instruction_sha256": "fbaab0532fd6b724adaafd3657f86069758217c44c9f1fcf0db42cdd6d47a444"
+    },
+    "native_raw": {
+      "task_id": "DR--L2-P74--L3--native_raw",
+      "instruction": "帮我核对 rca-benchmark 工作空间，cms-demo，2026-07-16T17:25:50+08:00—2026-07-16T17:47:45+08:00 内 settlement 的一笔时间账：窗口里第一次出现 settlement 业务容器停止记录时，哪些调用（全部观测操作）已经开始、但还没有结束？只看起止都在这个窗口里有记录的调用。按接口给出数量、这些调用落在该时点之后的累计耗时，并列出最后结束的那笔调用。累计的是各次调用耗时，不是并行调用合并后的墙钟时间。\n\n# 接口\n\n# Native API access\n\n`NATIVE_API_URL` is a read-only HTTP service. Start with `GET /v1/catalog`. Metric values use the proxied Prometheus endpoints `/api/v1/query`, `/api/v1/query_range`, `/api/v1/series`, and metadata endpoints. Entity identities are also in `/scene/entities.jsonl`; topology observations are in `/scene/topology.jsonl`. Event, Trace, and Log use `/v1/events`, `/v1/traces`, and `/v1/logs`; resources use `/v1/resources`. Follow `next_offset` until null. Preserve returned record references, timestamps, units, labels, and entity IDs. PromQL and these Native HTTP endpoints are one Native access method.\n\n# 交付\n\n把答案保存到`/app/answer.json`，使用UTF-8 JSON：\n```json\n{\"marker_time\":\"<带时区时间>\",\"marker_evidence_refs\":[],\"results\":[{\"operation\":\"\",\"call_count\":0,\"after_marker_total_ms\":0.0,\"last_completed_calls\":[{\"trace_id\":\"\",\"span_id\":\"\",\"end\":\"<带时区时间>\",\"record_ref\":\"\"}]}]}\n```\n可选的工作证据格式见`/scene/EVIDENCE_FORMAT.md`。\n",
+      "original_instruction_sha256": "1946c9b0fac1b7c309e61f3b6df06f54319a2311bddf3cc2114558d2035b311e",
+      "reference_artifact_sha256": {
+        "tests/private/contract.json": "4167a5614650d512e618d762eac56eeeeb279d5703f75d5b3b2e4f04550ea78e"
+      },
+      "instruction_sha256": "1946c9b0fac1b7c309e61f3b6df06f54319a2311bddf3cc2114558d2035b311e"
+    }
+  },
+  "analysis_cluster_id": "bundle-ead27ade033e7f318847"
+}

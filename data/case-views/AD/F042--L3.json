@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F042--L3",
+  "task": "AD",
+  "source_case_id": "F042",
+  "family_id": "F042",
+  "bundle_id": null,
+  "source_level": "IL1",
+  "level": 3,
+  "slice": "L3-S7",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F042--L3--shell_raw",
+      "instruction": "请调查 checkout::/oteldemo.CheckoutService/PlaceOrder 在 2026-04-28T11:08:24+08:00 至 2026-04-28T11:12:26+08:00 期间的业务异常。目标：判断这次异常何时可以视为业务恢复，并说明仍未恢复或无法确认的范围。 请给出可核查证据，并明确无法确认的部分。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n",
+      "original_instruction_sha256": "3a4dc20eaef514a6f59bb575a73dfdc5d28ba910a1799a711f507d11d36705e3",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "1c94f916821f2b13e940c92bd3f6f1c670c8f9240fe92a4ec6f85394aa7dde6a"
+      },
+      "instruction_sha256": "3a4dc20eaef514a6f59bb575a73dfdc5d28ba910a1799a711f507d11d36705e3"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F042--L3--umodel_semantic",
+      "instruction": "请调查 checkout::/oteldemo.CheckoutService/PlaceOrder 在 2026-04-28T11:08:24+08:00 至 2026-04-28T11:12:26+08:00 期间的业务异常。目标：判断这次异常何时可以视为业务恢复，并说明仍未恢复或无法确认的范围。 请给出可核查证据，并明确无法确认的部分。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "0ea29c12a4ef5a3d6ed9d23c5328017f2923bdfd032459e44786c992a55ddd0a",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "1c94f916821f2b13e940c92bd3f6f1c670c8f9240fe92a4ec6f85394aa7dde6a"
+      },
+      "instruction_sha256": "0ea29c12a4ef5a3d6ed9d23c5328017f2923bdfd032459e44786c992a55ddd0a"
+    },
+    "native_raw": {
+      "task_id": "AD--F042--L3--native_raw",
+      "instruction": "请调查 checkout::/oteldemo.CheckoutService/PlaceOrder 在 2026-04-28T11:08:24+08:00 至 2026-04-28T11:12:26+08:00 期间的业务异常。目标：判断这次异常何时可以视为业务恢复，并说明仍未恢复或无法确认的范围。 请给出可核查证据，并明确无法确认的部分。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "4b994e8501c1f2adc8df2895cbff24a529c09fcbf103a7b59728282498ddf622",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "1c94f916821f2b13e940c92bd3f6f1c670c8f9240fe92a4ec6f85394aa7dde6a"
+      },
+      "instruction_sha256": "4b994e8501c1f2adc8df2895cbff24a529c09fcbf103a7b59728282498ddf622"
+    }
+  },
+  "analysis_cluster_id": "F042"
+}

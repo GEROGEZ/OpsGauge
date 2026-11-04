@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F046--L2",
+  "task": "AD",
+  "source_case_id": "F046",
+  "family_id": "F046",
+  "bundle_id": null,
+  "source_level": "IL2",
+  "level": 2,
+  "slice": "L3-S3",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F046--L2--shell_raw",
+      "instruction": "请复核 rca-benchmark 中 frontend::POST /api/cart 在 2026年05月21日 06:12:38 至 06:18:04（北京时间）期间的异常。定位超时传播路径，区分调用失败与数据库业务结果，并判断是否有依据安全地再次提交。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n可使用 /scene/SCOPE-MAP.json 获取中性的调查范围信息；其中不包含因果边、根因或正确判断。\n",
+      "original_instruction_sha256": "c9492360319ad3f240c87a173cb8e988d4cbabbcc53c1eeac183c195bdb0325b",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "ea744f91d37f985cf54be9a7f3a58b4b7db480de3eee10f7daf555c9d44097c1"
+      },
+      "instruction_sha256": "c9492360319ad3f240c87a173cb8e988d4cbabbcc53c1eeac183c195bdb0325b"
+    },
+    "native_raw": {
+      "task_id": "AD--F046--L2--native_raw",
+      "instruction": "请复核 rca-benchmark 中 frontend::POST /api/cart 在 2026年05月21日 06:12:38 至 06:18:04（北京时间）期间的异常。定位超时传播路径，区分调用失败与数据库业务结果，并判断是否有依据安全地再次提交。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method. Public investigation guidance is available in `/scene/SCOPE-MAP.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "3c8ae667f6957edf17d5494adddd46156c286ed837d0812ed88f836430fbaa63",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "ea744f91d37f985cf54be9a7f3a58b4b7db480de3eee10f7daf555c9d44097c1"
+      },
+      "instruction_sha256": "3c8ae667f6957edf17d5494adddd46156c286ed837d0812ed88f836430fbaa63"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F046--L2--umodel_semantic",
+      "instruction": "请复核 rca-benchmark 中 frontend::POST /api/cart 在 2026年05月21日 06:12:38 至 06:18:04（北京时间）期间的异常。定位超时传播路径，区分调用失败与数据库业务结果，并判断是否有依据安全地再次提交。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`. Public investigation guidance is available in `/scene/SCOPE-MAP.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "0c3db394e646da0e04c5d2aebf762c81421ca7f51f0a64604c12c2fcc7d2fc16",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "ea744f91d37f985cf54be9a7f3a58b4b7db480de3eee10f7daf555c9d44097c1"
+      },
+      "instruction_sha256": "0c3db394e646da0e04c5d2aebf762c81421ca7f51f0a64604c12c2fcc7d2fc16"
+    }
+  },
+  "analysis_cluster_id": "F046"
+}

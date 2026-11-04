@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "readable_case_views_checked": 1287,
+  "changed_evidence_objects_checked": 193,
+  "approved_transformation": "Internal HTTP(S) URL host aliases only, plus corresponding content hashes and file bindings.",
+  "database_expected_row_equivalence": true,
+  "text_expected_equivalence": true,
+  "recorded_score_files_byte_identical": true,
+  "scorer_and_agent_source_hashes_unchanged": true,
+  "scope": "All changed object bodies checked against the approved host substitution; every readable case view binds to its current indexed question. No fresh agent evaluation."
+}

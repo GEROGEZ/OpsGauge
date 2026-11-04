@@ -1,0 +1,72 @@
+{
+  "version": "verb-led-paper-names-20261024",
+  "labels": {
+    "metric.retrieve-cpu-peaks": "Retrieve CPU peaks",
+    "metric.compare-independent-rankings": "Compare CPU rankings",
+    "event.reconstruct-transaction-state": "Reconstruct alert states",
+    "event.aggregate-cross-rule-state": "Aggregate alerts across rules",
+    "trace.rank-failure-volume-rate": "Rank APIs by failure count and rate",
+    "event-trace.align-intervals": "Measure calls at container stops",
+    "L3-S1": "Identify affected business objects",
+    "L3-S2": "Locate and bound business impact",
+    "L3-S3": "Distinguish progress from completion",
+    "L3-S4": "Reassess anomalies across phases",
+    "L3-S5": "Distinguish linked and independent anomalies",
+    "L3-S6": "Verify service availability",
+    "L3-S7": "Verify business recovery",
+    "mission.latency": "Identify latency degradation",
+    "mission.errors": "Identify elevated errors",
+    "mission.saturation": "Identify capacity saturation",
+    "mission.state_flow": "Identify state or flow anomalies",
+    "mission.multi_request": "Report multiple request-signal findings",
+    "mission.multi_request_capacity": "Report request and capacity findings",
+    "mission.multi_state_change": "Report mixed findings involving state",
+    "mission.healthy_confirmation": "Confirm a healthy scope",
+    "rca.capacity_load": "Diagnose capacity and load problems",
+    "rca.service_execution": "Diagnose service execution failures",
+    "rca.instance_lifecycle": "Diagnose instance lifecycle failures",
+    "rca.routing_connectivity": "Diagnose routing and connectivity failures",
+    "rca.data_access": "Diagnose data-access failures",
+    "rca.async_messaging": "Diagnose asynchronous messaging failures",
+    "rca.concurrent_causes": "Separate concurrent causes"
+  },
+  "task_labels": {
+    "DR": [
+      "Retrieve CPU peaks",
+      "Compare CPU rankings",
+      "Reconstruct alert states",
+      "Aggregate alerts across rules",
+      "Rank APIs by failure count and rate",
+      "Measure calls at container stops"
+    ],
+    "AD": [
+      "Identify affected business objects",
+      "Locate and bound business impact",
+      "Distinguish progress from completion",
+      "Reassess anomalies across phases",
+      "Distinguish linked and independent anomalies",
+      "Verify service availability",
+      "Verify business recovery"
+    ],
+    "HA": [
+      "Identify latency degradation",
+      "Identify elevated errors",
+      "Identify capacity saturation",
+      "Identify state or flow anomalies",
+      "Report multiple request-signal findings",
+      "Report request and capacity findings",
+      "Report mixed findings involving state",
+      "Confirm a healthy scope"
+    ],
+    "RCA": [
+      "Diagnose capacity and load problems",
+      "Diagnose service execution failures",
+      "Diagnose instance lifecycle failures",
+      "Diagnose routing and connectivity failures",
+      "Diagnose data-access failures",
+      "Diagnose asynchronous messaging failures",
+      "Separate concurrent causes"
+    ]
+  },
+  "note": "Approved paper display names; only DR CPU phase categories merged. No other assignments changed."
+}

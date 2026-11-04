@@ -1,0 +1,15 @@
+{
+  "bundle_id": "bundle-075983241d62665df086",
+  "case_id": "case-fcc6fc7eeb9b447df39f",
+  "eligibility": {
+    "eligible": true,
+    "entity_count": 7,
+    "profile": "shell_raw",
+    "raw_numeric_metric_count": 253,
+    "reasons": [],
+    "record_count": 294
+  },
+  "output_dir": "/workspace/benchmark-factory-data/experiments/all-scenario-difficulty-harbor3-v1-r2/compiled/bundle-075983241d62665df086/profiles/shell_raw/cases/rca/case-fcc6fc7eeb9b447df39f",
+  "profile": "shell_raw",
+  "schema_version": "access_profile_compilation_v1"
+}

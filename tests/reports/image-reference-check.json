@@ -1,0 +1,10 @@
+{
+  "task_package_compose_bindings_updated": 300,
+  "unique_compose_objects_changed": 53,
+  "example_compose_files_updated": 2,
+  "old_image": "original-shipping-accept-umodel-umodel:latest",
+  "release_image": "opsgauge-replay-base:2026.10.27",
+  "scope": "Compose image reference only; task requests, evidence and scorer source unchanged.",
+  "expected_compose_only_changes_verified": true,
+  "recorded_score_files_byte_identical": true
+}

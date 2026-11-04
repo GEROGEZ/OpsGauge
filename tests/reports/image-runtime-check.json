@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "response_digest": {
+    "sha256": "a591cbfa340f908a450893f0b1074abb97b8d397af257d9f740243d11f8a4233",
+    "modalities": [
+      "event",
+      "metric",
+      "topology",
+      "trace"
+    ],
+    "entity_count": 14
+  },
+  "scope": "Original versus minimized base-image Python replay modules against the bundled DR database, using the local Python/DuckDB environment. Not a Docker execution."
+}

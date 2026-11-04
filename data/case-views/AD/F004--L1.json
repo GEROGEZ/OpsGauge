@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F004--L1",
+  "task": "AD",
+  "source_case_id": "F004",
+  "family_id": "F004",
+  "bundle_id": null,
+  "source_level": "IL3",
+  "level": 1,
+  "slice": "L3-S7",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F004--L1--shell_raw",
+      "instruction": "请复核这份快照中 fc-consumer 在 2026 年 8 月 29 日 13:12—13:40（北京时间）期间这次回退操作的实际覆盖范围与业务效果。现有证据是否足以支持“运行输入已恢复、业务已恢复”？请给出可核查的依据，对无法确认的部分保留判断。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n可使用 /scene/SCOPE-MAP.json 与 /scene/EVIDENCE-PATH.json；其中仅提供调查阶段和证据归组，不包含根因、机制答案或正确判断。\n",
+      "original_instruction_sha256": "89649f3987df3571118c525807446738ecd1c612766175891d03bb6b58dc154b",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "e5d332db1e53bb5973661e030d476a7b9a92644d14102940e86a8341b358258a"
+      },
+      "instruction_sha256": "89649f3987df3571118c525807446738ecd1c612766175891d03bb6b58dc154b"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F004--L1--umodel_semantic",
+      "instruction": "请复核这份快照中 fc-consumer 在 2026 年 8 月 29 日 13:12—13:40（北京时间）期间这次回退操作的实际覆盖范围与业务效果。现有证据是否足以支持“运行输入已恢复、业务已恢复”？请给出可核查的依据，对无法确认的部分保留判断。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`. Public investigation guidance is available in `/scene/SCOPE-MAP.json` and `/scene/EVIDENCE-PATH.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "aa9968e3df6a01b87e76656f286a9c390e95aee6bdcf12ae2585475f6d151276",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "e5d332db1e53bb5973661e030d476a7b9a92644d14102940e86a8341b358258a"
+      },
+      "instruction_sha256": "aa9968e3df6a01b87e76656f286a9c390e95aee6bdcf12ae2585475f6d151276"
+    },
+    "native_raw": {
+      "task_id": "AD--F004--L1--native_raw",
+      "instruction": "请复核这份快照中 fc-consumer 在 2026 年 8 月 29 日 13:12—13:40（北京时间）期间这次回退操作的实际覆盖范围与业务效果。现有证据是否足以支持“运行输入已恢复、业务已恢复”？请给出可核查的依据，对无法确认的部分保留判断。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method. Public investigation guidance is available in `/scene/SCOPE-MAP.json` and `/scene/EVIDENCE-PATH.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "6a60739a99a25867b0b7010e1c9930ad96b2cc5b6451159d940db28e741254f8",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "e5d332db1e53bb5973661e030d476a7b9a92644d14102940e86a8341b358258a"
+      },
+      "instruction_sha256": "6a60739a99a25867b0b7010e1c9930ad96b2cc5b6451159d940db28e741254f8"
+    }
+  },
+  "analysis_cluster_id": "F004"
+}

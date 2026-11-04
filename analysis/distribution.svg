@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="252pt" height="195.84pt" viewBox="0 0 252 195.84" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-26T10:12:59.049103</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 195.84 
+L 252 195.84 
+L 252 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 60.447432 73.000412 
+C 66.312363 68.264811 70.566368 61.824519 72.62022 54.571587 
+C 74.67407 47.318654 74.428354 39.604152 71.917106 32.496623 
+C 69.405857 25.389095 64.750628 19.232572 58.59622 14.879802 
+C 52.441813 10.527032 45.086124 8.188704 37.547998 8.188704 
+L 37.548 44.64 
+z
+" style="fill: #a4c7b9; stroke: #ffffff; stroke-width: 0.42; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 22.53366 77.855457 
+C 28.68272 80.63501 35.484516 81.653187 42.177959 80.796057 
+C 48.871404 79.938929 55.197168 77.239704 60.447432 73.000412 
+L 37.548 44.64 
+z
+" style="fill: #e8b382; stroke: #ffffff; stroke-width: 0.42; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 4.999691 61.050501 
+C 6.861985 64.744146 9.339512 68.093983 12.325929 70.956232 
+C 15.312346 73.818482 18.764307 76.1516 22.53366 77.855457 
+L 37.548 44.64 
+z
+" style="fill: #b4a9d0; stroke: #ffffff; stroke-width: 0.42; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 1.914845 36.960464 
+C 1.043356 41.004181 0.866527 45.166901 1.391943 49.269958 
+C 1.917359 53.373015 3.137396 57.356858 4.999691 61.050501 
+L 37.548 44.64 
+z
+" style="fill: #9ebacb; stroke: #ffffff; stroke-width: 0.42; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 14.64857 16.279584 
+C 11.430176 18.878254 8.677496 22.005909 6.508664 25.528313 
+C 4.339832 29.050716 2.786335 32.916745 1.914845 36.960464 
+L 37.548 44.64 
+z
+" style="fill: #c8d8a6; stroke: #ffffff; stroke-width: 0.42; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 37.548 8.188704 
+C 33.411439 8.188704 29.304897 8.892841 25.404626 10.270894 
+C 21.504354 11.648947 17.866963 13.680914 14.64857 16.279584 
+L 37.548 44.64 
+z
+" style="fill: #d7b5c7; stroke: #ffffff; stroke-width: 0.42; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2"/>
+   <g id="text_1">
+    <text style="fill: #354344; font: 7.3px 'STIXGeneral'; text-anchor: middle" x="62.293755" y="37.59744" transform="rotate(-0 62.293755 37.59744)">39%</text>
+   </g>
+   <g id="text_2">
+    <text style="fill: #354344; font: 7.3px 'STIXGeneral'; text-anchor: middle" x="40.881571" y="72.373033" transform="rotate(-0 40.881571 72.373033)">18%</text>
+   </g>
+   <g id="text_3">
+    <text style="fill: #354344; font: 7.3px 'STIXGeneral'; text-anchor: middle" x="19.388109" y="65.288359" transform="rotate(-0 19.388109 65.288359)">11%</text>
+   </g>
+   <g id="text_4">
+    <text style="fill: #354344; font: 7.3px 'STIXGeneral'; text-anchor: middle" x="11.515639" y="49.674241" transform="rotate(-0 11.515639 49.674241)">11%</text>
+   </g>
+   <g id="text_5">
+    <text style="fill: #354344; font: 7.3px 'STIXGeneral'; text-anchor: middle" x="15.199675" y="32.580262" transform="rotate(-0 15.199675 32.580262)">11%</text>
+   </g>
+   <g id="text_6">
+    <text style="fill: #354344; font: 7.3px 'STIXGeneral'; text-anchor: middle" x="28.804771" y="21.594916" transform="rotate(-0 28.804771 21.594916)">11%</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="legend_1">
+    <g id="patch_8">
+     <path d="M 76.86 23.208531 
+L 82.19 23.208531 
+L 82.19 17.202031 
+L 76.86 17.202031 
+z
+" style="fill: #a4c7b9"/>
+    </g>
+    <g id="text_7">
+     <text style="font: 8.2px 'STIXGeneral'; text-anchor: start" x="85.47" y="23.065031" transform="rotate(-0 85.47 23.065031)">S1 (29)</text>
+    </g>
+    <g id="patch_9">
+     <path d="M 76.86 32.655187 
+L 82.19 32.655187 
+L 82.19 26.648687 
+L 76.86 26.648687 
+z
+" style="fill: #e8b382"/>
+    </g>
+    <g id="text_8">
+     <text style="font: 8.2px 'STIXGeneral'; text-anchor: start" x="85.47" y="32.511687" transform="rotate(-0 85.47 32.511687)">S2 (13)</text>
+    </g>
+    <g id="patch_10">
+     <path d="M 76.86 42.101844 
+L 82.19 42.101844 
+L 82.19 36.095344 
+L 76.86 36.095344 
+z
+" style="fill: #b4a9d0"/>
+    </g>
+    <g id="text_9">
+     <text style="font: 8.2px 'STIXGeneral'; text-anchor: start" x="85.47" y="41.958344" transform="rotate(-0 85.47 41.958344)">S3 (8)</text>
+    </g>
+    <g id="patch_11">
+     <path d="M 76.86 51.5485 
+L 82.19 51.5485 
+L 82.19 45.542 
+L 76.86 45.542 
+z
+" style="fill: #9ebacb"/>
+    </g>
+    <g id="text_10">
+     <text style="font: 8.2px 'STIXGeneral'; text-anchor: start" x="85.47" y="51.405" transform="rotate(-0 85.47 51.405)">S4 (8)</text>
+    </g>
+    <g id="patch_12">
+     <path d="M 76.86 60.995156 
+L 82.19 60.995156 
+L 82.19 54.988656 
+L 76.86 54.988656 
+z
+" style="fill: #c8d8a6"/>
+    </g>
+    <g id="text_11">
+     <text style="font: 8.2px 'STIXGeneral'; text-anchor: start" x="85.47" y="60.851656" transform="rotate(-0 85.47 60.851656)">S5 (8)</text>
+    </g>
+    <g id="patch_13">
+     <path d="M 76.86 70.441812 
+L 82.19 70.441812 
+L 82.19 64.435312 
+L 76.86 64.435312 
+z
+" style="fill: #d7b5c7"/>
+    </g>
+    <g id="text_12">
+     <text style="font: 8.2px 'STIXGeneral'; text-anchor: start" x="85.47" y="70.298312" transform="rotate(-0 85.47 70.298312)">S6 (8)</text>
+    </g>
+   </g>
+  </g>
+  <g id="axes_3">
+   <g id="patch_14">
+    <path d="M 192.894206 21.405069 
+C 189.474118 17.270893 185.183041 13.942392 180.328208 11.657881 
+C 175.473373 9.37337 170.173482 8.188704 164.807998 8.188704 
+L 164.808 44.64 
+z
+" style="fill: #a4c7b9; stroke: #ffffff; stroke-width: 0.42; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 199.475243 55.904069 
+C 201.372435 50.065116 201.764059 43.840401 200.613643 37.809709 
+C 199.463226 31.779017 196.807633 26.135588 192.894206 21.405069 
+L 164.808 44.64 
+z
+" style="fill: #e8b382; stroke: #ffffff; stroke-width: 0.42; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 178.226617 78.531558 
+C 183.215316 76.556391 187.706926 73.503899 191.379851 69.59263 
+C 195.052776 65.681361 197.817219 61.006947 199.475243 55.904069 
+L 164.808 44.64 
+z
+" style="fill: #b4a9d0; stroke: #ffffff; stroke-width: 0.42; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 147.247457 76.582515 
+C 151.949265 79.167356 157.164311 80.682468 162.519206 81.019368 
+C 167.874101 81.35627 173.237917 80.506723 178.226617 78.531558 
+L 164.808 44.64 
+z
+" style="fill: #9ebacb; stroke: #ffffff; stroke-width: 0.42; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 128.428632 46.928802 
+C 128.814133 53.056126 130.741481 58.987887 134.031157 64.171586 
+C 137.320833 69.355286 141.867427 73.624819 147.247457 76.582515 
+L 164.808 44.64 
+z
+" style="fill: #c8d8a6; stroke: #ffffff; stroke-width: 0.42; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 139.855368 18.068151 
+C 135.944099 21.741077 132.891609 26.232682 130.916442 31.221383 
+C 128.941275 36.210083 128.09173 41.573906 128.428632 46.928802 
+L 164.808 44.64 
+z
+" style="fill: #d7b5c7; stroke: #ffffff; stroke-width: 0.42; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_20">
+    <path d="M 164.808 8.188704 
+C 160.213875 8.188704 155.660887 9.057234 151.389378 10.748444 
+C 147.117869 12.439654 143.20434 14.923255 139.855368 18.068151 
+L 164.808 44.64 
+z
+" style="fill: #d7ccaa; stroke: #ffffff; stroke-width: 0.42; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_3"/>
+   <g id="matplotlib.axis_4"/>
+   <g id="text_13">
+    <text style="fill: #354344; font: 7.3px 'STIXGeneral'; text-anchor: middle" x="175.982547" y="22.593545" transform="rotate(-0 175.982547 22.593545)">14%</text>
+   </g>
+   <g id="text_14">
+    <text style="fill: #354344; font: 7.3px 'STIXGeneral'; text-anchor: middle" x="190.588063" y="41.422861" transform="rotate(-0 190.588063 41.422861)">16%</text>
+   </g>
+   <g id="text_15">
+    <text style="fill: #354344; font: 7.3px 'STIXGeneral'; text-anchor: middle" x="183.939733" y="64.306565" transform="rotate(-0 183.939733 64.306565)">14%</text>
+   </g>
+   <g id="text_16">
+    <text style="fill: #354344; font: 7.3px 'STIXGeneral'; text-anchor: middle" x="163.160068" y="72.533817" transform="rotate(-0 163.160068 72.533817)">14%</text>
+   </g>
+   <g id="text_17">
+    <text style="fill: #354344; font: 7.3px 'STIXGeneral'; text-anchor: middle" x="142.648672" y="60.403413" transform="rotate(-0 142.648672 60.403413)">16%</text>
+   </g>
+   <g id="text_18">
+    <text style="fill: #354344; font: 7.3px 'STIXGeneral'; text-anchor: middle" x="140.406078" y="36.679268" transform="rotate(-0 140.406078 36.679268)">14%</text>
+   </g>
+   <g id="text_19">
+    <text style="fill: #354344; font: 7.3px 'STIXGeneral'; text-anchor: middle" x="155.146604" y="21.938747" transform="rotate(-0 155.146604 21.938747)">12%</text>
+   </g>
+  </g>
+  <g id="axes_4">
+   <g id="legend_2">
+    <g id="patch_21">
+     <path d="M 204.12 18.485203 
+L 209.45 18.485203 
+L 209.45 12.478703 
+L 204.12 12.478703 
+z
+" style="fill: #a4c7b9"/>
+    </g>
+    <g id="text_20">
+     <text style="font: 8.2px 'STIXGeneral'; text-anchor: start" x="212.73" y="18.341703" transform="rotate(-0 212.73 18.341703)">S1 (7)</text>
+    </g>
+    <g id="patch_22">
+     <path d="M 204.12 27.931859 
+L 209.45 27.931859 
+L 209.45 21.925359 
+L 204.12 21.925359 
+z
+" style="fill: #e8b382"/>
+    </g>
+    <g id="text_21">
+     <text style="font: 8.2px 'STIXGeneral'; text-anchor: start" x="212.73" y="27.788359" transform="rotate(-0 212.73 27.788359)">S2 (8)</text>
+    </g>
+    <g id="patch_23">
+     <path d="M 204.12 37.378516 
+L 209.45 37.378516 
+L 209.45 31.372016 
+L 204.12 31.372016 
+z
+" style="fill: #b4a9d0"/>
+    </g>
+    <g id="text_22">
+     <text style="font: 8.2px 'STIXGeneral'; text-anchor: start" x="212.73" y="37.235016" transform="rotate(-0 212.73 37.235016)">S3 (7)</text>
+    </g>
+    <g id="patch_24">
+     <path d="M 204.12 46.825172 
+L 209.45 46.825172 
+L 209.45 40.818672 
+L 204.12 40.818672 
+z
+" style="fill: #9ebacb"/>
+    </g>
+    <g id="text_23">
+     <text style="font: 8.2px 'STIXGeneral'; text-anchor: start" x="212.73" y="46.681672" transform="rotate(-0 212.73 46.681672)">S4 (7)</text>
+    </g>
+    <g id="patch_25">
+     <path d="M 204.12 56.271828 
+L 209.45 56.271828 
+L 209.45 50.265328 
+L 204.12 50.265328 
+z
+" style="fill: #c8d8a6"/>
+    </g>
+    <g id="text_24">
+     <text style="font: 8.2px 'STIXGeneral'; text-anchor: start" x="212.73" y="56.128328" transform="rotate(-0 212.73 56.128328)">S5 (8)</text>
+    </g>
+    <g id="patch_26">
+     <path d="M 204.12 65.718484 
+L 209.45 65.718484 
+L 209.45 59.711984 
+L 204.12 59.711984 
+z
+" style="fill: #d7b5c7"/>
+    </g>
+    <g id="text_25">
+     <text style="font: 8.2px 'STIXGeneral'; text-anchor: start" x="212.73" y="65.574984" transform="rotate(-0 212.73 65.574984)">S6 (7)</text>
+    </g>
+    <g id="patch_27">
+     <path d="M 204.12 75.165141 
+L 209.45 75.165141 
+L 209.45 69.158641 
+L 204.12 69.158641 
+z
+" style="fill: #d7ccaa"/>
+    </g>
+    <g id="text_26">
+     <text style="font: 8.2px 'STIXGeneral'; text-anchor: start" x="212.73" y="75.021641" transform="rotate(-0 212.73 75.021641)">S7 (6)</text>
+    </g>
+   </g>
+  </g>
+  <g id="axes_5">
+   <g id="patch_28">
+    <path d="M 68.100997 116.920079 
+C 64.79087 111.83282 60.261979 107.651942 54.926837 104.758261 
+C 49.591695 101.86458 43.617359 100.348704 37.547998 100.348704 
+L 37.548 136.8 
+z
+" style="fill: #a4c7b9; stroke: #ffffff; stroke-width: 0.42; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_29">
+    <path d="M 72.25501 147.940935 
+C 73.909587 142.786483 74.395317 137.327589 73.676805 131.961982 
+C 72.958295 126.596374 71.05343 121.457605 68.100997 116.920079 
+L 37.548 136.8 
+z
+" style="fill: #e8b382; stroke: #ffffff; stroke-width: 0.42; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_30">
+    <path d="M 1.853405 144.188694 
+C 3.485221 152.071951 7.68351 159.196829 13.788796 164.444118 
+C 19.894083 169.691408 27.569019 172.771176 35.607985 173.199634 
+C 43.646953 173.628093 51.605766 171.381569 58.234217 166.812955 
+C 64.862668 162.244341 69.794502 155.606082 72.25501 147.940935 
+L 37.548 136.8 
+z
+" style="fill: #b4a9d0; stroke: #ffffff; stroke-width: 0.42; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_31">
+    <path d="M 1.339019 132.603967 
+C 1.115474 134.533023 1.046442 136.476858 1.132583 138.416912 
+C 1.218725 140.356966 1.459767 142.287042 1.853405 144.188694 
+L 37.548 136.8 
+z
+" style="fill: #9ebacb; stroke: #ffffff; stroke-width: 0.42; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_32">
+    <path d="M 5.054983 120.280292 
+C 4.076975 122.203959 3.271726 124.210679 2.648727 126.276804 
+C 2.025728 128.342928 1.587436 130.460305 1.339019 132.603967 
+L 37.548 136.8 
+z
+" style="fill: #c8d8a6; stroke: #ffffff; stroke-width: 0.42; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_33">
+    <path d="M 26.099489 102.193228 
+C 21.580807 103.688086 17.398343 106.053596 13.78879 109.155888 
+C 10.179237 112.25818 7.211998 116.037607 5.054983 120.280292 
+L 37.548 136.8 
+z
+" style="fill: #d7b5c7; stroke: #ffffff; stroke-width: 0.42; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_34">
+    <path d="M 36.254301 100.371669 
+C 34.529391 100.432927 32.811016 100.61662 31.112133 100.921362 
+C 29.413251 101.226105 27.738148 101.651133 26.099489 102.193228 
+L 37.548 136.8 
+z
+" style="fill: #d7ccaa; stroke: #ffffff; stroke-width: 0.42; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_35">
+    <path d="M 37.548 100.348704 
+C 37.332337 100.348704 37.116678 100.350618 36.901049 100.354446 
+C 36.68542 100.358275 36.469829 100.364015 36.254301 100.371669 
+L 37.548 136.8 
+z
+" style="fill: #a9c4d8; stroke: #ffffff; stroke-width: 0.42; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_5"/>
+   <g id="matplotlib.axis_6"/>
+   <g id="text_27">
+    <text style="fill: #354344; font: 7.3px 'STIXGeneral'; text-anchor: middle" x="50.060765" y="115.430621" transform="rotate(-0 50.060765 115.430621)">16%</text>
+   </g>
+   <g id="text_28">
+    <text style="fill: #354344; font: 7.3px 'STIXGeneral'; text-anchor: middle" x="63.56074" y="135.017298" transform="rotate(-0 63.56074 135.017298)">14%</text>
+   </g>
+   <g id="text_29">
+    <text style="fill: #354344; font: 7.3px 'STIXGeneral'; text-anchor: middle" x="36.151183" y="164.708408" transform="rotate(-0 36.151183 164.708408)">42%</text>
+   </g>
+   <g id="text_30">
+    <text style="fill: #354344; font: 7.3px 'STIXGeneral'; text-anchor: middle" x="11.3289" y="139.664849" transform="rotate(-0 11.3289 139.664849)">5%</text>
+   </g>
+   <g id="text_31">
+    <text style="fill: #354344; font: 7.3px 'STIXGeneral'; text-anchor: middle" x="12.420521" y="130.923976" transform="rotate(-0 12.420521 130.923976)">6%</text>
+   </g>
+   <g id="text_32">
+    <text style="fill: #354344; font: 7.3px 'STIXGeneral'; text-anchor: middle" x="20.441378" y="118.596904" transform="rotate(-0 20.441378 118.596904)">12%</text>
+   </g>
+   <g id="text_33">
+    <text style="fill: #354344; font: 7.3px 'STIXGeneral'; text-anchor: middle" x="32.914176" y="112.668053" transform="rotate(-0 32.914176 112.668053)">5%</text>
+   </g>
+  </g>
+  <g id="axes_6">
+   <g id="legend_3">
+    <g id="patch_36">
+     <path d="M 76.86 105.921875 
+L 82.19 105.921875 
+L 82.19 99.915375 
+L 76.86 99.915375 
+z
+" style="fill: #a4c7b9"/>
+    </g>
+    <g id="text_34">
+     <text style="font: 8.2px 'STIXGeneral'; text-anchor: start" x="85.47" y="105.778375" transform="rotate(-0 85.47 105.778375)">S1 (28)</text>
+    </g>
+    <g id="patch_37">
+     <path d="M 76.86 115.368531 
+L 82.19 115.368531 
+L 82.19 109.362031 
+L 76.86 109.362031 
+z
+" style="fill: #e8b382"/>
+    </g>
+    <g id="text_35">
+     <text style="font: 8.2px 'STIXGeneral'; text-anchor: start" x="85.47" y="115.225031" transform="rotate(-0 85.47 115.225031)">S2 (25)</text>
+    </g>
+    <g id="patch_38">
+     <path d="M 76.86 124.815188 
+L 82.19 124.815188 
+L 82.19 118.808688 
+L 76.86 118.808688 
+z
+" style="fill: #b4a9d0"/>
+    </g>
+    <g id="text_36">
+     <text style="font: 8.2px 'STIXGeneral'; text-anchor: start" x="85.47" y="124.671688" transform="rotate(-0 85.47 124.671688)">S3 (74)</text>
+    </g>
+    <g id="patch_39">
+     <path d="M 76.86 134.261844 
+L 82.19 134.261844 
+L 82.19 128.255344 
+L 76.86 128.255344 
+z
+" style="fill: #9ebacb"/>
+    </g>
+    <g id="text_37">
+     <text style="font: 8.2px 'STIXGeneral'; text-anchor: start" x="85.47" y="134.118344" transform="rotate(-0 85.47 134.118344)">S4 (9)</text>
+    </g>
+    <g id="patch_40">
+     <path d="M 76.86 143.7085 
+L 82.19 143.7085 
+L 82.19 137.702 
+L 76.86 137.702 
+z
+" style="fill: #c8d8a6"/>
+    </g>
+    <g id="text_38">
+     <text style="font: 8.2px 'STIXGeneral'; text-anchor: start" x="85.47" y="143.565" transform="rotate(-0 85.47 143.565)">S5 (10)</text>
+    </g>
+    <g id="patch_41">
+     <path d="M 76.86 153.155156 
+L 82.19 153.155156 
+L 82.19 147.148656 
+L 76.86 147.148656 
+z
+" style="fill: #d7b5c7"/>
+    </g>
+    <g id="text_39">
+     <text style="font: 8.2px 'STIXGeneral'; text-anchor: start" x="85.47" y="153.011656" transform="rotate(-0 85.47 153.011656)">S6 (22)</text>
+    </g>
+    <g id="patch_42">
+     <path d="M 76.86 162.601812 
+L 82.19 162.601812 
+L 82.19 156.595313 
+L 76.86 156.595313 
+z
+" style="fill: #d7ccaa"/>
+    </g>
+    <g id="text_40">
+     <text style="font: 8.2px 'STIXGeneral'; text-anchor: start" x="85.47" y="162.458313" transform="rotate(-0 85.47 162.458313)">S7 (8)</text>
+    </g>
+    <g id="patch_43">
+     <path d="M 76.86 172.048469 
+L 82.19 172.048469 
+L 82.19 166.041969 
+L 76.86 166.041969 
+z
+" style="fill: #a9c4d8"/>
+    </g>
+    <g id="text_41">
+     <text style="font: 8.2px 'STIXGeneral'; text-anchor: start" x="85.47" y="171.904969" transform="rotate(-0 85.47 171.904969)">S8 (1)</text>
+    </g>
+   </g>
+  </g>
+  <g id="axes_7">
+   <g id="patch_44">
+    <path d="M 201.083773 140.372852 
+C 201.582484 135.309355 201.015545 130.19709 199.419532 125.365894 
+C 197.823519 120.534697 195.233516 116.090762 191.816626 112.320805 
+C 188.399737 108.550848 184.231065 105.537736 179.57957 103.475869 
+C 174.928073 101.414002 169.895995 100.348704 164.807998 100.348704 
+L 164.808 136.8 
+z
+" style="fill: #a4c7b9; stroke: #ffffff; stroke-width: 0.42; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_45">
+    <path d="M 173.664944 172.158897 
+C 180.953162 170.333292 187.501706 166.298198 192.409245 160.608997 
+C 197.316784 154.919796 200.347332 147.850057 201.083773 140.372852 
+L 164.808 136.8 
+z
+" style="fill: #e8b382; stroke: #ffffff; stroke-width: 0.42; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_46">
+    <path d="M 140.328809 163.808631 
+C 144.77015 167.834026 150.136589 170.702447 155.951061 172.158897 
+C 161.765532 173.615344 167.850473 173.615348 173.664944 172.158897 
+L 164.808 136.8 
+z
+" style="fill: #b4a9d0; stroke: #ffffff; stroke-width: 0.42; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_47">
+    <path d="M 128.751234 131.451483 
+C 127.871717 137.380715 128.468147 143.436361 130.487501 149.080078 
+C 132.506856 154.723795 135.887468 159.783234 140.328809 163.808631 
+L 164.808 136.8 
+z
+" style="fill: #9ebacb; stroke: #ffffff; stroke-width: 0.42; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_48">
+    <path d="M 135.530043 115.08599 
+C 133.751344 117.48429 132.27405 120.092079 131.131395 122.850692 
+C 129.988739 125.609305 129.189357 128.497899 128.751234 131.451483 
+L 164.808 136.8 
+z
+" style="fill: #c8d8a6; stroke: #ffffff; stroke-width: 0.42; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_49">
+    <path d="M 140.328807 109.791369 
+C 139.444773 110.59261 138.600612 111.436771 137.799371 112.320805 
+C 136.998131 113.204839 136.240774 114.127679 135.530043 115.08599 
+L 164.808 136.8 
+z
+" style="fill: #d7b5c7; stroke: #ffffff; stroke-width: 0.42; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_50">
+    <path d="M 164.808 100.348704 
+C 160.322161 100.348704 155.874613 101.176772 151.689357 102.791205 
+C 147.504101 104.405637 143.652596 106.778863 140.328807 109.791369 
+L 164.808 136.8 
+z
+" style="fill: #d7ccaa; stroke: #ffffff; stroke-width: 0.42; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_7"/>
+   <g id="matplotlib.axis_8"/>
+   <g id="text_42">
+    <text style="fill: #354344; font: 7.3px 'STIXGeneral'; text-anchor: middle" x="184.254213" y="120.875652" transform="rotate(-0 184.254213 120.875652)">27%</text>
+   </g>
+   <g id="text_43">
+    <text style="fill: #354344; font: 7.3px 'STIXGeneral'; text-anchor: middle" x="184.680896" y="155.643149" transform="rotate(-0 184.680896 155.643149)">20%</text>
+   </g>
+   <g id="text_44">
+    <text style="fill: #354344; font: 7.3px 'STIXGeneral'; text-anchor: middle" x="158.431001" y="163.959077" transform="rotate(-0 158.431001 163.959077)">16%</text>
+   </g>
+   <g id="text_45">
+    <text style="fill: #354344; font: 7.3px 'STIXGeneral'; text-anchor: middle" x="140.097238" y="147.342322" transform="rotate(-0 140.097238 147.342322)">16%</text>
+   </g>
+   <g id="text_46">
+    <text style="fill: #354344; font: 7.3px 'STIXGeneral'; text-anchor: middle" x="140.560844" y="128.457171" transform="rotate(-0 140.560844 128.457171)">8%</text>
+   </g>
+   <g id="text_47">
+    <text style="fill: #354344; font: 7.3px 'STIXGeneral'; text-anchor: middle" x="145.361788" y="120.875651" transform="rotate(-0 145.361788 120.875651)">3%</text>
+   </g>
+   <g id="text_48">
+    <text style="fill: #354344; font: 7.3px 'STIXGeneral'; text-anchor: middle" x="155.362577" y="114.014339" transform="rotate(-0 155.362577 114.014339)">12%</text>
+   </g>
+  </g>
+  <g id="axes_8">
+   <g id="legend_4">
+    <g id="patch_51">
+     <path d="M 204.12 110.645203 
+L 209.45 110.645203 
+L 209.45 104.638703 
+L 204.12 104.638703 
+z
+" style="fill: #a4c7b9"/>
+    </g>
+    <g id="text_49">
+     <text style="font: 8.2px 'STIXGeneral'; text-anchor: start" x="212.73" y="110.501703" transform="rotate(-0 212.73 110.501703)">S1 (34)</text>
+    </g>
+    <g id="patch_52">
+     <path d="M 204.12 120.091859 
+L 209.45 120.091859 
+L 209.45 114.085359 
+L 204.12 114.085359 
+z
+" style="fill: #e8b382"/>
+    </g>
+    <g id="text_50">
+     <text style="font: 8.2px 'STIXGeneral'; text-anchor: start" x="212.73" y="119.948359" transform="rotate(-0 212.73 119.948359)">S2 (25)</text>
+    </g>
+    <g id="patch_53">
+     <path d="M 204.12 129.538516 
+L 209.45 129.538516 
+L 209.45 123.532016 
+L 204.12 123.532016 
+z
+" style="fill: #b4a9d0"/>
+    </g>
+    <g id="text_51">
+     <text style="font: 8.2px 'STIXGeneral'; text-anchor: start" x="212.73" y="129.395016" transform="rotate(-0 212.73 129.395016)">S3 (20)</text>
+    </g>
+    <g id="patch_54">
+     <path d="M 204.12 138.985172 
+L 209.45 138.985172 
+L 209.45 132.978672 
+L 204.12 132.978672 
+z
+" style="fill: #9ebacb"/>
+    </g>
+    <g id="text_52">
+     <text style="font: 8.2px 'STIXGeneral'; text-anchor: start" x="212.73" y="138.841672" transform="rotate(-0 212.73 138.841672)">S4 (20)</text>
+    </g>
+    <g id="patch_55">
+     <path d="M 204.12 148.431828 
+L 209.45 148.431828 
+L 209.45 142.425328 
+L 204.12 142.425328 
+z
+" style="fill: #c8d8a6"/>
+    </g>
+    <g id="text_53">
+     <text style="font: 8.2px 'STIXGeneral'; text-anchor: start" x="212.73" y="148.288328" transform="rotate(-0 212.73 148.288328)">S5 (10)</text>
+    </g>
+    <g id="patch_56">
+     <path d="M 204.12 157.878484 
+L 209.45 157.878484 
+L 209.45 151.871984 
+L 204.12 151.871984 
+z
+" style="fill: #d7b5c7"/>
+    </g>
+    <g id="text_54">
+     <text style="font: 8.2px 'STIXGeneral'; text-anchor: start" x="212.73" y="157.734984" transform="rotate(-0 212.73 157.734984)">S6 (4)</text>
+    </g>
+    <g id="patch_57">
+     <path d="M 204.12 167.325141 
+L 209.45 167.325141 
+L 209.45 161.318641 
+L 204.12 161.318641 
+z
+" style="fill: #d7ccaa"/>
+    </g>
+    <g id="text_55">
+     <text style="font: 8.2px 'STIXGeneral'; text-anchor: start" x="212.73" y="167.181641" transform="rotate(-0 212.73 167.181641)">S7 (15)</text>
+    </g>
+   </g>
+  </g>
+  <g id="text_56">
+   <text style="font: 700 8px 'STIXGeneral'; text-anchor: middle" x="60.984" y="93.9675" transform="rotate(-0 60.984 93.9675)">(a) Data Retrieval</text>
+  </g>
+  <g id="text_57">
+   <text style="font: 700 8px 'STIXGeneral'; text-anchor: middle" x="188.244" y="94.1125" transform="rotate(-0 188.244 94.1125)">(b) Anomaly Detection</text>
+  </g>
+  <g id="text_58">
+   <text style="font: 700 8px 'STIXGeneral'; text-anchor: middle" x="60.984" y="186.1275" transform="rotate(-0 60.984 186.1275)">(c) Health Assessment</text>
+  </g>
+  <g id="text_59">
+   <text style="font: 700 8px 'STIXGeneral'; text-anchor: middle" x="188.244" y="186.2725" transform="rotate(-0 188.244 186.2725)">(d) Root-Cause Analysis</text>
+  </g>
+ </g>
+</svg>

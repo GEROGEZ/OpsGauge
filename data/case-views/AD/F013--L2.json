@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F013--L2",
+  "task": "AD",
+  "source_case_id": "F013",
+  "family_id": "F013",
+  "bundle_id": null,
+  "source_level": "IL2",
+  "level": 2,
+  "slice": "L3-S5",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F013--L2--shell_raw",
+      "instruction": "请复核 rca-benchmark 中 /api/v1/inventory 在 2026年09月01日 09:55:02 至 10:19:30（北京时间）期间的业务异常。核实不同处理链路是否争用同一服务的处理能力，并判断是否必须分开处置；同时说明现有证据能覆盖到哪些业务、不能覆盖到哪些业务。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n可使用 /scene/SCOPE-MAP.json 获取中性的调查范围信息；其中不包含因果边、根因或正确判断。\n",
+      "original_instruction_sha256": "d09a2579224a507baf0383b3b82bf6fc5a6deeeccc673669ba89a249256cc2c1",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "7df164f5660e5bd561b6123685ee265118225ae26c653343596c1981d6b926aa"
+      },
+      "instruction_sha256": "d09a2579224a507baf0383b3b82bf6fc5a6deeeccc673669ba89a249256cc2c1"
+    },
+    "native_raw": {
+      "task_id": "AD--F013--L2--native_raw",
+      "instruction": "请复核 rca-benchmark 中 /api/v1/inventory 在 2026年09月01日 09:55:02 至 10:19:30（北京时间）期间的业务异常。核实不同处理链路是否争用同一服务的处理能力，并判断是否必须分开处置；同时说明现有证据能覆盖到哪些业务、不能覆盖到哪些业务。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method. Public investigation guidance is available in `/scene/SCOPE-MAP.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "41d3517dec046672299d662e31cf1af425ddc4ec1fecb39e219b4a66da8b3d2b",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "7df164f5660e5bd561b6123685ee265118225ae26c653343596c1981d6b926aa"
+      },
+      "instruction_sha256": "41d3517dec046672299d662e31cf1af425ddc4ec1fecb39e219b4a66da8b3d2b"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F013--L2--umodel_semantic",
+      "instruction": "请复核 rca-benchmark 中 /api/v1/inventory 在 2026年09月01日 09:55:02 至 10:19:30（北京时间）期间的业务异常。核实不同处理链路是否争用同一服务的处理能力，并判断是否必须分开处置；同时说明现有证据能覆盖到哪些业务、不能覆盖到哪些业务。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`. Public investigation guidance is available in `/scene/SCOPE-MAP.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "46b67d9ed4cd7cea19fc75d9ed5756fcca981694101479ec7bd2337e3815ab37",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "7df164f5660e5bd561b6123685ee265118225ae26c653343596c1981d6b926aa"
+      },
+      "instruction_sha256": "46b67d9ed4cd7cea19fc75d9ed5756fcca981694101479ec7bd2337e3815ab37"
+    }
+  },
+  "analysis_cluster_id": "F013"
+}

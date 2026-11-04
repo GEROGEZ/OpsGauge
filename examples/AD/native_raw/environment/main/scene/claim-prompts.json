@@ -1,0 +1,20 @@
+{
+  "claims": [
+    {
+      "id": "fixed_product_hotspot",
+      "prompt": "fixed product hotspot"
+    },
+    {
+      "id": "global_capacity_shortage",
+      "prompt": "global capacity shortage"
+    },
+    {
+      "id": "all_products_affected",
+      "prompt": "all products affected"
+    },
+    {
+      "id": "unique_business_impact_population",
+      "prompt": "unique business impact population"
+    }
+  ]
+}

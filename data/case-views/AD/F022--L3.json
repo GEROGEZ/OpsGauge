@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F022--L3",
+  "task": "AD",
+  "source_case_id": "F022",
+  "family_id": "F022",
+  "bundle_id": null,
+  "source_level": "IL1",
+  "level": 3,
+  "slice": "L3-S5",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F022--L3--shell_raw",
+      "instruction": "请调查 cart::POST /oteldemo.CartService/EmptyCart 在 2026-08-10T18:14:22+08:00 至 2026-08-10T19:12:00+08:00 期间的业务异常。目标：判断这次连通性变化实际影响了哪些业务依赖，说明需要恢复的通信范围。 请给出可核查证据，并明确无法确认的部分。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n",
+      "original_instruction_sha256": "77b8523484aa065c25bfa3124652af0369b1282eef33645dea2f8a05848f19c8",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "c1a40638bfda39e24fc0b4216ba17976c0aa669cbe32de21eb46fa30d2e0f715"
+      },
+      "instruction_sha256": "77b8523484aa065c25bfa3124652af0369b1282eef33645dea2f8a05848f19c8"
+    },
+    "native_raw": {
+      "task_id": "AD--F022--L3--native_raw",
+      "instruction": "请调查 cart::POST /oteldemo.CartService/EmptyCart 在 2026-08-10T18:14:22+08:00 至 2026-08-10T19:12:00+08:00 期间的业务异常。目标：判断这次连通性变化实际影响了哪些业务依赖，说明需要恢复的通信范围。 请给出可核查证据，并明确无法确认的部分。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "8df98f4dceadc7798610dcc8d5560c9ae417f904021e5dfe28acafc378ea243b",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "c1a40638bfda39e24fc0b4216ba17976c0aa669cbe32de21eb46fa30d2e0f715"
+      },
+      "instruction_sha256": "8df98f4dceadc7798610dcc8d5560c9ae417f904021e5dfe28acafc378ea243b"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F022--L3--umodel_semantic",
+      "instruction": "请调查 cart::POST /oteldemo.CartService/EmptyCart 在 2026-08-10T18:14:22+08:00 至 2026-08-10T19:12:00+08:00 期间的业务异常。目标：判断这次连通性变化实际影响了哪些业务依赖，说明需要恢复的通信范围。 请给出可核查证据，并明确无法确认的部分。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "d99827fcddf4ad2df1dad81460f87948944931539d2dc8aacbc79fdab38b3eca",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "c1a40638bfda39e24fc0b4216ba17976c0aa669cbe32de21eb46fa30d2e0f715"
+      },
+      "instruction_sha256": "d99827fcddf4ad2df1dad81460f87948944931539d2dc8aacbc79fdab38b3eca"
+    }
+  },
+  "analysis_cluster_id": "F022"
+}

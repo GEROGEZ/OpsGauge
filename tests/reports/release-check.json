@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "checks": {
+    "task_profile_packages_3861": true,
+    "packages_by_task": true,
+    "release_manifest_counts": true,
+    "scored_cells_15444": true,
+    "all_scores_present": true,
+    "all_scores_bind_to_package": true,
+    "AD_level_direction": true,
+    "three_profiles_per_case": true,
+    "manifest_object_totals": true,
+    "all_data_objects_present": true,
+    "object_sizes_and_requested_hashes": true,
+    "scorer_source_hashes": true,
+    "shard_object_coverage": true,
+    "all_task_files_indexed": true
+  },
+  "task_profile_packages": 3861,
+  "selected_scores": 15444,
+  "object_count": 17795,
+  "object_bytes": 69658555020,
+  "missing_objects": [],
+  "invalid_objects": [],
+  "full_hash_requested": false,
+  "metadata_only": false,
+  "bytes_rehashed": 0,
+  "agent_runs": 0,
+  "model_calls": 0,
+  "scope": "Index, score and source-code checks; evidence objects are checked only outside metadata-only mode. No Docker or agent execution."
+}

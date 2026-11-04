@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F040--L3",
+  "task": "AD",
+  "source_case_id": "F040",
+  "family_id": "F040",
+  "bundle_id": null,
+  "source_level": "IL1",
+  "level": 3,
+  "slice": "L3-S5",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F040--L3--shell_raw",
+      "instruction": "请调查 frontend::GET /api/products/{productId} 在 2026-07-07T09:43:00+08:00 至 2026-07-07T09:45:47+08:00 期间的业务异常。目标：核实这次文件相关业务是否产出了可交付结果，给出应继续跟踪的范围和结案依据。 请给出可核查证据，并明确无法确认的部分。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n",
+      "original_instruction_sha256": "b2c3942a3a89bc1ea4aac9a4a1feafbc6a09e882bd9e3fae5841e0cd08b40ca0",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "ef23a37bdb773d8778aabe9d2f2b4a33200e52f3aa1c85cae1922cc6175847a8"
+      },
+      "instruction_sha256": "b2c3942a3a89bc1ea4aac9a4a1feafbc6a09e882bd9e3fae5841e0cd08b40ca0"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F040--L3--umodel_semantic",
+      "instruction": "请调查 frontend::GET /api/products/{productId} 在 2026-07-07T09:43:00+08:00 至 2026-07-07T09:45:47+08:00 期间的业务异常。目标：核实这次文件相关业务是否产出了可交付结果，给出应继续跟踪的范围和结案依据。 请给出可核查证据，并明确无法确认的部分。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "a013ded355ce5106d48339ebfc653010c75c66391c28c5935c212ed6e3831a04",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "ef23a37bdb773d8778aabe9d2f2b4a33200e52f3aa1c85cae1922cc6175847a8"
+      },
+      "instruction_sha256": "a013ded355ce5106d48339ebfc653010c75c66391c28c5935c212ed6e3831a04"
+    },
+    "native_raw": {
+      "task_id": "AD--F040--L3--native_raw",
+      "instruction": "请调查 frontend::GET /api/products/{productId} 在 2026-07-07T09:43:00+08:00 至 2026-07-07T09:45:47+08:00 期间的业务异常。目标：核实这次文件相关业务是否产出了可交付结果，给出应继续跟踪的范围和结案依据。 请给出可核查证据，并明确无法确认的部分。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "4cceab2b65fc8bdf16855915b95ce41f70108586aba39441f089c95485ba84c2",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "ef23a37bdb773d8778aabe9d2f2b4a33200e52f3aa1c85cae1922cc6175847a8"
+      },
+      "instruction_sha256": "4cceab2b65fc8bdf16855915b95ce41f70108586aba39441f089c95485ba84c2"
+    }
+  },
+  "analysis_cluster_id": "F040"
+}

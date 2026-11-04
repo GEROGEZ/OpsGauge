@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F008--L2",
+  "task": "AD",
+  "source_case_id": "F008",
+  "family_id": "F008",
+  "bundle_id": null,
+  "source_level": "IL2",
+  "level": 2,
+  "slice": "L3-S7",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F008--L2--shell_raw",
+      "instruction": "请复核 inventory 在 2026 年 8 月 31 日 20:35 至 20:56（北京时间）期间的业务异常演变。请区分主要异常阶段，结合可查询的依赖观测判断状态何时发生变化，并评估现有证据是否足以证明某个处置已经生效或可以结束处置。请给出可核查的依据，明确仍不能确认的机制和业务验收结果。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n可使用 /scene/SCOPE-MAP.json 获取中性的调查范围信息；其中不包含因果边、根因或正确判断。\n",
+      "original_instruction_sha256": "a2b10a7fd11daeb7e81ab2bc49a2702dd43015b3e3bc5e08d7a15c1227ba9c12",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "31d308326ec7f4ce965edc466b6bcbba093f643823e3abcb594643406742a990"
+      },
+      "instruction_sha256": "a2b10a7fd11daeb7e81ab2bc49a2702dd43015b3e3bc5e08d7a15c1227ba9c12"
+    },
+    "native_raw": {
+      "task_id": "AD--F008--L2--native_raw",
+      "instruction": "请复核 inventory 在 2026 年 8 月 31 日 20:35 至 20:56（北京时间）期间的业务异常演变。请区分主要异常阶段，结合可查询的依赖观测判断状态何时发生变化，并评估现有证据是否足以证明某个处置已经生效或可以结束处置。请给出可核查的依据，明确仍不能确认的机制和业务验收结果。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method. Public investigation guidance is available in `/scene/SCOPE-MAP.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "53a3695279f759c007f1a5b5a6eee6891cb78709be7ecbfaa009be11c5eb7dc2",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "31d308326ec7f4ce965edc466b6bcbba093f643823e3abcb594643406742a990"
+      },
+      "instruction_sha256": "53a3695279f759c007f1a5b5a6eee6891cb78709be7ecbfaa009be11c5eb7dc2"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F008--L2--umodel_semantic",
+      "instruction": "请复核 inventory 在 2026 年 8 月 31 日 20:35 至 20:56（北京时间）期间的业务异常演变。请区分主要异常阶段，结合可查询的依赖观测判断状态何时发生变化，并评估现有证据是否足以证明某个处置已经生效或可以结束处置。请给出可核查的依据，明确仍不能确认的机制和业务验收结果。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`. Public investigation guidance is available in `/scene/SCOPE-MAP.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "3ed9e1968d6698685ac115c148768ad589199276f04f6c5e8fc06acfe61b8f41",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "31d308326ec7f4ce965edc466b6bcbba093f643823e3abcb594643406742a990"
+      },
+      "instruction_sha256": "3ed9e1968d6698685ac115c148768ad589199276f04f6c5e8fc06acfe61b8f41"
+    }
+  },
+  "analysis_cluster_id": "F008"
+}

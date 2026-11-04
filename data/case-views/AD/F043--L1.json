@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F043--L1",
+  "task": "AD",
+  "source_case_id": "F043",
+  "family_id": "F043",
+  "bundle_id": null,
+  "source_level": "IL3",
+  "level": 1,
+  "slice": "L3-S5",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F043--L1--shell_raw",
+      "instruction": "请复核 rca-benchmark 中 frontend::GET /api/recommendations 在 2026年04月12日 04:39:09 至 04:45:03（北京时间）期间的异常。判断节点 CPU 与 recommendation 路径退化的关系，说明是否足以扩大到同节点多个业务，并明确低信号与噪声边界。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n可使用 /scene/SCOPE-MAP.json 与 /scene/EVIDENCE-PATH.json；其中仅提供调查阶段和证据归组，不包含根因、机制答案或正确判断。\n",
+      "original_instruction_sha256": "a374192f20d5895443cbf938f073a769cbc2fb4b9511b4e01e945e7c57a179c9",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "51aca37f958c8de7f743eb7fe2edd86ad6557ceb512f56ff1166d22e82c885b4"
+      },
+      "instruction_sha256": "a374192f20d5895443cbf938f073a769cbc2fb4b9511b4e01e945e7c57a179c9"
+    },
+    "native_raw": {
+      "task_id": "AD--F043--L1--native_raw",
+      "instruction": "请复核 rca-benchmark 中 frontend::GET /api/recommendations 在 2026年04月12日 04:39:09 至 04:45:03（北京时间）期间的异常。判断节点 CPU 与 recommendation 路径退化的关系，说明是否足以扩大到同节点多个业务，并明确低信号与噪声边界。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method. Public investigation guidance is available in `/scene/SCOPE-MAP.json` and `/scene/EVIDENCE-PATH.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "e4760a10edbd1562477e9a0d161afce0953c4ed365ebac1f0717620e90a800f4",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "51aca37f958c8de7f743eb7fe2edd86ad6557ceb512f56ff1166d22e82c885b4"
+      },
+      "instruction_sha256": "e4760a10edbd1562477e9a0d161afce0953c4ed365ebac1f0717620e90a800f4"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F043--L1--umodel_semantic",
+      "instruction": "请复核 rca-benchmark 中 frontend::GET /api/recommendations 在 2026年04月12日 04:39:09 至 04:45:03（北京时间）期间的异常。判断节点 CPU 与 recommendation 路径退化的关系，说明是否足以扩大到同节点多个业务，并明确低信号与噪声边界。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`. Public investigation guidance is available in `/scene/SCOPE-MAP.json` and `/scene/EVIDENCE-PATH.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "c2ad933d02a90d011804207358e0421f91be52d3b556b5f6824fd93d29ea4668",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "51aca37f958c8de7f743eb7fe2edd86ad6557ceb512f56ff1166d22e82c885b4"
+      },
+      "instruction_sha256": "c2ad933d02a90d011804207358e0421f91be52d3b556b5f6824fd93d29ea4668"
+    }
+  },
+  "analysis_cluster_id": "F043"
+}

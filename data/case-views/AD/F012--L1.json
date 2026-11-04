@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F012--L1",
+  "task": "AD",
+  "source_case_id": "F012",
+  "family_id": "F012",
+  "bundle_id": null,
+  "source_level": "IL3",
+  "level": 1,
+  "slice": "L3-S1",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F012--L1--shell_raw",
+      "instruction": "团队在 order-review 的运行记录中看到大量报错，怀疑订单重复处理，准备对未处理订单补发。请核查 2026 年 9 月 7 日 11:50 至 11:51（北京时间，以请求发起时间为准）这批提交到 12:10 的实际进展，解释记录数量与问题范围，判断现有证据能否支持上述判断和补发范围，并明确仍不能确定的业务结果。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n可使用 /scene/SCOPE-MAP.json 与 /scene/EVIDENCE-PATH.json；其中仅提供调查阶段和证据归组，不包含根因、机制答案或正确判断。\n",
+      "original_instruction_sha256": "2cb8d1df2941330239f5d2a414435f118d051b7f1df43902e15182c87eedba14",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "e840d43a9253646a3e9a96127f1c789b7653ab4dd66c104afff6b861ade11907"
+      },
+      "instruction_sha256": "2cb8d1df2941330239f5d2a414435f118d051b7f1df43902e15182c87eedba14"
+    },
+    "native_raw": {
+      "task_id": "AD--F012--L1--native_raw",
+      "instruction": "团队在 order-review 的运行记录中看到大量报错，怀疑订单重复处理，准备对未处理订单补发。请核查 2026 年 9 月 7 日 11:50 至 11:51（北京时间，以请求发起时间为准）这批提交到 12:10 的实际进展，解释记录数量与问题范围，判断现有证据能否支持上述判断和补发范围，并明确仍不能确定的业务结果。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method. Public investigation guidance is available in `/scene/SCOPE-MAP.json` and `/scene/EVIDENCE-PATH.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "73b85ba7fc4d9ec73cdfa8c1a933fe4eef0ce349aba2a352fe49085f6112bb1d",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "e840d43a9253646a3e9a96127f1c789b7653ab4dd66c104afff6b861ade11907"
+      },
+      "instruction_sha256": "73b85ba7fc4d9ec73cdfa8c1a933fe4eef0ce349aba2a352fe49085f6112bb1d"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F012--L1--umodel_semantic",
+      "instruction": "团队在 order-review 的运行记录中看到大量报错，怀疑订单重复处理，准备对未处理订单补发。请核查 2026 年 9 月 7 日 11:50 至 11:51（北京时间，以请求发起时间为准）这批提交到 12:10 的实际进展，解释记录数量与问题范围，判断现有证据能否支持上述判断和补发范围，并明确仍不能确定的业务结果。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`. Public investigation guidance is available in `/scene/SCOPE-MAP.json` and `/scene/EVIDENCE-PATH.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "3fa21ffa0d03ba8b9c9c1f48ae57918ab3094da04df148ceeec7b06a15b022ec",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "e840d43a9253646a3e9a96127f1c789b7653ab4dd66c104afff6b861ade11907"
+      },
+      "instruction_sha256": "3fa21ffa0d03ba8b9c9c1f48ae57918ab3094da04df148ceeec7b06a15b022ec"
+    }
+  },
+  "analysis_cluster_id": "F012"
+}

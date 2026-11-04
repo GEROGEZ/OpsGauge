@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F045--L3",
+  "task": "AD",
+  "source_case_id": "F045",
+  "family_id": "F045",
+  "bundle_id": null,
+  "source_level": "IL1",
+  "level": 3,
+  "slice": "L3-S2",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F045--L3--shell_raw",
+      "instruction": "请调查 frontend-xc::GET /api/currency 在 2026-07-24T19:59:38+08:00 至 2026-07-24T20:06:30+08:00 期间的业务异常。目标：复核这次调用失败发生在哪一段，给出可以支持的责任边界和应优先处置的范围。 请给出可核查证据，并明确无法确认的部分。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n",
+      "original_instruction_sha256": "8d65afc3cff3889ddd5ee0478a1a22789857ef2a6d0c3dd55b61fdee122315e8",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "c840f758cf2ecda5111364ca0a090b1d81c74bf6de1fb1b4f8c693a212dc4491"
+      },
+      "instruction_sha256": "8d65afc3cff3889ddd5ee0478a1a22789857ef2a6d0c3dd55b61fdee122315e8"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F045--L3--umodel_semantic",
+      "instruction": "请调查 frontend-xc::GET /api/currency 在 2026-07-24T19:59:38+08:00 至 2026-07-24T20:06:30+08:00 期间的业务异常。目标：复核这次调用失败发生在哪一段，给出可以支持的责任边界和应优先处置的范围。 请给出可核查证据，并明确无法确认的部分。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "6ea30d197663a789786b8aa3da6dc3733a50dc3b912517a9d499fab238730221",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "c840f758cf2ecda5111364ca0a090b1d81c74bf6de1fb1b4f8c693a212dc4491"
+      },
+      "instruction_sha256": "6ea30d197663a789786b8aa3da6dc3733a50dc3b912517a9d499fab238730221"
+    },
+    "native_raw": {
+      "task_id": "AD--F045--L3--native_raw",
+      "instruction": "请调查 frontend-xc::GET /api/currency 在 2026-07-24T19:59:38+08:00 至 2026-07-24T20:06:30+08:00 期间的业务异常。目标：复核这次调用失败发生在哪一段，给出可以支持的责任边界和应优先处置的范围。 请给出可核查证据，并明确无法确认的部分。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "d46f0e436d38d71aa6bbf4a2c1f4535f2e6051edf347c87f5d2099564d3e7c62",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "c840f758cf2ecda5111364ca0a090b1d81c74bf6de1fb1b4f8c693a212dc4491"
+      },
+      "instruction_sha256": "d46f0e436d38d71aa6bbf4a2c1f4535f2e6051edf347c87f5d2099564d3e7c62"
+    }
+  },
+  "analysis_cluster_id": "F045"
+}

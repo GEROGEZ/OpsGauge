@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F002--L1",
+  "task": "AD",
+  "source_case_id": "F002",
+  "family_id": "F002",
+  "bundle_id": null,
+  "source_level": "IL3",
+  "level": 1,
+  "slice": "L3-S3",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F002--L1--shell_raw",
+      "instruction": "请核查这份快照中 checkout 在 2026 年 6 月 22 日 14:09—14:10（北京时间）发起的下单请求，在入口请求记录结束后是否仍有后续进展。结论须能确认后续活动确属原来的业务请求，并说明可核查的业务数量、处理阶段和最终状态的判断边界。\n\n已知入口：checkout 的下单操作为 `oteldemo.CheckoutService/PlaceOrder`。本题以业务请求为对象；同一业务操作可能存在多条埋点记录。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n可使用 /scene/SCOPE-MAP.json 与 /scene/EVIDENCE-PATH.json；其中仅提供调查阶段和证据归组，不包含根因、机制答案或正确判断。\n",
+      "original_instruction_sha256": "f034219d70347c9b565d9bcd44fa2271afb2e67091d0d38fdcfeed4aaece007c",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "a55f30ef98c64702fef16cd4ef8f4a84a03e4dd6ebd5bd9fa08ad4900cc3c9d8"
+      },
+      "instruction_sha256": "f034219d70347c9b565d9bcd44fa2271afb2e67091d0d38fdcfeed4aaece007c"
+    },
+    "native_raw": {
+      "task_id": "AD--F002--L1--native_raw",
+      "instruction": "请核查这份快照中 checkout 在 2026 年 6 月 22 日 14:09—14:10（北京时间）发起的下单请求，在入口请求记录结束后是否仍有后续进展。结论须能确认后续活动确属原来的业务请求，并说明可核查的业务数量、处理阶段和最终状态的判断边界。\n\n已知入口：checkout 的下单操作为 `oteldemo.CheckoutService/PlaceOrder`。本题以业务请求为对象；同一业务操作可能存在多条埋点记录。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method. Public investigation guidance is available in `/scene/SCOPE-MAP.json` and `/scene/EVIDENCE-PATH.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "724beb69cf3e0514b786774f90d0f3ef22e3c5d6fab70cdefa4aea0eeb7254ba",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "a55f30ef98c64702fef16cd4ef8f4a84a03e4dd6ebd5bd9fa08ad4900cc3c9d8"
+      },
+      "instruction_sha256": "724beb69cf3e0514b786774f90d0f3ef22e3c5d6fab70cdefa4aea0eeb7254ba"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F002--L1--umodel_semantic",
+      "instruction": "请核查这份快照中 checkout 在 2026 年 6 月 22 日 14:09—14:10（北京时间）发起的下单请求，在入口请求记录结束后是否仍有后续进展。结论须能确认后续活动确属原来的业务请求，并说明可核查的业务数量、处理阶段和最终状态的判断边界。\n\n已知入口：checkout 的下单操作为 `oteldemo.CheckoutService/PlaceOrder`。本题以业务请求为对象；同一业务操作可能存在多条埋点记录。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`. Public investigation guidance is available in `/scene/SCOPE-MAP.json` and `/scene/EVIDENCE-PATH.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "21bf2b163f28db53b813d158ab975a293001a52ad52aba17a5c89b8d3c01242b",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "a55f30ef98c64702fef16cd4ef8f4a84a03e4dd6ebd5bd9fa08ad4900cc3c9d8"
+      },
+      "instruction_sha256": "21bf2b163f28db53b813d158ab975a293001a52ad52aba17a5c89b8d3c01242b"
+    }
+  },
+  "analysis_cluster_id": "F002"
+}

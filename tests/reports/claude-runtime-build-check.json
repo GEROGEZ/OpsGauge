@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "profile": "shell_raw",
+      "passed": true,
+      "node": "v22.23.4",
+      "claude": "2.1.309 (Claude Code)"
+    },
+    {
+      "profile": "native_raw",
+      "passed": true,
+      "node": "v22.23.4",
+      "claude": "2.1.309 (Claude Code)"
+    },
+    {
+      "profile": "umodel_semantic",
+      "passed": true,
+      "node": "v22.23.4",
+      "claude": "2.1.309 (Claude Code)"
+    }
+  ],
+  "recipe_built_from_public_downloads": true,
+  "historical_runtime_image_used": false,
+  "scope": "New auxiliary image built under a test tag; three DR example main Dockerfiles used that tag for this test. Existing historical image and recorded task files were not overwritten. No agent/model calls."
+}

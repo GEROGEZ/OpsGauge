@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F005--L1",
+  "task": "AD",
+  "source_case_id": "F005",
+  "family_id": "F005",
+  "bundle_id": null,
+  "source_level": "IL3",
+  "level": 1,
+  "slice": "L3-S1",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F005--L1--shell_raw",
+      "instruction": "客服反馈 storefront-web 上有用户点击“加入购物车”后没有反应。请核查 2026 年 8 月 11 日 15:15:00 至 15:17:00（北京时间，以用户操作发生时间为准）的加购情况，判断问题出在哪个环节，量化涉及的操作和页面范围，并给出可以核验的证据。明确说明现有证据还不能确认哪些业务结果。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n可使用 /scene/SCOPE-MAP.json 与 /scene/EVIDENCE-PATH.json；其中仅提供调查阶段和证据归组，不包含根因、机制答案或正确判断。\n",
+      "original_instruction_sha256": "db5b901555565f30c6ed03a9bd60d20497d5db2066302a5ac2b1e68fb5f3010c",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "af05f63743f418cfe8554be534e32f28e3a2ba79a5713de9be82f8d126c2217e"
+      },
+      "instruction_sha256": "db5b901555565f30c6ed03a9bd60d20497d5db2066302a5ac2b1e68fb5f3010c"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F005--L1--umodel_semantic",
+      "instruction": "客服反馈 storefront-web 上有用户点击“加入购物车”后没有反应。请核查 2026 年 8 月 11 日 15:15:00 至 15:17:00（北京时间，以用户操作发生时间为准）的加购情况，判断问题出在哪个环节，量化涉及的操作和页面范围，并给出可以核验的证据。明确说明现有证据还不能确认哪些业务结果。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`. Public investigation guidance is available in `/scene/SCOPE-MAP.json` and `/scene/EVIDENCE-PATH.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "5789c110c7cd62a053e2a88433274db1ac19d51e3581a6f075d58a2d0aaed9d6",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "af05f63743f418cfe8554be534e32f28e3a2ba79a5713de9be82f8d126c2217e"
+      },
+      "instruction_sha256": "5789c110c7cd62a053e2a88433274db1ac19d51e3581a6f075d58a2d0aaed9d6"
+    },
+    "native_raw": {
+      "task_id": "AD--F005--L1--native_raw",
+      "instruction": "客服反馈 storefront-web 上有用户点击“加入购物车”后没有反应。请核查 2026 年 8 月 11 日 15:15:00 至 15:17:00（北京时间，以用户操作发生时间为准）的加购情况，判断问题出在哪个环节，量化涉及的操作和页面范围，并给出可以核验的证据。明确说明现有证据还不能确认哪些业务结果。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method. Public investigation guidance is available in `/scene/SCOPE-MAP.json` and `/scene/EVIDENCE-PATH.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "9facbba6b092f3dd7880d33af060154bdb742e19366964411fe1b7e452ba12b3",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "af05f63743f418cfe8554be534e32f28e3a2ba79a5713de9be82f8d126c2217e"
+      },
+      "instruction_sha256": "9facbba6b092f3dd7880d33af060154bdb742e19366964411fe1b7e452ba12b3"
+    }
+  },
+  "analysis_cluster_id": "F005"
+}

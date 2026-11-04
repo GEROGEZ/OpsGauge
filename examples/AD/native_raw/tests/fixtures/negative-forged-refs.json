@@ -1,0 +1,34 @@
+{
+  "state": "final",
+  "summary": "forged",
+  "claims": [
+    {
+      "id": "fixed_product_hotspot",
+      "status": "supported",
+      "evidence_refs": [
+        "forged-ref"
+      ]
+    },
+    {
+      "id": "global_capacity_shortage",
+      "status": "not_established",
+      "evidence_refs": [
+        "forged-ref"
+      ]
+    },
+    {
+      "id": "all_products_affected",
+      "status": "not_established",
+      "evidence_refs": [
+        "forged-ref"
+      ]
+    },
+    {
+      "id": "unique_business_impact_population",
+      "status": "not_established",
+      "evidence_refs": [
+        "forged-ref"
+      ]
+    }
+  ]
+}

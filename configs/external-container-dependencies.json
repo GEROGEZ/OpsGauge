@@ -1,0 +1,19 @@
+{
+  "dependencies": [
+    {
+      "image": "benchmark-claude-runtime:2.1.309-v1",
+      "used_by": "DR main Dockerfile COPY --from",
+      "included_in_release_archive": false,
+      "image_id_on_validation_host": "sha256:632cb28521a89d634d3633bfbb7c465eb581377ef51a6510caf25dda90d3712f",
+      "availability": "Reader builds locally from containers/claude-runtime/Dockerfile using public Node.js and npm downloads.",
+      "build_command": "docker build --platform linux/amd64 -t benchmark-claude-runtime:2.1.309-v1 containers/claude-runtime",
+      "build_recipe_included": true,
+      "versions": {
+        "node": "22.23.4",
+        "claude_code": "2.1.309"
+      },
+      "validation_report": "tests/reports/claude-runtime-build-check.json"
+    }
+  ],
+  "scope": "Third-party software is installed by the reader; the release supplies the required recipe and commands. See README for host, task/profile, runner, network, model-protocol and scoring requirements."
+}

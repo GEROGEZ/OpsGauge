@@ -1,0 +1,19 @@
+{
+  "version": "dr_operation_slices_v6_cpu_phase_merge",
+  "merge_from": [
+    "metric.resolve-latest-fulfilled",
+    "metric.resolve-latest-unfulfilled",
+    "metric.resolve-longest-fulfilled"
+  ],
+  "merge_to": "metric.retrieve-cpu-peaks",
+  "display_labels": {
+    "metric.retrieve-cpu-peaks": "Retrieve CPU peaks",
+    "metric.compare-independent-rankings": "Compare CPU rankings",
+    "event.reconstruct-transaction-state": "Reconstruct alert states",
+    "event.aggregate-cross-rule-state": "Aggregate alerts across rules",
+    "trace.rank-failure-volume-rate": "Rank APIs by failure count and rate",
+    "event-trace.align-intervals": "Measure calls at container stops"
+  },
+  "scope": "Merge three replica-phase CPU retrieval slices. Preserve original source labels and all case/score records. Phase conditions remain in original task contracts.",
+  "aggregation": "Weight all 29 member families equally, not the three former slices equally."
+}

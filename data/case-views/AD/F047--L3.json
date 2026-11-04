@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F047--L3",
+  "task": "AD",
+  "source_case_id": "F047",
+  "family_id": "F047",
+  "bundle_id": null,
+  "source_level": "IL1",
+  "level": 3,
+  "slice": "L3-S3",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F047--L3--shell_raw",
+      "instruction": "请调查 frontend::GET /nacos/css/{URL_RESOURCE} 在 2026-04-20T16:55:49.983704+08:00 至 2026-04-20T17:05:10+08:00 期间的业务异常。目标：判断这次异步处理的业务结果是否已经落定，说明哪些对象仍需核验最终状态。 请给出可核查证据，并明确无法确认的部分。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n",
+      "original_instruction_sha256": "f1bc0845cacd7921f87d6998c2db2cac0fb4bc03efa0a798ce98e335d9607fa9",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "3ca8afc7ba113fcf11f964a5e18aa7de9336356f34ba31a1746b59bf3e7a1cf3"
+      },
+      "instruction_sha256": "f1bc0845cacd7921f87d6998c2db2cac0fb4bc03efa0a798ce98e335d9607fa9"
+    },
+    "native_raw": {
+      "task_id": "AD--F047--L3--native_raw",
+      "instruction": "请调查 frontend::GET /nacos/css/{URL_RESOURCE} 在 2026-04-20T16:55:49.983704+08:00 至 2026-04-20T17:05:10+08:00 期间的业务异常。目标：判断这次异步处理的业务结果是否已经落定，说明哪些对象仍需核验最终状态。 请给出可核查证据，并明确无法确认的部分。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "5e4d495c70e488249e7a0e46f51dd50d7bd6ee75cdaed7d8ce85d72ceef69afe",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "3ca8afc7ba113fcf11f964a5e18aa7de9336356f34ba31a1746b59bf3e7a1cf3"
+      },
+      "instruction_sha256": "5e4d495c70e488249e7a0e46f51dd50d7bd6ee75cdaed7d8ce85d72ceef69afe"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F047--L3--umodel_semantic",
+      "instruction": "请调查 frontend::GET /nacos/css/{URL_RESOURCE} 在 2026-04-20T16:55:49.983704+08:00 至 2026-04-20T17:05:10+08:00 期间的业务异常。目标：判断这次异步处理的业务结果是否已经落定，说明哪些对象仍需核验最终状态。 请给出可核查证据，并明确无法确认的部分。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "cb969d53d24634d3019e5f3153a5570b9545488b71ed29b9410a1980bd1ac01b",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "3ca8afc7ba113fcf11f964a5e18aa7de9336356f34ba31a1746b59bf3e7a1cf3"
+      },
+      "instruction_sha256": "cb969d53d24634d3019e5f3153a5570b9545488b71ed29b9410a1980bd1ac01b"
+    }
+  },
+  "analysis_cluster_id": "F047"
+}

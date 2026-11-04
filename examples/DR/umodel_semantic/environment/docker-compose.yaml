@@ -1,0 +1,21 @@
+services:
+  main:
+    build: ./main
+    depends_on:
+      umodel:
+        condition: service_healthy
+    environment:
+      UMODEL_URL: http://umodel:8080
+      UMODEL_ENVIRONMENT_ID: frozen-observations-01
+      UMODEL_WORKSPACE: rca-benchmark
+      UMODEL_REGION_ID: cn-hongkong
+  umodel:
+    build: ./gateway
+    environment:
+      BUNDLE_ID: bundle-75bc35260b6723d3461e
+      ENVIRONMENT_ID: frozen-observations-01
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8080/v1/health')"]
+      interval: 2s
+      timeout: 2s
+      retries: 60

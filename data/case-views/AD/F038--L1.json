@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F038--L1",
+  "task": "AD",
+  "source_case_id": "F038",
+  "family_id": "F038",
+  "bundle_id": null,
+  "source_level": "IL3",
+  "level": 1,
+  "slice": "L3-S1",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F038--L1--shell_raw",
+      "instruction": "请复核 rca-benchmark 中 storefront-web 在 2026年08月10日 19:46:25 至 19:50:00（北京时间）期间的异常。判断影响是页面级还是整站级，说明 RUM 多层观测能否直接相加为业务规模，并给出数量边界。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n可使用 /scene/SCOPE-MAP.json 与 /scene/EVIDENCE-PATH.json；其中仅提供调查阶段和证据归组，不包含根因、机制答案或正确判断。\n",
+      "original_instruction_sha256": "fbe4a3a95610712420ea6ed57ac1817ce2e16a00bcd9b164aa684f08151ab32b",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "bf101426417678d8ca0b4c97f0bf72a17c9fb431154cf3817258fd0a7f794a94"
+      },
+      "instruction_sha256": "fbe4a3a95610712420ea6ed57ac1817ce2e16a00bcd9b164aa684f08151ab32b"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F038--L1--umodel_semantic",
+      "instruction": "请复核 rca-benchmark 中 storefront-web 在 2026年08月10日 19:46:25 至 19:50:00（北京时间）期间的异常。判断影响是页面级还是整站级，说明 RUM 多层观测能否直接相加为业务规模，并给出数量边界。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`. Public investigation guidance is available in `/scene/SCOPE-MAP.json` and `/scene/EVIDENCE-PATH.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "1e0cea72da2b746c70b54ac6f112e362b0c85a41069b260055cf57baff1b375c",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "bf101426417678d8ca0b4c97f0bf72a17c9fb431154cf3817258fd0a7f794a94"
+      },
+      "instruction_sha256": "1e0cea72da2b746c70b54ac6f112e362b0c85a41069b260055cf57baff1b375c"
+    },
+    "native_raw": {
+      "task_id": "AD--F038--L1--native_raw",
+      "instruction": "请复核 rca-benchmark 中 storefront-web 在 2026年08月10日 19:46:25 至 19:50:00（北京时间）期间的异常。判断影响是页面级还是整站级，说明 RUM 多层观测能否直接相加为业务规模，并给出数量边界。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method. Public investigation guidance is available in `/scene/SCOPE-MAP.json` and `/scene/EVIDENCE-PATH.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "6b369fa7ea413858283e931636f11a3efe91ffc1ea5f5355638e2c2ce104c6ef",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "bf101426417678d8ca0b4c97f0bf72a17c9fb431154cf3817258fd0a7f794a94"
+      },
+      "instruction_sha256": "6b369fa7ea413858283e931636f11a3efe91ffc1ea5f5355638e2c2ce104c6ef"
+    }
+  },
+  "analysis_cluster_id": "F038"
+}

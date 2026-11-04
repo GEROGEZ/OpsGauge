@@ -1,0 +1,14 @@
+{
+  "schema_version": "info150_access_dataset_v1",
+  "family_key": "F035",
+  "level": "IL1",
+  "profile": "umodel_semantic",
+  "bundle_id": "info150-f035-snapshot-v1",
+  "record_count": 7,
+  "entity_count": 5,
+  "modalities": {
+    "event": 5,
+    "log": 2
+  },
+  "source_evidence_sha256": "0831030b1d728c875af0456bfbbb9a74fc1f901ac474a9d4695097fae0ff2fe2"
+}

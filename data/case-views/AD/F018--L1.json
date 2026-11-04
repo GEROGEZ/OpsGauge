@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F018--L1",
+  "task": "AD",
+  "source_case_id": "F018",
+  "family_id": "F018",
+  "bundle_id": null,
+  "source_level": "IL3",
+  "level": 1,
+  "slice": "L3-S6",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F018--L1--shell_raw",
+      "instruction": "请复核 rca-benchmark 中 inventory::/api/v1/inventory/{productId} 在 2026年03月27日 18:08:44 至 18:12:01（北京时间）期间的业务异常。判断流量控制证明了什么，区分被拒绝、被接受和最终业务交付，并明确未知人口。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n可使用 /scene/SCOPE-MAP.json 与 /scene/EVIDENCE-PATH.json；其中仅提供调查阶段和证据归组，不包含根因、机制答案或正确判断。\n",
+      "original_instruction_sha256": "b90840e4d9fee044f2e2358e155db2fbee237d95f285c0bf112b06943858418f",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "ec52e5342a8fdbeed20c438f8718a0766c9cb9fcb9e0062b8a584d6439b3f425"
+      },
+      "instruction_sha256": "b90840e4d9fee044f2e2358e155db2fbee237d95f285c0bf112b06943858418f"
+    },
+    "native_raw": {
+      "task_id": "AD--F018--L1--native_raw",
+      "instruction": "请复核 rca-benchmark 中 inventory::/api/v1/inventory/{productId} 在 2026年03月27日 18:08:44 至 18:12:01（北京时间）期间的业务异常。判断流量控制证明了什么，区分被拒绝、被接受和最终业务交付，并明确未知人口。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method. Public investigation guidance is available in `/scene/SCOPE-MAP.json` and `/scene/EVIDENCE-PATH.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "b66e586b87d1c6b7c0deb6c4670ff7e0331d7f19d2198e109929a9b54c477b22",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "ec52e5342a8fdbeed20c438f8718a0766c9cb9fcb9e0062b8a584d6439b3f425"
+      },
+      "instruction_sha256": "b66e586b87d1c6b7c0deb6c4670ff7e0331d7f19d2198e109929a9b54c477b22"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F018--L1--umodel_semantic",
+      "instruction": "请复核 rca-benchmark 中 inventory::/api/v1/inventory/{productId} 在 2026年03月27日 18:08:44 至 18:12:01（北京时间）期间的业务异常。判断流量控制证明了什么，区分被拒绝、被接受和最终业务交付，并明确未知人口。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`. Public investigation guidance is available in `/scene/SCOPE-MAP.json` and `/scene/EVIDENCE-PATH.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "70c84eac93d6830a2bcaceeabb0daacb12379216bf3de68ea8dda3ca7753195f",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "ec52e5342a8fdbeed20c438f8718a0766c9cb9fcb9e0062b8a584d6439b3f425"
+      },
+      "instruction_sha256": "70c84eac93d6830a2bcaceeabb0daacb12379216bf3de68ea8dda3ca7753195f"
+    }
+  },
+  "analysis_cluster_id": "F018"
+}

@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F049--L3",
+  "task": "AD",
+  "source_case_id": "F049",
+  "family_id": "F049",
+  "bundle_id": null,
+  "source_level": "IL1",
+  "level": 3,
+  "slice": "L3-S5",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F049--L3--shell_raw",
+      "instruction": "请调查 settlement-reconciler 在 2026-08-05T23:04:39+08:00 至 2026-08-05T23:08:18+08:00 期间的业务异常。目标：复核这次金额相关异常应如何处置，说明现有证据支持修改哪一方以及仍需核对的业务范围。 请给出可核查证据，并明确无法确认的部分。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n",
+      "original_instruction_sha256": "4b1c31bf9398b53e85932c29e1acc52b204d1f317cdf3fbc221739d84f7c8b18",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "8b4cf7dd78614eab906d3d6ba46c9fd562b6409acfed8bb4678fd42fe5e61c20"
+      },
+      "instruction_sha256": "4b1c31bf9398b53e85932c29e1acc52b204d1f317cdf3fbc221739d84f7c8b18"
+    },
+    "native_raw": {
+      "task_id": "AD--F049--L3--native_raw",
+      "instruction": "请调查 settlement-reconciler 在 2026-08-05T23:04:39+08:00 至 2026-08-05T23:08:18+08:00 期间的业务异常。目标：复核这次金额相关异常应如何处置，说明现有证据支持修改哪一方以及仍需核对的业务范围。 请给出可核查证据，并明确无法确认的部分。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "73a917e7f75c96c2260bcd0de49a68138187243706304bc424ab8b779ce120db",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "8b4cf7dd78614eab906d3d6ba46c9fd562b6409acfed8bb4678fd42fe5e61c20"
+      },
+      "instruction_sha256": "73a917e7f75c96c2260bcd0de49a68138187243706304bc424ab8b779ce120db"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F049--L3--umodel_semantic",
+      "instruction": "请调查 settlement-reconciler 在 2026-08-05T23:04:39+08:00 至 2026-08-05T23:08:18+08:00 期间的业务异常。目标：复核这次金额相关异常应如何处置，说明现有证据支持修改哪一方以及仍需核对的业务范围。 请给出可核查证据，并明确无法确认的部分。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "44224912670e860a6efc03fda940ea2cec8b5968366cfecf6bbbfcd1304d884f",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "8b4cf7dd78614eab906d3d6ba46c9fd562b6409acfed8bb4678fd42fe5e61c20"
+      },
+      "instruction_sha256": "44224912670e860a6efc03fda940ea2cec8b5968366cfecf6bbbfcd1304d884f"
+    }
+  },
+  "analysis_cluster_id": "F049"
+}

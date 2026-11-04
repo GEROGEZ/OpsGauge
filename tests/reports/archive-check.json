@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "shards_checked": 122,
+  "objects_checked": 17795,
+  "object_bytes_verified": 69658555020,
+  "archive_bytes": 12757152355,
+  "verify_only": true,
+  "scope": "Archive and every member SHA256 plus exact object-index coverage; no Docker or agent execution."
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": "opsgauge_release_v2",
+  "created": "2026-10-26",
+  "cases": 1287,
+  "task_profile_packages": 3861,
+  "selected_scores": 15444,
+  "objects": 17795,
+  "object_bytes": 69658555020,
+  "files": "file-index.jsonl.gz",
+  "tasks": "tasks.jsonl",
+  "cases_index": "cases.jsonl",
+  "AD_source_to_paper_level": {
+    "IL3": 1,
+    "IL2": 2,
+    "IL1": 3
+  },
+  "data_layout": "SHA256 content-addressed minimally sanitized objects with exact task materialization",
+  "verification_reports": {
+    "coverage": "../tests/reports/index-check.json",
+    "scoring": "../tests/reports/scoring-check.json"
+  },
+  "sanitization_provenance": "provenance/sanitization-object-map.json",
+  "distribution": {
+    "format": "git-lfs-object-shards-v1",
+    "manifest": "shards.json",
+    "restore_command": "opsgauge restore-data",
+    "raw_objects_tracked_in_git": false
+  },
+  "name": "OpsGauge",
+  "release_id": "opsgauge-20261026",
+  "task_profile_counts": {
+    "DR": 666,
+    "AD": 450,
+    "HA": 1593,
+    "RCA": 1152
+  },
+  "case_counts": {
+    "DR": 222,
+    "AD": 150,
+    "HA": 531,
+    "RCA": 384
+  },
+  "family_counts": {
+    "DR": 74,
+    "AD": 50,
+    "HA": 177,
+    "RCA": 128
+  },
+  "license_status": "unspecified",
+  "evidence_URL_host_policy": "Consistent opaque aliases under example.invalid; scheme, port, path, query and local replay interface addresses preserved."
+}

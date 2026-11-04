@@ -1,0 +1,100 @@
+{
+  "schema_version": "mission_inspection_answer_v1",
+  "health_verdict": "actionable_findings_present",
+  "conclusion": "PolarDB 检查范围包括 pc-j6ca6v49n1t62ft27（acs.polardb.cluster）及其两个 acs.polardb.endpoint。窗口内仅集群有观测：AliyunPolardb_cluster_iops_usage 在 2026-08-03T22:36:30+08:00 为 latest 88.791%，超过 70% 运行阈值，并同时触发严重 IOPS 告警与 cms_alert_occurred；因此判定资源饱和异常。两个 endpoint 在窗口内无事件、日志、调用链、拓扑或指标观测，不产生异常结论。",
+  "evidence": [
+    {
+      "evidence_id": "ev-iops-check1",
+      "modality": "metric",
+      "signal": "AliyunPolardb_cluster_iops_usage",
+      "entity_ids": ["96be24e0e4e57bb5347393cbbd3f768f"],
+      "record_refs": ["record-03c6b558ac9414a768a9"],
+      "observed_at": "2026-08-03T22:36:30+08:00",
+      "value": 88.791,
+      "unit": "%",
+      "attributes": {
+        "stat": "latest",
+        "time_range": {
+          "start": "2026-08-03T22:36:30+08:00",
+          "end": "2026-08-03T22:38:30+08:00"
+        },
+        "prometheus_sample_time": 1785767790.0
+      }
+    },
+    {
+      "evidence_id": "ev-iops-check3",
+      "modality": "metric",
+      "signal": "AliyunPolardb_cluster_iops_usage",
+      "entity_ids": ["96be24e0e4e57bb5347393cbbd3f768f"],
+      "record_refs": ["record-a45f20ab2b98bd2dbc01"],
+      "observed_at": "2026-08-03T22:36:30+08:00",
+      "value": 88.791,
+      "unit": "%",
+      "attributes": {
+        "stat": "latest",
+        "time_range": {
+          "start": "2026-08-03T22:33:46+08:00",
+          "end": "2026-08-03T22:38:30+08:00"
+        },
+        "prometheus_sample_time": 1785767790.0
+      }
+    },
+    {
+      "evidence_id": "ev-critical-iops-alert",
+      "modality": "event",
+      "signal": "云原生数据库PolarDB 磁盘IOPS使用率打满 (pc-j6ca6v49n1t62ft27)",
+      "entity_ids": ["96be24e0e4e57bb5347393cbbd3f768f"],
+      "record_refs": ["alert-4cd72720746dbfd7a0a78fff9aeb17385fbfdd2f2439c335d3c685a7131ba9fa"],
+      "observed_at": "2026-08-03T22:36:30+08:00",
+      "value": "OCCURRED",
+      "unit": "",
+      "attributes": {
+        "stat": "identity",
+        "event_type": "ALERT",
+        "severity": "CRITICAL",
+        "current_value": 88.791,
+        "time_range": {
+          "start": "2026-08-03T22:36:30+08:00",
+          "end": "2026-08-03T22:36:30+08:00"
+        }
+      }
+    },
+    {
+      "evidence_id": "ev-cms-alert-occurred",
+      "modality": "event",
+      "signal": "cms_alert_occurred",
+      "entity_ids": ["96be24e0e4e57bb5347393cbbd3f768f"],
+      "record_refs": ["record-c4d01d23b61f36b916c1"],
+      "observed_at": "2026-08-03T22:36:30+08:00",
+      "value": 1,
+      "unit": "flag",
+      "attributes": {
+        "stat": "identity",
+        "event_type": "cms_alert_occurred",
+        "status": "OCCURRED",
+        "current_value": 1,
+        "baseline_value": 0,
+        "ratio": 0,
+        "time_range": {
+          "start": "2026-08-03T22:36:30+08:00",
+          "end": "2026-08-03T22:38:30+08:00"
+        }
+      }
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "find-polardb-iops-saturation",
+      "phenomenon": "resource_saturation",
+      "entity_ids": ["96be24e0e4e57bb5347393cbbd3f768f"],
+      "evidence_ids": [
+        "ev-iops-check1",
+        "ev-iops-check3",
+        "ev-critical-iops-alert",
+        "ev-cms-alert-occurred"
+      ],
+      "verdict": "occurred",
+      "summary": "pc-j6ca6v49n1t62ft27 在 2026-08-03T22:36:30+08:00 的 IOPS 使用率 latest 为 88.791%，超过 70% 巡检阈值；同刻集群产生 CRITICAL IOPS 告警，且 cms_alert_occurred 为 1，判定资源饱和。"
+    }
+  ]
+}

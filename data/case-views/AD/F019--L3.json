@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F019--L3",
+  "task": "AD",
+  "source_case_id": "F019",
+  "family_id": "F019",
+  "bundle_id": null,
+  "source_level": "IL1",
+  "level": 3,
+  "slice": "L3-S4",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F019--L3--shell_raw",
+      "instruction": "请调查 rm-j6c3l32c730ti37ur 在 2026-09-01T15:12:04+08:00 至 2026-09-01T15:26:12+08:00 期间的业务异常。目标：复核这次写入异常是否造成重复或遗漏的业务结果，明确能够确认和不能确认的范围。 请给出可核查证据，并明确无法确认的部分。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n",
+      "original_instruction_sha256": "612294a3380eb0b52ffb77d3bbc91b0d16491be217994c02c4ec6089f85368de",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "00a676bbead142ce5b3b0ae50d31d9474344a97df1237a5c1a54641cbaa92ef3"
+      },
+      "instruction_sha256": "612294a3380eb0b52ffb77d3bbc91b0d16491be217994c02c4ec6089f85368de"
+    },
+    "native_raw": {
+      "task_id": "AD--F019--L3--native_raw",
+      "instruction": "请调查 rm-j6c3l32c730ti37ur 在 2026-09-01T15:12:04+08:00 至 2026-09-01T15:26:12+08:00 期间的业务异常。目标：复核这次写入异常是否造成重复或遗漏的业务结果，明确能够确认和不能确认的范围。 请给出可核查证据，并明确无法确认的部分。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "59c633d383d989b33edf673e8ff6ca5c413d22ee3ce02efda5b15d4bdf5c919b",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "00a676bbead142ce5b3b0ae50d31d9474344a97df1237a5c1a54641cbaa92ef3"
+      },
+      "instruction_sha256": "59c633d383d989b33edf673e8ff6ca5c413d22ee3ce02efda5b15d4bdf5c919b"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F019--L3--umodel_semantic",
+      "instruction": "请调查 rm-j6c3l32c730ti37ur 在 2026-09-01T15:12:04+08:00 至 2026-09-01T15:26:12+08:00 期间的业务异常。目标：复核这次写入异常是否造成重复或遗漏的业务结果，明确能够确认和不能确认的范围。 请给出可核查证据，并明确无法确认的部分。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "d238fae8c0706fa9236b98b8531a576c4b7eb5cdcec35b48d2cf75a3b10eab05",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "00a676bbead142ce5b3b0ae50d31d9474344a97df1237a5c1a54641cbaa92ef3"
+      },
+      "instruction_sha256": "d238fae8c0706fa9236b98b8531a576c4b7eb5cdcec35b48d2cf75a3b10eab05"
+    }
+  },
+  "analysis_cluster_id": "F019"
+}

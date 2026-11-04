@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F009--L2",
+  "task": "AD",
+  "source_case_id": "F009",
+  "family_id": "F009",
+  "bundle_id": null,
+  "source_level": "IL2",
+  "level": 2,
+  "slice": "L3-S2",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F009--L2--shell_raw",
+      "instruction": "2026年9月2日21:35至21:40（北京时间），商品查询出现大量失败。请定位问题，判断影响范围以及可支持的处置，说明当前证据仍不能确定的部分。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n可使用 /scene/SCOPE-MAP.json 获取中性的调查范围信息；其中不包含因果边、根因或正确判断。\n",
+      "original_instruction_sha256": "64ab78359dab9b297333e0a8d8eb08285c18fbe8649d7a701450c01f1232f898",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "a22dba4e0a87b961fa51c4d67205181de1771ef3f7a42e6f591b02a576acc037"
+      },
+      "instruction_sha256": "64ab78359dab9b297333e0a8d8eb08285c18fbe8649d7a701450c01f1232f898"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F009--L2--umodel_semantic",
+      "instruction": "2026年9月2日21:35至21:40（北京时间），商品查询出现大量失败。请定位问题，判断影响范围以及可支持的处置，说明当前证据仍不能确定的部分。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`. Public investigation guidance is available in `/scene/SCOPE-MAP.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "1c76feec115870098148f8071d16f5fea5d31cf517d3d00e5971738d5f0519ee",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "a22dba4e0a87b961fa51c4d67205181de1771ef3f7a42e6f591b02a576acc037"
+      },
+      "instruction_sha256": "1c76feec115870098148f8071d16f5fea5d31cf517d3d00e5971738d5f0519ee"
+    },
+    "native_raw": {
+      "task_id": "AD--F009--L2--native_raw",
+      "instruction": "2026年9月2日21:35至21:40（北京时间），商品查询出现大量失败。请定位问题，判断影响范围以及可支持的处置，说明当前证据仍不能确定的部分。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method. Public investigation guidance is available in `/scene/SCOPE-MAP.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "71dbb6276f117c0f9f777d5191ab470402ce6b7a250a70d3f9aa8218d5000d53",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "a22dba4e0a87b961fa51c4d67205181de1771ef3f7a42e6f591b02a576acc037"
+      },
+      "instruction_sha256": "71dbb6276f117c0f9f777d5191ab470402ce6b7a250a70d3f9aa8218d5000d53"
+    }
+  },
+  "analysis_cluster_id": "F009"
+}

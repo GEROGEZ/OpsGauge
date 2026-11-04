@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F033--L1",
+  "task": "AD",
+  "source_case_id": "F033",
+  "family_id": "F033",
+  "bundle_id": null,
+  "source_level": "IL3",
+  "level": 1,
+  "slice": "L3-S3",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F033--L1--shell_raw",
+      "instruction": "请复核 rca-benchmark 中 checkout 在 2026年08月26日 00:17:17 至 00:21:30（北京时间）期间的异常。定位发布后失败发生在业务链的哪个阶段，判断当前窗口能否证明恢复完成，并说明历史失败订单的状态边界。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n可使用 /scene/SCOPE-MAP.json 与 /scene/EVIDENCE-PATH.json；其中仅提供调查阶段和证据归组，不包含根因、机制答案或正确判断。\n",
+      "original_instruction_sha256": "4e567bab629fe3fc3dd895602dd64b2301cee323bc5df8543e6f90daca769e13",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "d517eef8953025d73dd379381853c48c99e2ede0906fcc2c30931b7b649ac8c1"
+      },
+      "instruction_sha256": "4e567bab629fe3fc3dd895602dd64b2301cee323bc5df8543e6f90daca769e13"
+    },
+    "native_raw": {
+      "task_id": "AD--F033--L1--native_raw",
+      "instruction": "请复核 rca-benchmark 中 checkout 在 2026年08月26日 00:17:17 至 00:21:30（北京时间）期间的异常。定位发布后失败发生在业务链的哪个阶段，判断当前窗口能否证明恢复完成，并说明历史失败订单的状态边界。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method. Public investigation guidance is available in `/scene/SCOPE-MAP.json` and `/scene/EVIDENCE-PATH.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "ceec8f1f781891908d313b521231f0caeb62a43ece71528674af70b51f478d53",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "d517eef8953025d73dd379381853c48c99e2ede0906fcc2c30931b7b649ac8c1"
+      },
+      "instruction_sha256": "ceec8f1f781891908d313b521231f0caeb62a43ece71528674af70b51f478d53"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F033--L1--umodel_semantic",
+      "instruction": "请复核 rca-benchmark 中 checkout 在 2026年08月26日 00:17:17 至 00:21:30（北京时间）期间的异常。定位发布后失败发生在业务链的哪个阶段，判断当前窗口能否证明恢复完成，并说明历史失败订单的状态边界。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`. Public investigation guidance is available in `/scene/SCOPE-MAP.json` and `/scene/EVIDENCE-PATH.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "7fd701e2b763a8658c0023c71b620c3294ee246b7279d09781acf27bc31f1ed2",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "d517eef8953025d73dd379381853c48c99e2ede0906fcc2c30931b7b649ac8c1"
+      },
+      "instruction_sha256": "7fd701e2b763a8658c0023c71b620c3294ee246b7279d09781acf27bc31f1ed2"
+    }
+  },
+  "analysis_cluster_id": "F033"
+}

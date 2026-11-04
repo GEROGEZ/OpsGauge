@@ -1,0 +1,337 @@
+task,profile,config,slice,slice_name,mean,families,n
+AD,File-based,GLM-Claude,L3-S1,Determine Affected Business Populations,56.904761904761905,7,21
+AD,File-based,GLM-Claude,L3-S2,Delimit Business Impact,60.16666666666667,8,24
+AD,File-based,GLM-Claude,L3-S3,Reconcile Business Progress and Outcomes,63.56190476190476,7,21
+AD,File-based,GLM-Claude,L3-S4,Revise Judgments Across Incident Phases,77.85714285714286,7,21
+AD,File-based,GLM-Claude,L3-S5,Reconcile Evidence Across Entities,72.70833333333334,8,24
+AD,File-based,GLM-Claude,L3-S6,Verify Business Availability,65.76190476190477,7,21
+AD,File-based,GLM-Claude,L3-S7,Verify Business Recovery,69.38888888888889,6,18
+AD,File-based,GLM-Codex,L3-S1,Determine Affected Business Populations,51.047619047619044,7,21
+AD,File-based,GLM-Codex,L3-S2,Delimit Business Impact,56.95833333333333,8,24
+AD,File-based,GLM-Codex,L3-S3,Reconcile Business Progress and Outcomes,53.4952380952381,7,21
+AD,File-based,GLM-Codex,L3-S4,Revise Judgments Across Incident Phases,59.761904761904766,7,21
+AD,File-based,GLM-Codex,L3-S5,Reconcile Evidence Across Entities,66.45833333333333,8,24
+AD,File-based,GLM-Codex,L3-S6,Verify Business Availability,51.61904761904763,7,21
+AD,File-based,GLM-Codex,L3-S7,Verify Business Recovery,53.199999999999996,6,18
+AD,File-based,Qwen-Claude,L3-S1,Determine Affected Business Populations,43.76190476190476,7,21
+AD,File-based,Qwen-Claude,L3-S2,Delimit Business Impact,69.70833333333333,8,24
+AD,File-based,Qwen-Claude,L3-S3,Reconcile Business Progress and Outcomes,59.66666666666667,7,21
+AD,File-based,Qwen-Claude,L3-S4,Revise Judgments Across Incident Phases,84.52380952380952,7,21
+AD,File-based,Qwen-Claude,L3-S5,Reconcile Evidence Across Entities,85.83333333333333,8,24
+AD,File-based,Qwen-Claude,L3-S6,Verify Business Availability,72.0,7,21
+AD,File-based,Qwen-Claude,L3-S7,Verify Business Recovery,64.24444444444444,6,18
+AD,File-based,Qwen-Codex,L3-S1,Determine Affected Business Populations,51.142857142857146,7,21
+AD,File-based,Qwen-Codex,L3-S2,Delimit Business Impact,72.66666666666667,8,24
+AD,File-based,Qwen-Codex,L3-S3,Reconcile Business Progress and Outcomes,68.57142857142857,7,21
+AD,File-based,Qwen-Codex,L3-S4,Revise Judgments Across Incident Phases,88.57142857142857,7,21
+AD,File-based,Qwen-Codex,L3-S5,Reconcile Evidence Across Entities,88.125,8,24
+AD,File-based,Qwen-Codex,L3-S6,Verify Business Availability,75.71428571428571,7,21
+AD,File-based,Qwen-Codex,L3-S7,Verify Business Recovery,69.88888888888889,6,18
+AD,Native-API,GLM-Claude,L3-S1,Determine Affected Business Populations,53.42857142857143,7,21
+AD,Native-API,GLM-Claude,L3-S2,Delimit Business Impact,61.625,8,24
+AD,Native-API,GLM-Claude,L3-S3,Reconcile Business Progress and Outcomes,65.46666666666667,7,21
+AD,Native-API,GLM-Claude,L3-S4,Revise Judgments Across Incident Phases,84.52380952380952,7,21
+AD,Native-API,GLM-Claude,L3-S5,Reconcile Evidence Across Entities,68.33333333333333,8,24
+AD,Native-API,GLM-Claude,L3-S6,Verify Business Availability,67.42857142857143,7,21
+AD,Native-API,GLM-Claude,L3-S7,Verify Business Recovery,71.35555555555555,6,18
+AD,Native-API,GLM-Codex,L3-S1,Determine Affected Business Populations,48.142857142857146,7,21
+AD,Native-API,GLM-Codex,L3-S2,Delimit Business Impact,60.208333333333336,8,24
+AD,Native-API,GLM-Codex,L3-S3,Reconcile Business Progress and Outcomes,60.371428571428574,7,21
+AD,Native-API,GLM-Codex,L3-S4,Revise Judgments Across Incident Phases,66.66666666666667,7,21
+AD,Native-API,GLM-Codex,L3-S5,Reconcile Evidence Across Entities,68.75,8,24
+AD,Native-API,GLM-Codex,L3-S6,Verify Business Availability,54.666666666666664,7,21
+AD,Native-API,GLM-Codex,L3-S7,Verify Business Recovery,60.96666666666667,6,18
+AD,Native-API,Qwen-Claude,L3-S1,Determine Affected Business Populations,42.0,7,21
+AD,Native-API,Qwen-Claude,L3-S2,Delimit Business Impact,65.79166666666667,8,24
+AD,Native-API,Qwen-Claude,L3-S3,Reconcile Business Progress and Outcomes,52.61904761904763,7,21
+AD,Native-API,Qwen-Claude,L3-S4,Revise Judgments Across Incident Phases,84.52380952380952,7,21
+AD,Native-API,Qwen-Claude,L3-S5,Reconcile Evidence Across Entities,80.0,8,24
+AD,Native-API,Qwen-Claude,L3-S6,Verify Business Availability,64.76190476190476,7,21
+AD,Native-API,Qwen-Claude,L3-S7,Verify Business Recovery,63.96666666666667,6,18
+AD,Native-API,Qwen-Codex,L3-S1,Determine Affected Business Populations,40.42857142857143,7,21
+AD,Native-API,Qwen-Codex,L3-S2,Delimit Business Impact,67.04166666666667,8,24
+AD,Native-API,Qwen-Codex,L3-S3,Reconcile Business Progress and Outcomes,55.857142857142854,7,21
+AD,Native-API,Qwen-Codex,L3-S4,Revise Judgments Across Incident Phases,86.66666666666666,7,21
+AD,Native-API,Qwen-Codex,L3-S5,Reconcile Evidence Across Entities,83.33333333333333,8,24
+AD,Native-API,Qwen-Codex,L3-S6,Verify Business Availability,71.66666666666667,7,21
+AD,Native-API,Qwen-Codex,L3-S7,Verify Business Recovery,71.88888888888889,6,18
+AD,Semantic-query,GLM-Claude,L3-S1,Determine Affected Business Populations,49.57142857142857,7,21
+AD,Semantic-query,GLM-Claude,L3-S2,Delimit Business Impact,62.666666666666664,8,24
+AD,Semantic-query,GLM-Claude,L3-S3,Reconcile Business Progress and Outcomes,67.65714285714286,7,21
+AD,Semantic-query,GLM-Claude,L3-S4,Revise Judgments Across Incident Phases,81.66666666666667,7,21
+AD,Semantic-query,GLM-Claude,L3-S5,Reconcile Evidence Across Entities,74.58333333333333,8,24
+AD,Semantic-query,GLM-Claude,L3-S6,Verify Business Availability,70.38095238095238,7,21
+AD,Semantic-query,GLM-Claude,L3-S7,Verify Business Recovery,72.85555555555555,6,18
+AD,Semantic-query,GLM-Codex,L3-S1,Determine Affected Business Populations,50.047619047619044,7,21
+AD,Semantic-query,GLM-Codex,L3-S2,Delimit Business Impact,61.083333333333336,8,24
+AD,Semantic-query,GLM-Codex,L3-S3,Reconcile Business Progress and Outcomes,61.628571428571426,7,21
+AD,Semantic-query,GLM-Codex,L3-S4,Revise Judgments Across Incident Phases,70.71428571428571,7,21
+AD,Semantic-query,GLM-Codex,L3-S5,Reconcile Evidence Across Entities,73.33333333333333,8,24
+AD,Semantic-query,GLM-Codex,L3-S6,Verify Business Availability,51.0,7,21
+AD,Semantic-query,GLM-Codex,L3-S7,Verify Business Recovery,70.02222222222223,6,18
+AD,Semantic-query,Qwen-Claude,L3-S1,Determine Affected Business Populations,43.23809523809524,7,21
+AD,Semantic-query,Qwen-Claude,L3-S2,Delimit Business Impact,61.708333333333336,8,24
+AD,Semantic-query,Qwen-Claude,L3-S3,Reconcile Business Progress and Outcomes,53.57142857142857,7,21
+AD,Semantic-query,Qwen-Claude,L3-S4,Revise Judgments Across Incident Phases,85.23809523809523,7,21
+AD,Semantic-query,Qwen-Claude,L3-S5,Reconcile Evidence Across Entities,83.125,8,24
+AD,Semantic-query,Qwen-Claude,L3-S6,Verify Business Availability,65.0,7,21
+AD,Semantic-query,Qwen-Claude,L3-S7,Verify Business Recovery,63.24444444444444,6,18
+AD,Semantic-query,Qwen-Codex,L3-S1,Determine Affected Business Populations,42.857142857142854,7,21
+AD,Semantic-query,Qwen-Codex,L3-S2,Delimit Business Impact,66.125,8,24
+AD,Semantic-query,Qwen-Codex,L3-S3,Reconcile Business Progress and Outcomes,53.65714285714286,7,21
+AD,Semantic-query,Qwen-Codex,L3-S4,Revise Judgments Across Incident Phases,85.47619047619048,7,21
+AD,Semantic-query,Qwen-Codex,L3-S5,Reconcile Evidence Across Entities,84.375,8,24
+AD,Semantic-query,Qwen-Codex,L3-S6,Verify Business Availability,70.71428571428571,7,21
+AD,Semantic-query,Qwen-Codex,L3-S7,Verify Business Recovery,67.34444444444445,6,18
+DR,File-based,GLM-Claude,event-trace.align-intervals,Measure calls at container stops,89.86111104166666,8,24
+DR,File-based,GLM-Claude,event.aggregate-cross-rule-state,Aggregate alerts across rules,87.77699641666666,8,24
+DR,File-based,GLM-Claude,event.reconstruct-transaction-state,Reconstruct alert states,80.031364475,8,24
+DR,File-based,GLM-Claude,metric.compare-independent-rankings,Compare CPU rankings,50.410256410256416,13,39
+DR,File-based,GLM-Claude,metric.retrieve-cpu-peaks,Retrieve CPU peaks,52.8735632183908,29,87
+DR,File-based,GLM-Claude,trace.rank-failure-volume-rate,Rank APIs by failure count and rate,78.30669695,8,24
+DR,File-based,GLM-Codex,event-trace.align-intervals,Measure calls at container stops,78.97727261666667,8,24
+DR,File-based,GLM-Codex,event.aggregate-cross-rule-state,Aggregate alerts across rules,63.50456195833333,8,24
+DR,File-based,GLM-Codex,event.reconstruct-transaction-state,Reconstruct alert states,64.98237184166666,8,24
+DR,File-based,GLM-Codex,metric.compare-independent-rankings,Compare CPU rankings,54.92307692307692,13,39
+DR,File-based,GLM-Codex,metric.retrieve-cpu-peaks,Retrieve CPU peaks,57.42528735632184,29,87
+DR,File-based,GLM-Codex,trace.rank-failure-volume-rate,Rank APIs by failure count and rate,52.95558608333333,8,24
+DR,File-based,Qwen-Claude,event-trace.align-intervals,Measure calls at container stops,98.33333333333333,8,24
+DR,File-based,Qwen-Claude,event.aggregate-cross-rule-state,Aggregate alerts across rules,78.834514375,8,24
+DR,File-based,Qwen-Claude,event.reconstruct-transaction-state,Reconstruct alert states,65.77953291666667,8,24
+DR,File-based,Qwen-Claude,metric.compare-independent-rankings,Compare CPU rankings,36.0,13,39
+DR,File-based,Qwen-Claude,metric.retrieve-cpu-peaks,Retrieve CPU peaks,43.01149425287356,29,87
+DR,File-based,Qwen-Claude,trace.rank-failure-volume-rate,Rank APIs by failure count and rate,67.92811365,8,24
+DR,File-based,Qwen-Codex,event-trace.align-intervals,Measure calls at container stops,100.0,8,24
+DR,File-based,Qwen-Codex,event.aggregate-cross-rule-state,Aggregate alerts across rules,87.10006525,8,24
+DR,File-based,Qwen-Codex,event.reconstruct-transaction-state,Reconstruct alert states,73.29441383333334,8,24
+DR,File-based,Qwen-Codex,metric.compare-independent-rankings,Compare CPU rankings,40.871794871794876,13,39
+DR,File-based,Qwen-Codex,metric.retrieve-cpu-peaks,Retrieve CPU peaks,48.804597701149426,29,87
+DR,File-based,Qwen-Codex,trace.rank-failure-volume-rate,Rank APIs by failure count and rate,63.26465215,8,24
+DR,Native-API,GLM-Claude,event-trace.align-intervals,Measure calls at container stops,86.46825395833334,8,24
+DR,Native-API,GLM-Claude,event.aggregate-cross-rule-state,Aggregate alerts across rules,90.06911108333333,8,24
+DR,Native-API,GLM-Claude,event.reconstruct-transaction-state,Reconstruct alert states,75.29705796666667,8,24
+DR,Native-API,GLM-Claude,metric.compare-independent-rankings,Compare CPU rankings,49.23076923076923,13,39
+DR,Native-API,GLM-Claude,metric.retrieve-cpu-peaks,Retrieve CPU peaks,47.793103448275865,29,87
+DR,Native-API,GLM-Claude,trace.rank-failure-volume-rate,Rank APIs by failure count and rate,83.09882151666667,8,24
+DR,Native-API,GLM-Codex,event-trace.align-intervals,Measure calls at container stops,70.00496039166667,8,24
+DR,Native-API,GLM-Codex,event.aggregate-cross-rule-state,Aggregate alerts across rules,72.92579845,8,24
+DR,Native-API,GLM-Codex,event.reconstruct-transaction-state,Reconstruct alert states,65.96843519166667,8,24
+DR,Native-API,GLM-Codex,metric.compare-independent-rankings,Compare CPU rankings,54.1025641025641,13,39
+DR,Native-API,GLM-Codex,metric.retrieve-cpu-peaks,Retrieve CPU peaks,51.97701149425287,29,87
+DR,Native-API,GLM-Codex,trace.rank-failure-volume-rate,Rank APIs by failure count and rate,63.445054975,8,24
+DR,Native-API,Qwen-Claude,event-trace.align-intervals,Measure calls at container stops,85.83333333333334,8,24
+DR,Native-API,Qwen-Claude,event.aggregate-cross-rule-state,Aggregate alerts across rules,86.71252045833333,8,24
+DR,Native-API,Qwen-Claude,event.reconstruct-transaction-state,Reconstruct alert states,60.283501175,8,24
+DR,Native-API,Qwen-Claude,metric.compare-independent-rankings,Compare CPU rankings,26.307692307692307,13,39
+DR,Native-API,Qwen-Claude,metric.retrieve-cpu-peaks,Retrieve CPU peaks,40.229885057471265,29,87
+DR,Native-API,Qwen-Claude,trace.rank-failure-volume-rate,Rank APIs by failure count and rate,71.29120891666668,8,24
+DR,Native-API,Qwen-Codex,event-trace.align-intervals,Measure calls at container stops,95.83333333333333,8,24
+DR,Native-API,Qwen-Codex,event.aggregate-cross-rule-state,Aggregate alerts across rules,78.70714029166666,8,24
+DR,Native-API,Qwen-Codex,event.reconstruct-transaction-state,Reconstruct alert states,64.74778691666667,8,24
+DR,Native-API,Qwen-Codex,metric.compare-independent-rankings,Compare CPU rankings,39.69230769230769,13,39
+DR,Native-API,Qwen-Codex,metric.retrieve-cpu-peaks,Retrieve CPU peaks,42.64367816091954,29,87
+DR,Native-API,Qwen-Codex,trace.rank-failure-volume-rate,Rank APIs by failure count and rate,64.78250933333334,8,24
+DR,Semantic-query,GLM-Claude,event-trace.align-intervals,Measure calls at container stops,97.77777775,8,24
+DR,Semantic-query,GLM-Claude,event.aggregate-cross-rule-state,Aggregate alerts across rules,83.5608675,8,24
+DR,Semantic-query,GLM-Claude,event.reconstruct-transaction-state,Reconstruct alert states,76.72275645833334,8,24
+DR,Semantic-query,GLM-Claude,metric.compare-independent-rankings,Compare CPU rankings,56.92307692307692,13,39
+DR,Semantic-query,GLM-Claude,metric.retrieve-cpu-peaks,Retrieve CPU peaks,50.98850574712644,29,87
+DR,Semantic-query,GLM-Claude,trace.rank-failure-volume-rate,Rank APIs by failure count and rate,82.26090935833334,8,24
+DR,Semantic-query,GLM-Codex,event-trace.align-intervals,Measure calls at container stops,80.00699295833333,8,24
+DR,Semantic-query,GLM-Codex,event.aggregate-cross-rule-state,Aggregate alerts across rules,71.9292975,8,24
+DR,Semantic-query,GLM-Codex,event.reconstruct-transaction-state,Reconstruct alert states,72.40394490833333,8,24
+DR,Semantic-query,GLM-Codex,metric.compare-independent-rankings,Compare CPU rankings,55.74358974358974,13,39
+DR,Semantic-query,GLM-Codex,metric.retrieve-cpu-peaks,Retrieve CPU peaks,55.241379310344826,29,87
+DR,Semantic-query,GLM-Codex,trace.rank-failure-volume-rate,Rank APIs by failure count and rate,76.85393780833333,8,24
+DR,Semantic-query,Qwen-Claude,event-trace.align-intervals,Measure calls at container stops,81.16666666666667,8,24
+DR,Semantic-query,Qwen-Claude,event.aggregate-cross-rule-state,Aggregate alerts across rules,72.16165291666667,8,24
+DR,Semantic-query,Qwen-Claude,event.reconstruct-transaction-state,Reconstruct alert states,61.36561354166667,8,24
+DR,Semantic-query,Qwen-Claude,metric.compare-independent-rankings,Compare CPU rankings,36.256410256410255,13,39
+DR,Semantic-query,Qwen-Claude,metric.retrieve-cpu-peaks,Retrieve CPU peaks,43.86206896551724,29,87
+DR,Semantic-query,Qwen-Claude,trace.rank-failure-volume-rate,Rank APIs by failure count and rate,77.59844325,8,24
+DR,Semantic-query,Qwen-Codex,event-trace.align-intervals,Measure calls at container stops,91.66666666666667,8,24
+DR,Semantic-query,Qwen-Codex,event.aggregate-cross-rule-state,Aggregate alerts across rules,82.08725758333333,8,24
+DR,Semantic-query,Qwen-Codex,event.reconstruct-transaction-state,Reconstruct alert states,53.70612025,8,24
+DR,Semantic-query,Qwen-Codex,metric.compare-independent-rankings,Compare CPU rankings,44.76923076923077,13,39
+DR,Semantic-query,Qwen-Codex,metric.retrieve-cpu-peaks,Retrieve CPU peaks,46.16091954022989,29,87
+DR,Semantic-query,Qwen-Codex,trace.rank-failure-volume-rate,Rank APIs by failure count and rate,77.98992680833334,8,24
+HA,File-based,GLM-Claude,mission.errors,mission.errors,70.87767523870465,25,75
+HA,File-based,GLM-Claude,mission.healthy_confirmation,mission.healthy_confirmation,64.40422322775264,1,3
+HA,File-based,GLM-Claude,mission.latency,mission.latency,79.05520085944723,28,84
+HA,File-based,GLM-Claude,mission.multi_request,mission.multi_request,75.43449374699375,10,30
+HA,File-based,GLM-Claude,mission.multi_request_capacity,mission.multi_request_capacity,78.48892347640918,22,66
+HA,File-based,GLM-Claude,mission.multi_state_change,mission.multi_state_change,79.17617394179894,8,24
+HA,File-based,GLM-Claude,mission.saturation,mission.saturation,82.02964303148127,74,222
+HA,File-based,GLM-Claude,mission.state_flow,mission.state_flow,81.08824188319802,9,27
+HA,File-based,GLM-Codex,mission.errors,mission.errors,82.18646973941091,25,75
+HA,File-based,GLM-Codex,mission.healthy_confirmation,mission.healthy_confirmation,73.61111111111111,1,3
+HA,File-based,GLM-Codex,mission.latency,mission.latency,90.42116530955818,28,84
+HA,File-based,GLM-Codex,mission.multi_request,mission.multi_request,84.14484126984127,10,30
+HA,File-based,GLM-Codex,mission.multi_request_capacity,mission.multi_request_capacity,82.37103174603175,22,66
+HA,File-based,GLM-Codex,mission.multi_state_change,mission.multi_state_change,88.54166666666667,8,24
+HA,File-based,GLM-Codex,mission.saturation,mission.saturation,97.42492492492492,74,222
+HA,File-based,GLM-Codex,mission.state_flow,mission.state_flow,92.86265432098766,9,27
+HA,File-based,Qwen-Claude,mission.errors,mission.errors,68.6780610076275,25,75
+HA,File-based,Qwen-Claude,mission.healthy_confirmation,mission.healthy_confirmation,48.75609543712992,1,3
+HA,File-based,Qwen-Claude,mission.latency,mission.latency,75.66336646771569,28,84
+HA,File-based,Qwen-Claude,mission.multi_request,mission.multi_request,76.1831512746577,10,30
+HA,File-based,Qwen-Claude,mission.multi_request_capacity,mission.multi_request_capacity,77.81363575254036,22,66
+HA,File-based,Qwen-Claude,mission.multi_state_change,mission.multi_state_change,79.29565158425453,8,24
+HA,File-based,Qwen-Claude,mission.saturation,mission.saturation,78.74821748027681,74,222
+HA,File-based,Qwen-Claude,mission.state_flow,mission.state_flow,76.90212910758888,9,27
+HA,File-based,Qwen-Codex,mission.errors,mission.errors,66.90013827867043,25,75
+HA,File-based,Qwen-Codex,mission.healthy_confirmation,mission.healthy_confirmation,50.0,1,3
+HA,File-based,Qwen-Codex,mission.latency,mission.latency,73.90627032559202,28,84
+HA,File-based,Qwen-Codex,mission.multi_request,mission.multi_request,76.98050885857258,10,30
+HA,File-based,Qwen-Codex,mission.multi_request_capacity,mission.multi_request_capacity,75.86326272335894,22,66
+HA,File-based,Qwen-Codex,mission.multi_state_change,mission.multi_state_change,73.16221067579764,8,24
+HA,File-based,Qwen-Codex,mission.saturation,mission.saturation,77.53858772804146,74,222
+HA,File-based,Qwen-Codex,mission.state_flow,mission.state_flow,79.53059010653497,9,27
+HA,Native-API,GLM-Claude,mission.errors,mission.errors,76.14023981042504,25,75
+HA,Native-API,GLM-Claude,mission.healthy_confirmation,mission.healthy_confirmation,66.5625,1,3
+HA,Native-API,GLM-Claude,mission.latency,mission.latency,82.69726190680021,28,84
+HA,Native-API,GLM-Claude,mission.multi_request,mission.multi_request,77.61096970839618,10,30
+HA,Native-API,GLM-Claude,mission.multi_request_capacity,mission.multi_request_capacity,84.25312342259632,22,66
+HA,Native-API,GLM-Claude,mission.multi_state_change,mission.multi_state_change,81.55680690836941,8,24
+HA,Native-API,GLM-Claude,mission.saturation,mission.saturation,88.32163894663896,74,222
+HA,Native-API,GLM-Claude,mission.state_flow,mission.state_flow,86.44487842404509,9,27
+HA,Native-API,GLM-Codex,mission.errors,mission.errors,84.74786967418545,25,75
+HA,Native-API,GLM-Codex,mission.healthy_confirmation,mission.healthy_confirmation,66.66666666666667,1,3
+HA,Native-API,GLM-Codex,mission.latency,mission.latency,90.16455105740819,28,84
+HA,Native-API,GLM-Codex,mission.multi_request,mission.multi_request,84.56620728562218,10,30
+HA,Native-API,GLM-Codex,mission.multi_request_capacity,mission.multi_request_capacity,85.16804214012313,22,66
+HA,Native-API,GLM-Codex,mission.multi_state_change,mission.multi_state_change,92.70998677248677,8,24
+HA,Native-API,GLM-Codex,mission.saturation,mission.saturation,96.33067540962278,74,222
+HA,Native-API,GLM-Codex,mission.state_flow,mission.state_flow,88.65244708994709,9,27
+HA,Native-API,Qwen-Claude,mission.errors,mission.errors,72.12340173068813,25,75
+HA,Native-API,Qwen-Claude,mission.healthy_confirmation,mission.healthy_confirmation,56.537389333088264,1,3
+HA,Native-API,Qwen-Claude,mission.latency,mission.latency,80.62526267421183,28,84
+HA,Native-API,Qwen-Claude,mission.multi_request,mission.multi_request,78.78696841013017,10,30
+HA,Native-API,Qwen-Claude,mission.multi_request_capacity,mission.multi_request_capacity,79.28418928764376,22,66
+HA,Native-API,Qwen-Claude,mission.multi_state_change,mission.multi_state_change,85.51256613756614,8,24
+HA,Native-API,Qwen-Claude,mission.saturation,mission.saturation,81.47192280515563,74,222
+HA,Native-API,Qwen-Claude,mission.state_flow,mission.state_flow,76.93047693047693,9,27
+HA,Native-API,Qwen-Codex,mission.errors,mission.errors,72.40499379605923,25,75
+HA,Native-API,Qwen-Codex,mission.healthy_confirmation,mission.healthy_confirmation,58.02172364672365,1,3
+HA,Native-API,Qwen-Codex,mission.latency,mission.latency,73.14757354372703,28,84
+HA,Native-API,Qwen-Codex,mission.multi_request,mission.multi_request,75.00432457500875,10,30
+HA,Native-API,Qwen-Codex,mission.multi_request_capacity,mission.multi_request_capacity,78.24690215520158,22,66
+HA,Native-API,Qwen-Codex,mission.multi_state_change,mission.multi_state_change,77.37017794583585,8,24
+HA,Native-API,Qwen-Codex,mission.saturation,mission.saturation,77.1371846121287,74,222
+HA,Native-API,Qwen-Codex,mission.state_flow,mission.state_flow,75.84904169155806,9,27
+HA,Semantic-query,GLM-Claude,mission.errors,mission.errors,83.6496114136981,25,75
+HA,Semantic-query,GLM-Claude,mission.healthy_confirmation,mission.healthy_confirmation,33.379629629629626,1,3
+HA,Semantic-query,GLM-Claude,mission.latency,mission.latency,82.60354423009701,28,84
+HA,Semantic-query,GLM-Claude,mission.multi_request,mission.multi_request,85.3177787626317,10,30
+HA,Semantic-query,GLM-Claude,mission.multi_request_capacity,mission.multi_request_capacity,82.48837757360485,22,66
+HA,Semantic-query,GLM-Claude,mission.multi_state_change,mission.multi_state_change,85.7297502334267,8,24
+HA,Semantic-query,GLM-Claude,mission.saturation,mission.saturation,81.41941449023493,74,222
+HA,Semantic-query,GLM-Claude,mission.state_flow,mission.state_flow,88.62123730179286,9,27
+HA,Semantic-query,GLM-Codex,mission.errors,mission.errors,89.20631405631406,25,75
+HA,Semantic-query,GLM-Codex,mission.healthy_confirmation,mission.healthy_confirmation,51.23626373626374,1,3
+HA,Semantic-query,GLM-Codex,mission.latency,mission.latency,90.18937246615818,28,84
+HA,Semantic-query,GLM-Codex,mission.multi_request,mission.multi_request,95.15981240981242,10,30
+HA,Semantic-query,GLM-Codex,mission.multi_request_capacity,mission.multi_request_capacity,91.60044816294815,22,66
+HA,Semantic-query,GLM-Codex,mission.multi_state_change,mission.multi_state_change,93.76736111111111,8,24
+HA,Semantic-query,GLM-Codex,mission.saturation,mission.saturation,94.4079240954241,74,222
+HA,Semantic-query,GLM-Codex,mission.state_flow,mission.state_flow,93.37962962962962,9,27
+HA,Semantic-query,Qwen-Claude,mission.errors,mission.errors,80.11277443204978,25,75
+HA,Semantic-query,Qwen-Claude,mission.healthy_confirmation,mission.healthy_confirmation,30.08175399479747,1,3
+HA,Semantic-query,Qwen-Claude,mission.latency,mission.latency,80.57888867029635,28,84
+HA,Semantic-query,Qwen-Claude,mission.multi_request,mission.multi_request,84.2709003959004,10,30
+HA,Semantic-query,Qwen-Claude,mission.multi_request_capacity,mission.multi_request_capacity,81.73288794955344,22,66
+HA,Semantic-query,Qwen-Claude,mission.multi_state_change,mission.multi_state_change,83.14467072279572,8,24
+HA,Semantic-query,Qwen-Claude,mission.saturation,mission.saturation,76.64333138234838,74,222
+HA,Semantic-query,Qwen-Claude,mission.state_flow,mission.state_flow,84.80513585905743,9,27
+HA,Semantic-query,Qwen-Codex,mission.errors,mission.errors,74.42176749345055,25,75
+HA,Semantic-query,Qwen-Codex,mission.healthy_confirmation,mission.healthy_confirmation,42.23521767381416,1,3
+HA,Semantic-query,Qwen-Codex,mission.latency,mission.latency,76.3267987954216,28,84
+HA,Semantic-query,Qwen-Codex,mission.multi_request,mission.multi_request,83.03230805052299,10,30
+HA,Semantic-query,Qwen-Codex,mission.multi_request_capacity,mission.multi_request_capacity,78.74922446531149,22,66
+HA,Semantic-query,Qwen-Codex,mission.multi_state_change,mission.multi_state_change,81.80397919981253,8,24
+HA,Semantic-query,Qwen-Codex,mission.saturation,mission.saturation,77.15037202975863,74,222
+HA,Semantic-query,Qwen-Codex,mission.state_flow,mission.state_flow,84.20172074530089,9,27
+RCA,File-based,GLM-Claude,rca.async_messaging,rca.async_messaging,67.74408924408925,4,12
+RCA,File-based,GLM-Claude,rca.capacity_load,rca.capacity_load,72.82362556385047,34,102
+RCA,File-based,GLM-Claude,rca.concurrent_causes,rca.concurrent_causes,66.43357201792578,15,45
+RCA,File-based,GLM-Claude,rca.data_access,rca.data_access,75.0135943033002,10,30
+RCA,File-based,GLM-Claude,rca.instance_lifecycle,rca.instance_lifecycle,82.20622182398498,20,60
+RCA,File-based,GLM-Claude,rca.routing_connectivity,rca.routing_connectivity,70.95227681531861,20,60
+RCA,File-based,GLM-Claude,rca.service_execution,rca.service_execution,83.10847986130752,25,75
+RCA,File-based,GLM-Codex,rca.async_messaging,rca.async_messaging,63.900132275132265,4,12
+RCA,File-based,GLM-Codex,rca.capacity_load,rca.capacity_load,65.72741909506615,34,102
+RCA,File-based,GLM-Codex,rca.concurrent_causes,rca.concurrent_causes,61.33236128432207,15,45
+RCA,File-based,GLM-Codex,rca.data_access,rca.data_access,68.13531746031745,10,30
+RCA,File-based,GLM-Codex,rca.instance_lifecycle,rca.instance_lifecycle,77.16494708994709,20,60
+RCA,File-based,GLM-Codex,rca.routing_connectivity,rca.routing_connectivity,62.747071909571915,20,60
+RCA,File-based,GLM-Codex,rca.service_execution,rca.service_execution,75.82685245038186,25,75
+RCA,File-based,Qwen-Claude,rca.async_messaging,rca.async_messaging,64.30893670599554,4,12
+RCA,File-based,Qwen-Claude,rca.capacity_load,rca.capacity_load,76.70600066722675,34,102
+RCA,File-based,Qwen-Claude,rca.concurrent_causes,rca.concurrent_causes,70.34492555659916,15,45
+RCA,File-based,Qwen-Claude,rca.data_access,rca.data_access,76.31808653449521,10,30
+RCA,File-based,Qwen-Claude,rca.instance_lifecycle,rca.instance_lifecycle,82.05774479877421,20,60
+RCA,File-based,Qwen-Claude,rca.routing_connectivity,rca.routing_connectivity,68.58278796628507,20,60
+RCA,File-based,Qwen-Claude,rca.service_execution,rca.service_execution,86.05041704848946,25,75
+RCA,File-based,Qwen-Codex,rca.async_messaging,rca.async_messaging,58.059808791426434,4,12
+RCA,File-based,Qwen-Codex,rca.capacity_load,rca.capacity_load,75.97149742336421,34,102
+RCA,File-based,Qwen-Codex,rca.concurrent_causes,rca.concurrent_causes,44.963754589193876,15,45
+RCA,File-based,Qwen-Codex,rca.data_access,rca.data_access,74.77428558713389,10,30
+RCA,File-based,Qwen-Codex,rca.instance_lifecycle,rca.instance_lifecycle,78.36360829523191,20,60
+RCA,File-based,Qwen-Codex,rca.routing_connectivity,rca.routing_connectivity,64.27979489176144,20,60
+RCA,File-based,Qwen-Codex,rca.service_execution,rca.service_execution,84.86607199404361,25,75
+RCA,Native-API,GLM-Claude,rca.async_messaging,rca.async_messaging,62.91166241166242,4,12
+RCA,Native-API,GLM-Claude,rca.capacity_load,rca.capacity_load,72.55365277797507,34,102
+RCA,Native-API,GLM-Claude,rca.concurrent_causes,rca.concurrent_causes,60.50010850672478,15,45
+RCA,Native-API,GLM-Claude,rca.data_access,rca.data_access,74.2313545060604,10,30
+RCA,Native-API,GLM-Claude,rca.instance_lifecycle,rca.instance_lifecycle,80.60613779638547,20,60
+RCA,Native-API,GLM-Claude,rca.routing_connectivity,rca.routing_connectivity,69.0312795792933,20,60
+RCA,Native-API,GLM-Claude,rca.service_execution,rca.service_execution,80.40218033933013,25,75
+RCA,Native-API,GLM-Codex,rca.async_messaging,rca.async_messaging,50.47306397306397,4,12
+RCA,Native-API,GLM-Codex,rca.capacity_load,rca.capacity_load,68.18914305289738,34,102
+RCA,Native-API,GLM-Codex,rca.concurrent_causes,rca.concurrent_causes,55.89916898069633,15,45
+RCA,Native-API,GLM-Codex,rca.data_access,rca.data_access,67.48119288119287,10,30
+RCA,Native-API,GLM-Codex,rca.instance_lifecycle,rca.instance_lifecycle,76.68029933029933,20,60
+RCA,Native-API,GLM-Codex,rca.routing_connectivity,rca.routing_connectivity,64.17556960583276,20,60
+RCA,Native-API,GLM-Codex,rca.service_execution,rca.service_execution,74.89418904682063,25,75
+RCA,Native-API,Qwen-Claude,rca.async_messaging,rca.async_messaging,58.34167900876826,4,12
+RCA,Native-API,Qwen-Claude,rca.capacity_load,rca.capacity_load,62.679698503743055,34,102
+RCA,Native-API,Qwen-Claude,rca.concurrent_causes,rca.concurrent_causes,36.3921407293174,15,45
+RCA,Native-API,Qwen-Claude,rca.data_access,rca.data_access,71.87433942092842,10,30
+RCA,Native-API,Qwen-Claude,rca.instance_lifecycle,rca.instance_lifecycle,67.04128382081169,20,60
+RCA,Native-API,Qwen-Claude,rca.routing_connectivity,rca.routing_connectivity,49.82447583105449,20,60
+RCA,Native-API,Qwen-Claude,rca.service_execution,rca.service_execution,76.62229507638827,25,75
+RCA,Native-API,Qwen-Codex,rca.async_messaging,rca.async_messaging,47.484692843388494,4,12
+RCA,Native-API,Qwen-Codex,rca.capacity_load,rca.capacity_load,58.88976429509246,34,102
+RCA,Native-API,Qwen-Codex,rca.concurrent_causes,rca.concurrent_causes,36.615164375825195,15,45
+RCA,Native-API,Qwen-Codex,rca.data_access,rca.data_access,72.02974801332903,10,30
+RCA,Native-API,Qwen-Codex,rca.instance_lifecycle,rca.instance_lifecycle,68.0378824820439,20,60
+RCA,Native-API,Qwen-Codex,rca.routing_connectivity,rca.routing_connectivity,39.592121388490014,20,60
+RCA,Native-API,Qwen-Codex,rca.service_execution,rca.service_execution,74.27146821106201,25,75
+RCA,Semantic-query,GLM-Claude,rca.async_messaging,rca.async_messaging,69.86437826879003,4,12
+RCA,Semantic-query,GLM-Claude,rca.capacity_load,rca.capacity_load,80.09208985846652,34,102
+RCA,Semantic-query,GLM-Claude,rca.concurrent_causes,rca.concurrent_causes,68.1275525443006,15,45
+RCA,Semantic-query,GLM-Claude,rca.data_access,rca.data_access,77.89103040205981,10,30
+RCA,Semantic-query,GLM-Claude,rca.instance_lifecycle,rca.instance_lifecycle,85.12853679772714,20,60
+RCA,Semantic-query,GLM-Claude,rca.routing_connectivity,rca.routing_connectivity,71.92414366828487,20,60
+RCA,Semantic-query,GLM-Claude,rca.service_execution,rca.service_execution,87.36739637020024,25,75
+RCA,Semantic-query,GLM-Codex,rca.async_messaging,rca.async_messaging,67.24537037037037,4,12
+RCA,Semantic-query,GLM-Codex,rca.capacity_load,rca.capacity_load,75.89744569156335,34,102
+RCA,Semantic-query,GLM-Codex,rca.concurrent_causes,rca.concurrent_causes,69.39703394873673,15,45
+RCA,Semantic-query,GLM-Codex,rca.data_access,rca.data_access,71.26503126503127,10,30
+RCA,Semantic-query,GLM-Codex,rca.instance_lifecycle,rca.instance_lifecycle,82.21237188737189,20,60
+RCA,Semantic-query,GLM-Codex,rca.routing_connectivity,rca.routing_connectivity,69.2247927997928,20,60
+RCA,Semantic-query,GLM-Codex,rca.service_execution,rca.service_execution,79.41822843822844,25,75
+RCA,Semantic-query,Qwen-Claude,rca.async_messaging,rca.async_messaging,67.0913033699075,4,12
+RCA,Semantic-query,Qwen-Claude,rca.capacity_load,rca.capacity_load,78.48795192162474,34,102
+RCA,Semantic-query,Qwen-Claude,rca.concurrent_causes,rca.concurrent_causes,68.24765406125375,15,45
+RCA,Semantic-query,Qwen-Claude,rca.data_access,rca.data_access,77.34024922488308,10,30
+RCA,Semantic-query,Qwen-Claude,rca.instance_lifecycle,rca.instance_lifecycle,82.32413756742503,20,60
+RCA,Semantic-query,Qwen-Claude,rca.routing_connectivity,rca.routing_connectivity,64.68477913423496,20,60
+RCA,Semantic-query,Qwen-Claude,rca.service_execution,rca.service_execution,87.91054952430049,25,75
+RCA,Semantic-query,Qwen-Codex,rca.async_messaging,rca.async_messaging,62.70346871025265,4,12
+RCA,Semantic-query,Qwen-Codex,rca.capacity_load,rca.capacity_load,52.376032285441056,34,102
+RCA,Semantic-query,Qwen-Codex,rca.concurrent_causes,rca.concurrent_causes,20.661744833617288,15,45
+RCA,Semantic-query,Qwen-Codex,rca.data_access,rca.data_access,69.07982425793095,10,30
+RCA,Semantic-query,Qwen-Codex,rca.instance_lifecycle,rca.instance_lifecycle,62.883262073467634,20,60
+RCA,Semantic-query,Qwen-Codex,rca.routing_connectivity,rca.routing_connectivity,25.10176524791849,20,60
+RCA,Semantic-query,Qwen-Codex,rca.service_execution,rca.service_execution,75.66204871985518,25,75

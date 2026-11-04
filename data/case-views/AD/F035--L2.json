@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F035--L2",
+  "task": "AD",
+  "source_case_id": "F035",
+  "family_id": "F035",
+  "bundle_id": null,
+  "source_level": "IL2",
+  "level": 2,
+  "slice": "L3-S2",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F035--L2--shell_raw",
+      "instruction": "请复核 rca-benchmark 中 frontend::GET /api/products/{productId} 在 2026年04月16日 09:03:54 至 09:09:10（北京时间）期间的异常。判断证据支持固定商品局部热点还是整体容量不足，并说明可以和不能扩大的影响范围。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n可使用 /scene/SCOPE-MAP.json 获取中性的调查范围信息；其中不包含因果边、根因或正确判断。\n",
+      "original_instruction_sha256": "25a4bef34cd34f9d5c9d49d65901b718e5b614b102faaa3b782bee242afde582",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "1bc2570811007df495be802468a7ceffeaf114b78bc0dce71b302eee020c6159"
+      },
+      "instruction_sha256": "25a4bef34cd34f9d5c9d49d65901b718e5b614b102faaa3b782bee242afde582"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F035--L2--umodel_semantic",
+      "instruction": "请复核 rca-benchmark 中 frontend::GET /api/products/{productId} 在 2026年04月16日 09:03:54 至 09:09:10（北京时间）期间的异常。判断证据支持固定商品局部热点还是整体容量不足，并说明可以和不能扩大的影响范围。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`. Public investigation guidance is available in `/scene/SCOPE-MAP.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "cfedf7b06b0cab8451fc4fbcab8e5ee120551e6465f0da1bad83318f1311b1c2",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "1bc2570811007df495be802468a7ceffeaf114b78bc0dce71b302eee020c6159"
+      },
+      "instruction_sha256": "cfedf7b06b0cab8451fc4fbcab8e5ee120551e6465f0da1bad83318f1311b1c2"
+    },
+    "native_raw": {
+      "task_id": "AD--F035--L2--native_raw",
+      "instruction": "请复核 rca-benchmark 中 frontend::GET /api/products/{productId} 在 2026年04月16日 09:03:54 至 09:09:10（北京时间）期间的异常。判断证据支持固定商品局部热点还是整体容量不足，并说明可以和不能扩大的影响范围。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method. Public investigation guidance is available in `/scene/SCOPE-MAP.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "bf1bb3ee0a23487be104bca94952c3d54b91a0d21b4ac3caf8654d8f916e8279",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "1bc2570811007df495be802468a7ceffeaf114b78bc0dce71b302eee020c6159"
+      },
+      "instruction_sha256": "bf1bb3ee0a23487be104bca94952c3d54b91a0d21b4ac3caf8654d8f916e8279"
+    }
+  },
+  "analysis_cluster_id": "F035"
+}

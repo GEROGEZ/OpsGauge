@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F011--L1",
+  "task": "AD",
+  "source_case_id": "F011",
+  "family_id": "F011",
+  "bundle_id": null,
+  "source_level": "IL3",
+  "level": 1,
+  "slice": "L3-S3",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F011--L1--shell_raw",
+      "instruction": "2026年9月2日22:53至23:10（北京时间），结账和商品查询持续报错，团队已尝试恢复服务。请核实故障来源、处置后的真实进展及仍需处理的范围，并说明哪些后续动作有证据支持。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n可使用 /scene/SCOPE-MAP.json 与 /scene/EVIDENCE-PATH.json；其中仅提供调查阶段和证据归组，不包含根因、机制答案或正确判断。\n",
+      "original_instruction_sha256": "170af141c9dd9a32c539b3cda457901ed2b805b0f0d9e0cca360c44d0e1fe7d3",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "f44d880bef0a62eb3a81f17b4217b2948c9e7158e50723c76bb41b8da63ead33"
+      },
+      "instruction_sha256": "170af141c9dd9a32c539b3cda457901ed2b805b0f0d9e0cca360c44d0e1fe7d3"
+    },
+    "native_raw": {
+      "task_id": "AD--F011--L1--native_raw",
+      "instruction": "2026年9月2日22:53至23:10（北京时间），结账和商品查询持续报错，团队已尝试恢复服务。请核实故障来源、处置后的真实进展及仍需处理的范围，并说明哪些后续动作有证据支持。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method. Public investigation guidance is available in `/scene/SCOPE-MAP.json` and `/scene/EVIDENCE-PATH.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "a0b3a3035d8b71aa270561297ee8d792dfd3faa216486da9131ee1a42fdd51b6",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "f44d880bef0a62eb3a81f17b4217b2948c9e7158e50723c76bb41b8da63ead33"
+      },
+      "instruction_sha256": "a0b3a3035d8b71aa270561297ee8d792dfd3faa216486da9131ee1a42fdd51b6"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F011--L1--umodel_semantic",
+      "instruction": "2026年9月2日22:53至23:10（北京时间），结账和商品查询持续报错，团队已尝试恢复服务。请核实故障来源、处置后的真实进展及仍需处理的范围，并说明哪些后续动作有证据支持。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`. Public investigation guidance is available in `/scene/SCOPE-MAP.json` and `/scene/EVIDENCE-PATH.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "277aa0ce1cb5766f5809d2a1b30537e1b1395fdddf835d7c75636e959072d902",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "f44d880bef0a62eb3a81f17b4217b2948c9e7158e50723c76bb41b8da63ead33"
+      },
+      "instruction_sha256": "277aa0ce1cb5766f5809d2a1b30537e1b1395fdddf835d7c75636e959072d902"
+    }
+  },
+  "analysis_cluster_id": "F011"
+}

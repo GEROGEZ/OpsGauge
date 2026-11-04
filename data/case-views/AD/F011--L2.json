@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F011--L2",
+  "task": "AD",
+  "source_case_id": "F011",
+  "family_id": "F011",
+  "bundle_id": null,
+  "source_level": "IL2",
+  "level": 2,
+  "slice": "L3-S3",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F011--L2--shell_raw",
+      "instruction": "2026年9月2日22:53至23:10（北京时间），结账和商品查询持续报错，团队已尝试恢复服务。请核实故障来源、处置后的真实进展及仍需处理的范围，并说明哪些后续动作有证据支持。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n可使用 /scene/SCOPE-MAP.json 获取中性的调查范围信息；其中不包含因果边、根因或正确判断。\n",
+      "original_instruction_sha256": "59480665275be859c804064b83c5a3e7309cbb8e44d8772f435a038d0821ffbd",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "f44d880bef0a62eb3a81f17b4217b2948c9e7158e50723c76bb41b8da63ead33"
+      },
+      "instruction_sha256": "59480665275be859c804064b83c5a3e7309cbb8e44d8772f435a038d0821ffbd"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F011--L2--umodel_semantic",
+      "instruction": "2026年9月2日22:53至23:10（北京时间），结账和商品查询持续报错，团队已尝试恢复服务。请核实故障来源、处置后的真实进展及仍需处理的范围，并说明哪些后续动作有证据支持。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`. Public investigation guidance is available in `/scene/SCOPE-MAP.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "b5a52b48f22ced498d85c7ea5ef3b7a03041bf8c1dc31cffaab2059500eba03d",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "f44d880bef0a62eb3a81f17b4217b2948c9e7158e50723c76bb41b8da63ead33"
+      },
+      "instruction_sha256": "b5a52b48f22ced498d85c7ea5ef3b7a03041bf8c1dc31cffaab2059500eba03d"
+    },
+    "native_raw": {
+      "task_id": "AD--F011--L2--native_raw",
+      "instruction": "2026年9月2日22:53至23:10（北京时间），结账和商品查询持续报错，团队已尝试恢复服务。请核实故障来源、处置后的真实进展及仍需处理的范围，并说明哪些后续动作有证据支持。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method. Public investigation guidance is available in `/scene/SCOPE-MAP.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "d2cc7dce4abfa3cfe53c564ad4be11bfc4ac6905e05b08414567009096a4fc81",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "f44d880bef0a62eb3a81f17b4217b2948c9e7158e50723c76bb41b8da63ead33"
+      },
+      "instruction_sha256": "d2cc7dce4abfa3cfe53c564ad4be11bfc4ac6905e05b08414567009096a4fc81"
+    }
+  },
+  "analysis_cluster_id": "F011"
+}

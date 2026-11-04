@@ -1,0 +1,31 @@
+{
+  "access_profile": "native_raw",
+  "bundle_id": "bundle-a901bfe7465a08a8acdc",
+  "case_id": "case-9f9307b5e17b126b573f",
+  "classification": {
+    "axis": "capability",
+    "dimensions": {
+      "assessed_system": "managed",
+      "n_findings": 1,
+      "phenomena": [
+        "resource_saturation"
+      ],
+      "scope": "polardb",
+      "signal_kinds": [
+        "saturation"
+      ]
+    },
+    "labels": [
+      "mission.saturation"
+    ],
+    "schema_version": "benchmark_case_classification_v2",
+    "taxonomy_id": "operations_capability_slices",
+    "taxonomy_version": "2"
+  },
+  "difficulty": "hard",
+  "distribution_labels": [],
+  "schema_version": "harbor_access_profile_v1",
+  "shared_task_truth": true,
+  "task_type": "mission",
+  "implementation": "native-rollout-v1"
+}

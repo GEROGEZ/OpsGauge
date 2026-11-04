@@ -1,0 +1,14 @@
+{
+  "DR_AD": {
+    "model_ids": [
+      "qwen3.8-max",
+      "glm-5.3"
+    ],
+    "Codex": "0.160.0",
+    "Claude_Code": "2.1.309",
+    "agent_timeout_sec": 900,
+    "cpus": 2,
+    "memory_mb": 4096
+  },
+  "scope": "Settings confirmed in the prior runtime audit, including the original DR Codex-Qwen cohort. Exact per-task task.toml files remain in frozen packages."
+}

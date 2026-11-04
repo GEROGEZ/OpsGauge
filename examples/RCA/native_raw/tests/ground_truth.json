@@ -1,0 +1,225 @@
+{
+  "task_type": "rca",
+  "answer_schema": "rca_answer_v1",
+  "ground_truth": {
+    "metadata": {
+      "alert_entity_domain": "apm",
+      "alert_entity_name": "/api/promotion/calculate",
+      "alert_entity_type": "apm.operation",
+      "case_profile": null,
+      "case_profile_version": "",
+      "collection_stage": "candidate_handoff",
+      "difficulty_level": "medium",
+      "evaluation_focus": {
+        "expected_categories": [
+          "metric",
+          "topology"
+        ],
+        "key_evaluation_points": [
+          {
+            "category": "metric",
+            "must_query": "查云产品实例 r-j6cw5t7lfc4y2blu5u 的CPU（慢命令占满单线程）指标，确认实例侧异常及起始时间",
+            "rationale": "根因机制信号：Redis实例CPU（慢命令占满单线程）异常是本 case 的定义性数据",
+            "sub_type": "redis_cpu",
+            "weight": "critical"
+          },
+          {
+            "category": "topology",
+            "must_query": "从受影响应用沿依赖定位到 r-j6cw5t7lfc4y2blu5u（应用→云实例归因）",
+            "rationale": "证明能从应用症状穿到云产品实例",
+            "sub_type": "impact_analysis",
+            "weight": "important"
+          },
+          {
+            "category": "metric",
+            "must_query": "受影响应用服务的黄金指标（延迟/错误）",
+            "rationale": "确认业务侧劣化与实例异常同窗",
+            "sub_type": "golden_latency",
+            "weight": "supporting"
+          }
+        ]
+      },
+      "fault_id_source": "manual_injection",
+      "fault_taxonomy_valid": true,
+      "fault_type_description": "云数据库 Redis 数据面慢命令阻塞：重计算慢命令占满 Redis 单线程 CPU(0.45%→98.75%)，promotion 同步 GET promo:* 排队超 2s 池超时→500，error_count 64/min + RT 1.6s 触发错误次数告警；实例 Running+PING 可达=区别实例重启/网络封禁。",
+      "ground_truth_mode": "operator_known_injection",
+      "injection_effect_proven": true,
+      "injection_window": {
+        "end": "2026-06-21T03:51:20Z",
+        "start": "2026-06-21T03:47:38Z"
+      },
+      "mechanism_strength": "strong",
+      "primary_mode": "",
+      "source_run_id": "rca_run_2d2a99c0a752686e894e14aba27aceb5",
+      "source_run_note": "手动注入（非 RCA Drill run 产生）。source_run_id 为 provenance 派生值 = 'rca_run_' + md5('4e8t1m5nkt1hd8vun4k20j4o52')；注入窗 2026-06-21T03:47:38Z~03:51:20Z(北京 11:47:38~11:51:20)，集群内 pod 循环 EVAL 重计算 Lua 慢命令占满 Redis 单线程，recover=kill pod（Redis PING PONG 0.00s）。注入窗内无并发 RCA Drill run。",
+      "strict_audit": null,
+      "strict_audit_passed": true,
+      "strict_audit_reason": "云控制面 cause 信号(Redis CpuUsage, CloudMonitor acs_kvstore)不在 o11y-lens 信号映射，audit 可能返 SIGNAL_UNKNOWN；impact(promotion error_count/latency)+propagation 已 o11y-lens 实测对齐，注入经 CloudMonitor CPU 前后对照(0.45%→98.75%)+集群内 driver 实测 500@2.006s 双重确认。cloud-fault 信号映射缺口待补。",
+      "topology_context": {
+        "direction": "downstream_impact",
+        "path": [
+          "r-j6cw5t7lfc4y2blu5u (Redis)",
+          "acs.kvstore.instance",
+          "promotion",
+          "/api/promotion/calculate"
+        ]
+      }
+    },
+    "outcome": {
+      "expected_conclusion": "根因：托管云数据库 Redis 实例 r-j6cw5t7lfc4y2blu5u（promotion 独占促销折扣存储 promo:*，acs.kvstore.instance）数据面被一条重计算慢命令长时间占满单线程，CpuUsage 告警分钟 98.75%（基线 0.45%，约 219×），实例 Running 健康、PING 可达无连接拒绝。传播：promotion /api/promotion/calculate 每请求同步 GET promo:*（JedisPool 2s 超时，硬依赖不可降级），Redis 单线程被占满 → GET 排队阻塞 → 超 2s 池超时 → 接口 RT 12.4ms→1629.6ms（约 131×）。影响：promotion 抛 500（promotion data store unavailable），error_count 64/min（基线 399 req/min 零错误），触发 promotion 错误次数告警 11:49:19。关键鉴别：区别 F111-redisInstanceRestart（实例本身重启不可用）—本故障实例健康仅 CPU 被慢命令占满；区别 F103 网络封禁（连不上）—能 PING 通能建连、命令卡在单线程排队。处置：定位慢命令会话并 SCRIPT KILL / 终止之，或限制慢命令，Redis CPU 回落即恢复。",
+      "expected_fault_id": "F112-redisSlowCommand",
+      "target_entities": [
+        {
+          "entity_domain": "acs",
+          "entity_id": "a53f46d233fdcbac73b4bff635ad32a7",
+          "entity_name": "r-j6cw5t7lfc4y2blu5u",
+          "entity_type": "acs.kvstore.instance"
+        }
+      ],
+      "target_entity_ids": [
+        "a53f46d233fdcbac73b4bff635ad32a7"
+      ]
+    },
+    "reasoning": {
+      "steps": [
+        {
+          "conclusion_constraints": null,
+          "description": "2026-06-21 11:47:38 起，托管云数据库 Redis 实例 r-j6cw5t7lfc4y2blu5u（promotion 独占促销折扣存储 promo:*，acs.kvstore.instance，redis.shard.small.2.ce double-node HA）数据面被一条重计算慢命令长时间占满单线程。实例 CpuUsage 在告警分钟 11:49 升到 98.75%（基线 11:46 干净窗 0.45%，约 219×），实例始终 Running 健康、PING 可达无连接拒绝=纯数据面单线程 CPU 饱和；区别 F111-redisInstanceRestart（实例不可用）与 F103 网络封禁（连不上）。",
+          "fault_id": "F112-redisSlowCommand",
+          "observability": [
+            {
+              "evidence": {
+                "baseline_value": 0.45,
+                "current_value": 98.75,
+                "entity": "acs.kvstore.instance a53f46d233fdcbac73b4bff635ad32a7 (r-j6cw5t7lfc4y2blu5u)",
+                "metric_name": "CpuUsage",
+                "ratio": 219.4,
+                "timestamp": "2026-06-21T11:49:00+08:00",
+                "unit": "%"
+              },
+              "expected": {
+                "comparator": ">=",
+                "status": "",
+                "unit": "%",
+                "value": 98.75
+              },
+              "observed_at": "2026-06-21T11:49:00+08:00",
+              "required": true,
+              "signal": "CpuUsage",
+              "source": "cms",
+              "source_detail": "CloudMonitor DescribeMetricList Namespace=acs_kvstore MetricName=CpuUsage instanceId=r-j6cw5t7lfc4y2blu5u Period=60 (acs_kvstore.CpuUsage 11:46=0.45% -> 11:48=98.60% -> 11:49=98.75%)",
+              "source_type": "metric"
+            }
+          ],
+          "queryable": true,
+          "required": true,
+          "step": 1,
+          "step_type": "cause",
+          "target": "r-j6cw5t7lfc4y2blu5u",
+          "time_range_hint": "",
+          "time_window": {
+            "end": "2026-06-21T11:51:19+08:00",
+            "start": "2026-06-21T11:47:38+08:00"
+          },
+          "title": "Redis 单线程被慢命令占满（数据面 CPU 饱和）",
+          "target_entity_ids": [
+            "a53f46d233fdcbac73b4bff635ad32a7"
+          ]
+        },
+        {
+          "conclusion_constraints": null,
+          "description": "promotion 的 /api/promotion/calculate 每请求同步 GET promo:<productId>（JedisPool connectionTimeout=2000ms，促销折扣硬依赖 Redis 不可降级）。Redis 单线程被慢命令占满 → 所有 GET 命令在单线程排队阻塞 → 等待超过 2000ms 池超时 → Jedis 抛超时异常。实测注入窗内 promotion 接口请求大量卡满 2.006s（=2s 池超时封顶）后失败；promotion /api/promotion/calculate 接口 avg_request_latency_seconds 从基线 11:45 的 12.4ms 升到告警分钟 11:49 的 1629.6ms（约 131×，11:48=116.3ms 起步）。",
+          "fault_id": "F112-redisSlowCommand",
+          "observability": [
+            {
+              "evidence": {
+                "baseline_value": 0.0124,
+                "current_value": 1.6296,
+                "entity": "apm.operation /api/promotion/calculate (ee07ecf72f9a10eafeb80856e53c6351)",
+                "metric_name": "avg_request_latency_seconds",
+                "ratio": 131.4,
+                "timestamp": "2026-06-21T11:49:00+08:00",
+                "unit": "s"
+              },
+              "expected": {
+                "comparator": ">=",
+                "status": "",
+                "unit": "s",
+                "value": 1.6296
+              },
+              "observed_at": "2026-06-21T11:49:00+08:00",
+              "required": true,
+              "signal": "avg_request_latency_seconds",
+              "source": "apm",
+              "source_detail": "o11y-lens entity golden-metrics --entity-domain apm --entity-type apm.service --entity-ids 4b0413a7959a9a637df8c78697b2a164 (promotion avg_request_latency_seconds 11:45=12.4ms baseline -> 11:48=116.3ms -> 11:49=1629.6ms)",
+              "source_type": "metric"
+            }
+          ],
+          "queryable": true,
+          "required": true,
+          "step": 2,
+          "step_type": "propagation",
+          "target": "promotion::/api/promotion/calculate",
+          "time_range_hint": "",
+          "time_window": {
+            "end": "2026-06-21T11:50:00+08:00",
+            "start": "2026-06-21T11:48:00+08:00"
+          },
+          "title": "promotion 同步 Redis 读阻塞排队（Jedis 池超时 2s）",
+          "target_entity_ids": [
+            "/api/promotion/calculate",
+            "4b0413a7959a9a637df8c78697b2a164",
+            "ee07ecf72f9a10eafeb80856e53c6351"
+          ]
+        },
+        {
+          "conclusion_constraints": null,
+          "description": "promotion 同步读超时 → /api/promotion/calculate 抛 500（ResponseStatusException 'promotion data store unavailable'，促销折扣硬依赖 Redis）。error_count 在告警分钟 11:49 达 64/min（基线 11:45-11:47 在 399 req/min 高负载下仍 0 错误，证明负载本身无害、错误纯由 Redis CPU 饱和引起），触发 promotion 错误次数告警（rule 284851df >10/min）OCCURRED at 11:49:19。",
+          "fault_id": "F112-redisSlowCommand",
+          "observability": [
+            {
+              "evidence": {
+                "baseline_value": 0,
+                "current_value": 64,
+                "entity": "apm.operation /api/promotion/calculate (ee07ecf72f9a10eafeb80856e53c6351)",
+                "metric_name": "error_count",
+                "ratio": null,
+                "timestamp": "2026-06-21T11:49:00+08:00",
+                "unit": "count"
+              },
+              "expected": {
+                "comparator": ">=",
+                "status": "",
+                "unit": "count",
+                "value": 64
+              },
+              "observed_at": "2026-06-21T11:49:00+08:00",
+              "required": true,
+              "signal": "error_count",
+              "source": "apm",
+              "source_detail": "o11y-lens golden-metrics promotion error_count (11:45-47 baseline=0 @399req/min -> 11:49=64); alert event-store rule_id=284851df trans_id=4e8t1m5nkt1hd8vun4k20j4o52 event_id=a6ab8ccf4a3efcbf7f2495b2db517e26",
+              "source_type": "metric"
+            }
+          ],
+          "queryable": true,
+          "required": true,
+          "step": 3,
+          "step_type": "impact",
+          "target": "promotion::/api/promotion/calculate",
+          "time_range_hint": "",
+          "time_window": {
+            "end": "2026-06-21T11:51:00+08:00",
+            "start": "2026-06-21T11:48:00+08:00"
+          },
+          "title": "promotion 接口报错触发错误次数告警",
+          "target_entity_ids": [
+            "/api/promotion/calculate",
+            "4b0413a7959a9a637df8c78697b2a164",
+            "ee07ecf72f9a10eafeb80856e53c6351"
+          ]
+        }
+      ]
+    }
+  },
+  "scoring_policy": {}
+}

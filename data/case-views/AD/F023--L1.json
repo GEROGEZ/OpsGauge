@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F023--L1",
+  "task": "AD",
+  "source_case_id": "F023",
+  "family_id": "F023",
+  "bundle_id": null,
+  "source_level": "IL3",
+  "level": 1,
+  "slice": "L3-S6",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F023--L1--shell_raw",
+      "instruction": "请复核 rca-benchmark 中 frontend::POST /api/cart 在 2026年08月10日 04:55:17 至 05:00:04（北京时间）期间的异常。判断健康探测为绿色时服务是否真正具备接纳业务的条件，并区分配置面、调用方和最终业务结果的证据范围。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n可使用 /scene/SCOPE-MAP.json 与 /scene/EVIDENCE-PATH.json；其中仅提供调查阶段和证据归组，不包含根因、机制答案或正确判断。\n",
+      "original_instruction_sha256": "d233545c136671e12339212d5a66eeb1cb29de8290d8c830eae6174dcad97a1e",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "f174ac43cb635308524d61c352a1dfde15e70530b1fd1ae34d413cda1c673bf5"
+      },
+      "instruction_sha256": "d233545c136671e12339212d5a66eeb1cb29de8290d8c830eae6174dcad97a1e"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F023--L1--umodel_semantic",
+      "instruction": "请复核 rca-benchmark 中 frontend::POST /api/cart 在 2026年08月10日 04:55:17 至 05:00:04（北京时间）期间的异常。判断健康探测为绿色时服务是否真正具备接纳业务的条件，并区分配置面、调用方和最终业务结果的证据范围。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`. Public investigation guidance is available in `/scene/SCOPE-MAP.json` and `/scene/EVIDENCE-PATH.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "6e144f8da5fb95f3daf1aa67a8cd5fcf8cc17e04b2d15df47929d642b2122456",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "f174ac43cb635308524d61c352a1dfde15e70530b1fd1ae34d413cda1c673bf5"
+      },
+      "instruction_sha256": "6e144f8da5fb95f3daf1aa67a8cd5fcf8cc17e04b2d15df47929d642b2122456"
+    },
+    "native_raw": {
+      "task_id": "AD--F023--L1--native_raw",
+      "instruction": "请复核 rca-benchmark 中 frontend::POST /api/cart 在 2026年08月10日 04:55:17 至 05:00:04（北京时间）期间的异常。判断健康探测为绿色时服务是否真正具备接纳业务的条件，并区分配置面、调用方和最终业务结果的证据范围。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method. Public investigation guidance is available in `/scene/SCOPE-MAP.json` and `/scene/EVIDENCE-PATH.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "95a876c53636164037d9c9830306f0940df57944dc9b8f3d7e5aa571ecd7b1d2",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "f174ac43cb635308524d61c352a1dfde15e70530b1fd1ae34d413cda1c673bf5"
+      },
+      "instruction_sha256": "95a876c53636164037d9c9830306f0940df57944dc9b8f3d7e5aa571ecd7b1d2"
+    }
+  },
+  "analysis_cluster_id": "F023"
+}

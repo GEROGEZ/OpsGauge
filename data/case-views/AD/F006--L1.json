@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F006--L1",
+  "task": "AD",
+  "source_case_id": "F006",
+  "family_id": "F006",
+  "bundle_id": null,
+  "source_level": "IL3",
+  "level": 1,
+  "slice": "L3-S2",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F006--L1--shell_raw",
+      "instruction": "storefront-web 用户反馈在 2026 年 8 月 11 日 15:06 至 15:08（北京时间）点击加入购物车后有明显停顿。请评估通过扩容后端能否解决本次问题，指出应优先处理的责任范围并给出可核验的量化依据，明确现有证据不能确定的部分。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n可使用 /scene/SCOPE-MAP.json 与 /scene/EVIDENCE-PATH.json；其中仅提供调查阶段和证据归组，不包含根因、机制答案或正确判断。\n",
+      "original_instruction_sha256": "eed79ea9b37f400288fa349218beba1678b0c12935b5ffc2527b97361b2aaa35",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "ed51c56b906bf52dda5cd2b120e61d64b73a382de02e0f09f4f87eddfd4b8705"
+      },
+      "instruction_sha256": "eed79ea9b37f400288fa349218beba1678b0c12935b5ffc2527b97361b2aaa35"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F006--L1--umodel_semantic",
+      "instruction": "storefront-web 用户反馈在 2026 年 8 月 11 日 15:06 至 15:08（北京时间）点击加入购物车后有明显停顿。请评估通过扩容后端能否解决本次问题，指出应优先处理的责任范围并给出可核验的量化依据，明确现有证据不能确定的部分。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`. Public investigation guidance is available in `/scene/SCOPE-MAP.json` and `/scene/EVIDENCE-PATH.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "b3f4792fd95b2fdc59d5c5e5f93c24590115619e79f18116ec7c91070ca59038",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "ed51c56b906bf52dda5cd2b120e61d64b73a382de02e0f09f4f87eddfd4b8705"
+      },
+      "instruction_sha256": "b3f4792fd95b2fdc59d5c5e5f93c24590115619e79f18116ec7c91070ca59038"
+    },
+    "native_raw": {
+      "task_id": "AD--F006--L1--native_raw",
+      "instruction": "storefront-web 用户反馈在 2026 年 8 月 11 日 15:06 至 15:08（北京时间）点击加入购物车后有明显停顿。请评估通过扩容后端能否解决本次问题，指出应优先处理的责任范围并给出可核验的量化依据，明确现有证据不能确定的部分。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method. Public investigation guidance is available in `/scene/SCOPE-MAP.json` and `/scene/EVIDENCE-PATH.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "df374e064bbc155626bc024821af8b299383458e81b1217bdf6865d6158e7723",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "ed51c56b906bf52dda5cd2b120e61d64b73a382de02e0f09f4f87eddfd4b8705"
+      },
+      "instruction_sha256": "df374e064bbc155626bc024821af8b299383458e81b1217bdf6865d6158e7723"
+    }
+  },
+  "analysis_cluster_id": "F006"
+}

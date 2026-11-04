@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F007--L1",
+  "task": "AD",
+  "source_case_id": "F007",
+  "family_id": "F007",
+  "bundle_id": null,
+  "source_level": "IL3",
+  "level": 1,
+  "slice": "L3-S3",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F007--L1--shell_raw",
+      "instruction": "请复核 order-consumer 在 2026 年 7 月 15 日 16:35:00 至 16:38:00（北京时间）期间的消息流入、接收与积压变化，判断当前观测是否跟得上同期流入，并界定消费进展及后续追赶能够支持到什么程度。请给出可核查的依据，明确现有证据不能确认的业务完成结果。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n可使用 /scene/SCOPE-MAP.json 与 /scene/EVIDENCE-PATH.json；其中仅提供调查阶段和证据归组，不包含根因、机制答案或正确判断。\n",
+      "original_instruction_sha256": "a957418d4918bcafaa8e57f6c1006182685cc7357002cd3deb098aace78d934e",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "6c7d9ac1d911920269ea28b20902bc7e7a6829db0c77eb3508ef4a9a8dca3cdb"
+      },
+      "instruction_sha256": "a957418d4918bcafaa8e57f6c1006182685cc7357002cd3deb098aace78d934e"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F007--L1--umodel_semantic",
+      "instruction": "请复核 order-consumer 在 2026 年 7 月 15 日 16:35:00 至 16:38:00（北京时间）期间的消息流入、接收与积压变化，判断当前观测是否跟得上同期流入，并界定消费进展及后续追赶能够支持到什么程度。请给出可核查的依据，明确现有证据不能确认的业务完成结果。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`. Public investigation guidance is available in `/scene/SCOPE-MAP.json` and `/scene/EVIDENCE-PATH.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "5ad56355b77cee92bbd26b84f717b9cf509187533d4420144fc3fd8a7ad033b0",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "6c7d9ac1d911920269ea28b20902bc7e7a6829db0c77eb3508ef4a9a8dca3cdb"
+      },
+      "instruction_sha256": "5ad56355b77cee92bbd26b84f717b9cf509187533d4420144fc3fd8a7ad033b0"
+    },
+    "native_raw": {
+      "task_id": "AD--F007--L1--native_raw",
+      "instruction": "请复核 order-consumer 在 2026 年 7 月 15 日 16:35:00 至 16:38:00（北京时间）期间的消息流入、接收与积压变化，判断当前观测是否跟得上同期流入，并界定消费进展及后续追赶能够支持到什么程度。请给出可核查的依据，明确现有证据不能确认的业务完成结果。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method. Public investigation guidance is available in `/scene/SCOPE-MAP.json` and `/scene/EVIDENCE-PATH.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "299a4741ce94b50b2bea48e503246633bdfcf06136ff0eec7f92ac6059c73828",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "6c7d9ac1d911920269ea28b20902bc7e7a6829db0c77eb3508ef4a9a8dca3cdb"
+      },
+      "instruction_sha256": "299a4741ce94b50b2bea48e503246633bdfcf06136ff0eec7f92ac6059c73828"
+    }
+  },
+  "analysis_cluster_id": "F007"
+}

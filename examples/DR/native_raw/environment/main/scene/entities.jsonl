@@ -1,0 +1,14 @@
+{"entity_id": "168d84c269d0cb389499bb413aa86465", "entity_name": "168d84c269d0cb389499bb413aa86465", "entity_type": "apm.instance", "entity_domain": "apm", "attributes": {}}
+{"entity_id": "fb364e80b42f16618b6de13f3579b6ab", "entity_name": "frontend::GET /api/recommendations", "entity_type": "apm.operation", "entity_domain": "apm", "attributes": {}}
+{"entity_id": "411076815d222069e6b259c2e4376094", "entity_name": "recommendation::oteldemo.RecommendationService/ListRecommendations", "entity_type": "apm.operation", "entity_domain": "apm", "attributes": {}}
+{"entity_id": "2ec0302f072d864c084e0460734b7e0b", "entity_name": "recommendation", "entity_type": "apm.service", "entity_domain": "apm", "attributes": {}}
+{"entity_id": "70af2dee3d886988a1f1baefbf5fc400", "entity_name": "recommendation", "entity_type": "apm.service", "entity_domain": "apm", "attributes": {}}
+{"entity_id": "7b50436b7fb9e828f0a8c32a69c53ab0", "entity_name": "recommendation", "entity_type": "apm.service", "entity_domain": "apm", "attributes": {}}
+{"entity_id": "04f101e6b65c003efe4bcbe898555ef9", "entity_name": "recommendation", "entity_type": "k8s.deployment", "entity_domain": "k8s", "attributes": {}}
+{"entity_id": "0375934342a7f2b01ee80cbbbf203c44", "entity_name": "0375934342a7f2b01ee80cbbbf203c44", "entity_type": "k8s.namespace", "entity_domain": "k8s", "attributes": {}}
+{"entity_id": "d5d98b4507b08c584bcf03e415f6a07b", "entity_name": "recommendation-658bc44546-9tk7l", "entity_type": "k8s.pod", "entity_domain": "k8s", "attributes": {}}
+{"entity_id": "b631cadefc6e914fa6eb64b13c753220", "entity_name": "recommendation-658bc44546-llx2f", "entity_type": "k8s.pod", "entity_domain": "k8s", "attributes": {}}
+{"entity_id": "c70211567cb4268eca6db5a17d2fc804", "entity_name": "recommendation-658bc44546-xsch8", "entity_type": "k8s.pod", "entity_domain": "k8s", "attributes": {}}
+{"entity_id": "627eed90804b0687cee1326be688c425", "entity_name": "recommendation-7bc8c9589b-6z82s", "entity_type": "k8s.pod", "entity_domain": "k8s", "attributes": {}}
+{"entity_id": "6a4624fea920e2a7727454e4269ccd46", "entity_name": "recommendation-7bc8c9589b-c7l8n", "entity_type": "k8s.pod", "entity_domain": "k8s", "attributes": {}}
+{"entity_id": "93a7e4d2eff428a45f2940b91ece8b5b", "entity_name": "recommendation-7bc8c9589b-hfwsh", "entity_type": "k8s.pod", "entity_domain": "k8s", "attributes": {}}

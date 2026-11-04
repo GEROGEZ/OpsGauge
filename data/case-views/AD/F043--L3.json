@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F043--L3",
+  "task": "AD",
+  "source_case_id": "F043",
+  "family_id": "F043",
+  "bundle_id": null,
+  "source_level": "IL1",
+  "level": 3,
+  "slice": "L3-S5",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F043--L3--shell_raw",
+      "instruction": "请调查 cart::POST /oteldemo.CartService/AddItem 在 2026-04-12T04:39:09+08:00 至 2026-04-12T04:45:03+08:00 期间的业务异常。目标：界定这次异常是否影响了多个业务，说明能够确认的共同影响范围和仍需区分的现象。 请给出可核查证据，并明确无法确认的部分。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n",
+      "original_instruction_sha256": "f5ace096874f24a6781e8146451d0417c9391e424527873db21e4b86330fa81f",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "51aca37f958c8de7f743eb7fe2edd86ad6557ceb512f56ff1166d22e82c885b4"
+      },
+      "instruction_sha256": "f5ace096874f24a6781e8146451d0417c9391e424527873db21e4b86330fa81f"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F043--L3--umodel_semantic",
+      "instruction": "请调查 cart::POST /oteldemo.CartService/AddItem 在 2026-04-12T04:39:09+08:00 至 2026-04-12T04:45:03+08:00 期间的业务异常。目标：界定这次异常是否影响了多个业务，说明能够确认的共同影响范围和仍需区分的现象。 请给出可核查证据，并明确无法确认的部分。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "38755fbdb44cc07835a4c14f12410ab6af0a6fcde28b2371ec5a639c40a54f40",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "51aca37f958c8de7f743eb7fe2edd86ad6557ceb512f56ff1166d22e82c885b4"
+      },
+      "instruction_sha256": "38755fbdb44cc07835a4c14f12410ab6af0a6fcde28b2371ec5a639c40a54f40"
+    },
+    "native_raw": {
+      "task_id": "AD--F043--L3--native_raw",
+      "instruction": "请调查 cart::POST /oteldemo.CartService/AddItem 在 2026-04-12T04:39:09+08:00 至 2026-04-12T04:45:03+08:00 期间的业务异常。目标：界定这次异常是否影响了多个业务，说明能够确认的共同影响范围和仍需区分的现象。 请给出可核查证据，并明确无法确认的部分。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "7e66629ef95e990faa4b2af9a15fb801cbc804700b3813b7ee2d208a1723ff87",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "51aca37f958c8de7f743eb7fe2edd86ad6557ceb512f56ff1166d22e82c885b4"
+      },
+      "instruction_sha256": "7e66629ef95e990faa4b2af9a15fb801cbc804700b3813b7ee2d208a1723ff87"
+    }
+  },
+  "analysis_cluster_id": "F043"
+}

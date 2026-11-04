@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F037--L1",
+  "task": "AD",
+  "source_case_id": "F037",
+  "family_id": "F037",
+  "bundle_id": null,
+  "source_level": "IL3",
+  "level": 1,
+  "slice": "L3-S6",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F037--L1--shell_raw",
+      "instruction": "请复核 rca-benchmark 中 order-routing 在 2026年08月06日 22:48:07 至 22:51:58（北京时间）期间的异常。判断 APM 健康是否足以排除服务端问题，明确配置不匹配影响的调用范围，并说明何时可以结束处置。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n可使用 /scene/SCOPE-MAP.json 与 /scene/EVIDENCE-PATH.json；其中仅提供调查阶段和证据归组，不包含根因、机制答案或正确判断。\n",
+      "original_instruction_sha256": "cecb7434f68131d0e909f1a1581d5eb5fe20d48c56970cbb4d5eaf3311119220",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "5cce73fd1105d6e999bd99b60c92c16395e0aa168529f7ac048dac1a768a956f"
+      },
+      "instruction_sha256": "cecb7434f68131d0e909f1a1581d5eb5fe20d48c56970cbb4d5eaf3311119220"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F037--L1--umodel_semantic",
+      "instruction": "请复核 rca-benchmark 中 order-routing 在 2026年08月06日 22:48:07 至 22:51:58（北京时间）期间的异常。判断 APM 健康是否足以排除服务端问题，明确配置不匹配影响的调用范围，并说明何时可以结束处置。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`. Public investigation guidance is available in `/scene/SCOPE-MAP.json` and `/scene/EVIDENCE-PATH.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "72cb9b019109f975ea9e3460f24b69756000f6a877c7490121e2e8fbafdba6fd",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "5cce73fd1105d6e999bd99b60c92c16395e0aa168529f7ac048dac1a768a956f"
+      },
+      "instruction_sha256": "72cb9b019109f975ea9e3460f24b69756000f6a877c7490121e2e8fbafdba6fd"
+    },
+    "native_raw": {
+      "task_id": "AD--F037--L1--native_raw",
+      "instruction": "请复核 rca-benchmark 中 order-routing 在 2026年08月06日 22:48:07 至 22:51:58（北京时间）期间的异常。判断 APM 健康是否足以排除服务端问题，明确配置不匹配影响的调用范围，并说明何时可以结束处置。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method. Public investigation guidance is available in `/scene/SCOPE-MAP.json` and `/scene/EVIDENCE-PATH.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "9beff4faa2b779578fc84d4f8b857c9181643973361faafd3db4c5c4fbb1a11c",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "5cce73fd1105d6e999bd99b60c92c16395e0aa168529f7ac048dac1a768a956f"
+      },
+      "instruction_sha256": "9beff4faa2b779578fc84d4f8b857c9181643973361faafd3db4c5c4fbb1a11c"
+    }
+  },
+  "analysis_cluster_id": "F037"
+}

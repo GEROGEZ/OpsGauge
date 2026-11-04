@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F011--L3",
+  "task": "AD",
+  "source_case_id": "F011",
+  "family_id": "F011",
+  "bundle_id": null,
+  "source_level": "IL1",
+  "level": 3,
+  "slice": "L3-S3",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F011--L3--shell_raw",
+      "instruction": "请调查 cart::POST /oteldemo.CartService/EmptyCart 在 2026-08-10T14:42:24+08:00 至 2026-08-10T15:27:00+08:00 期间的业务异常。目标：评估这次异常是否遗留了需要清理或恢复的业务状态，并给出可确认的对象范围。 请给出可核查证据，并明确无法确认的部分。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n",
+      "original_instruction_sha256": "0fecce084b0d2ad40694fc483d34bf08bec7d0d948bef2f9cd6bc43bbad7018e",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "f44d880bef0a62eb3a81f17b4217b2948c9e7158e50723c76bb41b8da63ead33"
+      },
+      "instruction_sha256": "0fecce084b0d2ad40694fc483d34bf08bec7d0d948bef2f9cd6bc43bbad7018e"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F011--L3--umodel_semantic",
+      "instruction": "请调查 cart::POST /oteldemo.CartService/EmptyCart 在 2026-08-10T14:42:24+08:00 至 2026-08-10T15:27:00+08:00 期间的业务异常。目标：评估这次异常是否遗留了需要清理或恢复的业务状态，并给出可确认的对象范围。 请给出可核查证据，并明确无法确认的部分。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "fd088f62eaeb6be6e771a40e74288af954fd9a3ca3f19b54766ff96945c8e646",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "f44d880bef0a62eb3a81f17b4217b2948c9e7158e50723c76bb41b8da63ead33"
+      },
+      "instruction_sha256": "fd088f62eaeb6be6e771a40e74288af954fd9a3ca3f19b54766ff96945c8e646"
+    },
+    "native_raw": {
+      "task_id": "AD--F011--L3--native_raw",
+      "instruction": "请调查 cart::POST /oteldemo.CartService/EmptyCart 在 2026-08-10T14:42:24+08:00 至 2026-08-10T15:27:00+08:00 期间的业务异常。目标：评估这次异常是否遗留了需要清理或恢复的业务状态，并给出可确认的对象范围。 请给出可核查证据，并明确无法确认的部分。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "3ba2772f0031eb72a84c80c4b9fb7aa27a7c010b6e5215d3e3b03673dd7eee75",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "f44d880bef0a62eb3a81f17b4217b2948c9e7158e50723c76bb41b8da63ead33"
+      },
+      "instruction_sha256": "3ba2772f0031eb72a84c80c4b9fb7aa27a7c010b6e5215d3e3b03673dd7eee75"
+    }
+  },
+  "analysis_cluster_id": "F011"
+}

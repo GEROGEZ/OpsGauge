@@ -1,0 +1,122 @@
+{
+  "allowed_health_verdicts": [
+    "actionable_findings_present",
+    "no_actionable_finding"
+  ],
+  "allowed_phenomena": [
+    "availability_failure",
+    "configuration_anomaly",
+    "connection_saturation",
+    "data_backlog",
+    "error_volume_increase",
+    "latency_increase",
+    "resource_saturation",
+    "restart_or_flapping",
+    "slow_request_volume_increase",
+    "traffic_anomaly"
+  ],
+  "evidence_semantics": {
+    "context_checks_require_grounding_not_anomaly_findings": true,
+    "copy_actual_observation_not_threshold": true,
+    "numeric_fields": [
+      "value",
+      "unit",
+      "observed_at"
+    ],
+    "statistic_field": "attributes.stat",
+    "window_field": "attributes.time_range"
+  },
+  "inspection_checks": [
+    {
+      "check_id": "check-1",
+      "dimensions": {},
+      "entity_names": [
+        "pc-j6ca6v49n1t62ft27"
+      ],
+      "entity_types": [
+        "acs.polardb.cluster"
+      ],
+      "modality": "metric",
+      "observation_time": "2026-08-03T22:36:30+08:00",
+      "query_time_range": {
+        "end": "2026-08-03T22:36:30+08:00",
+        "start": "2026-08-03T22:36:30+08:00"
+      },
+      "role": "inspection",
+      "signal": "AliyunPolardb_cluster_iops_usage",
+      "stat": "latest",
+      "unit": "%"
+    },
+    {
+      "check_id": "check-2",
+      "dimensions": {},
+      "entity_names": [
+        "pc-j6ca6v49n1t62ft27"
+      ],
+      "entity_types": [
+        "acs.polardb.cluster"
+      ],
+      "event_id": "record-c4d01d23b61f36b916c1",
+      "modality": "event",
+      "observation_time": "2026-08-03T22:36:30+08:00",
+      "query_time_range": {
+        "end": "2026-08-03T22:36:30+08:00",
+        "start": "2026-08-03T22:36:30+08:00"
+      },
+      "role": "inspection",
+      "signal": "cms_alert_occurred",
+      "stat": "identity",
+      "unit": "flag"
+    },
+    {
+      "check_id": "check-3",
+      "dimensions": {},
+      "entity_names": [
+        "pc-j6ca6v49n1t62ft27"
+      ],
+      "entity_types": [
+        "acs.polardb.cluster"
+      ],
+      "modality": "metric",
+      "observation_time": "2026-08-03T22:36:30+08:00",
+      "query_time_range": {
+        "end": "2026-08-03T22:36:30+08:00",
+        "start": "2026-08-03T22:36:30+08:00"
+      },
+      "role": "inspection",
+      "signal": "AliyunPolardb_cluster_iops_usage",
+      "stat": "latest",
+      "unit": "%"
+    }
+  ],
+  "inspection_rules": [
+    {
+      "check_ids": [
+        "check-1",
+        "check-2",
+        "check-3"
+      ],
+      "entity_names": [
+        "pc-j6ca6v49n1t62ft27"
+      ],
+      "phenomenon": "resource_saturation",
+      "predicate": {
+        "operator": ">",
+        "threshold": 70.0,
+        "unit": "% (threshold 70, alert 88.791, baseline 0.2)"
+      },
+      "rule_id": "rule-1"
+    }
+  ],
+  "schema_version": "mission_public_contract_v1",
+  "scope_policy": "Emit findings only for entities in target_scope. Do not emit foreign-scope findings, including negative findings.",
+  "seed_entities": [
+    {
+      "entity_domain": "acs",
+      "entity_name": "pc-j6ca6v49n1t62ft27",
+      "entity_type": "acs.polardb.cluster"
+    }
+  ],
+  "target_scope": "polardb",
+  "target_scope_label": "PolarDB"
+}

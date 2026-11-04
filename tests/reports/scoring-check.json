@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "fixture": "DR",
+      "expected_reward": 0.66,
+      "actual_reward": 0.66,
+      "passed": true
+    },
+    {
+      "fixture": "F020",
+      "expected_reward": 0.85,
+      "actual_reward": 0.85,
+      "passed": true
+    },
+    {
+      "fixture": "F025",
+      "expected_reward": 0.85,
+      "actual_reward": 0.85,
+      "passed": true
+    },
+    {
+      "fixture": "HA",
+      "expected_reward": 0.875,
+      "actual_reward": 0.875,
+      "passed": true
+    },
+    {
+      "fixture": "RCA",
+      "expected_reward": 0.5333333333333333,
+      "actual_reward": 0.5333333333333333,
+      "passed": true
+    }
+  ],
+  "agent_runs": 0,
+  "model_calls": 0,
+  "scope": "Five bundled submissions scored through the current public command; not a new agent or Docker run."
+}

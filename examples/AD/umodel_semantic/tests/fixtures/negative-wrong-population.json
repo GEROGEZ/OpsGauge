@@ -1,0 +1,34 @@
+{
+  "state": "final",
+  "summary": "wrong population",
+  "claims": [
+    {
+      "id": "fixed_product_hotspot",
+      "status": "supported",
+      "evidence_refs": [
+        "c049-e01"
+      ]
+    },
+    {
+      "id": "global_capacity_shortage",
+      "status": "not_established",
+      "evidence_refs": [
+        "c049-e06"
+      ]
+    },
+    {
+      "id": "all_products_affected",
+      "status": "not_established",
+      "evidence_refs": [
+        "c049-e06"
+      ]
+    },
+    {
+      "id": "unique_business_impact_population",
+      "status": "not_established",
+      "evidence_refs": [
+        "c049-e07"
+      ]
+    }
+  ]
+}

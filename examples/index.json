@@ -1,0 +1,58 @@
+{
+  "DR": [
+    {
+      "task_id": "DR--L2-P06--L2--umodel_semantic",
+      "directory": "DR/umodel_semantic"
+    },
+    {
+      "task_id": "DR--L2-P06--L2--shell_raw",
+      "directory": "DR/shell_raw"
+    },
+    {
+      "task_id": "DR--L2-P06--L2--native_raw",
+      "directory": "DR/native_raw"
+    }
+  ],
+  "AD": [
+    {
+      "task_id": "AD--F035--L3--shell_raw",
+      "directory": "AD/shell_raw"
+    },
+    {
+      "task_id": "AD--F035--L3--umodel_semantic",
+      "directory": "AD/umodel_semantic"
+    },
+    {
+      "task_id": "AD--F035--L3--native_raw",
+      "directory": "AD/native_raw"
+    }
+  ],
+  "HA": [
+    {
+      "task_id": "HA--case-9f9307b5e17b126b573f--L3--shell_raw",
+      "directory": "HA/shell_raw"
+    },
+    {
+      "task_id": "HA--case-9f9307b5e17b126b573f--L3--native_raw",
+      "directory": "HA/native_raw"
+    },
+    {
+      "task_id": "HA--case-9f9307b5e17b126b573f--L3--umodel_semantic",
+      "directory": "HA/umodel_semantic"
+    }
+  ],
+  "RCA": [
+    {
+      "task_id": "RCA--case-fcc6fc7eeb9b447df39f--L3--shell_raw",
+      "directory": "RCA/shell_raw"
+    },
+    {
+      "task_id": "RCA--case-fcc6fc7eeb9b447df39f--L3--native_raw",
+      "directory": "RCA/native_raw"
+    },
+    {
+      "task_id": "RCA--case-fcc6fc7eeb9b447df39f--L3--umodel_semantic",
+      "directory": "RCA/umodel_semantic"
+    }
+  ]
+}

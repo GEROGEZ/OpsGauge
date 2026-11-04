@@ -1,0 +1,10 @@
+{
+  "image": "opsgauge-replay-base:2026.10.27",
+  "image_id": "sha256:8aec63feb081882edcb25a7d68ddce2a76ba9761a5599c3c1e082601763e62f5",
+  "archive_sha256": "3ce9f0ca96c88b5dd4bc0764458393633f3f1334dda28856bc7bedee29526841",
+  "architecture": "amd64",
+  "os": "linux",
+  "layers": 8,
+  "docker_executed": true,
+  "verification": "OCI/Docker references and digests checked; image loaded and ID matched on Linux amd64. Runtime imports and 12 example environment startup checks passed. See tests/reports/container-startup-check.json for prerequisites and limits."
+}

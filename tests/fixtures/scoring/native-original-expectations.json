@@ -1,0 +1,10 @@
+{
+  "HA": {
+    "sha256": "de7155d56f9903e356546667180141e7246ec3b7c1465d4d3e46613bf07eacd0",
+    "expected_reward": 0.875
+  },
+  "RCA": {
+    "sha256": "de59e40c896125cbe41d928b9d251174d3d4a1681023de1d87ccc74081b17161",
+    "expected_reward": 0.5333333333333333
+  }
+}

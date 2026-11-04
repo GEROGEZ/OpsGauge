@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F003--L3",
+  "task": "AD",
+  "source_case_id": "F003",
+  "family_id": "F003",
+  "bundle_id": null,
+  "source_level": "IL1",
+  "level": 3,
+  "slice": "L3-S1",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F003--L3--shell_raw",
+      "instruction": "请调查 B03 在 the archived evidence window 至 the archived evidence window 期间的业务异常。目标：核查异常的实际范围、原因边界与恢复状态，并给出可核查证据，明确无法确认的部分。 请给出可核查证据，并明确无法确认的部分。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n",
+      "original_instruction_sha256": "8af8e1b90f6453bd5be820ac947e8696754d6b4e12d03a130ae3bbd55922e976",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "8dccd71850ed2a65902ad892ab96c93cdb1a5c118d853c02faf49b9a9234a56d"
+      },
+      "instruction_sha256": "8af8e1b90f6453bd5be820ac947e8696754d6b4e12d03a130ae3bbd55922e976"
+    },
+    "native_raw": {
+      "task_id": "AD--F003--L3--native_raw",
+      "instruction": "请调查 B03 在 the archived evidence window 至 the archived evidence window 期间的业务异常。目标：核查异常的实际范围、原因边界与恢复状态，并给出可核查证据，明确无法确认的部分。 请给出可核查证据，并明确无法确认的部分。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "03cd4018bef5ed322ce6ffa768d110da5cff43734e03cad8b85a071059286fea",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "8dccd71850ed2a65902ad892ab96c93cdb1a5c118d853c02faf49b9a9234a56d"
+      },
+      "instruction_sha256": "03cd4018bef5ed322ce6ffa768d110da5cff43734e03cad8b85a071059286fea"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F003--L3--umodel_semantic",
+      "instruction": "请调查 B03 在 the archived evidence window 至 the archived evidence window 期间的业务异常。目标：核查异常的实际范围、原因边界与恢复状态，并给出可核查证据，明确无法确认的部分。 请给出可核查证据，并明确无法确认的部分。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "364e35d822767ac272e0161ba39a57e20ab654d5cdba5b3f2c30f4c4d9ac34e0",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "8dccd71850ed2a65902ad892ab96c93cdb1a5c118d853c02faf49b9a9234a56d"
+      },
+      "instruction_sha256": "364e35d822767ac272e0161ba39a57e20ab654d5cdba5b3f2c30f4c4d9ac34e0"
+    }
+  },
+  "analysis_cluster_id": "F003"
+}

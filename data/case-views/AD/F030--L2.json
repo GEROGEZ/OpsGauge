@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F030--L2",
+  "task": "AD",
+  "source_case_id": "F030",
+  "family_id": "F030",
+  "bundle_id": null,
+  "source_level": "IL2",
+  "level": 2,
+  "slice": "L3-S1",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F030--L2--shell_raw",
+      "instruction": "请复核 rca-benchmark 中 frontend::POST /api/checkout 在 2026年04月16日 09:03:54 至 09:13:05（北京时间）期间的异常。量化可观察的请求和延迟变化，并判断这些请求是否能直接当作唯一业务需求人口，说明重复计算边界。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n可使用 /scene/SCOPE-MAP.json 获取中性的调查范围信息；其中不包含因果边、根因或正确判断。\n",
+      "original_instruction_sha256": "cc6fda9756ca156a7d2b86c266b42d5adf69707673d7938c458b37d9220a13ff",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "088023dfacb3e12259bc6bfd05af94d997ce20143331cf786071406eaa615cff"
+      },
+      "instruction_sha256": "cc6fda9756ca156a7d2b86c266b42d5adf69707673d7938c458b37d9220a13ff"
+    },
+    "native_raw": {
+      "task_id": "AD--F030--L2--native_raw",
+      "instruction": "请复核 rca-benchmark 中 frontend::POST /api/checkout 在 2026年04月16日 09:03:54 至 09:13:05（北京时间）期间的异常。量化可观察的请求和延迟变化，并判断这些请求是否能直接当作唯一业务需求人口，说明重复计算边界。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method. Public investigation guidance is available in `/scene/SCOPE-MAP.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "96280a729660bd7f8424cf3c2d3269b85fc79b6721d1f2c8ce48d78dc1360560",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "088023dfacb3e12259bc6bfd05af94d997ce20143331cf786071406eaa615cff"
+      },
+      "instruction_sha256": "96280a729660bd7f8424cf3c2d3269b85fc79b6721d1f2c8ce48d78dc1360560"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F030--L2--umodel_semantic",
+      "instruction": "请复核 rca-benchmark 中 frontend::POST /api/checkout 在 2026年04月16日 09:03:54 至 09:13:05（北京时间）期间的异常。量化可观察的请求和延迟变化，并判断这些请求是否能直接当作唯一业务需求人口，说明重复计算边界。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`. Public investigation guidance is available in `/scene/SCOPE-MAP.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "b3abf86136727c5415f5610cc73ba5cb7922d13d2fa642f5fa655915b0e1ce63",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "088023dfacb3e12259bc6bfd05af94d997ce20143331cf786071406eaa615cff"
+      },
+      "instruction_sha256": "b3abf86136727c5415f5610cc73ba5cb7922d13d2fa642f5fa655915b0e1ce63"
+    }
+  },
+  "analysis_cluster_id": "F030"
+}

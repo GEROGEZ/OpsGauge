@@ -1,0 +1,15 @@
+{
+  "bundle_id": "bundle-a901bfe7465a08a8acdc",
+  "case_id": "case-9f9307b5e17b126b573f",
+  "eligibility": {
+    "eligible": true,
+    "entity_count": 10,
+    "profile": "umodel_semantic",
+    "raw_numeric_metric_count": 21,
+    "reasons": [],
+    "record_count": 31
+  },
+  "output_dir": "/workspace/benchmark-factory-data/experiments/all-scenario-difficulty-harbor3-v1-r2/compiled/bundle-a901bfe7465a08a8acdc/profiles/umodel_semantic/cases/mission/case-9f9307b5e17b126b573f",
+  "profile": "umodel_semantic",
+  "schema_version": "access_profile_compilation_v1"
+}

@@ -1,0 +1,13 @@
+FROM python:3.11-slim
+# Both the source filename and this filesystem layer are bundle-specific. This
+# prevents stale COPY-layer reuse for same-sized DuckDB snapshots produced with
+# identical timestamps in rapidly compiled sibling tasks.
+LABEL io.benchmark-factory.bundle-sha256="d30ef6fc1e73f9fc979489bafcf22c053cbe9cec09f6df4724d8a12ad66e84c7"
+RUN pip install --no-cache-dir "duckdb>=1.1,<1.2" "fastapi>=0.115,<1" "uvicorn>=0.30,<1" "pydantic>=2,<3" "PyYAML>=6,<7" "pytz>=2024,<2027"
+RUN mkdir -p /scene && echo 'd30ef6fc1e73f9fc979489bafcf22c053cbe9cec09f6df4724d8a12ad66e84c7' > /scene/.bundle-sha256
+ENV PYTHONPATH=/runtime
+COPY runtime/bench_factory /runtime/bench_factory
+COPY replay-d30ef6fc1e73f9fc979489bafcf22c053cbe9cec09f6df4724d8a12ad66e84c7.duckdb /scene/replay.duckdb
+COPY gateway_entry.py /app/gateway_entry.py
+WORKDIR /app
+CMD ["python", "gateway_entry.py"]

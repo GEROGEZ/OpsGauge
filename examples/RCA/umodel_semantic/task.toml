@@ -1,0 +1,30 @@
+version = "1.0"
+
+[task]
+name = "benchmark-factory/case-fcc6fc7eeb9b447df39f__umodel_semantic"
+
+[metadata]
+author_name = "benchmark-factory"
+author_email = "noreply@example.com"
+difficulty = "hard"
+category = "rca"
+tags = ["aiops", "umodel", "online-query", "semantic-tool"]
+
+[metadata.benchmark_factory]
+case_id = "case-fcc6fc7eeb9b447df39f"
+bundle_id = "bundle-075983241d62665df086"
+workspace = "rca-benchmark"
+region_id = "cn-hongkong"
+access_profile = "umodel_semantic"
+
+[verifier]
+timeout_sec = 120.0
+
+[agent]
+timeout_sec = 900.0
+
+[environment]
+build_timeout_sec = 600.0
+cpus = 2
+memory = "4G"
+storage = "4G"

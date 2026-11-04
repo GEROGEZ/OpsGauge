@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F017--L2",
+  "task": "AD",
+  "source_case_id": "F017",
+  "family_id": "F017",
+  "bundle_id": null,
+  "source_level": "IL2",
+  "level": 2,
+  "slice": "L3-S4",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F017--L2--shell_raw",
+      "instruction": "请复核 rca-benchmark 中 frontend::GET /api/cart 在 2026年08月10日 08:17:34 至 08:26:00（北京时间）期间的业务异常。判断两波异常是否属于同一因果链、分别需要什么处置，并说明现有证据能否证明处置已经完成。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n可使用 /scene/SCOPE-MAP.json 获取中性的调查范围信息；其中不包含因果边、根因或正确判断。\n",
+      "original_instruction_sha256": "ffa6adf4a26c572ba646e51342972dff8741ca57fcb90db169ada8a8d9dcb980",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "f58b812b3088c34d1697c9c8171eeb8db026a3cea7597652d2f02301c4f231e2"
+      },
+      "instruction_sha256": "ffa6adf4a26c572ba646e51342972dff8741ca57fcb90db169ada8a8d9dcb980"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F017--L2--umodel_semantic",
+      "instruction": "请复核 rca-benchmark 中 frontend::GET /api/cart 在 2026年08月10日 08:17:34 至 08:26:00（北京时间）期间的业务异常。判断两波异常是否属于同一因果链、分别需要什么处置，并说明现有证据能否证明处置已经完成。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`. Public investigation guidance is available in `/scene/SCOPE-MAP.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "ed2fbda5f9df320bf4487be0881f0dbf2529b891d114b5c21640eefcef24e557",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "f58b812b3088c34d1697c9c8171eeb8db026a3cea7597652d2f02301c4f231e2"
+      },
+      "instruction_sha256": "ed2fbda5f9df320bf4487be0881f0dbf2529b891d114b5c21640eefcef24e557"
+    },
+    "native_raw": {
+      "task_id": "AD--F017--L2--native_raw",
+      "instruction": "请复核 rca-benchmark 中 frontend::GET /api/cart 在 2026年08月10日 08:17:34 至 08:26:00（北京时间）期间的业务异常。判断两波异常是否属于同一因果链、分别需要什么处置，并说明现有证据能否证明处置已经完成。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method. Public investigation guidance is available in `/scene/SCOPE-MAP.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "892b00989e2e94f0ed59b8eb4df852cdcc6703812dfe4aa130e6e133672ac2ec",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "f58b812b3088c34d1697c9c8171eeb8db026a3cea7597652d2f02301c4f231e2"
+      },
+      "instruction_sha256": "892b00989e2e94f0ed59b8eb4df852cdcc6703812dfe4aa130e6e133672ac2ec"
+    }
+  },
+  "analysis_cluster_id": "F017"
+}

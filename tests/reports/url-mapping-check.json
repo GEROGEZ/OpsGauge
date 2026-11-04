@@ -1,0 +1,56 @@
+{
+  "mapping_consistency": {
+    "passed": true,
+    "hosts": 38,
+    "changed_objects_checked": 193,
+    "text_equivalence_checked": 104,
+    "database_equivalence_checked": 89,
+    "readable_case_views_checked": 1287,
+    "final_score_files_byte_identical": true,
+    "failures": [],
+    "source_mapping_distributed": false
+  },
+  "query_regression": {
+    "passed": true,
+    "checks": [
+      {
+        "task": "DR",
+        "passed": true,
+        "modalities": [
+          "event",
+          "metric",
+          "topology",
+          "trace"
+        ],
+        "entity_count": 14,
+        "scope": "Entity discovery, signal catalog, capabilities and all available example modalities; response equality after approved host substitution."
+      },
+      {
+        "task": "HA",
+        "passed": true,
+        "modalities": [
+          "event",
+          "log",
+          "metric",
+          "topology"
+        ],
+        "entity_count": 10,
+        "scope": "Entity discovery, signal catalog, capabilities and all available example modalities; response equality after approved host substitution."
+      },
+      {
+        "task": "RCA",
+        "passed": true,
+        "modalities": [
+          "event",
+          "metric",
+          "topology"
+        ],
+        "entity_count": 7,
+        "scope": "Entity discovery, signal catalog, capabilities and all available example modalities; response equality after approved host substitution."
+      }
+    ],
+    "docker_run": false,
+    "agent_runs": 0
+  },
+  "scope": "Packaging and offline verification only; no new agent runs."
+}

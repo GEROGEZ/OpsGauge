@@ -1,0 +1,50 @@
+{
+  "state": "final",
+  "summary": "窗口 2026-09-01T19:23:36+08:00 ~ 19:39:42+08:00 内，UModel 只读语义 API（环境 info150-f020-snapshot-v1 / workspace rca-benchmark / region cn-hongkong）对该范围只返回 6 条归档记录：5 条 event（c085-e01、c085-e02、c085-e04、c085-e05、c085-e06）与 1 条 topology（c085-e03，relation 为 pod CPU），与 /scene/dataset.json 的 record_count=6、modalities{event:5, topology:1} 一致；log、trace、metric 三种模态查询均返回 result_count=0；实体搜索只返回 5 个 observed.target（RDS/inventory、cart、cart/inventory、inventory、inventory-runtime-worker-*），无其他实体类型。已能联系起来的部分：c085-e01「表锁独占段」（target RDS/inventory）与 c085-e04「三段服务影响」的 segment 1 之间存在值级身份证据——latency_s 6.84718 等于 segment1_latency_s 6.84718，throughput 4627.16 等于 segment1_throughput 4627.16；c085-e03 与 c085-e04 共享同一 entity_id entity-9302c98ea66fe743617c86e7（target inventory），属同一业务对象上的两条记录，不得拆成两个对象。仍需单独核实的部分：(1) 所有记录 rule_id 与 status 字段均为空字符串，无可引用的规则或告警 ID；(2) segment2 与专用线程池（c085-e02）、segment3 与 pod CPU（c085-e03）只有字段名级线索，数值与单位互不一致（347.308 对 0.117469 对 74.1522；peak 865 对 peak_pct 100.189）；(3) cart（c085-e05，标量 16.8637，无单位无 baseline）与 cart/inventory（c085-e06）是独立 entity_id，归档中没有任何 topology 边或共享 entity_id 把它们与 inventory 或 RDS/inventory 连起来；(4) 6 条记录的 occurred_at 与 observed_at 全部等于 2026-09-01T11:23:36+00:00（即窗口起点 19:23:36+08:00），先后顺序只能依赖 e02.appeared_at 19:28:50 与 e03.injected_at 19:31:02，而这两个字符串不含日期与时区偏移，按 API 自身的时间戳要求无法严格定位；(5) 归档中没有任何描述已执行修复动作、变更、回滚或其效果的记录；(6) 锚点实例 ID rm-j6c3l32c730ti37ur 未出现在任何 API 返回的实体名、属性或记录值中，窗口归属只由任务给定的 DISCLOSURE symptom_anchor 与快照 bundle 界定；(7) c085-e06「端到端完成状态」的 value 字面为 not observed，端到端完成与否无法判定。结论：主因与最高影响源可判定为 RDS/inventory 的表锁独占段（segment 1），但专用线程池、pod CPU、cart 下游影响、以及端到端完成状态都必须作为独立事项分别处置与核实，不能合并进单一根因。",
+  "claims": [
+    {
+      "id": "primary_cause_rule",
+      "status": "supported",
+      "value": "表锁独占段（RDS/inventory table-lock exclusive segment，source_group rds，记录 c085-e01），即「三段服务影响」中的 segment 1；mdl_mean 291.486、mdl_peak 717.583（记录未给单位）、latency_s 6.84718、throughput 4627.16 对 baseline_throughput 10282.5（下降 5655.34，降幅 55.0%）",
+      "evidence_refs": [
+        "c085-e01",
+        "c085-e04"
+      ],
+      "note": "身份证据（值级、完全相等）：c085-e01.latency_s 6.84718 等于 c085-e04.segment1_latency_s 6.84718；c085-e01.throughput 4627.16 等于 c085-e04.segment1_throughput 4627.16，因此表锁独占段就是三段影响的 segment 1。占比：segment1 6.84718 s 除以三段合计 8.325189 s 得 82.247%（segment2 16.342%、segment3 1.411%），且 c085-e01 是 6 条记录中唯一带 baseline_throughput 的一条。无法确认的部分：(a) 全部记录 rule_id 与 status 为空字符串，不存在可引用的规则 ID 或告警规则名，主因只能由 event_type「表锁独占段」标识；(b) RDS/inventory（entity-fed42ec7d44fb37efc4a7318）与 inventory（entity-9302c98ea66fe743617c86e7）是两个不同 entity_id，唯一的 topology 记录 relation 只有 pod CPU，没有连接二者的依赖边，所以 segment1 与表锁的联系仅建立在数值完全相等之上，而非拓扑身份证据；(c) 因果先后无法由 API 时间戳确立，全部记录 occurred_at 都是 2026-09-01T11:23:36+00:00（窗口起点），表锁并没有可证的、早于线程池与 CPU 现象的时间戳；(d) mdl_mean 与 mdl_peak 的单位在记录中缺失，不能换算为秒或毫秒；(e) 锚点 ID rm-j6c3l32c730ti37ur 未出现在 c085-e01 或任何记录的实体名与属性中，归属仅由任务给定窗口与 bundle info150-f020-snapshot-v1 界定。"
+    },
+    {
+      "id": "highest_impact_source",
+      "status": "supported",
+      "value": "RDS/inventory 表锁独占段（即 segment 1，c085-e01 与 c085-e04）：延迟 6.84718 s 占三段合计 8.325189 s 的 82.247%；吞吐 4627.16 对 baseline 10282.5，绝对下降 5655.34，降幅 55.0%",
+      "evidence_refs": [
+        "c085-e01",
+        "c085-e04",
+        "c085-e05"
+      ],
+      "note": "排序依据：c085-e04 在同一条记录内给出可直接比较的三段延迟 segment1 6.84718、segment2 1.36054、segment3 0.117469（合计 8.325189），segment1 占 82.247%，且 segment1 是唯一能与 baseline 对比的吞吐损失（降幅 55.0%）。必须单独核实、且不足以改判排序的项：c085-e05「cart第一段延迟」的 value 是标量 16.8637，数值上大于 6.84718，但 (i) 记录未给单位，(ii) 无 baseline，(iii) cart 是独立 entity entity-ff6abd7564a41b8900dd3016、source_group 为 downstream，归档中没有任何 topology 边或共享 entity_id 把 cart 与 inventory 或 RDS/inventory 连接，因此它属于下游受影响观测而非影响源，不能与 segment1 直接比大小。若强行假设同单位，cart 与 inventory segment1 之间存在 10.01652 的未解释差值（比值 2.4629），现有记录中没有任何解释项。c085-e02（rejected_segment2 700、peak 865）与 c085-e03（segment3_mean_pct 74.1522、peak_pct 100.189）都没有 baseline 与业务量纲，无法折算为可比的影响量，故不参与最高影响源排序。"
+    },
+    {
+      "id": "remediation_scope",
+      "status": "supported",
+      "value": "需分别处置的已取证范围为 3 个相互独立的目标：(1) RDS/inventory 表锁独占段，entity-fed42ec7d44fb37efc4a7318，c085-e01，source_group rds；(2) inventory-runtime-worker-* 专用线程池，entity-3471f93ca25e8c7353743dbd，c085-e02，source_group worker_pool，appeared_at 19:28:50、rejected_segment2 700、segment3_mean 347.308、peak 865；(3) inventory pod CPU，entity-9302c98ea66fe743617c86e7，c085-e03，relation pod CPU，source_group cpu，injected_at 19:31:02、segment3_mean_pct 74.1522、peak_pct 100.189。不在已确认范围、须单独核实后才可纳入：cart（c085-e05）与 cart/inventory 业务端到端（c085-e06）",
+      "evidence_refs": [
+        "c085-e01",
+        "c085-e02",
+        "c085-e03",
+        "c085-e04",
+        "c085-e05",
+        "c085-e06"
+      ],
+      "note": "范围不能收敛为单点：三项现象各有独立记录、独立 entity_id、独立 source_group（rds、worker_pool、cpu），因此必须按三个范围分别处置，不能用一次修复覆盖。对象合并规则：c085-e03 与 c085-e04 共享 entity-9302c98ea66fe743617c86e7（target inventory），是同一业务对象上的两条记录，不得计为两个对象；反之 RDS/inventory、inventory、cart、cart/inventory、inventory-runtime-worker-* 是 5 个不同 entity_id，缺少身份证据不得互相合并，尤其不得把 cart/inventory 直接当作 cart 与 inventory 的端到端组合，归档中没有此证据。归属仍需核实：segment2 与线程池、segment3 与 pod CPU 的对应只有字段名级线索（e02.rejected_segment2、e03.segment3_mean_pct 对 e04.segment2_latency_s 与 segment3_latency_s），而数值与单位互相矛盾：e02.segment3_mean 347.308 对 e04.segment3_latency_s 0.117469 对 e03.segment3_mean_pct 74.1522；e02.peak 865 对 e03.peak_pct 100.189；e04.segment3_throughput 8663.02 与二者均无可推导关系。所以哪一项现象对应哪一段必须单独核实。时间归属仍需核实：e02.appeared_at 19:28:50 与 e03.injected_at 19:31:02 都是不含日期与时区偏移的本地时间字符串，按 API 的时间戳要求无法严格定位；仅在按 2026-09-01 +08:00 解读时才落在 19:23:36 至 19:39:42 窗口内，因此表锁 19:23:36、线程池 19:28:50、CPU 19:31:02 这一先后顺序只是推测，不能作为处置顺序的依据。e03 的字段名 injected_at 提示该 CPU 现象可能来自注入而非自然负载，但记录未给出注入来源、主体或用途，需单独核实；若确为注入，其处置方式与表锁完全不同，不应合并进同一整改项。最重要的无法确认项：6 条记录中没有任何一条描述已执行的修复、变更、回滚、限流或其效果，也没有验证类记录，因此本 value 给出的是应分别处置的范围，而不是已处置的范围；处置是否落地与是否有效均为 not_established。"
+    },
+    {
+      "id": "completion_state",
+      "status": "not_established",
+      "value": "not observed（c085-e06 的字面 value）",
+      "evidence_refs": [
+        "c085-e06"
+      ],
+      "note": "c085-e06（event_type 端到端完成状态，target cart/inventory，entity-a9e7ea3aa7d2e6dc24ecfa5a，source_group business，source_status local_archived_strict_audit）的 value 是字符串 not observed，即归档明确记录端到端完成状态未被观测到。因此既不能判定业务端到端已完成，也不能判定失败、超时或未恢复，两个方向都缺证据，只能 not_established。间接推断路径也已排除：对同一实体集合的 log、trace、metric 查询均返回 result_count=0，没有 request 行、trace span、重试、告警或恢复记录可用；按协议不得把这些缺失的记录当作未完成的证据，也不得把 5 条现象记录反推成一次完整的业务事务。另一处需单独核实：cart/inventory 是独立 entity_id，归档中没有证据表明它就是 cart 与 inventory 的端到端组合，所以即使将来取得完成状态，也需先建立该身份关联，才能归属到本次三段影响链。"
+    }
+  ]
+}

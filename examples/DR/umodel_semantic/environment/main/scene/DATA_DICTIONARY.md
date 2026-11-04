@@ -1,0 +1,11 @@
+# 观测字段字典
+
+实体具有entity_id、entity_name、entity_type和attributes。entity_id是原始不透明标识。
+观测记录的record_ref可用于引用来源；同一记录可能关联多个实体。
+调用记录含trace_id、span_id、service_name、operation_name、start_time、end_time、status、attributes。
+status采用OpenTelemetry枚举：0=UNSET，1=OK，2=ERROR。
+attributes.duration_ns是原始整数纳秒耗时；时间展示字段经过接口日期序列化，精度可能低于原始耗时字段。
+事件含event_id、event_type、signal、occurred_at、status、entity_ids和attributes。
+不同source_stream保留不同业务字段：alert有rule_id、trans_id及OCCURRED/PERSISTENT/RECOVERED通知状态；
+k8s_event有namespace、object_kind、event_type、message等。事件通知不承诺等于物理动作发生次数。
+日志、指标及拓扑的字段说明通过信号目录和查询响应获得。数据为冻结历史快照。

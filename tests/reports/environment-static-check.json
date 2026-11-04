@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "compose_definitions_checked": 3861,
+  "errors": [],
+  "warnings": [],
+  "service_images": {
+    "prom/prometheus:v3.10.0": 2574,
+    "opsgauge-replay-base:2026.10.27": 300
+  },
+  "docker_executed": false,
+  "scope": "YAML syntax, service definitions, and referenced build Dockerfiles in the collected task tree. Not an execution/availability guarantee."
+}

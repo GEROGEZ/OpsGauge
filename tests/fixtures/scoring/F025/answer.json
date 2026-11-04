@@ -1,0 +1,88 @@
+{
+  "state": "final",
+  "summary": "结论：响应表现的“改善”不能被认定为业务恢复；实际交付范围与拒绝范围是否发生变化无法确认。取证范围为 UModel 只读语义 API（bundle info150-f025-snapshot-v1，workspace rca-benchmark，region cn-hongkong）。在闭区间 2026-08-31T19:44:53+08:00 <= event_time <= 2026-08-31T19:58:57+08:00 内共取得 7 条记录 c086-e01..c086-e07，覆盖 3 个 observed.target 实体：inventory(entity-9302c98ea66fe743617c86e7)、cart(entity-ff6abd7564a41b8900dd3016)、inventory/cart(entity-4f1a2b48a3f28e99a2b84b28)，与 dataset.json 的 record_count=7 / entity_count=3 / modalities{event:6,topology:1} 完全一致；kind=metric|log|trace 均返回 0 条，且不存在 k8s.pod、apm.service 等实体，故无逐请求遥测、无身份见证（identity witness）。(1) 非单一原因：阶段一 19:44:53 起 source_group=ratelimit，错误由 baseline_error=1.0 放大到 segment_error=143.67（143.67 倍），error_alert_rules=4；阶段二 19:50:26 起（晚 5 分 33 秒）source_group=cpu，status='full load'，latency_alert_rules=6，延迟由 segment1_s=0.002538 升至 segment2_s=0.009472，ratio=3.73（自算 0.009472/0.002538=3.7321，与上报一致）；c086-e04「两族告警重叠数」=0，即 4 条错误告警规则与 6 条延迟告警规则零重叠；c086-e06 下游 cart 形态由 'cart errors' 变为 'cart latency'。零重叠 + 形态切换说明这是错误族到延迟族的故障形态迁移（先后接续的两种机制），而非症状消除，因此响应层面的“改善”不等于业务恢复。(2) rollout 告警不是根因：唯一相关记录 c086-e05（kind=topology，relation='Pod启动超时告警'，count=1，timing='rollout'）自带 attributes.source_group='sideeffect'，被观测面归类为副作用，且与两个阶段的机制无任何关联记录。(3) 交付与拒绝范围无法确认：c086-e07「接受、拒绝与最终交付业务对象」value 字面为 'not observed'，无身份见证可把请求行/重试/告警/报告还原为唯一业务对象，接受数、拒绝数、最终交付对象集合及规模均不可得。窗口内也没有任何标记恢复完成的记录：阶段二 19:50:26 至窗口结束 19:58:57 之间 8 分 31 秒无恢复见证。无法确认的部分：接受/拒绝/最终交付业务对象的数量与身份；交付范围与拒绝范围是否发生变化；响应“改善”是否对应交付恢复；限流拒绝是否为错误与延迟同时回落的原因（阶段一 source_group=ratelimit 使其成为可能解释，但仅为假设）；19:58:57 之后的走势。",
+  "claims": [
+    {
+      "id": "single_cause_explanation",
+      "status": "refuted",
+      "value": {
+        "distinct_stage_mechanisms": 2,
+        "alert_family_overlap": 0,
+        "error_alert_rules": 4,
+        "latency_alert_rules": 6,
+        "stage1_start": "19:44:53",
+        "stage2_start": "19:50:26",
+        "stage_gap": "0:05:33"
+      },
+      "evidence_refs": [
+        "c086-e01",
+        "c086-e02",
+        "c086-e03",
+        "c086-e04",
+        "c086-e06"
+      ],
+      "note": "单一原因解释被证据否证。窗口内存在两个起点不同、来源组不同、下游形态不同且告警族零重叠的阶段：c086-e01（target=inventory，attributes.source_group='ratelimit'）value.start='19:44:53'，baseline_error=1.0，segment_error=143.67，error_alert_rules=4；c086-e02（source_group='cpu'）value.start='19:50:26'（晚 5 分 33 秒），status='full load'，latency_alert_rules=6；c086-e03 给出 segment1_s=0.002538、segment2_s=0.009472、ratio=3.73；c086-e04「两族告警重叠数」value=0，说明错误告警族（4 条规则）与延迟告警族（6 条规则）互斥、合计 10 条无重叠；c086-e06（target=cart）value.segment1='cart errors'、value.segment2='cart latency'。同一个原因无法同时解释零重叠的两族告警、5 分 33 秒的起点错开以及下游形态由 errors 切换为 latency。因此该异常是两阶段接续的复合事件，不存在可被证据支持的单一原因解释。"
+    },
+    {
+      "id": "stage_specific_mechanisms",
+      "status": "supported",
+      "value": {
+        "stage1": {
+          "start": "19:44:53",
+          "source_group": "ratelimit",
+          "baseline_error": 1.0,
+          "segment_error": 143.67,
+          "error_amplification_x": 143.67,
+          "error_alert_rules": 4,
+          "downstream_shape": "cart errors"
+        },
+        "stage2": {
+          "start": "19:50:26",
+          "source_group": "cpu",
+          "status": "full load",
+          "latency_alert_rules": 6,
+          "segment1_s": 0.002538,
+          "segment2_s": 0.009472,
+          "ratio": 3.73,
+          "recomputed_ratio": 3.7321,
+          "downstream_shape": "cart latency"
+        },
+        "alert_family_overlap": 0
+      },
+      "evidence_refs": [
+        "c086-e01",
+        "c086-e02",
+        "c086-e03",
+        "c086-e04",
+        "c086-e06"
+      ],
+      "note": "两个阶段各自有独立、可核查的机制。阶段一（19:44:53 起，ratelimit 组，c086-e01）：错误量由 baseline_error=1.0 放大至 segment_error=143.67（143.67 倍），触发 error_alert_rules=4，下游 cart 呈 'cart errors'（c086-e06.value.segment1）。阶段二（19:50:26 起，cpu 组，c086-e02）：status='full load'，触发 latency_alert_rules=6；延迟由 segment1_s=0.002538s 升至 segment2_s=0.009472s，ratio=3.73（c086-e03），自算 0.009472/0.002538=3.7321 与上报一致；下游 cart 转为 'cart latency'（c086-e06.value.segment2）。c086-e04 两族告警重叠数=0 证明两机制时间上互斥、先后接续，而非同一机制的连续波动。据此可判定：响应表现的“改善”是故障形态由错误族迁移到延迟族，属症状形态变化，不构成业务恢复的证据。"
+    },
+    {
+      "id": "rollout_alert_as_root_cause",
+      "status": "refuted",
+      "value": {
+        "pod_startup_timeout_alerts": 1,
+        "timing": "rollout",
+        "source_group": "sideeffect",
+        "relation": "Pod启动超时告警",
+        "record_kind": "topology"
+      },
+      "evidence_refs": [
+        "c086-e05",
+        "c086-e01",
+        "c086-e02"
+      ],
+      "note": "把 rollout 告警当作根因被证据否证。全窗口唯一与 rollout 相关的记录是 c086-e05（kind=topology，relation='Pod启动超时告警'，entity_ids=[entity-9302c98ea66fe743617c86e7] 即 inventory），其 attributes.source_group='sideeffect'、value={count:1, timing:'rollout'}——观测面已将其归类为副作用而非成因，且数量仅 1 条。它既不能解释 c086-e01 中 19:44:53 起 ratelimit 组的 143.67 倍错误放大，也不能解释 c086-e02 中 19:50:26 起 cpu 组的 'full load'；证据集中不存在任何把该 Pod 启动超时告警与两阶段机制连接起来的因果记录。因此 rollout 告警是伴随的副作用，不是根因。"
+    },
+    {
+      "id": "delivery_population",
+      "status": "not_established",
+      "value": null,
+      "evidence_refs": [
+        "c086-e07"
+      ],
+      "note": "交付对象总体无法确认。唯一涉及交付的记录 c086-e07（event_type='接受、拒绝与最终交付业务对象'，entity_ids=[entity-4f1a2b48a3f28e99a2b84b28] 即 inventory/cart，attributes.source_group='delivery'）value 字面为 'not observed'。窗口内 kind=metric、kind=log、kind=trace 查询均返回 0 条结果，实体清单中也没有 k8s.pod、apm.service 等可承载逐请求或逐商品身份的实体，因此不存在身份见证（identity witness）可把请求行、重试、告警或报告还原为唯一业务对象。接受数、拒绝数、最终交付业务对象集合及其规模均为未知；实际交付范围与拒绝范围是否发生变化同样无法确认，故不给出任何数量（value=null）。附注：阶段一 source_group='ratelimit' 使“请求被限流快速拒绝，从而同时压低错误与延迟”成为一种可能解释，但这只是假设，现有证据不支持该结论。"
+    }
+  ]
+}

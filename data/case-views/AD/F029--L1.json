@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F029--L1",
+  "task": "AD",
+  "source_case_id": "F029",
+  "family_id": "F029",
+  "bundle_id": null,
+  "source_level": "IL3",
+  "level": 1,
+  "slice": "L3-S5",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F029--L1--shell_raw",
+      "instruction": "请复核 rca-benchmark 中 frontend::POST 在 2026年03月27日 16:32:20 至 16:37:05（北京时间）期间的异常。判断调用状态能确认哪一段传播，是否足以证明最终业务结果和单一责任归属，并明确未知范围。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n可使用 /scene/SCOPE-MAP.json 与 /scene/EVIDENCE-PATH.json；其中仅提供调查阶段和证据归组，不包含根因、机制答案或正确判断。\n",
+      "original_instruction_sha256": "18039317ae1723ca6fb754a2674c3dd6c7942126ddae0aef1ee90930f688f1d3",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "f7fe7ba61cddb3488df6ac02f9989068a84a4bcc9211d9acd6933064b0fbd3c4"
+      },
+      "instruction_sha256": "18039317ae1723ca6fb754a2674c3dd6c7942126ddae0aef1ee90930f688f1d3"
+    },
+    "native_raw": {
+      "task_id": "AD--F029--L1--native_raw",
+      "instruction": "请复核 rca-benchmark 中 frontend::POST 在 2026年03月27日 16:32:20 至 16:37:05（北京时间）期间的异常。判断调用状态能确认哪一段传播，是否足以证明最终业务结果和单一责任归属，并明确未知范围。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method. Public investigation guidance is available in `/scene/SCOPE-MAP.json` and `/scene/EVIDENCE-PATH.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "ee76465fc66facb5bcc793ba8d85690ff87ed1a583698675111c2c38827e0a19",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "f7fe7ba61cddb3488df6ac02f9989068a84a4bcc9211d9acd6933064b0fbd3c4"
+      },
+      "instruction_sha256": "ee76465fc66facb5bcc793ba8d85690ff87ed1a583698675111c2c38827e0a19"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F029--L1--umodel_semantic",
+      "instruction": "请复核 rca-benchmark 中 frontend::POST 在 2026年03月27日 16:32:20 至 16:37:05（北京时间）期间的异常。判断调用状态能确认哪一段传播，是否足以证明最终业务结果和单一责任归属，并明确未知范围。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`. Public investigation guidance is available in `/scene/SCOPE-MAP.json` and `/scene/EVIDENCE-PATH.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "f2376fc6f0b2ec7a17b80303f7fc00ed8eaa3d62528b1c4cd7416b13c7942ea6",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "f7fe7ba61cddb3488df6ac02f9989068a84a4bcc9211d9acd6933064b0fbd3c4"
+      },
+      "instruction_sha256": "f2376fc6f0b2ec7a17b80303f7fc00ed8eaa3d62528b1c4cd7416b13c7942ea6"
+    }
+  },
+  "analysis_cluster_id": "F029"
+}

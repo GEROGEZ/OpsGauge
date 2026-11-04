@@ -1,0 +1,49 @@
+task,slice,label,config,mean,families
+DR,metric.retrieve-cpu-peaks,Retrieve CPU peaks,Qwen-Codex,48.804597701149426,29
+DR,event.aggregate-cross-rule-state,Aggregate alerts across rules,Qwen-Codex,87.10006525,8
+DR,trace.rank-failure-volume-rate,Rank APIs by failure count and rate,Qwen-Codex,63.26465215,8
+DR,metric.retrieve-cpu-peaks,Retrieve CPU peaks,Qwen-Claude,43.01149425287356,29
+DR,event.aggregate-cross-rule-state,Aggregate alerts across rules,Qwen-Claude,78.834514375,8
+DR,trace.rank-failure-volume-rate,Rank APIs by failure count and rate,Qwen-Claude,67.92811365,8
+DR,metric.retrieve-cpu-peaks,Retrieve CPU peaks,GLM-Codex,57.42528735632184,29
+DR,event.aggregate-cross-rule-state,Aggregate alerts across rules,GLM-Codex,63.50456195833333,8
+DR,trace.rank-failure-volume-rate,Rank APIs by failure count and rate,GLM-Codex,52.95558608333333,8
+DR,metric.retrieve-cpu-peaks,Retrieve CPU peaks,GLM-Claude,52.8735632183908,29
+DR,event.aggregate-cross-rule-state,Aggregate alerts across rules,GLM-Claude,87.77699641666666,8
+DR,trace.rank-failure-volume-rate,Rank APIs by failure count and rate,GLM-Claude,78.30669695,8
+AD,L3-S1,Identify affected business objects,Qwen-Codex,51.142857142857146,7
+AD,L3-S3,Distinguish progress from completion,Qwen-Codex,68.57142857142857,7
+AD,L3-S4,Reassess anomalies across phases,Qwen-Codex,88.57142857142857,7
+AD,L3-S1,Identify affected business objects,Qwen-Claude,43.76190476190476,7
+AD,L3-S3,Distinguish progress from completion,Qwen-Claude,59.66666666666667,7
+AD,L3-S4,Reassess anomalies across phases,Qwen-Claude,84.52380952380952,7
+AD,L3-S1,Identify affected business objects,GLM-Codex,51.04761904761904,7
+AD,L3-S3,Distinguish progress from completion,GLM-Codex,53.4952380952381,7
+AD,L3-S4,Reassess anomalies across phases,GLM-Codex,59.761904761904766,7
+AD,L3-S1,Identify affected business objects,GLM-Claude,56.904761904761905,7
+AD,L3-S3,Distinguish progress from completion,GLM-Claude,63.56190476190476,7
+AD,L3-S4,Reassess anomalies across phases,GLM-Claude,77.85714285714286,7
+HA,mission.saturation,Identify capacity saturation,Qwen-Codex,77.53858772804146,74
+HA,mission.state_flow,Identify state or flow anomalies,Qwen-Codex,79.53059010653497,9
+HA,mission.multi_state_change,Report mixed findings involving state,Qwen-Codex,73.16221067579764,8
+HA,mission.saturation,Identify capacity saturation,Qwen-Claude,78.74821748027681,74
+HA,mission.state_flow,Identify state or flow anomalies,Qwen-Claude,76.90212910758888,9
+HA,mission.multi_state_change,Report mixed findings involving state,Qwen-Claude,79.29565158425453,8
+HA,mission.saturation,Identify capacity saturation,GLM-Codex,97.42492492492492,74
+HA,mission.state_flow,Identify state or flow anomalies,GLM-Codex,92.86265432098766,9
+HA,mission.multi_state_change,Report mixed findings involving state,GLM-Codex,88.54166666666667,8
+HA,mission.saturation,Identify capacity saturation,GLM-Claude,82.02964303148127,74
+HA,mission.state_flow,Identify state or flow anomalies,GLM-Claude,81.08824188319802,9
+HA,mission.multi_state_change,Report mixed findings involving state,GLM-Claude,79.17617394179894,8
+RCA,rca.capacity_load,Diagnose capacity and load problems,Qwen-Codex,75.97149742336421,34
+RCA,rca.service_execution,Diagnose service execution failures,Qwen-Codex,84.86607199404361,25
+RCA,rca.concurrent_causes,Separate concurrent causes,Qwen-Codex,44.96375458919387,15
+RCA,rca.capacity_load,Diagnose capacity and load problems,Qwen-Claude,76.70600066722675,34
+RCA,rca.service_execution,Diagnose service execution failures,Qwen-Claude,86.05041704848946,25
+RCA,rca.concurrent_causes,Separate concurrent causes,Qwen-Claude,70.34492555659916,15
+RCA,rca.capacity_load,Diagnose capacity and load problems,GLM-Codex,65.72741909506615,34
+RCA,rca.service_execution,Diagnose service execution failures,GLM-Codex,75.82685245038186,25
+RCA,rca.concurrent_causes,Separate concurrent causes,GLM-Codex,61.33236128432207,15
+RCA,rca.capacity_load,Diagnose capacity and load problems,GLM-Claude,72.82362556385047,34
+RCA,rca.service_execution,Diagnose service execution failures,GLM-Claude,83.10847986130752,25
+RCA,rca.concurrent_causes,Separate concurrent causes,GLM-Claude,66.43357201792578,15

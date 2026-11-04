@@ -1,0 +1,4155 @@
+{
+  "version": "ad_operation_slices_v5_f049_resolved",
+  "scope": "Classification and unchanged-score regrouping only. No GT/evidence validity audit, no task rewriting, no reruns or regrading.",
+  "l3_definition": "Interpret observations as business judgments, revising query objects, windows, identity units, comparison sets or success criteria when intermediate evidence requires it; no prescribed query count or full root-cause reconstruction.",
+  "source_definition": "/workspace/Desktop/ai4edu/docs/plans/2026-10-21-l3-business-family-expansion-playbook.md",
+  "population": {
+    "registered_families": 50,
+    "assigned_to_seven_slices": 50,
+    "boundary_pending_families": [],
+    "no_family_deleted": true
+  },
+  "rules": [
+    "Classify by the central L3 judgment; do not classify by score.",
+    "7–8 families is a preference, not a quota.",
+    "Mixed attribution and action subquestions remain in original tasks and scores; labels do not erase them.",
+    "Boundary-pending means task-definition alignment is unresolved, not GT wrong, score missing, or zero.",
+    "All existing three access modes and three levels inherit each family label."
+  ],
+  "taxonomy": [
+    {
+      "slice_id": "L3-S1",
+      "name_en": "Determine Affected Business Populations",
+      "name_zh": "界定受影响业务对象",
+      "definition": "依据中间证据修正业务身份、关联单位、群组和分母，判断哪些对象受影响及可确认的规模。",
+      "boundary": "仅执行已指定键的筛选、去重或计数属于 L2 式数据处理，不是该类的核心定义。",
+      "definition_en": "Revise business identities, grouping criteria, or denominators as evidence emerges to determine the affected business population.",
+      "key_question": "数的是谁、哪些记录属于同一业务、影响规模能确认到什么程度？",
+      "family_ids": [
+        "F001",
+        "F003",
+        "F005",
+        "F012",
+        "F030",
+        "F034",
+        "F038"
+      ],
+      "family_count": 7
+    },
+    {
+      "slice_id": "L3-S2",
+      "name_en": "Delimit Business Impact",
+      "name_zh": "界定业务影响范围",
+      "definition": "借助局部观测、路径对照和覆盖范围，修正对受影响环节、接口、实例及业务范围的判断。",
+      "boundary": "定位观测到的受影响路径，不默认要求识别底层根因或设计修复策略。",
+      "definition_en": "Use local observations and cross-path comparisons to delimit the business impact and constrain scope generalization.",
+      "key_question": "影响落在哪里，现有证据允许外推到多大范围？",
+      "family_ids": [
+        "F006",
+        "F009",
+        "F015",
+        "F032",
+        "F035",
+        "F036",
+        "F045",
+        "F050"
+      ],
+      "family_count": 8
+    },
+    {
+      "slice_id": "L3-S3",
+      "name_en": "Reconcile Business Progress and Outcomes",
+      "name_zh": "核对业务进展与结果",
+      "definition": "协调入口返回、异步处理、后续活动和存量状态，修正对业务进展、完成与未定结果的判断。",
+      "boundary": "以状态和结果为答案；重提问题只核验提交终态与幂等前提，不要求规划或执行处置。",
+      "definition_en": "Reconcile evidence across processing stages to distinguish observed business progress from confirmed, contradicted, or unresolved outcomes.",
+      "key_question": "这些不同阶段的记录意味着业务推进到哪里、哪些结果仍无法确认？",
+      "family_ids": [
+        "F002",
+        "F007",
+        "F011",
+        "F033",
+        "F046",
+        "F047",
+        "F048"
+      ],
+      "family_count": 7
+    },
+    {
+      "slice_id": "L3-S4",
+      "name_en": "Revise Judgments Across Incident Phases",
+      "name_zh": "跨阶段修正异常判断",
+      "definition": "根据新阶段、新依赖或中间正常窗口重新分段，并更新异常持续性、解释覆盖和业务影响主次的判断。",
+      "boundary": "允许检验原判断能否覆盖新观测；不把完整根因机制与传播链还原作为定义。",
+      "definition_en": "Revise anomaly and impact judgments when new phases or intervening evidence invalidate the initial interpretation.",
+      "key_question": "后续证据出现后，原判断是否仍然成立，是否需要重新分段或比较影响？",
+      "family_ids": [
+        "F017",
+        "F019",
+        "F020",
+        "F021",
+        "F025",
+        "F026",
+        "F044"
+      ],
+      "family_count": 7
+    },
+    {
+      "slice_id": "L3-S5",
+      "name_en": "Reconcile Evidence Across Entities",
+      "name_zh": "协调跨实体观测证据",
+      "definition": "核对实体绑定、共享资源、调用关系及对照，判断不同观测能支持共同影响、独立范围还是只能保留未知。",
+      "boundary": "可使用可见实体关系协调证据；不要求确定唯一根因、认证完整因果链、推出组织责任或选择修复方案。",
+      "definition_en": "Reconcile observations across related entities to establish supported impact relationships and explicitly limit unsupported causal or responsibility claims.",
+      "key_question": "多个实体的证据是否相互支持，支持到哪一段关系，哪些结论不能推出？",
+      "family_ids": [
+        "F013",
+        "F022",
+        "F028",
+        "F029",
+        "F039",
+        "F040",
+        "F043",
+        "F049"
+      ],
+      "family_count": 8
+    },
+    {
+      "slice_id": "L3-S6",
+      "name_en": "Verify Business Availability",
+      "name_zh": "核验业务实际可用性",
+      "definition": "面对健康探测、APM、响应码、低延迟与实际失败之间的冲突，修正成功标准并判断业务是否可接纳、可服务。",
+      "boundary": "判断当前运行信号代表什么；处置前后的恢复充分性以 S7 为主，逐对象终态以 S3 为主。",
+      "definition_en": "Cross-check health signals and response semantics to verify whether business requests can actually be accepted and served.",
+      "key_question": "探测正常、响应快或返回成功，是否真的代表业务可用？",
+      "family_ids": [
+        "F010",
+        "F014",
+        "F018",
+        "F023",
+        "F024",
+        "F031",
+        "F037"
+      ],
+      "family_count": 7
+    },
+    {
+      "slice_id": "L3-S7",
+      "name_en": "Verify Business Recovery",
+      "name_zh": "核验业务恢复",
+      "definition": "在既有处置或恢复声明后，利用运行输入、后续业务观测和观察窗口，判断恢复证据是否充分。",
+      "boundary": "核验已有动作后的业务效果；不以选择应修哪个组件、修改校验或生成修复方案作为主能力。",
+      "definition_en": "Verify whether post-intervention evidence establishes business recovery within the relevant observation window, rather than merely successful operations.",
+      "key_question": "已有操作完成之后，证据是否足以证明业务已恢复？",
+      "family_ids": [
+        "F004",
+        "F008",
+        "F016",
+        "F027",
+        "F041",
+        "F042"
+      ],
+      "family_count": 6
+    }
+  ],
+  "assignments": [
+    {
+      "family_id": "F001",
+      "primary_slice": "L3-S1",
+      "previous_primary_slice": "L3-S1",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "从内容特征建立请求群组并量化慢请求集中度",
+      "classification_reason": "需要从内容线索确定受影响请求群组及分母，主问题是对象集合与规模而非慢调用位置。",
+      "boundary_note": "关联和数量判断不扩展为缓存、GC 或代码根因解释。",
+      "mixed_subquestions": [],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S02",
+        "S01"
+      ],
+      "question_text": "请分析 rca-benchmark 中 pricing 在 2026 年 8 月 26 日 15:24—15:26（北京时间）期间发起的业务请求：响应变慢是否集中在具有某种内容特征的请求上，受影响的范围有多大？请给出可核查的依据，对无法确认的部分保留判断。\n\n已知分析入口：业务请求对应 pricing 的 SERVER span，操作名为 `POST /api/pricing/calculate`；可用于观察请求内容的线索保留在相关缓存调用的 `db.statement` 字段中。请自行判断如何建立请求与这些线索的对应关系，以及哪些观测支持你的结论。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F001/IL1/public/question.md",
+          "question_sha256": "97931c88bdfac20c75feca8a4a9fdc69563dd8d6dc7e3f37b9d7cf866549ebae",
+          "config_sha256": "7079ac958150abc61fba769156d8a78b30829695e56d463e71c2420481ccd18d"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F001/IL2/public/question.md",
+          "question_sha256": "d7064d3f1aab34a2de305cfc9f5d308cf8e61dc644f228aad938ac459ea38737",
+          "config_sha256": "7079ac958150abc61fba769156d8a78b30829695e56d463e71c2420481ccd18d"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F001/IL3/public/question.md",
+          "question_sha256": "d7064d3f1aab34a2de305cfc9f5d308cf8e61dc644f228aad938ac459ea38737",
+          "config_sha256": "7079ac958150abc61fba769156d8a78b30829695e56d463e71c2420481ccd18d"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "total_requests",
+          "status": "supported",
+          "value": 179318,
+          "tolerance": 0,
+          "required_groups": [
+            "pricing_raw"
+          ],
+          "weight": 12,
+          "prompt": "report the total request population"
+        },
+        {
+          "id": "affected_requests",
+          "status": "supported",
+          "value": 2682,
+          "tolerance": 0,
+          "required_groups": [
+            "pricing_raw"
+          ],
+          "weight": 12,
+          "prompt": "report the affected content-defined cohort"
+        },
+        {
+          "id": "other_requests",
+          "status": "supported",
+          "value": 176626,
+          "tolerance": 0,
+          "required_groups": [
+            "pricing_raw"
+          ],
+          "weight": 12,
+          "prompt": "report the observed other-request population"
+        },
+        {
+          "id": "unknown_requests",
+          "status": "supported",
+          "value": 10,
+          "tolerance": 0,
+          "required_groups": [
+            "pricing_raw"
+          ],
+          "weight": 12,
+          "prompt": "report the unclassified request population"
+        },
+        {
+          "id": "global_or_terminal_boundary",
+          "status": "not_established",
+          "required_groups": [
+            "pricing_raw"
+          ],
+          "weight": 12,
+          "prompt": "state whether global pattern equivalence or terminal business outcome is established"
+        }
+      ]
+    },
+    {
+      "family_id": "F002",
+      "primary_slice": "L3-S3",
+      "previous_primary_slice": "L3-S3",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "入口失败后继续追踪同一业务的异步处理进展",
+      "classification_reason": "入口失败后仍有后续活动，必须重新判断原业务推进到哪一步；身份关联服务于进展判断。",
+      "boundary_note": "观察到后续处理不等于数据库提交或交易完成。",
+      "mixed_subquestions": [],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S04",
+        "S01"
+      ],
+      "question_text": "请核查这份快照中 checkout 在 2026 年 6 月 22 日 14:09—14:10（北京时间）发起的下单请求，在入口请求记录结束后是否仍有后续进展。结论须能确认后续活动确属原来的业务请求，并说明可核查的业务数量、处理阶段和最终状态的判断边界。\n\n已知入口：checkout 的下单操作为 `oteldemo.CheckoutService/PlaceOrder`。本题以业务请求为对象；同一业务操作可能存在多条埋点记录。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F002/IL1/public/question.md",
+          "question_sha256": "c5108adda9ef3cb1ac59cf77958cb1aee7e7b6102070515852d2d2914889f137",
+          "config_sha256": "a55f30ef98c64702fef16cd4ef8f4a84a03e4dd6ebd5bd9fa08ad4900cc3c9d8"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F002/IL2/public/question.md",
+          "question_sha256": "689a780625449dcd8acc3309c1408956f41d6e91431dfbc2c5c8a7b97d6281ea",
+          "config_sha256": "a55f30ef98c64702fef16cd4ef8f4a84a03e4dd6ebd5bd9fa08ad4900cc3c9d8"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F002/IL3/public/question.md",
+          "question_sha256": "689a780625449dcd8acc3309c1408956f41d6e91431dfbc2c5c8a7b97d6281ea",
+          "config_sha256": "a55f30ef98c64702fef16cd4ef8f4a84a03e4dd6ebd5bd9fa08ad4900cc3c9d8"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "request_count",
+          "status": "supported",
+          "value": 24,
+          "tolerance": 0,
+          "required_groups": [
+            "checkout_raw"
+          ],
+          "weight": 12,
+          "prompt": "report the observed request count"
+        },
+        {
+          "id": "continued_requests",
+          "status": "supported",
+          "value": 24,
+          "tolerance": 0,
+          "required_groups": [
+            "checkout_raw"
+          ],
+          "weight": 12,
+          "prompt": "report requests with linked later consumer activity"
+        },
+        {
+          "id": "risk_http_200",
+          "status": "supported",
+          "value": 24,
+          "tolerance": 0,
+          "required_groups": [
+            "checkout_raw"
+          ],
+          "weight": 12,
+          "prompt": "report linked risk HTTP 200 count"
+        },
+        {
+          "id": "entry_failure_with_later_progress",
+          "status": "supported",
+          "required_groups": [
+            "checkout_raw"
+          ],
+          "weight": 12,
+          "prompt": "assess whether entry failure coexists with later linked progress"
+        },
+        {
+          "id": "terminal_business_state",
+          "status": "not_established",
+          "required_groups": [
+            "checkout_raw"
+          ],
+          "weight": 12,
+          "prompt": "state whether database terminal state or client receipt is established"
+        }
+      ]
+    },
+    {
+      "family_id": "F003",
+      "primary_slice": "L3-S1",
+      "previous_primary_slice": "L3-S1",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "将入口、重试和下游尝试归并为正确的业务计数",
+      "classification_reason": "入口、重试及参与方记录不能直接相加，需要确定异常影响的业务单位与群体。",
+      "boundary_note": "客户端与服务端结果差异不自动证明具体网络根因。",
+      "mixed_subquestions": [],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S01",
+        "S03"
+      ],
+      "question_text": "请分析这份快照中 promotion 在 2026 年 6 月 16 日 21:37—21:39（北京时间）期间的请求处理情况：异常影响了多大范围，时间主要消耗在哪里，不同参与方的处理结果应如何理解？请给出可核查的依据，对无法确认的部分保留判断。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F003/IL1/public/question.md",
+          "question_sha256": "86291a13cb25e1f6e9c041ede253ffdf21abe82021b78d1c50a1c47333142654",
+          "config_sha256": "8dccd71850ed2a65902ad892ab96c93cdb1a5c118d853c02faf49b9a9234a56d"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F003/IL2/public/question.md",
+          "question_sha256": "2add51fc1e8ced3d0e5e7734e68c8c99e22ed52615f382828b2b78e4f42cb24e",
+          "config_sha256": "8dccd71850ed2a65902ad892ab96c93cdb1a5c118d853c02faf49b9a9234a56d"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F003/IL3/public/question.md",
+          "question_sha256": "2add51fc1e8ced3d0e5e7734e68c8c99e22ed52615f382828b2b78e4f42cb24e",
+          "config_sha256": "8dccd71850ed2a65902ad892ab96c93cdb1a5c118d853c02faf49b9a9234a56d"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "target_entrances",
+          "status": "supported",
+          "value": 463,
+          "tolerance": 0,
+          "required_groups": [
+            "promotion_raw"
+          ],
+          "weight": 12,
+          "prompt": "report target entrance population"
+        },
+        {
+          "id": "target_traces",
+          "status": "supported",
+          "value": 458,
+          "tolerance": 0,
+          "required_groups": [
+            "promotion_raw"
+          ],
+          "weight": 12,
+          "prompt": "report target trace population"
+        },
+        {
+          "id": "target_http_500",
+          "status": "supported",
+          "value": 167,
+          "tolerance": 0,
+          "required_groups": [
+            "promotion_raw"
+          ],
+          "weight": 12,
+          "prompt": "report target root HTTP 500 count"
+        },
+        {
+          "id": "neighbor_control_clean",
+          "status": "supported",
+          "required_groups": [
+            "promotion_raw"
+          ],
+          "weight": 12,
+          "prompt": "assess the neighbor control result"
+        },
+        {
+          "id": "terminal_retry_boundary",
+          "status": "not_established",
+          "required_groups": [
+            "promotion_raw"
+          ],
+          "weight": 12,
+          "prompt": "state whether unique business completion and retry side effects are established"
+        }
+      ]
+    },
+    {
+      "family_id": "F004",
+      "primary_slice": "L3-S7",
+      "previous_primary_slice": "L3-S7",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "区分回退改变运行输入与实际业务恢复",
+      "classification_reason": "题面明确问回退覆盖与业务是否恢复，需以运行输入和实际业务证据核验恢复声明。",
+      "boundary_note": "复核既有回退效果，不把设计新修复方案作为本 slice 定义。",
+      "mixed_subquestions": [],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S12",
+        "S11"
+      ],
+      "question_text": "请复核这份快照中 fc-consumer 在 2026 年 8 月 29 日 13:12—13:40（北京时间）期间这次回退操作的实际覆盖范围与业务效果。现有证据是否足以支持“运行输入已恢复、业务已恢复”？请给出可核查的依据，对无法确认的部分保留判断。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F004/IL1/public/question.md",
+          "question_sha256": "6b90c7cb9b22355ad7ac90a26d57d37bd72412282d4e992d345150a687f198bb",
+          "config_sha256": "e5d332db1e53bb5973661e030d476a7b9a92644d14102940e86a8341b358258a"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F004/IL2/public/question.md",
+          "question_sha256": "d9fe719780fd8c0fd78bb21500f92197fe560922a9c6bc5dfd0fdfa148c5708a",
+          "config_sha256": "e5d332db1e53bb5973661e030d476a7b9a92644d14102940e86a8341b358258a"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F004/IL3/public/question.md",
+          "question_sha256": "d9fe719780fd8c0fd78bb21500f92197fe560922a9c6bc5dfd0fdfa148c5708a",
+          "config_sha256": "e5d332db1e53bb5973661e030d476a7b9a92644d14102940e86a8341b358258a"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "captured_requests",
+          "status": "supported",
+          "value": 1032,
+          "tolerance": 0,
+          "required_groups": [
+            "fc_raw"
+          ],
+          "weight": 12,
+          "prompt": "report captured request population"
+        },
+        {
+          "id": "pre_patch_enrich_502",
+          "status": "supported",
+          "value": 171,
+          "tolerance": 0,
+          "required_groups": [
+            "fc_raw"
+          ],
+          "weight": 12,
+          "prompt": "report enrich 502 count before template completion"
+        },
+        {
+          "id": "post_patch_enrich_200",
+          "status": "supported",
+          "value": 57,
+          "tolerance": 0,
+          "required_groups": [
+            "fc_raw"
+          ],
+          "weight": 12,
+          "prompt": "report enrich 200 count after second config patch"
+        },
+        {
+          "id": "runtime_input_changed",
+          "status": "supported",
+          "required_groups": [
+            "fc_raw"
+          ],
+          "weight": 12,
+          "prompt": "assess whether runtime input was changed by recorded patches"
+        },
+        {
+          "id": "full_business_recovery",
+          "status": "not_established",
+          "required_groups": [
+            "fc_raw"
+          ],
+          "weight": 12,
+          "prompt": "state whether full business recovery and unseen-request outcomes are established"
+        }
+      ]
+    },
+    {
+      "family_id": "F005",
+      "primary_slice": "L3-S1",
+      "previous_primary_slice": "L3-S1",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "将前端点击关联到页面会话和后端操作，识别实际受影响动作",
+      "classification_reason": "从点击、页面与后端观测关联实际受影响动作，量化问题范围是主要输出。",
+      "boundary_note": "定位环节为辅助能力；不要求实现前端代码修复。",
+      "mixed_subquestions": [],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S01",
+        "S09"
+      ],
+      "question_text": "客服反馈 storefront-web 上有用户点击“加入购物车”后没有反应。请核查 2026 年 8 月 11 日 15:15:00 至 15:17:00（北京时间，以用户操作发生时间为准）的加购情况，判断问题出在哪个环节，量化涉及的操作和页面范围，并给出可以核验的证据。明确说明现有证据还不能确认哪些业务结果。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F005/IL1/public/question.md",
+          "question_sha256": "57d7e7bf8de4328631086e69bcb05f92622161890bedd8fd90d3ba90f1e11664",
+          "config_sha256": "af05f63743f418cfe8554be534e32f28e3a2ba79a5713de9be82f8d126c2217e"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F005/IL2/public/question.md",
+          "question_sha256": "80bb2d38958767a782aeed4ef83e5c1107a0196b9e20be23fe5e1a2cd3981fec",
+          "config_sha256": "af05f63743f418cfe8554be534e32f28e3a2ba79a5713de9be82f8d126c2217e"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F005/IL3/public/question.md",
+          "question_sha256": "80bb2d38958767a782aeed4ef83e5c1107a0196b9e20be23fe5e1a2cd3981fec",
+          "config_sha256": "af05f63743f418cfe8554be534e32f28e3a2ba79a5713de9be82f8d126c2217e"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "actions",
+          "status": "supported",
+          "value": 397,
+          "tolerance": 0,
+          "required_groups": [
+            "rum_raw"
+          ],
+          "weight": 12,
+          "prompt": "report the verified actions quantity"
+        },
+        {
+          "id": "page_keys",
+          "status": "supported",
+          "value": 134,
+          "tolerance": 0,
+          "required_groups": [
+            "rum_raw"
+          ],
+          "weight": 12,
+          "prompt": "report the verified page_keys quantity"
+        },
+        {
+          "id": "cohort_POST",
+          "status": "supported",
+          "value": 0,
+          "tolerance": 0,
+          "required_groups": [
+            "rum_raw"
+          ],
+          "weight": 12,
+          "prompt": "report the verified cohort_POST quantity"
+        },
+        {
+          "id": "positive_POST",
+          "status": "supported",
+          "value": 1116,
+          "tolerance": 0,
+          "required_groups": [
+            "rum_raw"
+          ],
+          "weight": 12,
+          "prompt": "report the verified positive_POST quantity"
+        },
+        {
+          "id": "evidence_boundary",
+          "status": "not_established",
+          "required_groups": [
+            "rum_raw"
+          ],
+          "weight": 12,
+          "prompt": "state the unsupported business/causal boundary"
+        }
+      ]
+    },
+    {
+      "family_id": "F006",
+      "primary_slice": "L3-S2",
+      "previous_primary_slice": "L3-S2",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "比较前端脚本与后端耗时，定位停顿环节",
+      "classification_reason": "用脚本与后端耗时对照定位停顿发生的环节，扩容判断依赖这一影响边界。",
+      "boundary_note": "是否选择扩容是处置子问题，不将处置策略设计计入 slice 定义。",
+      "mixed_subquestions": [
+        "backend_scaling_choice"
+      ],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S09",
+        "S13"
+      ],
+      "question_text": "storefront-web 用户反馈在 2026 年 8 月 11 日 15:06 至 15:08（北京时间）点击加入购物车后有明显停顿。请评估通过扩容后端能否解决本次问题，指出应优先处理的责任范围并给出可核验的量化依据，明确现有证据不能确定的部分。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F006/IL1/public/question.md",
+          "question_sha256": "8aec7722270fec58562579f05adba1cb5dd579fe453445f021cbd56f6abcbaa1",
+          "config_sha256": "ed51c56b906bf52dda5cd2b120e61d64b73a382de02e0f09f4f87eddfd4b8705"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F006/IL2/public/question.md",
+          "question_sha256": "251cc2e340ecd942656c4cd175ed55dbbfd83e03139ee352c685b6199d659e90",
+          "config_sha256": "ed51c56b906bf52dda5cd2b120e61d64b73a382de02e0f09f4f87eddfd4b8705"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F006/IL3/public/question.md",
+          "question_sha256": "251cc2e340ecd942656c4cd175ed55dbbfd83e03139ee352c685b6199d659e90",
+          "config_sha256": "ed51c56b906bf52dda5cd2b120e61d64b73a382de02e0f09f4f87eddfd4b8705"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "actions",
+          "status": "supported",
+          "value": 358,
+          "tolerance": 0,
+          "required_groups": [
+            "rum_raw"
+          ],
+          "weight": 12,
+          "prompt": "report the verified actions quantity"
+        },
+        {
+          "id": "pages",
+          "status": "supported",
+          "value": 120,
+          "tolerance": 0,
+          "required_groups": [
+            "rum_raw"
+          ],
+          "weight": 12,
+          "prompt": "report the verified pages quantity"
+        },
+        {
+          "id": "onclick_script_p50_ms",
+          "status": "supported",
+          "value": 420,
+          "tolerance": 0,
+          "required_groups": [
+            "rum_raw"
+          ],
+          "weight": 12,
+          "prompt": "report the verified onclick_script_p50_ms quantity"
+        },
+        {
+          "id": "all_window_POST_p50_ms",
+          "status": "supported",
+          "value": 28,
+          "tolerance": 0,
+          "required_groups": [
+            "rum_raw"
+          ],
+          "weight": 12,
+          "prompt": "report the verified all_window_POST_p50_ms quantity"
+        },
+        {
+          "id": "evidence_boundary",
+          "status": "not_established",
+          "required_groups": [
+            "rum_raw"
+          ],
+          "weight": 12,
+          "prompt": "state the unsupported business/causal boundary"
+        }
+      ]
+    },
+    {
+      "family_id": "F007",
+      "primary_slice": "L3-S3",
+      "previous_primary_slice": "L3-S3",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "对齐流入、消费与积压口径，判断消费进度及完成边界",
+      "classification_reason": "区分流入、接收、积压及完成，核心是消费进展与完成边界而非孤立计数。",
+      "boundary_note": "接收次数与积压变化不等于唯一订单已完成。",
+      "mixed_subquestions": [],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S04",
+        "S03"
+      ],
+      "question_text": "请复核 order-consumer 在 2026 年 7 月 15 日 16:35:00 至 16:38:00（北京时间）期间的消息流入、接收与积压变化，判断当前观测是否跟得上同期流入，并界定消费进展及后续追赶能够支持到什么程度。请给出可核查的依据，明确现有证据不能确认的业务完成结果。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F007/IL1/public/question.md",
+          "question_sha256": "eb52ab81928b68384b8a0765b3441cdacc699a37d712dda9c2a85200a51d7795",
+          "config_sha256": "6c7d9ac1d911920269ea28b20902bc7e7a6829db0c77eb3508ef4a9a8dca3cdb"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F007/IL2/public/question.md",
+          "question_sha256": "02a964fec7f3cf65dcb6b601b66023895591e6728dcb2c03543e9af23718ead5",
+          "config_sha256": "6c7d9ac1d911920269ea28b20902bc7e7a6829db0c77eb3508ef4a9a8dca3cdb"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F007/IL3/public/question.md",
+          "question_sha256": "02a964fec7f3cf65dcb6b601b66023895591e6728dcb2c03543e9af23718ead5",
+          "config_sha256": "6c7d9ac1d911920269ea28b20902bc7e7a6829db0c77eb3508ef4a9a8dca3cdb"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "send_total",
+          "status": "supported",
+          "value": 27000,
+          "tolerance": 0,
+          "required_groups": [
+            "observation-02.json",
+            "observation-03.json"
+          ],
+          "weight": 9.6,
+          "prompt": "report the verified send_total quantity"
+        },
+        {
+          "id": "receive_total",
+          "status": "supported",
+          "value": 10816,
+          "tolerance": 0,
+          "required_groups": [
+            "observation-02.json"
+          ],
+          "weight": 9.6,
+          "prompt": "report the verified receive_total quantity"
+        },
+        {
+          "id": "lag_start",
+          "status": "supported",
+          "value": 10207,
+          "tolerance": 0,
+          "required_groups": [
+            "observation-02.json"
+          ],
+          "weight": 9.6,
+          "prompt": "report the verified lag_start quantity"
+        },
+        {
+          "id": "lag_end",
+          "status": "supported",
+          "value": 26390,
+          "tolerance": 0,
+          "required_groups": [
+            "observation-02.json"
+          ],
+          "weight": 9.6,
+          "prompt": "report the verified lag_end quantity"
+        },
+        {
+          "id": "strict_spans",
+          "status": "supported",
+          "value": 1102,
+          "tolerance": 0,
+          "required_groups": [
+            "supplemental-receipts.jsonl"
+          ],
+          "weight": 9.6,
+          "prompt": "report the verified strict_spans quantity"
+        },
+        {
+          "id": "evidence_boundary",
+          "status": "not_established",
+          "required_groups": [
+            "observation-01.json"
+          ],
+          "weight": 12.0,
+          "prompt": "state whether final business outcome or safe remediation is established"
+        }
+      ]
+    },
+    {
+      "family_id": "F008",
+      "primary_slice": "L3-S7",
+      "previous_primary_slice": "L3-S6",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "锁信号变化后继续核验业务结果，判断能否认定处置生效或业务恢复。",
+      "classification_reason": "题面明确问处置是否生效及能否结束处置；锁信号变化后仍需核验业务响应，主归恢复核验。",
+      "boundary_note": "时间分段和拒绝语义保留为辅助标签；不证明具体修复动作的完整因果效果。",
+      "mixed_subquestions": [],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S11",
+        "S05"
+      ],
+      "question_text": "请复核 inventory 在 2026 年 8 月 31 日 20:35 至 20:56（北京时间）期间的业务异常演变。请区分主要异常阶段，结合可查询的依赖观测判断状态何时发生变化，并评估现有证据是否足以证明某个处置已经生效或可以结束处置。请给出可核查的依据，明确仍不能确认的机制和业务验收结果。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F008/IL1/public/question.md",
+          "question_sha256": "fad751c20d4652cca98ea3243f35c126a109e9a4d1312fa80bfddfcd556c0402",
+          "config_sha256": "31d308326ec7f4ce965edc466b6bcbba093f643823e3abcb594643406742a990"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F008/IL2/public/question.md",
+          "question_sha256": "1ec76d28f59e31450718c5d15037b9bd1416e6504b3df964169974e182ecf1b0",
+          "config_sha256": "31d308326ec7f4ce965edc466b6bcbba093f643823e3abcb594643406742a990"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F008/IL3/public/question.md",
+          "question_sha256": "1ec76d28f59e31450718c5d15037b9bd1416e6504b3df964169974e182ecf1b0",
+          "config_sha256": "31d308326ec7f4ce965edc466b6bcbba093f643823e3abcb594643406742a990"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "http_200",
+          "status": "supported",
+          "value": 147507,
+          "tolerance": 0,
+          "required_groups": [
+            "lock-admission-common-clock.jsonl"
+          ],
+          "weight": 9.6,
+          "prompt": "report the verified http_200 quantity"
+        },
+        {
+          "id": "http_404",
+          "status": "supported",
+          "value": 15744,
+          "tolerance": 0,
+          "required_groups": [
+            "lock-admission-common-clock.jsonl"
+          ],
+          "weight": 9.6,
+          "prompt": "report the verified http_404 quantity"
+        },
+        {
+          "id": "http_429",
+          "status": "supported",
+          "value": 21864,
+          "tolerance": 0,
+          "required_groups": [
+            "lock-admission-common-clock.jsonl"
+          ],
+          "weight": 9.6,
+          "prompt": "report the verified http_429 quantity"
+        },
+        {
+          "id": "lock_max",
+          "status": "supported",
+          "value": 559.283,
+          "tolerance": 1e-09,
+          "required_groups": [
+            "selected-GT-gaps.jsonl"
+          ],
+          "weight": 9.6,
+          "prompt": "report the verified lock_max quantity"
+        },
+        {
+          "id": "zero_samples",
+          "status": "supported",
+          "value": 8,
+          "tolerance": 0,
+          "required_groups": [
+            "selected-GT-gaps.jsonl"
+          ],
+          "weight": 9.6,
+          "prompt": "report the verified zero_samples quantity"
+        },
+        {
+          "id": "evidence_boundary",
+          "status": "not_established",
+          "required_groups": [
+            "lock-admission-common-clock.jsonl"
+          ],
+          "weight": 12.0,
+          "prompt": "state whether final business outcome or safe remediation is established"
+        }
+      ]
+    },
+    {
+      "family_id": "F009",
+      "primary_slice": "L3-S2",
+      "previous_primary_slice": "L3-S2",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "按接口和结果分层，界定商品查询的受影响范围",
+      "classification_reason": "分接口、请求结果与时间界定商品查询影响，不能将局部失败外推全服务。",
+      "boundary_note": "支持何种处置属于附带问题，分类依据是影响范围判断。",
+      "mixed_subquestions": [
+        "remediation_choice"
+      ],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S02",
+        "S03"
+      ],
+      "question_text": "2026年9月2日21:35至21:40（北京时间），商品查询出现大量失败。请定位问题，判断影响范围以及可支持的处置，说明当前证据仍不能确定的部分。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F009/IL1/public/question.md",
+          "question_sha256": "37266331683ff2ce9b9a6cd3b2cdb913b5ba5bb8642984695319b70709540f06",
+          "config_sha256": "a22dba4e0a87b961fa51c4d67205181de1771ef3f7a42e6f591b02a576acc037"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F009/IL2/public/question.md",
+          "question_sha256": "86f068c9b211a3a7584f2d3698ff73d2b3e5b0108a47bccf5698c37baf87385f",
+          "config_sha256": "a22dba4e0a87b961fa51c4d67205181de1771ef3f7a42e6f591b02a576acc037"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F009/IL3/public/question.md",
+          "question_sha256": "86f068c9b211a3a7584f2d3698ff73d2b3e5b0108a47bccf5698c37baf87385f",
+          "config_sha256": "a22dba4e0a87b961fa51c4d67205181de1771ef3f7a42e6f591b02a576acc037"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "question_get_ok",
+          "status": "supported",
+          "value": 2976,
+          "tolerance": 0,
+          "required_groups": [],
+          "weight": 16.0,
+          "prompt": "report the verified question_get_ok quantity"
+        },
+        {
+          "id": "question_get_fail",
+          "status": "supported",
+          "value": 80920,
+          "tolerance": 0,
+          "required_groups": [],
+          "weight": 16.0,
+          "prompt": "report the verified question_get_fail quantity"
+        },
+        {
+          "id": "list_ok",
+          "status": "supported",
+          "value": 4923,
+          "tolerance": 0,
+          "required_groups": [],
+          "weight": 16.0,
+          "prompt": "report the verified list_ok quantity"
+        },
+        {
+          "id": "evidence_boundary",
+          "status": "not_established",
+          "required_groups": [
+            "catalog-delayed-trace-census"
+          ],
+          "weight": 12.0,
+          "prompt": "state whether final business outcome or safe remediation is established"
+        }
+      ]
+    },
+    {
+      "family_id": "F010",
+      "primary_slice": "L3-S6",
+      "previous_primary_slice": "L3-S6",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "识别 HTTP 成功与 gRPC/解析失败的语义冲突",
+      "classification_reason": "HTTP 与 gRPC/解析结果冲突要求修正成功判据，核心 L3 能力是业务可用性核验。",
+      "boundary_note": "题面中的下一步恢复措施不纳入 S6 定义；保留完整旧分数。",
+      "mixed_subquestions": [
+        "recovery_measure_selection"
+      ],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S11",
+        "S12"
+      ],
+      "question_text": "2026年9月3日08:55至09:05（北京时间），购物车部分操作失败。请判断故障变化与近期处置的关系，界定影响范围，并评估下一步恢复措施及其证据边界。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F010/IL1/public/question.md",
+          "question_sha256": "30fb2ba2aa5bdcb4a7ed04365e166eb3ddb1177759132b7a79a8aa6e5c680414",
+          "config_sha256": "3af4067e4095f3d7b525f9b5f7fa1be24cb841967218333552f9c02591e43af5"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F010/IL2/public/question.md",
+          "question_sha256": "4cc699c58ca25fcb163ede1312f385981db1867a9fe066cb3045f496ecc064c0",
+          "config_sha256": "3af4067e4095f3d7b525f9b5f7fa1be24cb841967218333552f9c02591e43af5"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F010/IL3/public/question.md",
+          "question_sha256": "4cc699c58ca25fcb163ede1312f385981db1867a9fe066cb3045f496ecc064c0",
+          "config_sha256": "3af4067e4095f3d7b525f9b5f7fa1be24cb841967218333552f9c02591e43af5"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "add_ok",
+          "status": "supported",
+          "value": 7725,
+          "tolerance": 0,
+          "required_groups": [],
+          "weight": 12.0,
+          "prompt": "report the verified add_ok quantity"
+        },
+        {
+          "id": "add_grpc9",
+          "status": "supported",
+          "value": 3409,
+          "tolerance": 0,
+          "required_groups": [],
+          "weight": 12.0,
+          "prompt": "report the verified add_grpc9 quantity"
+        },
+        {
+          "id": "get_grpc9",
+          "status": "supported",
+          "value": 1339,
+          "tolerance": 0,
+          "required_groups": [],
+          "weight": 12.0,
+          "prompt": "report the verified get_grpc9 quantity"
+        },
+        {
+          "id": "parser_fail",
+          "status": "supported",
+          "value": 4601,
+          "tolerance": 0,
+          "required_groups": [],
+          "weight": 12.0,
+          "prompt": "report the verified parser_fail quantity"
+        },
+        {
+          "id": "evidence_boundary",
+          "status": "not_established",
+          "required_groups": [
+            "cart-rollback-trace-census"
+          ],
+          "weight": 12.0,
+          "prompt": "state whether final business outcome or safe remediation is established"
+        }
+      ]
+    },
+    {
+      "family_id": "F011",
+      "primary_slice": "L3-S3",
+      "previous_primary_slice": "L3-S3",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "沿产品后缀和后续窗口识别处置后仍残留的失败记录",
+      "classification_reason": "恢复尝试后仍有后缀请求失败，需要重建残留业务记录的进展与范围。",
+      "boundary_note": "重建剩余状态与范围；具体故障机制和后续操作规划为附带内容。",
+      "mixed_subquestions": [
+        "fault_source",
+        "followup_action_selection"
+      ],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S14",
+        "S02"
+      ],
+      "question_text": "2026年9月2日22:53至23:10（北京时间），结账和商品查询持续报错，团队已尝试恢复服务。请核实故障来源、处置后的真实进展及仍需处理的范围，并说明哪些后续动作有证据支持。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F011/IL1/public/question.md",
+          "question_sha256": "f47f3a95644a1e4aa676ceb9ee121f857a818b35c787106673d4c41e877a7301",
+          "config_sha256": "f44d880bef0a62eb3a81f17b4217b2948c9e7158e50723c76bb41b8da63ead33"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F011/IL2/public/question.md",
+          "question_sha256": "ff22042599e96b7570c855d870053e6fcc88ba37ca1179539bbdb6292d6ee146",
+          "config_sha256": "f44d880bef0a62eb3a81f17b4217b2948c9e7158e50723c76bb41b8da63ead33"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F011/IL3/public/question.md",
+          "question_sha256": "ff22042599e96b7570c855d870053e6fcc88ba37ca1179539bbdb6292d6ee146",
+          "config_sha256": "f44d880bef0a62eb3a81f17b4217b2948c9e7158e50723c76bb41b8da63ead33"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "failed_suffix_before_cutoff",
+          "status": "supported",
+          "value": 3184,
+          "tolerance": 0,
+          "required_groups": [],
+          "weight": 24.0,
+          "prompt": "report the verified failed_suffix_before_cutoff quantity"
+        },
+        {
+          "id": "complete_groups",
+          "status": "supported",
+          "value": 274,
+          "tolerance": 0,
+          "required_groups": [],
+          "weight": 24.0,
+          "prompt": "report the verified complete_groups quantity"
+        },
+        {
+          "id": "evidence_boundary",
+          "status": "not_established",
+          "required_groups": [
+            "cart-contract-trace-census"
+          ],
+          "weight": 12.0,
+          "prompt": "state whether final business outcome or safe remediation is established"
+        }
+      ]
+    },
+    {
+      "family_id": "F012",
+      "primary_slice": "L3-S1",
+      "previous_primary_slice": "L3-S1",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "把重复报错归并到消息身份并还原实际处理次数",
+      "classification_reason": "大量报错不等于重复订单，需按提交与消息身份重定计数单位及问题规模。",
+      "boundary_note": "补发是附带动作问题；未知终态不能被改写成可安全补发。",
+      "mixed_subquestions": [
+        "resubmission_scope"
+      ],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S01",
+        "S04"
+      ],
+      "question_text": "团队在 order-review 的运行记录中看到大量报错，怀疑订单重复处理，准备对未处理订单补发。请核查 2026 年 9 月 7 日 11:50 至 11:51（北京时间，以请求发起时间为准）这批提交到 12:10 的实际进展，解释记录数量与问题范围，判断现有证据能否支持上述判断和补发范围，并明确仍不能确定的业务结果。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F012/IL1/public/question.md",
+          "question_sha256": "6e64f61814cef4cc55eed1b61876b7fb9f1d38e7a1c649d657d636ae8818c01f",
+          "config_sha256": "e840d43a9253646a3e9a96127f1c789b7653ab4dd66c104afff6b861ade11907"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F012/IL2/public/question.md",
+          "question_sha256": "90db6c32aa07da5eee3a38c6b4971e2e4fee93c6b4f7abd1e002369010cac667",
+          "config_sha256": "e840d43a9253646a3e9a96127f1c789b7653ab4dd66c104afff6b861ade11907"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F012/IL3/public/question.md",
+          "question_sha256": "90db6c32aa07da5eee3a38c6b4971e2e4fee93c6b4f7abd1e002369010cac667",
+          "config_sha256": "e840d43a9253646a3e9a96127f1c789b7653ab4dd66c104afff6b861ade11907"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "selected_requests",
+          "status": "supported",
+          "value": 515,
+          "tolerance": 0,
+          "required_groups": [
+            "cohort-spans.jsonl"
+          ],
+          "weight": 8.0,
+          "prompt": "report the verified selected_requests quantity"
+        },
+        {
+          "id": "published",
+          "status": "supported",
+          "value": 515,
+          "tolerance": 0,
+          "required_groups": [
+            "message-spans.jsonl"
+          ],
+          "weight": 8.0,
+          "prompt": "report the verified published quantity"
+        },
+        {
+          "id": "process",
+          "status": "supported",
+          "value": 515,
+          "tolerance": 0,
+          "required_groups": [
+            "message-spans.jsonl"
+          ],
+          "weight": 8.0,
+          "prompt": "report the verified process quantity"
+        },
+        {
+          "id": "ended",
+          "status": "supported",
+          "value": 397,
+          "tolerance": 0,
+          "required_groups": [
+            "message-spans.jsonl"
+          ],
+          "weight": 8.0,
+          "prompt": "report the verified ended quantity"
+        },
+        {
+          "id": "not_started",
+          "status": "supported",
+          "value": 117,
+          "tolerance": 0,
+          "required_groups": [
+            "message-spans.jsonl"
+          ],
+          "weight": 8.0,
+          "prompt": "report the verified not_started quantity"
+        },
+        {
+          "id": "report_rows",
+          "status": "supported",
+          "value": 1885,
+          "tolerance": 0,
+          "required_groups": [
+            "identified-business-logs.jsonl"
+          ],
+          "weight": 8.0,
+          "prompt": "report the verified report_rows quantity"
+        },
+        {
+          "id": "evidence_boundary",
+          "status": "not_established",
+          "required_groups": [
+            "cohort-spans.jsonl"
+          ],
+          "weight": 12.0,
+          "prompt": "state whether final business outcome or safe remediation is established"
+        }
+      ]
+    },
+    {
+      "family_id": "F013",
+      "primary_slice": "L3-S5",
+      "previous_primary_slice": "L3-S5",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "区分资源池归属、内部处理路径与跨业务共享争用",
+      "classification_reason": "核对不同路径与容量对象的归属及证据覆盖，判断单路径观测能支持多大业务结论。",
+      "boundary_note": "容量机制归因、必须如何拆分处置是混合子问题，不宣称完整根因定位。",
+      "mixed_subquestions": [
+        "capacity_mechanism_relationship",
+        "remediation_scope"
+      ],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S07",
+        "S08"
+      ],
+      "question_text": "请复核 rca-benchmark 中 /api/v1/inventory 在 2026年09月01日 09:55:02 至 10:19:30（北京时间）期间的业务异常。核实不同处理链路是否争用同一服务的处理能力，并判断是否必须分开处置；同时说明现有证据能覆盖到哪些业务、不能覆盖到哪些业务。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F013/IL1/public/question.md",
+          "question_sha256": "825e635f30229525aa3fdcd7d0f4e2ba3fdae0a97a80c03193b6caa9fd948363",
+          "config_sha256": "7df164f5660e5bd561b6123685ee265118225ae26c653343596c1981d6b926aa"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F013/IL2/public/question.md",
+          "question_sha256": "2ffd21044fff991b23ccae4f539e04417e8eb2994571bfd5fae668e6a708b6bd",
+          "config_sha256": "7df164f5660e5bd561b6123685ee265118225ae26c653343596c1981d6b926aa"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F013/IL3/public/question.md",
+          "question_sha256": "2ffd21044fff991b23ccae4f539e04417e8eb2994571bfd5fae668e6a708b6bd",
+          "config_sha256": "7df164f5660e5bd561b6123685ee265118225ae26c653343596c1981d6b926aa"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "capacity_mechanism_relationship",
+          "status": "supported",
+          "required_groups": [
+            "worker_pool",
+            "jvm",
+            "sql"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "remediation_scope",
+          "status": "supported",
+          "required_groups": [
+            "worker_pool",
+            "jvm",
+            "sql"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "single_path_recovery_scope",
+          "status": "refuted",
+          "required_groups": [
+            "tomcat",
+            "worker_pool",
+            "jvm"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "business_scope_completeness",
+          "status": "not_established",
+          "required_groups": [
+            "downstream"
+          ],
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "family_id": "F014",
+      "primary_slice": "L3-S6",
+      "previous_primary_slice": "L3-S6",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "将运行机制与告警覆盖对齐，识别无告警但仍受阻的部分",
+      "classification_reason": "无对应告警不等于业务未受阻，需要对照运行观测核验健康信号的覆盖。",
+      "boundary_note": "机制解释与处置拆分为附带内容；主能力不要求枚举完整根因。",
+      "mixed_subquestions": [
+        "mechanism_scope",
+        "remediation_split"
+      ],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S10",
+        "S07"
+      ],
+      "question_text": "请复核 rca-benchmark 中 /api/v1/inventory 在 2026年09月01日 09:55:02 至 10:19:30（北京时间）期间的业务异常。评估告警面是否完整覆盖了处理受阻机制，以及现有证据是否足以判断无关业务也受影响；说明处置范围应否拆分。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F014/IL1/public/question.md",
+          "question_sha256": "4ef3cba26d6559c7c758d211dc0d26ad3eb3d52a4b631faf97ba35a30fdde448",
+          "config_sha256": "df3a22939fb5d4ca7ee453153ecf5e17cc96ab52193897d8a375951b2fa9aa42"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F014/IL2/public/question.md",
+          "question_sha256": "d69ec882672f5896eafbb8ef5e9cacd4b579b8543eeec2cff9952c24ad5bc6b8",
+          "config_sha256": "df3a22939fb5d4ca7ee453153ecf5e17cc96ab52193897d8a375951b2fa9aa42"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F014/IL3/public/question.md",
+          "question_sha256": "d69ec882672f5896eafbb8ef5e9cacd4b579b8543eeec2cff9952c24ad5bc6b8",
+          "config_sha256": "df3a22939fb5d4ca7ee453153ecf5e17cc96ab52193897d8a375951b2fa9aa42"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "alert_coverage",
+          "status": "refuted",
+          "required_groups": [
+            "alert_surface",
+            "worker_pool"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "mechanism_scope",
+          "status": "supported",
+          "required_groups": [
+            "sql",
+            "worker_pool",
+            "jvm"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "unrelated_business_scope",
+          "status": "not_established",
+          "required_groups": [
+            "observed_scope"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "recovery_signal_sufficiency",
+          "status": "refuted",
+          "required_groups": [
+            "alert_surface",
+            "jvm"
+          ],
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "family_id": "F015",
+      "primary_slice": "L3-S2",
+      "previous_primary_slice": "L3-S2",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "用请求权重评估坏副本对全服务的实际影响",
+      "classification_reason": "坏副本错误率与服务请求加权影响不同，主问题是受影响范围及多数请求可用性。",
+      "boundary_note": "恢复与终态作为辅助边界，不用坏副本比例替代整体影响。",
+      "mixed_subquestions": [],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S02",
+        "S03"
+      ],
+      "question_text": "请复核 rca-benchmark 中 search 在 2026年08月28日 17:10:03 至 17:16:28（北京时间）期间的业务异常。判断服务是否仍具备多数请求可用性、故障范围是否可限定，并说明是否已有证据宣布完全恢复和最终业务结果有效。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F015/IL1/public/question.md",
+          "question_sha256": "bc9c150b8e2ccb446bbf37607d8f5482504817590cae040200a60d014c591f1e",
+          "config_sha256": "cb02bcf670f26b5995efc4c5f5ae2aff79e64205ac30c414064057412a53bc01"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F015/IL2/public/question.md",
+          "question_sha256": "e297264f9e0cf22dd1c164977e268bae9bdbfa8fdde389d59df0924dad8255e0",
+          "config_sha256": "cb02bcf670f26b5995efc4c5f5ae2aff79e64205ac30c414064057412a53bc01"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F015/IL3/public/question.md",
+          "question_sha256": "e297264f9e0cf22dd1c164977e268bae9bdbfa8fdde389d59df0924dad8255e0",
+          "config_sha256": "cb02bcf670f26b5995efc4c5f5ae2aff79e64205ac30c414064057412a53bc01"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "service_availability",
+          "status": "supported",
+          "required_groups": [
+            "service",
+            "pod"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "fault_scope",
+          "status": "supported",
+          "required_groups": [
+            "change",
+            "pod"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "recovery_confirmation",
+          "status": "not_established",
+          "required_groups": [
+            "recovery"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "business_result_validity",
+          "status": "not_established",
+          "required_groups": [
+            "upstream",
+            "recovery"
+          ],
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "family_id": "F016",
+      "primary_slice": "L3-S7",
+      "previous_primary_slice": "L3-S7",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "追查回滚后下游残留，判断回滚是否足以清理既有影响",
+      "classification_reason": "题面要求评估回滚充分性，需要判断运行回退是否覆盖下游与遗留业务。",
+      "boundary_note": "回滚对象选择为混合子问题；S7 主能力限于恢复声明的充分性。",
+      "mixed_subquestions": [
+        "rollback_target"
+      ],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S14",
+        "S13"
+      ],
+      "question_text": "请复核 rca-benchmark 中 checkout 在 2026年09月02日 22:51:41 至 22:55:30（北京时间）期间的业务异常。评估发布涉及的实际范围，判断回滚对象与回滚充分性，并说明仍不能确认的业务状态。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F016/IL1/public/question.md",
+          "question_sha256": "12298ac8f76374735d9d8bd0c22aa0a9b6171d1f4733ba772785744c178cb4d5",
+          "config_sha256": "800808d3ce9e97f570aa2205781c1a696e86a35cb7981d199e2ee44a7f85b3fd"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F016/IL2/public/question.md",
+          "question_sha256": "9292f12007f94738d8bda5634395e6e8e283361699d9d8afb55f30f75fe5ba03",
+          "config_sha256": "800808d3ce9e97f570aa2205781c1a696e86a35cb7981d199e2ee44a7f85b3fd"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F016/IL3/public/question.md",
+          "question_sha256": "9292f12007f94738d8bda5634395e6e8e283361699d9d8afb55f30f75fe5ba03",
+          "config_sha256": "800808d3ce9e97f570aa2205781c1a696e86a35cb7981d199e2ee44a7f85b3fd"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "rollback_target",
+          "status": "supported",
+          "required_groups": [
+            "release"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "rollback_sufficiency",
+          "status": "refuted",
+          "required_groups": [
+            "rollback",
+            "downstream"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "post_rollback_state",
+          "status": "refuted",
+          "required_groups": [
+            "rollback"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "dirty_state_population",
+          "status": "not_established",
+          "required_groups": [
+            "business_state"
+          ],
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "family_id": "F017",
+      "primary_slice": "L3-S4",
+      "previous_primary_slice": "L3-S4",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "利用两段依赖异常的错位更新单一故障解释",
+      "classification_reason": "两波依赖观测错位要求分段修正判断，时间证据是与 S5 的主要区别。",
+      "boundary_note": "因果链与处置选择仍在原题中；本 slice 不定义为完整因果机制还原。",
+      "mixed_subquestions": [
+        "causal_relationship",
+        "remediation_scope"
+      ],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S05",
+        "S08"
+      ],
+      "question_text": "请复核 rca-benchmark 中 frontend::GET /api/cart 在 2026年08月10日 08:17:34 至 08:26:00（北京时间）期间的业务异常。判断两波异常是否属于同一因果链、分别需要什么处置，并说明现有证据能否证明处置已经完成。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F017/IL1/public/question.md",
+          "question_sha256": "3410f5705c768452469b2e96d770bc0f9b783c6fe727a0e54cbc6f73ad62b415",
+          "config_sha256": "f58b812b3088c34d1697c9c8171eeb8db026a3cea7597652d2f02301c4f231e2"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F017/IL2/public/question.md",
+          "question_sha256": "9538376df7b9daa4cc551bd9898bb68c3e6df0bd3a5dbd58a0d21c87b99c9f18",
+          "config_sha256": "f58b812b3088c34d1697c9c8171eeb8db026a3cea7597652d2f02301c4f231e2"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F017/IL3/public/question.md",
+          "question_sha256": "9538376df7b9daa4cc551bd9898bb68c3e6df0bd3a5dbd58a0d21c87b99c9f18",
+          "config_sha256": "f58b812b3088c34d1697c9c8171eeb8db026a3cea7597652d2f02301c4f231e2"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "causal_relationship",
+          "status": "refuted",
+          "required_groups": [
+            "independence",
+            "rds",
+            "redis"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "remediation_scope",
+          "status": "supported",
+          "required_groups": [
+            "rds",
+            "redis"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "single_action_scope",
+          "status": "refuted",
+          "required_groups": [
+            "independence",
+            "cart"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "remediation_completion",
+          "status": "not_established",
+          "required_groups": [
+            "actions"
+          ],
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "family_id": "F018",
+      "primary_slice": "L3-S6",
+      "previous_primary_slice": "L3-S6",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "区分快速响应、拒绝、接纳与业务交付",
+      "classification_reason": "低延迟与拒绝并存，需要区分被接纳、被拒绝及实际交付。",
+      "boundary_note": "当前服务结果与交付语义为主，不承担逐对象进展重建。",
+      "mixed_subquestions": [],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S11",
+        "S03"
+      ],
+      "question_text": "请复核 rca-benchmark 中 inventory::/api/v1/inventory/{productId} 在 2026年03月27日 18:08:44 至 18:12:01（北京时间）期间的业务异常。判断流量控制证明了什么，区分被拒绝、被接受和最终业务交付，并明确未知人口。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F018/IL1/public/question.md",
+          "question_sha256": "45f58899647ed8541ed44e7feba65ab2421db910409f62e17b3a20ceaf72e8ad",
+          "config_sha256": "ec52e5342a8fdbeed20c438f8718a0766c9cb9fcb9e0062b8a584d6439b3f425"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F018/IL2/public/question.md",
+          "question_sha256": "340471597dae8b619c20d49aa6020054c5eee0f6c0b429c64edddd61e971779a",
+          "config_sha256": "ec52e5342a8fdbeed20c438f8718a0766c9cb9fcb9e0062b8a584d6439b3f425"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F018/IL3/public/question.md",
+          "question_sha256": "340471597dae8b619c20d49aa6020054c5eee0f6c0b429c64edddd61e971779a",
+          "config_sha256": "ec52e5342a8fdbeed20c438f8718a0766c9cb9fcb9e0062b8a584d6439b3f425"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "rejection_behavior",
+          "status": "supported",
+          "required_groups": [
+            "service",
+            "operation",
+            "trace"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "delivery_guarantee",
+          "status": "refuted",
+          "required_groups": [
+            "delivery",
+            "trace"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "unique_success_population",
+          "status": "not_established",
+          "required_groups": [
+            "identity",
+            "delivery"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "inflight_population",
+          "status": "not_established",
+          "required_groups": [
+            "inflight"
+          ],
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "family_id": "F019",
+      "primary_slice": "L3-S4",
+      "previous_primary_slice": "L3-S4",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "按业务影响比较锁、SQL 与 CPU 阶段的主次",
+      "classification_reason": "比较不同阶段的锁、SQL、CPU 与业务影响，避免按最大指标认定主影响。",
+      "boundary_note": "机制数量与归因措辞为混合内容；不将主影响阶段等同唯一根因。",
+      "mixed_subquestions": [
+        "mechanism_count"
+      ],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S06",
+        "S05"
+      ],
+      "question_text": "请复核 rca-benchmark 中 rm-j6c3l32c730ti37ur 在 2026年09月01日 15:12:04 至 15:26:12（北京时间）期间的异常。判断可确认的运行机制与主要影响阶段，并说明现有证据能否确认写入造成了重复、遗漏或最终业务正确性。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F019/IL1/public/question.md",
+          "question_sha256": "64793ba7067ad47c2aa944d583132a5407c9e370dc40fe75e75e669407e52104",
+          "config_sha256": "00a676bbead142ce5b3b0ae50d31d9474344a97df1237a5c1a54641cbaa92ef3"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F019/IL2/public/question.md",
+          "question_sha256": "3a8677496b74cd4d147eda500041e70619d7f8158fb9a863aca2cb609f1c81f8",
+          "config_sha256": "00a676bbead142ce5b3b0ae50d31d9474344a97df1237a5c1a54641cbaa92ef3"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F019/IL3/public/question.md",
+          "question_sha256": "3a8677496b74cd4d147eda500041e70619d7f8158fb9a863aca2cb609f1c81f8",
+          "config_sha256": "00a676bbead142ce5b3b0ae50d31d9474344a97df1237a5c1a54641cbaa92ef3"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "mechanism_count",
+          "status": "supported",
+          "required_groups": [
+            "rds",
+            "sql",
+            "cpu"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "primary_impact_attribution",
+          "status": "refuted",
+          "required_groups": [
+            "cpu",
+            "impact"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "write_outcome",
+          "status": "not_established",
+          "required_groups": [
+            "business_records"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "business_correctness",
+          "status": "not_established",
+          "required_groups": [
+            "business_records",
+            "impact"
+          ],
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "family_id": "F020",
+      "primary_slice": "L3-S4",
+      "previous_primary_slice": "L3-S4",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "拒绝以最新或最大指标替代最高业务影响阶段",
+      "classification_reason": "最后出现或峰值最大的信号未必对应最重影响，核心是按阶段重新判断主次。",
+      "boundary_note": "处置拆分不是 S4 的定义；不凭相关峰值认证根因。",
+      "mixed_subquestions": [
+        "primary_cause_rule",
+        "remediation_scope"
+      ],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S06",
+        "S05"
+      ],
+      "question_text": "请复核 rca-benchmark 中 rm-j6c3l32c730ti37ur 在 2026年09月01日 19:23:36 至 19:39:42（北京时间）期间的异常。判断最晚出现或数值最大的信号是否就是主要用户影响来源，说明是否需要拆分处置及未知边界。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F020/IL1/public/question.md",
+          "question_sha256": "0df82b9e10aa2d2c942b48700550ca57db062577af1df92e56600036394147e0",
+          "config_sha256": "fd29f08a01bf9bdc7fd786edf615b4d63b95f4178b86bc4a1608b4ccc4cf9c87"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F020/IL2/public/question.md",
+          "question_sha256": "da80474ec484656ccb91a6217c571cc13cf142148766a5a2d8f78868adb04c2d",
+          "config_sha256": "fd29f08a01bf9bdc7fd786edf615b4d63b95f4178b86bc4a1608b4ccc4cf9c87"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F020/IL3/public/question.md",
+          "question_sha256": "da80474ec484656ccb91a6217c571cc13cf142148766a5a2d8f78868adb04c2d",
+          "config_sha256": "fd29f08a01bf9bdc7fd786edf615b4d63b95f4178b86bc4a1608b4ccc4cf9c87"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "primary_cause_rule",
+          "status": "refuted",
+          "required_groups": [
+            "rds",
+            "cpu",
+            "impact"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "highest_impact_source",
+          "status": "supported",
+          "required_groups": [
+            "rds",
+            "impact",
+            "downstream"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "remediation_scope",
+          "status": "supported",
+          "required_groups": [
+            "rds",
+            "worker_pool",
+            "cpu"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "completion_state",
+          "status": "not_established",
+          "required_groups": [
+            "business"
+          ],
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "family_id": "F021",
+      "primary_slice": "L3-S4",
+      "previous_primary_slice": "L3-S4",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "发现第二阶段新依赖后修订全程解释",
+      "classification_reason": "第二阶段出现新依赖后，原先对全部入口失败的判断需修订。",
+      "boundary_note": "允许检验原解释是否覆盖观测，不要求恢复完整因果链。",
+      "mixed_subquestions": [
+        "full_incident_explanation"
+      ],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S05",
+        "S08"
+      ],
+      "question_text": "请复核 rca-benchmark 中 rm-j6c3l32c730ti37ur 在 2026年09月01日 18:50:51 至 18:56:12（北京时间）期间的异常。区分两个阶段，判断单一RDS问题能否解释全部入口失败，并说明端到端完成状态的证据边界。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F021/IL1/public/question.md",
+          "question_sha256": "9e86602f8bfbc3947f1a507a04697173ad79f62decee781ee48dadcf4297dc3c",
+          "config_sha256": "6acd28c94706c76a0eb927150b4a4c34281781de3de87ebb1cbc495a1e855852"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F021/IL2/public/question.md",
+          "question_sha256": "9e82e96cf2e9fc75971ae67511dff83092194205e02858f561fd5e47cca374cb",
+          "config_sha256": "6acd28c94706c76a0eb927150b4a4c34281781de3de87ebb1cbc495a1e855852"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F021/IL3/public/question.md",
+          "question_sha256": "9e82e96cf2e9fc75971ae67511dff83092194205e02858f561fd5e47cca374cb",
+          "config_sha256": "6acd28c94706c76a0eb927150b4a4c34281781de3de87ebb1cbc495a1e855852"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "full_incident_explanation",
+          "status": "refuted",
+          "required_groups": [
+            "rds",
+            "payment",
+            "inventory"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "second_stage_dependency",
+          "status": "supported",
+          "required_groups": [
+            "payment",
+            "cart"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "cart_second_stage_outcome",
+          "status": "supported",
+          "required_groups": [
+            "cart"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "completion_state",
+          "status": "not_established",
+          "required_groups": [
+            "completion"
+          ],
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "family_id": "F022",
+      "primary_slice": "L3-S5",
+      "previous_primary_slice": "L3-S5",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "按通信边及受害群体拆分网络与缓存异常",
+      "classification_reason": "对照通信边、Redis 观测及业务范围，判断跨实体证据能否被一个结论覆盖。",
+      "boundary_note": "同一故障链的机制证明与恢复动作选择属于混合子问题。",
+      "mixed_subquestions": [
+        "failure_chain_relationship",
+        "action_sufficiency"
+      ],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S08",
+        "S07"
+      ],
+      "question_text": "请复核 rca-benchmark 中 cart::POST /oteldemo.CartService/EmptyCart 在 2026年08月10日 18:14:22 至 19:12:00（北京时间）期间的异常。判断连通性变化与Redis慢命令是否为同一条链，明确分别需要恢复的范围及端到端结果边界。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F022/IL1/public/question.md",
+          "question_sha256": "805dc1dbecb03f3bed9c3126e3d56cf48de938a7d933bcf064d19847366ab8e4",
+          "config_sha256": "c1a40638bfda39e24fc0b4216ba17976c0aa669cbe32de21eb46fa30d2e0f715"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F022/IL2/public/question.md",
+          "question_sha256": "24ad84130f6abf804f9a12b08a9aedd218c06316be1671664cee82766c2d3105",
+          "config_sha256": "c1a40638bfda39e24fc0b4216ba17976c0aa669cbe32de21eb46fa30d2e0f715"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F022/IL3/public/question.md",
+          "question_sha256": "24ad84130f6abf804f9a12b08a9aedd218c06316be1671664cee82766c2d3105",
+          "config_sha256": "c1a40638bfda39e24fc0b4216ba17976c0aa669cbe32de21eb46fa30d2e0f715"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "failure_chain_relationship",
+          "status": "supported",
+          "required_groups": [
+            "network",
+            "redis"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "action_sufficiency",
+          "status": "refuted",
+          "required_groups": [
+            "network",
+            "redis_clients"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "network_block_scope",
+          "status": "supported",
+          "required_groups": [
+            "network",
+            "rds",
+            "inventory"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "end_to_end_completion",
+          "status": "not_established",
+          "required_groups": [
+            "completion"
+          ],
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "family_id": "F023",
+      "primary_slice": "L3-S6",
+      "previous_primary_slice": "L3-S6",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "核对 Service 到监听端口，检验 Ready 是否代表可接纳请求",
+      "classification_reason": "Ready 与端点存在不等于可接纳请求，需要检查服务路径和实际调用表现。",
+      "boundary_note": "端口/路径事实可作可用性依据，不扩展成无边界机制诊断。",
+      "mixed_subquestions": [],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S10",
+        "S09"
+      ],
+      "question_text": "请复核 rca-benchmark 中 frontend::POST /api/cart 在 2026年08月10日 04:55:17 至 05:00:04（北京时间）期间的异常。判断健康探测为绿色时服务是否真正具备接纳业务的条件，并区分配置面、调用方和最终业务结果的证据范围。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F023/IL1/public/question.md",
+          "question_sha256": "6cc599e75bd2c6934940431c9a39a6228c17e00313f1f5e247d3b6b101c6243c",
+          "config_sha256": "f174ac43cb635308524d61c352a1dfde15e70530b1fd1ae34d413cda1c673bf5"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F023/IL2/public/question.md",
+          "question_sha256": "478c830a0d074c9553bb90e792a43dabf4ff8754e7fdaa19ca92c082dc480115",
+          "config_sha256": "f174ac43cb635308524d61c352a1dfde15e70530b1fd1ae34d413cda1c673bf5"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F023/IL3/public/question.md",
+          "question_sha256": "478c830a0d074c9553bb90e792a43dabf4ff8754e7fdaa19ca92c082dc480115",
+          "config_sha256": "f174ac43cb635308524d61c352a1dfde15e70530b1fd1ae34d413cda1c673bf5"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "probe_business_consistency",
+          "status": "refuted",
+          "required_groups": [
+            "health",
+            "trace",
+            "inventory"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "service_acceptance_path",
+          "status": "refuted",
+          "required_groups": [
+            "k8s_service",
+            "trace"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "fault_scope",
+          "status": "supported",
+          "required_groups": [
+            "k8s_service",
+            "inventory",
+            "callers"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "final_business_outcome",
+          "status": "not_established",
+          "required_groups": [
+            "business"
+          ],
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "family_id": "F024",
+      "primary_slice": "L3-S6",
+      "previous_primary_slice": "L3-S6",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "将成功与拒绝分开解释延迟、吞吐改善",
+      "classification_reason": "延迟和吞吐改善可能来自快速拒绝，关键是重选业务可用性判据。",
+      "boundary_note": "虽涉及阶段与恢复，主判断是成功/拒绝语义，而非某个处置是否足够。",
+      "mixed_subquestions": [],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S11",
+        "S05"
+      ],
+      "question_text": "请复核 rca-benchmark 中 rm-j6c3l32c730ti37ur 在 2026年08月31日 20:42:48 至 20:55:42（北京时间）期间的异常。区分数据库锁等待与入口拒绝两个阶段，判断延迟和吞吐改善是否代表业务恢复，并明确最终业务结果边界。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F024/IL1/public/question.md",
+          "question_sha256": "8e0c0ad99f1d957359dd50ced97ac6969d7893a363994cc38febcf9ed43f7e9c",
+          "config_sha256": "0b2b5514e190a9e6657715707c9a76248ad65914256561805857367d5b409a62"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F024/IL2/public/question.md",
+          "question_sha256": "2682c77b0a800a310774f8c5a3a9f27c2440d2531d2f69dd9f8b87a7d79eabe3",
+          "config_sha256": "0b2b5514e190a9e6657715707c9a76248ad65914256561805857367d5b409a62"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F024/IL3/public/question.md",
+          "question_sha256": "2682c77b0a800a310774f8c5a3a9f27c2440d2531d2f69dd9f8b87a7d79eabe3",
+          "config_sha256": "0b2b5514e190a9e6657715707c9a76248ad65914256561805857367d5b409a62"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "phase_relationship",
+          "status": "supported",
+          "required_groups": [
+            "rds",
+            "ratelimit",
+            "independence"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "latency_improvement_recovery",
+          "status": "refuted",
+          "required_groups": [
+            "segment1",
+            "segment2",
+            "ratelimit"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "remediation_scope",
+          "status": "supported",
+          "required_groups": [
+            "rds",
+            "ratelimit"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "final_business_result",
+          "status": "not_established",
+          "required_groups": [
+            "business"
+          ],
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "family_id": "F025",
+      "primary_slice": "L3-S4",
+      "previous_primary_slice": "L3-S4",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "依据分阶段信号改写单一原因解释并排除伴生告警",
+      "classification_reason": "拒绝与延迟分属不同阶段，需要更新对全程异常的判断。",
+      "boundary_note": "根因排除和阶段机制内容不等于本 slice 要求完整 RCA。",
+      "mixed_subquestions": [
+        "single_cause_explanation",
+        "stage_specific_mechanisms",
+        "rollout_alert_as_root_cause"
+      ],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S05",
+        "S08"
+      ],
+      "question_text": "请复核 rca-benchmark 中 inventory::/api/v1/inventory/{productId} 在 2026年08月31日 19:44:53 至 19:58:57（北京时间）期间的异常。区分前后两个阶段的拒绝与延迟形态，判断单一原因能否解释全部表现，并说明交付人口的证据边界。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F025/IL1/public/question.md",
+          "question_sha256": "fa0edf5f72441847c02ad03a7506ad67c3a4f98eb55ec152c29ef138dcb05a69",
+          "config_sha256": "775d3bc7bf76a261e43bdeeff82b64fd1f80b46dcef1060413797951062213b0"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F025/IL2/public/question.md",
+          "question_sha256": "11a06401473b0e08a0ea06d14b5fb75ecbd0e6271b5d5322e1e23ad644de5ca8",
+          "config_sha256": "775d3bc7bf76a261e43bdeeff82b64fd1f80b46dcef1060413797951062213b0"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F025/IL3/public/question.md",
+          "question_sha256": "11a06401473b0e08a0ea06d14b5fb75ecbd0e6271b5d5322e1e23ad644de5ca8",
+          "config_sha256": "775d3bc7bf76a261e43bdeeff82b64fd1f80b46dcef1060413797951062213b0"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "single_cause_explanation",
+          "status": "refuted",
+          "required_groups": [
+            "ratelimit",
+            "cpu",
+            "alerts"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "stage_specific_mechanisms",
+          "status": "supported",
+          "required_groups": [
+            "ratelimit",
+            "cpu",
+            "latency"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "rollout_alert_as_root_cause",
+          "status": "refuted",
+          "required_groups": [
+            "sideeffect",
+            "alerts"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "delivery_population",
+          "status": "not_established",
+          "required_groups": [
+            "delivery"
+          ],
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "family_id": "F026",
+      "primary_slice": "L3-S4",
+      "previous_primary_slice": "L3-S4",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "利用中间正常窗口区分两波异常及各自解释",
+      "classification_reason": "中间正常窗口和两波不同表现要求分段，零错误的业务含义是辅助判断。",
+      "boundary_note": "不把两波关联或处置边界扩展为完整根因和修复方案。",
+      "mixed_subquestions": [
+        "split_remediation_scope"
+      ],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S05",
+        "S11"
+      ],
+      "question_text": "请复核 rca-benchmark 中 frontend::DELETE /api/cart 在 2026年08月10日 16:40:38 至 16:56:00（北京时间）期间的异常。区分前后两波错误型和延迟型异常，判断请求成功或零错误是否足以证明业务状态一致，并明确处置边界。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F026/IL1/public/question.md",
+          "question_sha256": "038f8882478b6063ad125ec70bc3b5c1efa9f2e31ec299a574cc08481fc496e1",
+          "config_sha256": "ecd04f3813962053240bd842ed16f96542b11c23daf61d38de95efd9a23d20e0"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F026/IL2/public/question.md",
+          "question_sha256": "fe6b8f7dd8d704d043160cbc5d4862ca09b1139afa464fb3a5fcd601401af3d5",
+          "config_sha256": "ecd04f3813962053240bd842ed16f96542b11c23daf61d38de95efd9a23d20e0"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F026/IL3/public/question.md",
+          "question_sha256": "fe6b8f7dd8d704d043160cbc5d4862ca09b1139afa464fb3a5fcd601401af3d5",
+          "config_sha256": "ecd04f3813962053240bd842ed16f96542b11c23daf61d38de95efd9a23d20e0"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "two_wave_relationship",
+          "status": "supported",
+          "required_groups": [
+            "rds",
+            "gap",
+            "redis"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "zero_error_business_consistency",
+          "status": "refuted",
+          "required_groups": [
+            "cart_frontend",
+            "redis_clients"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "split_remediation_scope",
+          "status": "supported",
+          "required_groups": [
+            "rds",
+            "redis"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "final_business_completion",
+          "status": "not_established",
+          "required_groups": [
+            "business"
+          ],
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "family_id": "F027",
+      "primary_slice": "L3-S7",
+      "previous_primary_slice": "L3-S7",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "区分回滚停止新增失败与历史失败订单已修复",
+      "classification_reason": "明确区分回滚止住新增失败与历史订单已修复，存在直接的恢复充分性问题。",
+      "boundary_note": "超时机制、主因与回滚目标是原题混合项；全题总分不能称为纯恢复核验分。",
+      "mixed_subquestions": [
+        "timeout_origin",
+        "message_backlog_as_primary_cause",
+        "rollback_target"
+      ],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S14",
+        "S13"
+      ],
+      "question_text": "请复核 rca-benchmark 中 checkout 在 2026年08月12日 02:49:59 至 02:54:30（北京时间）期间的异常。判断新版下单路径失败的机制与回滚对象，区分阻止新增失败和修复既有失败业务，并说明未验证边界。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F027/IL1/public/question.md",
+          "question_sha256": "d478522217b6dfdd0018ab3d6c988cc72aefbd687c4f37d5ad77325d64a777fb",
+          "config_sha256": "241823fe70cd78338579b99e1d638aff6716937d3002ff33d5f44ef608ec67c0"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F027/IL2/public/question.md",
+          "question_sha256": "64f04440e72b9adf64599cd6744e6e6a2602547f0a795c83202441ca0b83a2a0",
+          "config_sha256": "241823fe70cd78338579b99e1d638aff6716937d3002ff33d5f44ef608ec67c0"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F027/IL3/public/question.md",
+          "question_sha256": "64f04440e72b9adf64599cd6744e6e6a2602547f0a795c83202441ca0b83a2a0",
+          "config_sha256": "241823fe70cd78338579b99e1d638aff6716937d3002ff33d5f44ef608ec67c0"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "timeout_origin",
+          "status": "supported",
+          "required_groups": [
+            "release",
+            "latency",
+            "downstream"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "message_backlog_as_primary_cause",
+          "status": "refuted",
+          "required_groups": [
+            "message",
+            "latency",
+            "downstream"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "rollback_target",
+          "status": "supported",
+          "required_groups": [
+            "release",
+            "placeorder"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "prior_failed_orders_repaired",
+          "status": "not_established",
+          "required_groups": [
+            "recovery"
+          ],
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "family_id": "F028",
+      "primary_slice": "L3-S5",
+      "previous_primary_slice": "L3-S5",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "利用独立对照判断两个服务能否由单一资源解释",
+      "classification_reason": "不同服务观测及对照能检验单一资源解释是否充分，主归跨实体证据协调。",
+      "boundary_note": "CPU/GC 正向机制归因及资源调整策略是混合项，不由标签自动改成纯 L3。",
+      "mixed_subquestions": [
+        "statement_cpu_attribution",
+        "invoicing_gc_attribution"
+      ],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S08",
+        "S07"
+      ],
+      "question_text": "请复核 rca-benchmark 中 statement 在 2026年07月16日 01:06:23 至 01:11:24（北京时间）期间的异常。判断单一资源压力是否足以解释窗口内全部业务受阻，并说明不同资源调整能够解决和不能解决的范围。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F028/IL1/public/question.md",
+          "question_sha256": "89d3d62233035e80b478e36a3ff4c608b27a6c8b292e3f0f8567ea374f143db8",
+          "config_sha256": "295179a4c7f6a813f6a020338a9b161220af880af150267282f28e9c678584d0"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F028/IL2/public/question.md",
+          "question_sha256": "69f0b4e8cc03b28acd12d8f63019859dc4b12c88cd2f3c4ae073cf5519e78d08",
+          "config_sha256": "295179a4c7f6a813f6a020338a9b161220af880af150267282f28e9c678584d0"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F028/IL3/public/question.md",
+          "question_sha256": "69f0b4e8cc03b28acd12d8f63019859dc4b12c88cd2f3c4ae073cf5519e78d08",
+          "config_sha256": "295179a4c7f6a813f6a020338a9b161220af880af150267282f28e9c678584d0"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "single_resource_explanation",
+          "status": "refuted",
+          "required_groups": [
+            "invoicing_gc",
+            "statement_cpu",
+            "topology"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "statement_cpu_attribution",
+          "status": "supported",
+          "required_groups": [
+            "statement_cpu",
+            "statement_latency",
+            "abtest"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "invoicing_gc_attribution",
+          "status": "supported",
+          "required_groups": [
+            "invoicing_gc",
+            "invoicing_latency",
+            "abtest"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "final_business_completion",
+          "status": "not_established",
+          "required_groups": [
+            "business"
+          ],
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "family_id": "F029",
+      "primary_slice": "L3-S5",
+      "previous_primary_slice": "L3-S5",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "区分调用失败传播、最终业务结果与责任归属",
+      "classification_reason": "跨调用层的状态能支持传播观测，却不足以确认单一责任和最终结果，主归证据边界协调。",
+      "boundary_note": "观测到错误沿调用关系出现，不等于证明全部传播机制或组织责任。",
+      "mixed_subquestions": [],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S04",
+        "S07"
+      ],
+      "question_text": "请复核 rca-benchmark 中 frontend::POST 在 2026年03月27日 16:32:20 至 16:37:05（北京时间）期间的异常。判断调用状态能确认哪一段传播，是否足以证明最终业务结果和单一责任归属，并明确未知范围。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F029/IL1/public/question.md",
+          "question_sha256": "5abb2676e1bebfbc4f690838fee10c6bb9e33f5b3170699035954e307d4a3ab9",
+          "config_sha256": "f7fe7ba61cddb3488df6ac02f9989068a84a4bcc9211d9acd6933064b0fbd3c4"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F029/IL2/public/question.md",
+          "question_sha256": "ceea4f2e41df9f0cea26b84aacd6568453ad4a7da293a20c27cf6578d8f3bd18",
+          "config_sha256": "f7fe7ba61cddb3488df6ac02f9989068a84a4bcc9211d9acd6933064b0fbd3c4"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F029/IL3/public/question.md",
+          "question_sha256": "ceea4f2e41df9f0cea26b84aacd6568453ad4a7da293a20c27cf6578d8f3bd18",
+          "config_sha256": "f7fe7ba61cddb3488df6ac02f9989068a84a4bcc9211d9acd6933064b0fbd3c4"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "five_x_propagation",
+          "status": "supported",
+          "required_groups": [
+            "inventory_trace",
+            "inventory_metric",
+            "frontend_operation"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "call_status_proves_final_result",
+          "status": "refuted",
+          "required_groups": [
+            "business",
+            "frontend_operation"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "frontend_exclusive_responsibility",
+          "status": "not_established",
+          "required_groups": [
+            "ownership"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "final_business_availability",
+          "status": "not_established",
+          "required_groups": [
+            "business"
+          ],
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "family_id": "F030",
+      "primary_slice": "L3-S1",
+      "previous_primary_slice": "L3-S1",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "判断请求计数能否换算唯一业务需求",
+      "classification_reason": "请求变化与唯一业务需求不同，需判断计数单位及身份覆盖能否支持人口换算。",
+      "boundary_note": "调用传播为辅助内容，不能将请求次数当业务对象数。",
+      "mixed_subquestions": [],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S03",
+        "S02"
+      ],
+      "question_text": "请复核 rca-benchmark 中 frontend::POST /api/checkout 在 2026年04月16日 09:03:54 至 09:13:05（北京时间）期间的异常。量化可观察的请求和延迟变化，并判断这些请求是否能直接当作唯一业务需求人口，说明重复计算边界。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F030/IL1/public/question.md",
+          "question_sha256": "9705a6cb3ca606faf8885f64b3277ac80ed07f3256e80f02c661fe71e577fd4c",
+          "config_sha256": "088023dfacb3e12259bc6bfd05af94d997ce20143331cf786071406eaa615cff"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F030/IL2/public/question.md",
+          "question_sha256": "e9768da8d452bd20f09e0c6c0cd3267533a2f7b76f9c3771e043842bb8c1f179",
+          "config_sha256": "088023dfacb3e12259bc6bfd05af94d997ce20143331cf786071406eaa615cff"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F030/IL3/public/question.md",
+          "question_sha256": "e9768da8d452bd20f09e0c6c0cd3267533a2f7b76f9c3771e043842bb8c1f179",
+          "config_sha256": "088023dfacb3e12259bc6bfd05af94d997ce20143331cf786071406eaa615cff"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "performance_propagation",
+          "status": "supported",
+          "required_groups": [
+            "inventory",
+            "cart",
+            "checkout",
+            "frontend"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "request_count_equals_unique_demand",
+          "status": "not_established",
+          "required_groups": [
+            "identity",
+            "retries"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "duplicate_free_population",
+          "status": "not_established",
+          "required_groups": [
+            "identity",
+            "retries"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "observed_request_change_quantified",
+          "status": "supported",
+          "required_groups": [
+            "inventory",
+            "frontend"
+          ],
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "family_id": "F031",
+      "primary_slice": "L3-S6",
+      "previous_primary_slice": "L3-S6",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "对齐缩容事件与统计桶，避免把历史流量当当前容量",
+      "classification_reason": "归零副本和统计桶仍有请求形成冲突，要判断当前是否具备业务承载条件。",
+      "boundary_note": "时间对齐为手段，核心是当前可用性而非恢复方案。",
+      "mixed_subquestions": [],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S10",
+        "S12"
+      ],
+      "question_text": "请复核 rca-benchmark 中 checkout::/oteldemo.CheckoutService/PlaceOrder 在 2026年04月23日 00:46:00 至 00:50:26（北京时间）期间的异常。复核缩容前后实际可用处理容量，判断请求计数是否足以证明具备承载能力，并说明业务完成边界。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F031/IL1/public/question.md",
+          "question_sha256": "7913e09a0f7b7a1142c0d381cb8cca153b6537974f533ca87de373228efe5079",
+          "config_sha256": "d75d661749ca035bdf477f1c519e5054e110a6752e3c96c6f31ae64327832d46"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F031/IL2/public/question.md",
+          "question_sha256": "c8fc16f3650434941942cc6c80cc9635cde73c76132dad1fc1cc7e59ba20f76c",
+          "config_sha256": "d75d661749ca035bdf477f1c519e5054e110a6752e3c96c6f31ae64327832d46"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F031/IL3/public/question.md",
+          "question_sha256": "c8fc16f3650434941942cc6c80cc9635cde73c76132dad1fc1cc7e59ba20f76c",
+          "config_sha256": "d75d661749ca035bdf477f1c519e5054e110a6752e3c96c6f31ae64327832d46"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "zero_replica_capacity",
+          "status": "refuted",
+          "required_groups": [
+            "deployment",
+            "checkout_trace"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "request_count_proves_available_capacity",
+          "status": "refuted",
+          "required_groups": [
+            "shipping",
+            "deployment",
+            "checkout_trace"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "shipping_failure_propagation",
+          "status": "supported",
+          "required_groups": [
+            "deployment",
+            "checkout_trace",
+            "placeorder"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "completed_order_population",
+          "status": "not_established",
+          "required_groups": [
+            "business"
+          ],
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "family_id": "F032",
+      "primary_slice": "L3-S2",
+      "previous_primary_slice": "L3-S7",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "用接口与版本对照界定实际影响，判断是否能将失败外推至全部接口。",
+      "classification_reason": "题面首先要求判断版本变化是否影响全部接口，恢复策略依赖接口范围；主归 S2 更准确。",
+      "boundary_note": "回退/保留及 DDL 决策属于混合内容，不再用这些动作将其归入恢复核验。",
+      "mixed_subquestions": [
+        "rollback_scope",
+        "execute_ddl_during_rollback"
+      ],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S13",
+        "S02"
+      ],
+      "question_text": "请复核 rca-benchmark 中 /api/v1/inventory/{productId} 在 2026年09月03日 10:10:25 至 10:15:43（北京时间）期间的异常。判断版本变化是否影响全部接口，确定回退或保留范围，并说明历史失败业务的结果边界。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F032/IL1/public/question.md",
+          "question_sha256": "e5482e2a6bfe0ffc00ca1aa4486d2225f537595255b7f198622118471538e79f",
+          "config_sha256": "3edf18bd68d5056d70ffa088a47f14936b0cda2516472a549821ff459f9b57e0"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F032/IL2/public/question.md",
+          "question_sha256": "1146829da3a4034e3c4dd1c8b8571f662d7b824a5aa32caab67490b14794d709",
+          "config_sha256": "3edf18bd68d5056d70ffa088a47f14936b0cda2516472a549821ff459f9b57e0"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F032/IL3/public/question.md",
+          "question_sha256": "1146829da3a4034e3c4dd1c8b8571f662d7b824a5aa32caab67490b14794d709",
+          "config_sha256": "3edf18bd68d5056d70ffa088a47f14936b0cda2516472a549821ff459f9b57e0"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "all_interfaces_affected",
+          "status": "refuted",
+          "required_groups": [
+            "error",
+            "scope"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "rollback_scope",
+          "status": "supported",
+          "required_groups": [
+            "release",
+            "rollback",
+            "database"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "execute_ddl_during_rollback",
+          "status": "refuted",
+          "required_groups": [
+            "migration",
+            "rollback",
+            "database"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "historical_failed_business_state",
+          "status": "not_established",
+          "required_groups": [
+            "business"
+          ],
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "family_id": "F033",
+      "primary_slice": "L3-S3",
+      "previous_primary_slice": "L3-S3",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "定位失败业务阶段并限制窗外恢复证据的使用",
+      "classification_reason": "失败发生在支付之前还是之后决定业务进展与终态，窗口恢复问题保留为辅助标签。",
+      "boundary_note": "发布机制与恢复关联不扩展为完整根因证明。",
+      "mixed_subquestions": [
+        "release_failure_relationship"
+      ],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S12",
+        "S04"
+      ],
+      "question_text": "请复核 rca-benchmark 中 checkout 在 2026年08月26日 00:17:17 至 00:21:30（北京时间）期间的异常。定位发布后失败发生在业务链的哪个阶段，判断当前窗口能否证明恢复完成，并说明历史失败订单的状态边界。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F033/IL1/public/question.md",
+          "question_sha256": "953ac07ab1d0d2a39577b44029cc5ab910ec3ad179d4c687e8533c2bdd85c161",
+          "config_sha256": "d517eef8953025d73dd379381853c48c99e2ede0906fcc2c30931b7b649ac8c1"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F033/IL2/public/question.md",
+          "question_sha256": "29ffe2e5ddb47237f5a2623757b3fcce7154286cb831bf46309ac0ae08b56a1f",
+          "config_sha256": "d517eef8953025d73dd379381853c48c99e2ede0906fcc2c30931b7b649ac8c1"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F033/IL3/public/question.md",
+          "question_sha256": "29ffe2e5ddb47237f5a2623757b3fcce7154286cb831bf46309ac0ae08b56a1f",
+          "config_sha256": "d517eef8953025d73dd379381853c48c99e2ede0906fcc2c30931b7b649ac8c1"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "release_failure_relationship",
+          "status": "supported",
+          "required_groups": [
+            "release",
+            "code",
+            "errors"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "failure_before_payment",
+          "status": "supported",
+          "required_groups": [
+            "trace",
+            "trace_stage"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "question_window_proves_recovery",
+          "status": "refuted",
+          "required_groups": [
+            "recovery"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "failed_order_final_state",
+          "status": "not_established",
+          "required_groups": [
+            "business"
+          ],
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "family_id": "F034",
+      "primary_slice": "L3-S1",
+      "previous_primary_slice": "L3-S1",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "识别服务/操作嵌套计数及重试映射缺口",
+      "classification_reason": "调用数、业务对象与重试后结果不是同一单位，主问题是可确认的人口与数量边界。",
+      "boundary_note": "缺少身份映射时只能保留边界，不能补造唯一业务数量。",
+      "mixed_subquestions": [],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S03",
+        "S01"
+      ],
+      "question_text": "请复核 rca-benchmark 中 inventory::/* 在 2026年03月27日 16:32:20 至 16:36:01（北京时间）期间的异常。量化可确认的失败请求观测，并判断这些调用记录能否直接换算成唯一受影响业务对象及重试后的最终范围。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F034/IL1/public/question.md",
+          "question_sha256": "a9898651f41935db9409ec5847241722d158d25069e6981022e4e8a75571f1d6",
+          "config_sha256": "978f49bdf07f92562735d0f09ae296cdb9d29d769c009914cbc012526590c9b0"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F034/IL2/public/question.md",
+          "question_sha256": "3fa14f2b58c7999a4e210355f184086d4b72162d2a796877babc83115f862d95",
+          "config_sha256": "978f49bdf07f92562735d0f09ae296cdb9d29d769c009914cbc012526590c9b0"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F034/IL3/public/question.md",
+          "question_sha256": "3fa14f2b58c7999a4e210355f184086d4b72162d2a796877babc83115f862d95",
+          "config_sha256": "978f49bdf07f92562735d0f09ae296cdb9d29d769c009914cbc012526590c9b0"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "observed_failure_volume",
+          "status": "supported",
+          "required_groups": [
+            "service",
+            "operation",
+            "trace"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "unique_affected_object_count",
+          "status": "not_established",
+          "required_groups": [
+            "identity"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "retry_adjusted_scope",
+          "status": "not_established",
+          "required_groups": [
+            "retry",
+            "identity"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "final_business_outcome",
+          "status": "not_established",
+          "required_groups": [
+            "business"
+          ],
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "family_id": "F035",
+      "primary_slice": "L3-S2",
+      "previous_primary_slice": "L3-S2",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "从固定商品热点区分局部群体与全局容量问题",
+      "classification_reason": "固定商品热点与整体容量不足要用群组和对照区分，核心是局部影响能否外推。",
+      "boundary_note": "不能由局部慢调用推定全局容量根因。",
+      "mixed_subquestions": [],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S02",
+        "S09"
+      ],
+      "question_text": "请复核 rca-benchmark 中 frontend::GET /api/products/{productId} 在 2026年04月16日 09:03:54 至 09:09:10（北京时间）期间的异常。判断证据支持固定商品局部热点还是整体容量不足，并说明可以和不能扩大的影响范围。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F035/IL1/public/question.md",
+          "question_sha256": "929beb0bc10d9ead4a9105c683e9b015c7c4a555d0bb79d2a03c7e2abe8de5f1",
+          "config_sha256": "1bc2570811007df495be802468a7ceffeaf114b78bc0dce71b302eee020c6159"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F035/IL2/public/question.md",
+          "question_sha256": "56a05f7348d8c2350ba3e7669d03caad71c6136fe872eee8a22b60f7ccb2c144",
+          "config_sha256": "1bc2570811007df495be802468a7ceffeaf114b78bc0dce71b302eee020c6159"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F035/IL3/public/question.md",
+          "question_sha256": "56a05f7348d8c2350ba3e7669d03caad71c6136fe872eee8a22b60f7ccb2c144",
+          "config_sha256": "1bc2570811007df495be802468a7ceffeaf114b78bc0dce71b302eee020c6159"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "fixed_product_hotspot",
+          "status": "supported",
+          "required_groups": [
+            "traffic",
+            "product_catalog",
+            "frontend"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "global_capacity_shortage",
+          "status": "not_established",
+          "required_groups": [
+            "scope"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "all_products_affected",
+          "status": "not_established",
+          "required_groups": [
+            "scope"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "unique_business_impact_population",
+          "status": "not_established",
+          "required_groups": [
+            "business"
+          ],
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "family_id": "F036",
+      "primary_slice": "L3-S2",
+      "previous_primary_slice": "L3-S2",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "沿调用链定位 DNS 配置故障并约束实例处置范围",
+      "classification_reason": "定位寻址失败落在哪一段并限制实例外推，主归路径和影响范围。",
+      "boundary_note": "寻址机制归因与全实例处置是混合内容，分类不等同完整 RCA。",
+      "mixed_subquestions": [
+        "dns_failure_attribution",
+        "all_instances_same_remediation"
+      ],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S09",
+        "S13"
+      ],
+      "question_text": "请复核 rca-benchmark 中 checkout::/oteldemo.CheckoutService/PlaceOrder 在 2026年04月28日 23:25:21 至 23:29:26（北京时间）期间的异常。确认寻址失败所在服务和传播路径，判断是否已有证据要求对所有实例采用同样处置，并说明订单结果边界。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F036/IL1/public/question.md",
+          "question_sha256": "cb875e50b904d07324766754e102b37763f76ab9b8a6a1ee9f78e54386a6e8c0",
+          "config_sha256": "8a6cad0146e5f144e6708665387f3a5291ef675868133407761d7dc5c54a8d2f"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F036/IL2/public/question.md",
+          "question_sha256": "c5fddba603f8c73944d4cfdda4677dc0c6d29b67bfc6f5cf323762b3b5926368",
+          "config_sha256": "8a6cad0146e5f144e6708665387f3a5291ef675868133407761d7dc5c54a8d2f"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F036/IL3/public/question.md",
+          "question_sha256": "c5fddba603f8c73944d4cfdda4677dc0c6d29b67bfc6f5cf323762b3b5926368",
+          "config_sha256": "8a6cad0146e5f144e6708665387f3a5291ef675868133407761d7dc5c54a8d2f"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "dns_failure_attribution",
+          "status": "supported",
+          "required_groups": [
+            "dns_config",
+            "shipping",
+            "checkout"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "checkout_propagation",
+          "status": "supported",
+          "required_groups": [
+            "shipping",
+            "checkout",
+            "placeorder"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "all_instances_same_remediation",
+          "status": "not_established",
+          "required_groups": [
+            "instances"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "failed_order_final_state",
+          "status": "not_established",
+          "required_groups": [
+            "business"
+          ],
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "family_id": "F037",
+      "primary_slice": "L3-S6",
+      "previous_primary_slice": "L3-S6",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "用失败与成功对照识别 APM 之前的业务失败",
+      "classification_reason": "APM 健康与应用前失败冲突，需转向业务入口及连接观测核验可用性。",
+      "boundary_note": "配置因果归因与处置关闭属附带内容，不改变主可用性判断。",
+      "mixed_subquestions": [
+        "timeout_mismatch_attribution",
+        "remediation_closeout"
+      ],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S10",
+        "S09"
+      ],
+      "question_text": "请复核 rca-benchmark 中 order-routing 在 2026年08月06日 22:48:07 至 22:51:58（北京时间）期间的异常。判断 APM 健康是否足以排除服务端问题，明确配置不匹配影响的调用范围，并说明何时可以结束处置。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F037/IL1/public/question.md",
+          "question_sha256": "faec733b534a0341a4b8642b7df55bfb2bb6ba187d4e9b18527f2429d30eeccc",
+          "config_sha256": "5cce73fd1105d6e999bd99b60c92c16395e0aa168529f7ac048dac1a768a956f"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F037/IL2/public/question.md",
+          "question_sha256": "dc47066b125013ab7e1af23e26bf9b7811aba577549fe19490bb7732b4ef4a6f",
+          "config_sha256": "5cce73fd1105d6e999bd99b60c92c16395e0aa168529f7ac048dac1a768a956f"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F037/IL3/public/question.md",
+          "question_sha256": "dc47066b125013ab7e1af23e26bf9b7811aba577549fe19490bb7732b4ef4a6f",
+          "config_sha256": "5cce73fd1105d6e999bd99b60c92c16395e0aa168529f7ac048dac1a768a956f"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "timeout_mismatch_attribution",
+          "status": "supported",
+          "required_groups": [
+            "config",
+            "mesh",
+            "request_id"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "apm_health_excludes_failure",
+          "status": "refuted",
+          "required_groups": [
+            "mesh",
+            "application",
+            "request_id"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "affected_scope_pre_application",
+          "status": "supported",
+          "required_groups": [
+            "mesh",
+            "request_id",
+            "caller"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "remediation_closeout",
+          "status": "not_established",
+          "required_groups": [
+            "recovery"
+          ],
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "family_id": "F038",
+      "primary_slice": "L3-S1",
+      "previous_primary_slice": "L3-S1",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "区分资源、页面与用户口径，避免跨层相加",
+      "classification_reason": "资源、页面和用户是不同单位，需要避免跨层相加形成虚假的业务规模。",
+      "boundary_note": "页面影响范围是辅助能力，主输出是计数解释和数量边界。",
+      "mixed_subquestions": [],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S03",
+        "S02"
+      ],
+      "question_text": "请复核 rca-benchmark 中 storefront-web 在 2026年08月10日 19:46:25 至 19:50:00（北京时间）期间的异常。判断影响是页面级还是整站级，说明 RUM 多层观测能否直接相加为业务规模，并给出数量边界。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F038/IL1/public/question.md",
+          "question_sha256": "cb508d74ba35b9407acf4e850b43c29cb3489de4757eb70eea9db841e1e09d5b",
+          "config_sha256": "bf101426417678d8ca0b4c97f0bf72a17c9fb431154cf3817258fd0a7f794a94"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F038/IL2/public/question.md",
+          "question_sha256": "eef670af36ccf8292d8511a6f115ba46cebd627a5430526c8f56ff9015053d5e",
+          "config_sha256": "bf101426417678d8ca0b4c97f0bf72a17c9fb431154cf3817258fd0a7f794a94"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F038/IL3/public/question.md",
+          "question_sha256": "eef670af36ccf8292d8511a6f115ba46cebd627a5430526c8f56ff9015053d5e",
+          "config_sha256": "bf101426417678d8ca0b4c97f0bf72a17c9fb431154cf3817258fd0a7f794a94"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "page_level_scope",
+          "status": "supported",
+          "required_groups": [
+            "cart_resources",
+            "home_resources",
+            "cart_view",
+            "home_view"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "global_network_failure",
+          "status": "refuted",
+          "required_groups": [
+            "home_resources",
+            "third_party",
+            "api"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "cross_layer_counts_additive",
+          "status": "refuted",
+          "required_groups": [
+            "cart_resources",
+            "cart_view",
+            "identity"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "unique_affected_business_population",
+          "status": "not_established",
+          "required_groups": [
+            "identity"
+          ],
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "family_id": "F039",
+      "primary_slice": "L3-S5",
+      "previous_primary_slice": "L3-S5",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "由消费组与线程池归属识别多 topic 的共享瓶颈",
+      "classification_reason": "依据消费组与线程池绑定协调多 topic 证据，判断能否将它们当作独立异常。",
+      "boundary_note": "共享消费原因是原题归因项；标签仅描述跨实体证据协调，不认证完整机制。",
+      "mixed_subquestions": [
+        "shared_consumer_cause"
+      ],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S07",
+        "S03"
+      ],
+      "question_text": "请复核 rca-benchmark 中 rmq-cn-h2u4rvtql03 在 2026年07月15日 16:35:30 至 16:37:30（北京时间）期间的异常。区分共享消费资源导致的多 topic 堆积与独立故障，说明 lag 记录能确认和不能确认的业务对象范围。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F039/IL1/public/question.md",
+          "question_sha256": "f7b9c32fcc3c769e5c260abe2327b80172ac14457ebaffc8651ed61907194045",
+          "config_sha256": "eb9143b5950d829886979f3bf05727e8c439270e4a3ca59c4300d704c975657b"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F039/IL2/public/question.md",
+          "question_sha256": "02ab82cfe09633bc34eb846c92d3d5ed8a5dbff9d816a69e6e5991158b09853b",
+          "config_sha256": "eb9143b5950d829886979f3bf05727e8c439270e4a3ca59c4300d704c975657b"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F039/IL3/public/question.md",
+          "question_sha256": "02ab82cfe09633bc34eb846c92d3d5ed8a5dbff9d816a69e6e5991158b09853b",
+          "config_sha256": "eb9143b5950d829886979f3bf05727e8c439270e4a3ca59c4300d704c975657b"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "shared_consumer_cause",
+          "status": "supported",
+          "required_groups": [
+            "consumer_group",
+            "lag",
+            "rates",
+            "apm"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "three_independent_topic_failures",
+          "status": "refuted",
+          "required_groups": [
+            "consumer_group",
+            "lag"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "lag_equals_unique_business_objects",
+          "status": "not_established",
+          "required_groups": [
+            "identity"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "lag_recovery_proves_business_completion",
+          "status": "not_established",
+          "required_groups": [
+            "recovery",
+            "identity"
+          ],
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "family_id": "F040",
+      "primary_slice": "L3-S5",
+      "previous_primary_slice": "L3-S5",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "分离商品慢路径和另一服务线程池拒绝的解释",
+      "classification_reason": "比较两条路径的观测归属及覆盖，判断单一业务结论是否能解释全部现象。",
+      "boundary_note": "具体卷/线程池机制和入口归因仍是混合项，不由重命名消除。",
+      "mixed_subquestions": [
+        "frontend_slow_path_attribution",
+        "inventory_independent_mechanism",
+        "single_failure_chain"
+      ],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S08",
+        "S09"
+      ],
+      "question_text": "请复核 rca-benchmark 中 frontend::GET /api/products/{productId} 在 2026年07月07日 09:43:00 至 09:45:47（北京时间）期间的异常。区分 product-catalog 文件卷与 inventory 线程池两条链，判断入口慢调用归属，并说明可交付业务结果边界。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F040/IL1/public/question.md",
+          "question_sha256": "40a6c86d293770b882e25c14da2096d12f434a401ab679a328f26d38b8be5889",
+          "config_sha256": "ef23a37bdb773d8778aabe9d2f2b4a33200e52f3aa1c85cae1922cc6175847a8"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F040/IL2/public/question.md",
+          "question_sha256": "96b506fe9800602cdcd6b5bc4b964df0e555eed73a8316756e2a4cfd60d0d094",
+          "config_sha256": "ef23a37bdb773d8778aabe9d2f2b4a33200e52f3aa1c85cae1922cc6175847a8"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F040/IL3/public/question.md",
+          "question_sha256": "96b506fe9800602cdcd6b5bc4b964df0e555eed73a8316756e2a4cfd60d0d094",
+          "config_sha256": "ef23a37bdb773d8778aabe9d2f2b4a33200e52f3aa1c85cae1922cc6175847a8"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "frontend_slow_path_attribution",
+          "status": "supported",
+          "required_groups": [
+            "product_volume",
+            "product_latency",
+            "frontend_trace",
+            "frontend"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "inventory_independent_mechanism",
+          "status": "supported",
+          "required_groups": [
+            "inventory_pool",
+            "inventory_impact"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "single_failure_chain",
+          "status": "refuted",
+          "required_groups": [
+            "frontend_trace",
+            "inventory_pool"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "deliverable_business_result",
+          "status": "not_established",
+          "required_groups": [
+            "business"
+          ],
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "family_id": "F041",
+      "primary_slice": "L3-S7",
+      "previous_primary_slice": "L3-S7",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "判断 Pod 重建事件是否支持连续服务恢复",
+      "classification_reason": "Pod 重建完成不自动证明服务连续性，需要后续窗口与入口表现支持恢复声明。",
+      "boundary_note": "重建事件和失败传播是上下文；遗留业务是否恢复单独保留未知。",
+      "mixed_subquestions": [],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S12",
+        "S14"
+      ],
+      "question_text": "请复核 rca-benchmark 中 frontend::GET 在 2026年05月02日 03:08:30 至 03:13:06（北京时间）期间的异常。确认 Pod 重建与入口失败的衔接，判断重建完成是否足以证明业务连续性，并说明遗留业务边界。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F041/IL1/public/question.md",
+          "question_sha256": "4d3e2906c23ca087210625d4526faf29e5c19d495c284a9430be1fbb0842ac5b",
+          "config_sha256": "40e92864d55bc097f75d2026a5cabc0b9a610ee278765035134da6f48c5e9557"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F041/IL2/public/question.md",
+          "question_sha256": "21ce5f7ab6c8884397118c453e620428226dd27463128cd13a7c18003890ac36",
+          "config_sha256": "40e92864d55bc097f75d2026a5cabc0b9a610ee278765035134da6f48c5e9557"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F041/IL3/public/question.md",
+          "question_sha256": "21ce5f7ab6c8884397118c453e620428226dd27463128cd13a7c18003890ac36",
+          "config_sha256": "40e92864d55bc097f75d2026a5cabc0b9a610ee278765035134da6f48c5e9557"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "pod_restart_event",
+          "status": "supported",
+          "required_groups": [
+            "pod"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "frontend_failure_propagation",
+          "status": "supported",
+          "required_groups": [
+            "pod",
+            "grpc",
+            "alert"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "restart_proves_continuity",
+          "status": "not_established",
+          "required_groups": [
+            "recovery",
+            "continuity"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "legacy_request_recovery",
+          "status": "not_established",
+          "required_groups": [
+            "business"
+          ],
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "family_id": "F042",
+      "primary_slice": "L3-S7",
+      "previous_primary_slice": "L3-S7",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "检查题窗内持续健康与业务信号能否支持恢复声明",
+      "classification_reason": "题面明确问当前窗口是否满足业务恢复条件，主归恢复核验。",
+      "boundary_note": "CrashLoop 机制归因仍保留在原全题评分中，不充当纯恢复得分。",
+      "mixed_subquestions": [
+        "crashloop_attribution"
+      ],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S12",
+        "S10"
+      ],
+      "question_text": "请复核 rca-benchmark 中 checkout::/oteldemo.CheckoutService/PlaceOrder 在 2026年04月28日 11:08:24 至 11:12:26（北京时间）期间的异常。判断当前窗口是否已经满足业务恢复条件，并区分运行恢复与历史订单结果。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F042/IL1/public/question.md",
+          "question_sha256": "bf1a8886105239a6a0b8cad3b4236cef0d2c4aa435c480aaf65069261adeaa38",
+          "config_sha256": "1c94f916821f2b13e940c92bd3f6f1c670c8f9240fe92a4ec6f85394aa7dde6a"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F042/IL2/public/question.md",
+          "question_sha256": "c0cbd855fb97ab5545d4353990cebea4cfa17b4486b118592d3491fb9bf41c0f",
+          "config_sha256": "1c94f916821f2b13e940c92bd3f6f1c670c8f9240fe92a4ec6f85394aa7dde6a"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F042/IL3/public/question.md",
+          "question_sha256": "c0cbd855fb97ab5545d4353990cebea4cfa17b4486b118592d3491fb9bf41c0f",
+          "config_sha256": "1c94f916821f2b13e940c92bd3f6f1c670c8f9240fe92a4ec6f85394aa7dde6a"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "crashloop_attribution",
+          "status": "supported",
+          "required_groups": [
+            "deployment",
+            "pod",
+            "shipping"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "checkout_failure_propagation",
+          "status": "supported",
+          "required_groups": [
+            "shipping",
+            "checkout",
+            "alert"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "question_window_proves_recovery",
+          "status": "refuted",
+          "required_groups": [
+            "pod",
+            "recovery"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "failed_order_final_state",
+          "status": "not_established",
+          "required_groups": [
+            "business"
+          ],
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "family_id": "F043",
+      "primary_slice": "L3-S5",
+      "previous_primary_slice": "L3-S5",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "核对 Pod–Node 与业务绑定，限制共时异常的共享影响推断",
+      "classification_reason": "节点与业务观测并存时，应核对绑定、对照和外推边界，主归跨实体证据协调。",
+      "boundary_note": "节点根因和噪声排除的归因项为混合内容；共时出现不能自动变成因果关系。",
+      "mixed_subquestions": [
+        "node_recommendation_relationship",
+        "dashscope_noise_as_primary_cause"
+      ],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S07",
+        "S08"
+      ],
+      "question_text": "请复核 rca-benchmark 中 frontend::GET /api/recommendations 在 2026年04月12日 04:39:09 至 04:45:03（北京时间）期间的异常。判断节点 CPU 与 recommendation 路径退化的关系，说明是否足以扩大到同节点多个业务，并明确低信号与噪声边界。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F043/IL1/public/question.md",
+          "question_sha256": "42ffc195620afbe88356b820ebf8b023ff0ef070f7c7faa1ac5088d4b39d03a7",
+          "config_sha256": "51aca37f958c8de7f743eb7fe2edd86ad6557ceb512f56ff1166d22e82c885b4"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F043/IL2/public/question.md",
+          "question_sha256": "daf46cd1d1533bcdeea10bbcf5cac279e12190e1b7ed7ac0c22fce0303c70bb7",
+          "config_sha256": "51aca37f958c8de7f743eb7fe2edd86ad6557ceb512f56ff1166d22e82c885b4"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F043/IL3/public/question.md",
+          "question_sha256": "daf46cd1d1533bcdeea10bbcf5cac279e12190e1b7ed7ac0c22fce0303c70bb7",
+          "config_sha256": "51aca37f958c8de7f743eb7fe2edd86ad6557ceb512f56ff1166d22e82c885b4"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "node_recommendation_relationship",
+          "status": "supported",
+          "required_groups": [
+            "node",
+            "pod",
+            "frontend",
+            "alert"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "dashscope_noise_as_primary_cause",
+          "status": "refuted",
+          "required_groups": [
+            "noise",
+            "node",
+            "pod"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "all_colocated_businesses_affected",
+          "status": "not_established",
+          "required_groups": [
+            "scope"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "final_business_outcome",
+          "status": "not_established",
+          "required_groups": [
+            "business"
+          ],
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "family_id": "F044",
+      "primary_slice": "L3-S4",
+      "previous_primary_slice": "L3-S4",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "锁归零后继续比较 SQL、CPU 与业务影响，判断主阶段",
+      "classification_reason": "锁归零后仍有 SQL/CPU 变化，需要继续按阶段比较影响而非沿用最初判断。",
+      "boundary_note": "处置对象和锁机制是混合内容；主能力是证据更新后的阶段判断。",
+      "mixed_subquestions": [
+        "lock_wait_attribution",
+        "remediation_target"
+      ],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S06",
+        "S05"
+      ],
+      "question_text": "请复核 rca-benchmark 中 rm-j6c3l32c730ti37ur 在 2026年09月01日 15:12:04 至 15:26:12（北京时间）期间的异常。区分锁等待、持续慢查询和后续 CPU 压力，判断主要影响阶段与处置对象，并说明业务对象人口边界。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F044/IL1/public/question.md",
+          "question_sha256": "82c26626e7c1968e62fc7951ca9323fab12d1ce9a215f9a7cd1204264beb014d",
+          "config_sha256": "149c5f0bbb4d725bb40eef92c3ac9bf7a5368f7f27f8313f9d1f41d930823456"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F044/IL2/public/question.md",
+          "question_sha256": "496a15ac108161edc5735017ff86bbd0868824ca0655bfac6fbbb1955a007245",
+          "config_sha256": "149c5f0bbb4d725bb40eef92c3ac9bf7a5368f7f27f8313f9d1f41d930823456"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F044/IL3/public/question.md",
+          "question_sha256": "496a15ac108161edc5735017ff86bbd0868824ca0655bfac6fbbb1955a007245",
+          "config_sha256": "149c5f0bbb4d725bb40eef92c3ac9bf7a5368f7f27f8313f9d1f41d930823456"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "lock_wait_attribution",
+          "status": "supported",
+          "required_groups": [
+            "rds",
+            "timing",
+            "impact2"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "slow_sql_persistence",
+          "status": "supported",
+          "required_groups": [
+            "sql",
+            "timing"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "cpu_as_primary_impact",
+          "status": "refuted",
+          "required_groups": [
+            "cpu",
+            "impact2",
+            "impact3"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "affected_business_population",
+          "status": "not_established",
+          "required_groups": [
+            "business"
+          ],
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "family_id": "F045",
+      "primary_slice": "L3-S2",
+      "previous_primary_slice": "L3-S2",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "比较调用两端耗时，将慢段定位到跨集群路径",
+      "classification_reason": "两端耗时对照定位计算或跨集群段，并约束责任及实例范围。",
+      "boundary_note": "范围/路径定位不要求识别网络内部完整根因机制。",
+      "mixed_subquestions": [
+        "main_cluster_currency_responsibility"
+      ],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S09",
+        "S07"
+      ],
+      "question_text": "请复核 rca-benchmark 中 frontend-xc::GET /api/currency 在 2026年07月24日 19:59:38 至 20:06:30（北京时间）期间的异常。定位慢调用发生在计算还是跨集群传输段，给出责任边界、实例范围和业务结果边界。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F045/IL1/public/question.md",
+          "question_sha256": "5267887b6048c396ac231000c2ab2ad13e94fdc372899452c9b64aee98473cab",
+          "config_sha256": "c840f758cf2ecda5111364ca0a090b1d81c74bf6de1fb1b4f8c693a212dc4491"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F045/IL2/public/question.md",
+          "question_sha256": "7b9abab57ff46ca2ddf6c784e59b579618d36dd55688389e52d084db745071fb",
+          "config_sha256": "c840f758cf2ecda5111364ca0a090b1d81c74bf6de1fb1b4f8c693a212dc4491"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F045/IL3/public/question.md",
+          "question_sha256": "7b9abab57ff46ca2ddf6c784e59b579618d36dd55688389e52d084db745071fb",
+          "config_sha256": "c840f758cf2ecda5111364ca0a090b1d81c74bf6de1fb1b4f8c693a212dc4491"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "slow_segment_attribution",
+          "status": "supported",
+          "required_groups": [
+            "routing",
+            "trace",
+            "compute"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "main_cluster_currency_responsibility",
+          "status": "refuted",
+          "required_groups": [
+            "routing",
+            "trace"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "all_instances_affected",
+          "status": "not_established",
+          "required_groups": [
+            "instances"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "final_business_outcome",
+          "status": "not_established",
+          "required_groups": [
+            "business"
+          ],
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "family_id": "F046",
+      "primary_slice": "L3-S3",
+      "previous_primary_slice": "L3-S3",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "依据提交终态和幂等证据判断超时业务能否安全重提",
+      "classification_reason": "调用失败不代表数据库未提交，必须核验终态和幂等前提后才能判断重提依据。",
+      "boundary_note": "安全重提是状态判断的应用；不执行操作或生成完整修复计划。",
+      "mixed_subquestions": [
+        "db_connection_propagation",
+        "frontend_independent_root_cause"
+      ],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S14",
+        "S04"
+      ],
+      "question_text": "请复核 rca-benchmark 中 frontend::POST /api/cart 在 2026年05月21日 06:12:38 至 06:18:04（北京时间）期间的异常。定位超时传播路径，区分调用失败与数据库业务结果，并判断是否有依据安全地再次提交。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F046/IL1/public/question.md",
+          "question_sha256": "17f65c6412a9da3c532ead6122c77a1242f41d20f804564283cb4c840896be76",
+          "config_sha256": "ea744f91d37f985cf54be9a7f3a58b4b7db480de3eee10f7daf555c9d44097c1"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F046/IL2/public/question.md",
+          "question_sha256": "3e5f17b20f61b8d7e693059a377af2da4e629f5df50aa63014fc96219e17aabc",
+          "config_sha256": "ea744f91d37f985cf54be9a7f3a58b4b7db480de3eee10f7daf555c9d44097c1"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F046/IL3/public/question.md",
+          "question_sha256": "3e5f17b20f61b8d7e693059a377af2da4e629f5df50aa63014fc96219e17aabc",
+          "config_sha256": "ea744f91d37f985cf54be9a7f3a58b4b7db480de3eee10f7daf555c9d44097c1"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "db_connection_propagation",
+          "status": "supported",
+          "required_groups": [
+            "trace",
+            "db_connection",
+            "inventory",
+            "cart",
+            "frontend"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "frontend_independent_root_cause",
+          "status": "refuted",
+          "required_groups": [
+            "trace",
+            "cart",
+            "frontend"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "safe_to_resubmit_all",
+          "status": "not_established",
+          "required_groups": [
+            "database",
+            "identity"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "final_business_result",
+          "status": "not_established",
+          "required_groups": [
+            "database",
+            "identity"
+          ],
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "family_id": "F047",
+      "primary_slice": "L3-S3",
+      "previous_primary_slice": "L3-S3",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "区分异步消费遥测、受影响对象与最终业务完成",
+      "classification_reason": "消费遥测不能替代业务对象处理完成，需要解释进展及终态的证据边界。",
+      "boundary_note": "异常传播是辅助内容，不用处理记录直接认定完成。",
+      "mixed_subquestions": [
+        "frontend_propagation_observed"
+      ],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S04",
+        "S03"
+      ],
+      "question_text": "请复核 rca-benchmark 中 frontend::GET /nacos/css/{URL_RESOURCE} 在 2026年04月20日 16:55:49 至 17:05:10（北京时间）期间的异常。量化异步消息处理退化及其传播，并判断消息处理记录是否足以证明业务结果已经落定。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F047/IL1/public/question.md",
+          "question_sha256": "25745a1e8fce790bdd18002311a3d546f7a9aba8a63192eb78a6d133a15f9700",
+          "config_sha256": "3ca8afc7ba113fcf11f964a5e18aa7de9336356f34ba31a1746b59bf3e7a1cf3"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F047/IL2/public/question.md",
+          "question_sha256": "4a8622d56a823f852312319d10ecfc8068fdea70366109cb5dfd15b6baabd5ed",
+          "config_sha256": "3ca8afc7ba113fcf11f964a5e18aa7de9336356f34ba31a1746b59bf3e7a1cf3"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F047/IL3/public/question.md",
+          "question_sha256": "4a8622d56a823f852312319d10ecfc8068fdea70366109cb5dfd15b6baabd5ed",
+          "config_sha256": "3ca8afc7ba113fcf11f964a5e18aa7de9336356f34ba31a1746b59bf3e7a1cf3"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "async_processing_degradation",
+          "status": "supported",
+          "required_groups": [
+            "flag",
+            "consumer",
+            "throughput"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "frontend_propagation_observed",
+          "status": "supported",
+          "required_groups": [
+            "throughput",
+            "frontend"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "unique_affected_object_count",
+          "status": "not_established",
+          "required_groups": [
+            "identity"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "business_result_settled",
+          "status": "not_established",
+          "required_groups": [
+            "completion",
+            "identity"
+          ],
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "family_id": "F048",
+      "primary_slice": "L3-S3",
+      "previous_primary_slice": "L3-S3",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "区分共享资源运行恢复与历史业务状态清理",
+      "classification_reason": "运行恢复不能替代存量状态清理，关键是哪些业务状态和对象范围能被确认。",
+      "boundary_note": "Redis 命令归因和资源影响面为混合项；主标签限于业务状态判断。",
+      "mixed_subquestions": [
+        "redis_slow_command_attribution",
+        "shared_resource_fanout"
+      ],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S14",
+        "S07"
+      ],
+      "question_text": "请复核 rca-benchmark 中 frontend::DELETE /api/cart 在 2026年08月10日 06:19:49 至 06:25:04（北京时间）期间的异常。判断共享 Redis 阻塞的影响面，区分运行恢复与需要清理或恢复的业务状态，并给出对象范围边界。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F048/IL1/public/question.md",
+          "question_sha256": "383ef53608129a51171f3830b893ff829c025e2f44304a3021f318cbb9565d05",
+          "config_sha256": "2fe8904c1f060a1d0e12a4d009b4afa5637a1a2dd6c515855fe530c097a30211"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F048/IL2/public/question.md",
+          "question_sha256": "282ac248f17561ae6c49a7cae781843f0a36e70e707e6f7ad647555419b9b165",
+          "config_sha256": "2fe8904c1f060a1d0e12a4d009b4afa5637a1a2dd6c515855fe530c097a30211"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F048/IL3/public/question.md",
+          "question_sha256": "282ac248f17561ae6c49a7cae781843f0a36e70e707e6f7ad647555419b9b165",
+          "config_sha256": "2fe8904c1f060a1d0e12a4d009b4afa5637a1a2dd6c515855fe530c097a30211"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "redis_slow_command_attribution",
+          "status": "supported",
+          "required_groups": [
+            "redis",
+            "promotion"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "shared_resource_fanout",
+          "status": "supported",
+          "required_groups": [
+            "redis",
+            "cart",
+            "profile",
+            "wishlist"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "runtime_recovery_proves_state_cleanup",
+          "status": "not_established",
+          "required_groups": [
+            "business"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "cleanup_object_population",
+          "status": "not_established",
+          "required_groups": [
+            "business"
+          ],
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "family_id": "F049",
+      "primary_slice": "L3-S5",
+      "previous_primary_slice": null,
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "Cross-check producer output, validation constraints, and reconciler observations to resolve conflicting evidence while bounding unsupported population and repair claims.",
+      "classification_reason": "The required source judgment cross-checks producer amount=999999 and HTTP200 against validation 0<amount<=100000 and reconciler failures. This distinguishes corrupt producer output from a valid downstream rejection. Two further scored claims require withholding unsupported affected-object counts and historical repair scope.",
+      "boundary_note": "Mixed repair-target wording remains in the original question. Classification records its principal evidence-reconciliation operation, not a claim that all scored subquestions isolate this capability. No recovery intervention or post-intervention evidence is present.",
+      "mixed_subquestions": [
+        "corruption_source",
+        "weaken_reconciler_validation"
+      ],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S13",
+        "S08"
+      ],
+      "question_text": "请复核 rca-benchmark 中 settlement-reconciler 在 2026年08月05日 23:04:39 至 23:08:18（北京时间）期间的金额异常。判断应修改数据生产方还是对账校验方，并说明损坏业务对象与修复范围边界。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F049/IL1/public/question.md",
+          "question_sha256": "44dad421e5d9e3d40dc3db30aaaca84bdeeb9a9cc5d13a3f81c7aac5b7d18b11",
+          "config_sha256": "8b4cf7dd78614eab906d3d6ba46c9fd562b6409acfed8bb4678fd42fe5e61c20"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F049/IL2/public/question.md",
+          "question_sha256": "53238806229fcc84ba444c86229bc881e2a99deca51dde6856fbed832e4427ee",
+          "config_sha256": "8b4cf7dd78614eab906d3d6ba46c9fd562b6409acfed8bb4678fd42fe5e61c20"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F049/IL3/public/question.md",
+          "question_sha256": "53238806229fcc84ba444c86229bc881e2a99deca51dde6856fbed832e4427ee",
+          "config_sha256": "8b4cf7dd78614eab906d3d6ba46c9fd562b6409acfed8bb4678fd42fe5e61c20"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "corruption_source",
+          "status": "supported",
+          "required_groups": [
+            "producer",
+            "validation",
+            "reconciler"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "weaken_reconciler_validation",
+          "status": "refuted",
+          "required_groups": [
+            "producer",
+            "validation"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "corrupted_object_population",
+          "status": "not_established",
+          "required_groups": [
+            "identity"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "historical_repair_scope",
+          "status": "not_established",
+          "required_groups": [
+            "repair",
+            "identity"
+          ],
+          "weight": 15
+        }
+      ]
+    },
+    {
+      "family_id": "F050",
+      "primary_slice": "L3-S2",
+      "previous_primary_slice": "L3-S2",
+      "assignment_status": "assigned",
+      "assignment_basis": "Existing family business question (IL2/IL3) and unchanged claim contract; one family label inherited by all nine configurations.",
+      "primary_l3_ability": "将句柄耗尽绑定到受影响操作并约束全业务外推",
+      "classification_reason": "句柄受限路径不能直接外推所有业务，主问题是可确认的受影响操作范围。",
+      "boundary_note": "句柄根因和扩容策略为混合内容，不将完整总分解释成纯影响范围能力分。",
+      "mixed_subquestions": [
+        "fd_exhaustion_attribution",
+        "cpu_memory_scaling_sufficient"
+      ],
+      "score_interpretation": "Original whole-task score; not a newly isolated L3 subscore.",
+      "previous_fine_grained_tags": [
+        "S02",
+        "S13"
+      ],
+      "question_text": "请复核 rca-benchmark 中 checkout 在 2026年06月18日 09:50:59 至 09:55:31（北京时间）期间的异常。判断句柄耗尽阻断的具体业务路径、是否可扩大为全部业务不可用，并说明恢复后历史失败业务边界。\n",
+      "source_files": {
+        "IL1": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F050/IL1/public/question.md",
+          "question_sha256": "2851ea1737e2257c3da92a99f2fb8d1136f5473b01a0ed624460671615be6843",
+          "config_sha256": "8aeb1f19e64bc04aea91e2784f750a2749770d9c425c6fd57080bc533b6bbdbb"
+        },
+        "IL2": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F050/IL2/public/question.md",
+          "question_sha256": "1842943c631f8f7044a7f5e04c54e5006a617a49f9afa0f7598b42642b4d0e5d",
+          "config_sha256": "8aeb1f19e64bc04aea91e2784f750a2749770d9c425c6fd57080bc533b6bbdbb"
+        },
+        "IL3": {
+          "question_path": "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F050/IL3/public/question.md",
+          "question_sha256": "1842943c631f8f7044a7f5e04c54e5006a617a49f9afa0f7598b42642b4d0e5d",
+          "config_sha256": "8aeb1f19e64bc04aea91e2784f750a2749770d9c425c6fd57080bc533b6bbdbb"
+        }
+      },
+      "claim_contract": [
+        {
+          "id": "fd_exhaustion_attribution",
+          "status": "supported",
+          "required_groups": [
+            "fd",
+            "error",
+            "placeorder",
+            "resources"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "cpu_memory_scaling_sufficient",
+          "status": "refuted",
+          "required_groups": [
+            "fd",
+            "resources"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "all_checkout_business_blocked",
+          "status": "not_established",
+          "required_groups": [
+            "scope"
+          ],
+          "weight": 15
+        },
+        {
+          "id": "historical_failed_order_state",
+          "status": "not_established",
+          "required_groups": [
+            "business"
+          ],
+          "weight": 15
+        }
+      ]
+    }
+  ],
+  "naming_changes": [
+    {
+      "slice_id": "L3-S1",
+      "old_name": "Resolve Business Populations",
+      "new_name": "Determine Affected Business Populations"
+    },
+    {
+      "slice_id": "L3-S2",
+      "old_name": "Localize Business Impact",
+      "new_name": "Delimit Business Impact"
+    },
+    {
+      "slice_id": "L3-S3",
+      "old_name": "Reconstruct Business State",
+      "new_name": "Reconcile Business Progress and Outcomes"
+    },
+    {
+      "slice_id": "L3-S4",
+      "old_name": "Revise Explanations Across Phases",
+      "new_name": "Revise Judgments Across Incident Phases"
+    },
+    {
+      "slice_id": "L3-S5",
+      "old_name": "Resolve Cross-Entity Relationships",
+      "new_name": "Reconcile Evidence Across Entities"
+    },
+    {
+      "slice_id": "L3-S6",
+      "old_name": "Verify Business Availability",
+      "new_name": "Verify Business Availability"
+    },
+    {
+      "slice_id": "L3-S7",
+      "old_name": "Assess Remediation and Recovery",
+      "new_name": "Verify Business Recovery"
+    }
+  ],
+  "sources": {
+    "/workspace/Desktop/ai4edu/experiments/l3-evaluation-slices-v4/classification.json": "757bfcc97f24bee8669bc95847da7e14396cc1ae8f1d95a5887fddd2421e3038",
+    "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F049/IL2/public/question.md": "53238806229fcc84ba444c86229bc881e2a99deca51dde6856fbed832e4427ee",
+    "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F049/IL2/private/case-config.json": "8b4cf7dd78614eab906d3d6ba46c9fd562b6409acfed8bb4678fd42fe5e61c20",
+    "/workspace/Desktop/ai4edu/experiments/l3-information-level-expansion-150-v1/graph150-v1/F049/IL2/private/bounded-gt.json": "40b4f51ac498fda3621a9e0539332bdfb37e561d1c8887f0d45b54558120d1c0"
+  },
+  "revision_note": "User authorized final assignment of F049 and redrawing; source v4 is preserved. No changes to cases, score rules, score values, or overall task means.",
+  "source_v4_changes": [
+    {
+      "family_id": "F008",
+      "old_slice": "L3-S6",
+      "new_slice": "L3-S7",
+      "reason": "题面明确问处置是否生效及能否结束处置；锁信号变化后仍需核验业务响应，主归恢复核验。"
+    },
+    {
+      "family_id": "F032",
+      "old_slice": "L3-S7",
+      "new_slice": "L3-S2",
+      "reason": "题面首先要求判断版本变化是否影响全部接口，恢复策略依赖接口范围；主归 S2 更准确。"
+    },
+    {
+      "family_id": "F049",
+      "old_slice": "L3-S7",
+      "new_slice": null,
+      "reason": "题面核心要求选择修数据生产方还是校验方，没有已执行处置后的恢复核验目标。"
+    }
+  ],
+  "changes": [
+    {
+      "family_id": "F049",
+      "old_slice": null,
+      "new_slice": "L3-S5",
+      "reason": "The required source judgment cross-checks producer amount=999999 and HTTP200 against validation 0<amount<=100000 and reconciler failures. This distinguishes corrupt producer output from a valid downstream rejection. Two further scored claims require withholding unsupported affected-object counts and historical repair scope.",
+      "authorization": "User requested final classification of F049 and redrawing in this conversation."
+    }
+  ],
+  "source_v4_review_checks": {
+    "questions_read": 50,
+    "claim_contracts_read": 50,
+    "all_review_rationales_present": true,
+    "all_boundaries_present": true,
+    "S5_reviewed_family_ids": [
+      "F013",
+      "F022",
+      "F028",
+      "F029",
+      "F039",
+      "F040",
+      "F043"
+    ],
+    "S7_reviewed_family_ids": [
+      "F004",
+      "F008",
+      "F016",
+      "F027",
+      "F032",
+      "F041",
+      "F042",
+      "F049"
+    ]
+  },
+  "current_revision_checks": {
+    "F049_question_contract_and_bounded_gt_read": true,
+    "F049_assigned_to": "L3-S5",
+    "all_50_family_assignments_complete": true,
+    "independent_verification": "CONFIRMED; source documents and original/current 15444 score rows compared"
+  }
+}

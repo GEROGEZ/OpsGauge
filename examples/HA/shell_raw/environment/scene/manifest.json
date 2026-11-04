@@ -1,0 +1,31 @@
+{
+  "bundle_id": "bundle-a901bfe7465a08a8acdc",
+  "capture_time_range": {
+    "end": "2026-08-03T22:37:16+08:00",
+    "start": "2026-08-03T22:13:46+08:00"
+  },
+  "entity_count": 10,
+  "files": {
+    "entities": "entities.jsonl",
+    "telemetry": {
+      "event": "telemetry/event.jsonl",
+      "log": "telemetry/log.jsonl",
+      "metric": "telemetry/metric.jsonl",
+      "topology": "telemetry/topology.jsonl"
+    }
+  },
+  "observation_profile": "retained_observations_with_provenance",
+  "record_counts": {
+    "event": 2,
+    "log": 1,
+    "metric": 23,
+    "topology": 5
+  },
+  "region_id": "cn-hongkong",
+  "schema_version": "shell_scene_snapshot_v1",
+  "task_query_time_range": {
+    "end": "2026-08-03T22:37:16+08:00",
+    "start": "2026-08-03T22:13:46+08:00"
+  },
+  "workspace": "rca-benchmark"
+}

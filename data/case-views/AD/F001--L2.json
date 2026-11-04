@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F001--L2",
+  "task": "AD",
+  "source_case_id": "F001",
+  "family_id": "F001",
+  "bundle_id": null,
+  "source_level": "IL2",
+  "level": 2,
+  "slice": "L3-S1",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F001--L2--shell_raw",
+      "instruction": "请分析 rca-benchmark 中 pricing 在 2026 年 8 月 26 日 15:24—15:26（北京时间）期间发起的业务请求：响应变慢是否集中在具有某种内容特征的请求上，受影响的范围有多大？请给出可核查的依据，对无法确认的部分保留判断。\n\n已知分析入口：业务请求对应 pricing 的 SERVER span，操作名为 `POST /api/pricing/calculate`；可用于观察请求内容的线索保留在相关缓存调用的 `db.statement` 字段中。请自行判断如何建立请求与这些线索的对应关系，以及哪些观测支持你的结论。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n可使用 /scene/SCOPE-MAP.json 获取中性的调查范围信息；其中不包含因果边、根因或正确判断。\n",
+      "original_instruction_sha256": "4f761772cfa0c5692ee61f7224559f9c8268a4c7127dc36d18db2ad9b5c45b61",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "7079ac958150abc61fba769156d8a78b30829695e56d463e71c2420481ccd18d"
+      },
+      "instruction_sha256": "4f761772cfa0c5692ee61f7224559f9c8268a4c7127dc36d18db2ad9b5c45b61"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F001--L2--umodel_semantic",
+      "instruction": "请分析 rca-benchmark 中 pricing 在 2026 年 8 月 26 日 15:24—15:26（北京时间）期间发起的业务请求：响应变慢是否集中在具有某种内容特征的请求上，受影响的范围有多大？请给出可核查的依据，对无法确认的部分保留判断。\n\n已知分析入口：业务请求对应 pricing 的 SERVER span，操作名为 `POST /api/pricing/calculate`；可用于观察请求内容的线索保留在相关缓存调用的 `db.statement` 字段中。请自行判断如何建立请求与这些线索的对应关系，以及哪些观测支持你的结论。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`. Public investigation guidance is available in `/scene/SCOPE-MAP.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "9e95c7bcb009431abde929d23e1b6569d03d6d48d0594625618aa99ce8f9b952",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "7079ac958150abc61fba769156d8a78b30829695e56d463e71c2420481ccd18d"
+      },
+      "instruction_sha256": "9e95c7bcb009431abde929d23e1b6569d03d6d48d0594625618aa99ce8f9b952"
+    },
+    "native_raw": {
+      "task_id": "AD--F001--L2--native_raw",
+      "instruction": "请分析 rca-benchmark 中 pricing 在 2026 年 8 月 26 日 15:24—15:26（北京时间）期间发起的业务请求：响应变慢是否集中在具有某种内容特征的请求上，受影响的范围有多大？请给出可核查的依据，对无法确认的部分保留判断。\n\n已知分析入口：业务请求对应 pricing 的 SERVER span，操作名为 `POST /api/pricing/calculate`；可用于观察请求内容的线索保留在相关缓存调用的 `db.statement` 字段中。请自行判断如何建立请求与这些线索的对应关系，以及哪些观测支持你的结论。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method. Public investigation guidance is available in `/scene/SCOPE-MAP.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "09df80c3c7a019276bfa670ae02d506101f56e91d144e75e448cead84362725a",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "7079ac958150abc61fba769156d8a78b30829695e56d463e71c2420481ccd18d"
+      },
+      "instruction_sha256": "09df80c3c7a019276bfa670ae02d506101f56e91d144e75e448cead84362725a"
+    }
+  },
+  "analysis_cluster_id": "F001"
+}

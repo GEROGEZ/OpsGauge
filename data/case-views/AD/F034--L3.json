@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F034--L3",
+  "task": "AD",
+  "source_case_id": "F034",
+  "family_id": "F034",
+  "bundle_id": null,
+  "source_level": "IL1",
+  "level": 3,
+  "slice": "L3-S1",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F034--L3--shell_raw",
+      "instruction": "请调查 inventory::/* 在 2026-03-27T16:32:20.924948+08:00 至 2026-03-27T16:36:01+08:00 期间的业务异常。目标：复核受影响业务量，说明重复尝试是否改变了受影响对象的范围，以及实际可以确认的数量。 请给出可核查证据，并明确无法确认的部分。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n",
+      "original_instruction_sha256": "e5a3070daa4cc71b49d1214465354d499473e6f7a7cad4f23823ac1a9b44b675",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "978f49bdf07f92562735d0f09ae296cdb9d29d769c009914cbc012526590c9b0"
+      },
+      "instruction_sha256": "e5a3070daa4cc71b49d1214465354d499473e6f7a7cad4f23823ac1a9b44b675"
+    },
+    "native_raw": {
+      "task_id": "AD--F034--L3--native_raw",
+      "instruction": "请调查 inventory::/* 在 2026-03-27T16:32:20.924948+08:00 至 2026-03-27T16:36:01+08:00 期间的业务异常。目标：复核受影响业务量，说明重复尝试是否改变了受影响对象的范围，以及实际可以确认的数量。 请给出可核查证据，并明确无法确认的部分。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "565d7e908e225bfdc622d9d692d75433f2e407a80c6c4d2891e475431bb5c14b",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "978f49bdf07f92562735d0f09ae296cdb9d29d769c009914cbc012526590c9b0"
+      },
+      "instruction_sha256": "565d7e908e225bfdc622d9d692d75433f2e407a80c6c4d2891e475431bb5c14b"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F034--L3--umodel_semantic",
+      "instruction": "请调查 inventory::/* 在 2026-03-27T16:32:20.924948+08:00 至 2026-03-27T16:36:01+08:00 期间的业务异常。目标：复核受影响业务量，说明重复尝试是否改变了受影响对象的范围，以及实际可以确认的数量。 请给出可核查证据，并明确无法确认的部分。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "c89f73fad4cb1a9905a8aa770c022a48dfdbef30d8f5546dfdc2454951527d5e",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "978f49bdf07f92562735d0f09ae296cdb9d29d769c009914cbc012526590c9b0"
+      },
+      "instruction_sha256": "c89f73fad4cb1a9905a8aa770c022a48dfdbef30d8f5546dfdc2454951527d5e"
+    }
+  },
+  "analysis_cluster_id": "F034"
+}

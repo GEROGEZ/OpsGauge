@@ -1,0 +1,10 @@
+{
+  "level": "IL1",
+  "symptom_anchor": {
+    "scope": "frontend::GET /api/products/{productId}",
+    "start": "2026-04-16T09:03:54.479068+08:00",
+    "end": "2026-04-16T09:09:10+08:00"
+  },
+  "business_goal": "判断异常是局部业务受阻还是整体容量不足，给出能够确认的影响范围与处置依据。",
+  "disclosed_reasoning_structure": "none"
+}

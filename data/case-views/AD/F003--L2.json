@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F003--L2",
+  "task": "AD",
+  "source_case_id": "F003",
+  "family_id": "F003",
+  "bundle_id": null,
+  "source_level": "IL2",
+  "level": 2,
+  "slice": "L3-S1",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F003--L2--shell_raw",
+      "instruction": "请分析这份快照中 promotion 在 2026 年 6 月 16 日 21:37—21:39（北京时间）期间的请求处理情况：异常影响了多大范围，时间主要消耗在哪里，不同参与方的处理结果应如何理解？请给出可核查的依据，对无法确认的部分保留判断。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n可使用 /scene/SCOPE-MAP.json 获取中性的调查范围信息；其中不包含因果边、根因或正确判断。\n",
+      "original_instruction_sha256": "d1e2b2d0e91bb80a08989593bfa6c1cd8fc50813850b4cf1bb054df0937e91a1",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "8dccd71850ed2a65902ad892ab96c93cdb1a5c118d853c02faf49b9a9234a56d"
+      },
+      "instruction_sha256": "d1e2b2d0e91bb80a08989593bfa6c1cd8fc50813850b4cf1bb054df0937e91a1"
+    },
+    "native_raw": {
+      "task_id": "AD--F003--L2--native_raw",
+      "instruction": "请分析这份快照中 promotion 在 2026 年 6 月 16 日 21:37—21:39（北京时间）期间的请求处理情况：异常影响了多大范围，时间主要消耗在哪里，不同参与方的处理结果应如何理解？请给出可核查的依据，对无法确认的部分保留判断。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method. Public investigation guidance is available in `/scene/SCOPE-MAP.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "81bbebc87e2ca05366508e55e51011d4fc533d02988f01d2addd3d39173af71a",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "8dccd71850ed2a65902ad892ab96c93cdb1a5c118d853c02faf49b9a9234a56d"
+      },
+      "instruction_sha256": "81bbebc87e2ca05366508e55e51011d4fc533d02988f01d2addd3d39173af71a"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F003--L2--umodel_semantic",
+      "instruction": "请分析这份快照中 promotion 在 2026 年 6 月 16 日 21:37—21:39（北京时间）期间的请求处理情况：异常影响了多大范围，时间主要消耗在哪里，不同参与方的处理结果应如何理解？请给出可核查的依据，对无法确认的部分保留判断。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`. Public investigation guidance is available in `/scene/SCOPE-MAP.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "e0e70bfec2b8fb25774dda92a111de1afeaaea8644263b282cbf5d847866bba9",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "8dccd71850ed2a65902ad892ab96c93cdb1a5c118d853c02faf49b9a9234a56d"
+      },
+      "instruction_sha256": "e0e70bfec2b8fb25774dda92a111de1afeaaea8644263b282cbf5d847866bba9"
+    }
+  },
+  "analysis_cluster_id": "F003"
+}

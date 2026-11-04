@@ -1,0 +1,5 @@
+# Inspected experiment runner host (Python 3.14), separate from replay-container dependencies.
+harbor==0.21.0
+pydantic==2.13.4
+httpx==0.28.1
+litellm==1.97.0

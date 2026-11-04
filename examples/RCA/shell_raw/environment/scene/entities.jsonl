@@ -1,0 +1,7 @@
+{"attributes": {}, "entity_domain": "acs", "entity_id": "a53f46d233fdcbac73b4bff635ad32a7", "entity_name": "r-j6cw5t7lfc4y2blu5u", "entity_type": "acs.kvstore.instance"}
+{"attributes": {}, "entity_domain": "acs", "entity_id": "e308e29bc8a0ff0c0b0e37347752a193", "entity_name": "e308e29bc8a0ff0c0b0e37347752a193", "entity_type": "acs.vpc.vswitch"}
+{"attributes": {}, "entity_domain": "apm", "entity_id": "dfa794a545190351f003e1a1fa390e62", "entity_name": "dfa794a545190351f003e1a1fa390e62", "entity_type": "apm.external.nosql"}
+{"attributes": {}, "entity_domain": "apm", "entity_id": "8282e7e049abab18645aebf0c256ac5b", "entity_name": "8282e7e049abab18645aebf0c256ac5b", "entity_type": "apm.external.rpc_client"}
+{"attributes": {}, "entity_domain": "apm", "entity_id": "ee07ecf72f9a10eafeb80856e53c6351", "entity_name": "/api/promotion/calculate", "entity_type": "apm.operation"}
+{"attributes": {}, "entity_domain": "apm", "entity_id": "4b0413a7959a9a637df8c78697b2a164", "entity_name": "/api/promotion/calculate", "entity_type": "apm.service"}
+{"attributes": {}, "entity_domain": "k8s", "entity_id": "/api/promotion/calculate", "entity_name": "/api/promotion/calculate", "entity_type": "k8s.deployment"}

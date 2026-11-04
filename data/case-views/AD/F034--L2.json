@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F034--L2",
+  "task": "AD",
+  "source_case_id": "F034",
+  "family_id": "F034",
+  "bundle_id": null,
+  "source_level": "IL2",
+  "level": 2,
+  "slice": "L3-S1",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F034--L2--shell_raw",
+      "instruction": "请复核 rca-benchmark 中 inventory::/* 在 2026年03月27日 16:32:20 至 16:36:01（北京时间）期间的异常。量化可确认的失败请求观测，并判断这些调用记录能否直接换算成唯一受影响业务对象及重试后的最终范围。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n可使用 /scene/SCOPE-MAP.json 获取中性的调查范围信息；其中不包含因果边、根因或正确判断。\n",
+      "original_instruction_sha256": "0f9e67f94a2d27bf042d9dc8eab8a9cf3bc2ad92c39688dd10eebc9ef6dc3fd6",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "978f49bdf07f92562735d0f09ae296cdb9d29d769c009914cbc012526590c9b0"
+      },
+      "instruction_sha256": "0f9e67f94a2d27bf042d9dc8eab8a9cf3bc2ad92c39688dd10eebc9ef6dc3fd6"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F034--L2--umodel_semantic",
+      "instruction": "请复核 rca-benchmark 中 inventory::/* 在 2026年03月27日 16:32:20 至 16:36:01（北京时间）期间的异常。量化可确认的失败请求观测，并判断这些调用记录能否直接换算成唯一受影响业务对象及重试后的最终范围。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`. Public investigation guidance is available in `/scene/SCOPE-MAP.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "38b524603bd753281cef890118218ccbe6d0107462eed74f67a4821101dc93a9",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "978f49bdf07f92562735d0f09ae296cdb9d29d769c009914cbc012526590c9b0"
+      },
+      "instruction_sha256": "38b524603bd753281cef890118218ccbe6d0107462eed74f67a4821101dc93a9"
+    },
+    "native_raw": {
+      "task_id": "AD--F034--L2--native_raw",
+      "instruction": "请复核 rca-benchmark 中 inventory::/* 在 2026年03月27日 16:32:20 至 16:36:01（北京时间）期间的异常。量化可确认的失败请求观测，并判断这些调用记录能否直接换算成唯一受影响业务对象及重试后的最终范围。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method. Public investigation guidance is available in `/scene/SCOPE-MAP.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "2f6594f08e2c5a0775396db32c564d63d5d65073d2392ab561879e3714a24e00",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "978f49bdf07f92562735d0f09ae296cdb9d29d769c009914cbc012526590c9b0"
+      },
+      "instruction_sha256": "2f6594f08e2c5a0775396db32c564d63d5d65073d2392ab561879e3714a24e00"
+    }
+  },
+  "analysis_cluster_id": "F034"
+}

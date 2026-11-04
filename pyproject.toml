@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "opsgauge"
+version = "2026.10.27"
+description = "Task-aligned capability evaluation of AIOps agents"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["duckdb==1.5.6", "PyYAML==6.0.3", "pytz==2026.5"]
+
+[project.scripts]
+opsgauge = "opsgauge.cli:main"
+
+[project.optional-dependencies]
+analysis = ["numpy==2.0.2", "pandas==2.3.3", "matplotlib==3.9.4"]
+agents = ["harbor==0.21.0", "pydantic==2.13.4", "httpx==0.28.1", "litellm==1.97.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,5 @@
+{"entity_id": "entity-d937fbdb5dee4e1ce8b1c163", "entity_name": "frontend product detail", "entity_type": "observed.target", "entity_domain": "task", "attributes": {"derived_from_raw_field": "target"}}
+{"entity_id": "entity-a14567c291bfd3a7a389071a", "entity_name": "frontend::GET /api/products/{productId}", "entity_type": "observed.target", "entity_domain": "task", "attributes": {"derived_from_raw_field": "target"}}
+{"entity_id": "entity-7479036b3a37a6b88d7a2238", "entity_name": "product detail", "entity_type": "observed.target", "entity_domain": "task", "attributes": {"derived_from_raw_field": "target"}}
+{"entity_id": "entity-5eb5b3826713f8cc2dd12b6b", "entity_name": "product-catalog/frontend", "entity_type": "observed.target", "entity_domain": "task", "attributes": {"derived_from_raw_field": "target"}}
+{"entity_id": "entity-278d7179b450282ba2f8c459", "entity_name": "product-catalog::GetProduct", "entity_type": "observed.target", "entity_domain": "task", "attributes": {"derived_from_raw_field": "target"}}

@@ -1,0 +1,41 @@
+services:
+  main:
+    build: ./main
+    depends_on:
+      native-api: {condition: service_healthy}
+    environment: {NATIVE_API_URL: "http://native-api:8080"}
+    networks: [default, query]
+  native-api:
+    image: opsgauge-replay-base:2026.10.27
+    command: ["python","/app/native_replay_server.py"]
+    depends_on:
+      prometheus: {condition: service_healthy}
+    environment:
+      PROMETHEUS_UPSTREAM: "http://prometheus:9090"
+      NATIVE_AUDIT_PATH: "/audit/queries.jsonl"
+    volumes: ["./gateway/replay.duckdb:/scene/replay.duckdb:ro","./gateway/native_replay_server.py:/app/native_replay_server.py:ro","native-audit:/audit"]
+    networks: [query]
+    healthcheck:
+      test: ["CMD","python","-c","import urllib.request;urllib.request.urlopen('http://localhost:8080/health')"]
+      interval: 2s
+      timeout: 3s
+      retries: 90
+  prometheus-init:
+    image: prom/prometheus:v3.10.0
+    user: "0"
+    entrypoint: ["/bin/sh","-ec"]
+    command: ["rm -rf /prometheus/* && promtool tsdb create-blocks-from openmetrics /scene/metrics.openmetrics /prometheus && chown -R 65534:65534 /prometheus"]
+    volumes: ["./metrics.openmetrics:/scene/metrics.openmetrics:ro","prometheus-data:/prometheus"]
+  prometheus:
+    image: prom/prometheus:v3.10.0
+    depends_on: {prometheus-init: {condition: service_completed_successfully}}
+    command: ["--config.file=/etc/prometheus/prometheus.yml","--storage.tsdb.path=/prometheus","--storage.tsdb.retention.time=3650d"]
+    volumes: ["./prometheus.yml:/etc/prometheus/prometheus.yml:ro","prometheus-data:/prometheus"]
+    networks: [query]
+    healthcheck:
+      test: ["CMD","wget","-qO-","http://localhost:9090/-/ready"]
+      interval: 2s
+      timeout: 3s
+      retries: 90
+networks: {query: {internal: true}}
+volumes: {prometheus-data: {}, native-audit: {}}

@@ -1,0 +1,219 @@
+{
+  "schema_version": "rca_answer_v1",
+  "status": "completed",
+  "conclusion": "根因是 /api/promotion/calculate 入口流量突增。请求量在 11:45:19 为 46，11:46:49 升至 396（约 8.6 倍）；11:47:49 开始出现慢请求和错误，11:48:49-11:49:49 延迟升至约 1.6s、错误数达 58、慢请求数达 68，而吞吐降至 80-90。该模式与流量激增引发的服务处理能力饱和一致，并触发 promotion 错误、P99 延迟和超时告警。11:51:49 请求量仍为 394 但延迟降至 0.016s，说明异常随流量/处理能力恢复而恢复，未观察到持续性基础设施故障证据。",
+  "root_causes": [
+    {
+      "rc_id": "rc-promotion-traffic-surge",
+      "fault_id": "F006-trafficSurge",
+      "entity_ids": [
+        "ee07ecf72f9a10eafeb80856e53c6351"
+      ],
+      "evidence_ids": [
+        "metric-request-surge",
+        "metric-latency-peak",
+        "metric-error-peak",
+        "metric-slow-peak",
+        "event-error-alert"
+      ],
+      "conclusion": "/api/promotion/calculate 发生流量突增：request_count 从 46 增至 396，随后平均延迟从约 0.016s 升至约 1.6s，error_count 和 slow_count 同步达到峰值，且 request_count 在故障峰值降至 80-90，形成过载导致的吞吐坍缩与错误放大。"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "metric-request-surge",
+      "modality": "metric",
+      "signal": "request_count",
+      "entity_ids": [
+        "ee07ecf72f9a10eafeb80856e53c6351"
+      ],
+      "record_refs": [
+        "metric-d5f94ed75a33056d12803bde343b745a",
+        "metric-0ff6851c9ae40ceb10e578d4c82d236d"
+      ],
+      "observed_at": "2026-06-21T11:46:49+08:00",
+      "unit": "count",
+      "value": {
+        "baseline_2026_06_21T11_45_19_plus_08_00": 46,
+        "surge_2026_06_21T11_46_49_plus_08_00": 396
+      },
+      "attributes": {
+        "source_stat": "identity",
+        "source": "Prometheus exact label/time query"
+      }
+    },
+    {
+      "evidence_id": "metric-latency-peak",
+      "modality": "metric",
+      "signal": "avg_request_latency_seconds",
+      "entity_ids": [
+        "ee07ecf72f9a10eafeb80856e53c6351"
+      ],
+      "record_refs": [
+        "metric-12a3e700312e02e41ef7ae5559bad915"
+      ],
+      "observed_at": "2026-06-21T11:49:19+08:00",
+      "unit": "s",
+      "value": 1.6045374999999993,
+      "attributes": {
+        "source_stat": "identity",
+        "source": "Prometheus exact label/time query"
+      }
+    },
+    {
+      "evidence_id": "metric-error-peak",
+      "modality": "metric",
+      "signal": "error_count",
+      "entity_ids": [
+        "ee07ecf72f9a10eafeb80856e53c6351"
+      ],
+      "record_refs": [
+        "metric-737d9d2853df62db4452e3f50c21b056"
+      ],
+      "observed_at": "2026-06-21T11:49:19+08:00",
+      "unit": "count",
+      "value": 58,
+      "attributes": {
+        "source_stat": "identity",
+        "source": "Prometheus exact label/time query"
+      }
+    },
+    {
+      "evidence_id": "metric-slow-peak",
+      "modality": "metric",
+      "signal": "slow_count",
+      "entity_ids": [
+        "ee07ecf72f9a10eafeb80856e53c6351"
+      ],
+      "record_refs": [
+        "metric-975c74cf84990ea1e3e6de54d3009c7b"
+      ],
+      "observed_at": "2026-06-21T11:49:19+08:00",
+      "unit": "count",
+      "value": 67,
+      "attributes": {
+        "source_stat": "identity",
+        "source": "Prometheus exact label/time query"
+      }
+    },
+    {
+      "evidence_id": "metric-recovery",
+      "modality": "metric",
+      "signal": "avg_request_latency_seconds",
+      "entity_ids": [
+        "ee07ecf72f9a10eafeb80856e53c6351"
+      ],
+      "record_refs": [
+        "metric-3ebc1c8d38d87b2d6f2dcfb6620fb275",
+        "metric-10ef1e075b2236f64f7ce14a50619156"
+      ],
+      "observed_at": "2026-06-21T11:51:49+08:00",
+      "unit": "s",
+      "value": 0.01634771573604047,
+      "attributes": {
+        "request_count": 394,
+        "source_stat": "identity",
+        "source": "Prometheus exact label/time query"
+      }
+    },
+    {
+      "evidence_id": "event-error-alert",
+      "modality": "event",
+      "signal": "promotion 错误次数告警 (>10 over 1min)",
+      "entity_ids": [
+        "ee07ecf72f9a10eafeb80856e53c6351"
+      ],
+      "record_refs": [
+        "alert-dd9d17a92e085608143aa732b576f005e81bb0447283383913a643a4ea6c86e4"
+      ],
+      "observed_at": "2026-06-21T11:49:23+08:00",
+      "value": 12,
+      "attributes": {
+        "status": "OCCURRED",
+        "severity": "CRITICAL"
+      }
+    },
+    {
+      "evidence_id": "event-latency-alerts",
+      "modality": "event",
+      "signal": "promotion P99 latency and timeout alerts",
+      "entity_ids": [
+        "ee07ecf72f9a10eafeb80856e53c6351"
+      ],
+      "record_refs": [
+        "alert-a40e0d397f223615e93473451cd4e847a2a53aab0c5f2e86bb3e2462cdca4d75",
+        "alert-37a721b6cd39340b2560af43e9ac46600208a043d021163be54ad9e91a58c6ee"
+      ],
+      "observed_at": "2026-06-21T11:50:46+08:00",
+      "value": "OCCURRED",
+      "attributes": {
+        "alerts": [
+          "P99 latency >800ms over 5min",
+          "interface timeout >300ms over 1min"
+        ]
+      }
+    }
+  ],
+  "causal_chain": [
+    {
+      "step": 1,
+      "step_type": "cause",
+      "entity_ids": [
+        "ee07ecf72f9a10eafeb80856e53c6351"
+      ],
+      "evidence_ids": [
+        "metric-request-surge"
+      ],
+      "description": "入口请求量在约 90 秒内从 46 升至 396，形成约 8.6 倍流量突增，超过常规处理水平。"
+    },
+    {
+      "step": 2,
+      "step_type": "propagation",
+      "entity_ids": [
+        "ee07ecf72f9a10eafeb80856e53c6351"
+      ],
+      "evidence_ids": [
+        "metric-request-surge",
+        "metric-latency-peak",
+        "metric-error-peak"
+      ],
+      "description": "高流量导致处理饱和：平均延迟从约 0.016s 升至约 1.6s，处理吞吐从 396 降至 80，说明请求排队或等待处理。"
+    },
+    {
+      "step": 3,
+      "step_type": "propagation",
+      "entity_ids": [
+        "ee07ecf72f9a10eafeb80856e53c6351"
+      ],
+      "evidence_ids": [
+        "metric-error-peak",
+        "metric-slow-peak",
+        "metric-latency-peak"
+      ],
+      "description": "饱和进一步转化为 58 个错误、67 个慢请求和约 1.6 秒平均延迟，接口可用性和响应时间同时劣化。"
+    },
+    {
+      "step": 4,
+      "step_type": "impact",
+      "entity_ids": [
+        "ee07ecf72f9a10eafeb80856e53c6351"
+      ],
+      "evidence_ids": [
+        "event-error-alert",
+        "event-latency-alerts"
+      ],
+      "description": "错误次数超过阈值触发 CRITICAL 告警，随后 P99 延迟和接口超时告警相继发生。"
+    },
+    {
+      "step": 5,
+      "step_type": "conclusion",
+      "entity_ids": [
+        "ee07ecf72f9a10eafeb80856e53c6351"
+      ],
+      "evidence_ids": [
+        "metric-recovery"
+      ],
+      "description": "11:51:49 请求量仍为 394，但平均延迟恢复到 0.016s；结合后续告警恢复，故障窗口与突发流量冲击一致，未见持续性资源或基础设施故障证据。"
+    }
+  ]
+}

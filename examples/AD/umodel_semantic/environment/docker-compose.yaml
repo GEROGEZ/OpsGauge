@@ -1,0 +1,25 @@
+services:
+  main:
+    build: ./main
+    depends_on:
+      umodel-api: {condition: service_healthy}
+    environment:
+      UMODEL_URL: http://umodel-api:8080
+      UMODEL_ENVIRONMENT_ID: info150-f035-snapshot-v1
+      UMODEL_WORKSPACE: rca-benchmark
+      UMODEL_REGION_ID: cn-hongkong
+    networks: [default, query]
+  umodel-api:
+    image: opsgauge-replay-base:2026.10.27
+    command: ["python","/app/umodel_replay_server_v2.py"]
+    volumes: ["./gateway/replay.duckdb:/scene/replay.duckdb:ro","./gateway/umodel_replay_server_v2.py:/app/umodel_replay_server_v2.py:ro"]
+    environment:
+      BUNDLE_ID: info150-f035-snapshot-v1
+      ENVIRONMENT_ID: info150-f035-snapshot-v1
+    networks: [query]
+    healthcheck:
+      test: ["CMD","python","-c","import urllib.request;urllib.request.urlopen('http://localhost:8080/v1/health')"]
+      interval: 2s
+      timeout: 3s
+      retries: 90
+networks: {query: {internal: true}}

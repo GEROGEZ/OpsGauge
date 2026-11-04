@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F007--L3",
+  "task": "AD",
+  "source_case_id": "F007",
+  "family_id": "F007",
+  "bundle_id": null,
+  "source_level": "IL1",
+  "level": 3,
+  "slice": "L3-S3",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F007--L3--shell_raw",
+      "instruction": "请调查 ba01d8d0ae33cc8be07c994cfe5ae69d 在 2026-06-27T01:13:00+08:00 至 2026-06-27T01:15:30+08:00 期间的业务异常。目标：复核消息处理能力与受影响范围，说明各项数量能否合并，以及能够支持到什么程度。 请给出可核查证据，并明确无法确认的部分。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n",
+      "original_instruction_sha256": "f546825143a819167343b3186b5573b4c457adff68f081b4c0b05339e7b32f92",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "6c7d9ac1d911920269ea28b20902bc7e7a6829db0c77eb3508ef4a9a8dca3cdb"
+      },
+      "instruction_sha256": "f546825143a819167343b3186b5573b4c457adff68f081b4c0b05339e7b32f92"
+    },
+    "native_raw": {
+      "task_id": "AD--F007--L3--native_raw",
+      "instruction": "请调查 ba01d8d0ae33cc8be07c994cfe5ae69d 在 2026-06-27T01:13:00+08:00 至 2026-06-27T01:15:30+08:00 期间的业务异常。目标：复核消息处理能力与受影响范围，说明各项数量能否合并，以及能够支持到什么程度。 请给出可核查证据，并明确无法确认的部分。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "46ddf6a13aad3da8217f7fa26242244863b9a9df70947c570fe541d00d3baf39",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "6c7d9ac1d911920269ea28b20902bc7e7a6829db0c77eb3508ef4a9a8dca3cdb"
+      },
+      "instruction_sha256": "46ddf6a13aad3da8217f7fa26242244863b9a9df70947c570fe541d00d3baf39"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F007--L3--umodel_semantic",
+      "instruction": "请调查 ba01d8d0ae33cc8be07c994cfe5ae69d 在 2026-06-27T01:13:00+08:00 至 2026-06-27T01:15:30+08:00 期间的业务异常。目标：复核消息处理能力与受影响范围，说明各项数量能否合并，以及能够支持到什么程度。 请给出可核查证据，并明确无法确认的部分。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "0b7d20932d121c294b23915515f06fa2d0097674b3b157f1ff1f93346de71194",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "6c7d9ac1d911920269ea28b20902bc7e7a6829db0c77eb3508ef4a9a8dca3cdb"
+      },
+      "instruction_sha256": "0b7d20932d121c294b23915515f06fa2d0097674b3b157f1ff1f93346de71194"
+    }
+  },
+  "analysis_cluster_id": "F007"
+}

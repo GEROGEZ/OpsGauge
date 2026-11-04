@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F014--L3",
+  "task": "AD",
+  "source_case_id": "F014",
+  "family_id": "F014",
+  "bundle_id": null,
+  "source_level": "IL1",
+  "level": 3,
+  "slice": "L3-S6",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F014--L3--shell_raw",
+      "instruction": "请调查 /api/v1/inventory 在 2026-09-01T09:55:02+08:00 至 2026-09-01T10:19:30+08:00 期间的业务异常。目标：评估这次处理受阻是否影响了无关业务，并说明是否已有依据拆分处置范围。 请给出可核查证据，并明确无法确认的部分。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n",
+      "original_instruction_sha256": "2efd442d5856982b6a99c718687ea555ef67659268dc781bc9598b8009885740",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "df3a22939fb5d4ca7ee453153ecf5e17cc96ab52193897d8a375951b2fa9aa42"
+      },
+      "instruction_sha256": "2efd442d5856982b6a99c718687ea555ef67659268dc781bc9598b8009885740"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F014--L3--umodel_semantic",
+      "instruction": "请调查 /api/v1/inventory 在 2026-09-01T09:55:02+08:00 至 2026-09-01T10:19:30+08:00 期间的业务异常。目标：评估这次处理受阻是否影响了无关业务，并说明是否已有依据拆分处置范围。 请给出可核查证据，并明确无法确认的部分。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "1b9734547ee38d61be97858679795fa294b5c01463e3d449ab139e24d6bc3752",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "df3a22939fb5d4ca7ee453153ecf5e17cc96ab52193897d8a375951b2fa9aa42"
+      },
+      "instruction_sha256": "1b9734547ee38d61be97858679795fa294b5c01463e3d449ab139e24d6bc3752"
+    },
+    "native_raw": {
+      "task_id": "AD--F014--L3--native_raw",
+      "instruction": "请调查 /api/v1/inventory 在 2026-09-01T09:55:02+08:00 至 2026-09-01T10:19:30+08:00 期间的业务异常。目标：评估这次处理受阻是否影响了无关业务，并说明是否已有依据拆分处置范围。 请给出可核查证据，并明确无法确认的部分。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "e720d760c89e918680d3de609b3ae2e645f69b6349bf1652aa3cbc4a97fce931",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "df3a22939fb5d4ca7ee453153ecf5e17cc96ab52193897d8a375951b2fa9aa42"
+      },
+      "instruction_sha256": "e720d760c89e918680d3de609b3ae2e645f69b6349bf1652aa3cbc4a97fce931"
+    }
+  },
+  "analysis_cluster_id": "F014"
+}

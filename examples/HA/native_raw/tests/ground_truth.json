@@ -1,0 +1,340 @@
+{
+  "answer_schema": "mission_inspection_answer_v1",
+  "ground_truth": {
+    "context_observations": [],
+    "health_verdict": "actionable_findings_present",
+    "out_of_scope": {
+      "excluded_atom_ids": [
+        "obs-31c5469927dd3b17"
+      ],
+      "policy": "Verified observations from foreign scopes are not scored in this Mission Case.",
+      "scopes": [
+        "k8s"
+      ]
+    },
+    "required_findings": [
+      {
+        "claim": {
+          "acceptable_signal_patterns": [
+            "cpu|mem(ory)?|heap|disk|iops|io_?(read|write|util)|class_load|buffer_pool|hog|saturation|usage_rate|resource_sat|storage"
+          ],
+          "claim_id": "claim-4580836d95197c08",
+          "criterion": {
+            "kind": "current_at_or_above_threshold",
+            "observed_value": 88.791,
+            "operator": ">",
+            "threshold_value": 70.0,
+            "unit": "% (threshold 70, alert 88.791, baseline 0.2)"
+          },
+          "episode_id": "approved-rca-6e8f127a89556ffc",
+          "evidence": [
+            {
+              "atom_id": "obs-19a4dfc9da8908c1",
+              "role": "primary"
+            }
+          ],
+          "phenomenon": "resource_saturation",
+          "policy_rule_id": "resource_usage_crosses_threshold",
+          "policy_version": 1,
+          "proposition": "acs.polardb.cluster pc-j6ca6v49n1t62ft27 的 resource_saturation 判定值 88.791 > 70.0",
+          "schema_version": "claim_atom_v1",
+          "source_refs": [
+            {
+              "ref": "obs-19a4dfc9da8908c1",
+              "role": "primary_observation"
+            },
+            {
+              "ref": "mission-findings-backfill@1#resource_usage_crosses_threshold",
+              "role": "claim_policy"
+            }
+          ],
+          "subject_entities": [
+            {
+              "entity_domain": "acs",
+              "entity_id": "96be24e0e4e57bb5347393cbbd3f768f",
+              "entity_name": "pc-j6ca6v49n1t62ft27",
+              "entity_type": "acs.polardb.cluster"
+            }
+          ],
+          "time_range": {
+            "end": "2026-08-03T22:38:30+08:00",
+            "start": "2026-08-03T22:33:46+08:00"
+          },
+          "verdict": "occurred"
+        },
+        "required": true
+      }
+    ],
+    "required_observations": [
+      {
+        "atom": {
+          "atom_id": "obs-19a4dfc9da8908c1",
+          "distribution_label": "polardb.metric",
+          "entities": [
+            {
+              "entity_domain": "acs",
+              "entity_id": "96be24e0e4e57bb5347393cbbd3f768f",
+              "entity_name": "pc-j6ca6v49n1t62ft27",
+              "entity_type": "acs.polardb.cluster"
+            }
+          ],
+          "episode_id": "approved-rca-6e8f127a89556ffc",
+          "evidence_status": "checked_projection",
+          "expected": {
+            "comparator": ">",
+            "status": "",
+            "unit": "% (threshold 70, alert 88.791, baseline 0.2)",
+            "value": 70
+          },
+          "measurements": {
+            "anchor_event_id": "91013f18db5143551f9b0f59ea0c4425",
+            "evidence": {
+              "baseline_value": 0.2,
+              "current_value": 88.791,
+              "metric_name": "AliyunPolardb_cluster_iops_usage",
+              "ratio": 444.0,
+              "timestamp": "2026-08-03T22:36:30+08:00",
+              "unit": "%"
+            },
+            "historical_candidate_id": "fact-65d15753086a0f1d",
+            "historical_observed_at_basis": "explicit_observed_at",
+            "original_rc_refs": [
+              "rc1"
+            ],
+            "original_source_step": 3,
+            "rc_binding_basis": "explicit_rc_refs",
+            "target_binding_basis": "record_primary_alert"
+          },
+          "modality": "metric",
+          "observation_binding": {
+            "aggregation": "",
+            "dimensions": {},
+            "mode": "snapshot",
+            "observed_at": "2026-08-03T22:36:30+08:00",
+            "provenance_ref": "provenance-03c6b558ac9414a768a9",
+            "record_refs": [
+              "record-03c6b558ac9414a768a9"
+            ],
+            "source_kind": "measured_evidence",
+            "stat": "latest",
+            "synthetic": false,
+            "time_range": {
+              "end": "2026-08-03T22:38:30+08:00",
+              "start": "2026-08-03T22:36:30+08:00"
+            },
+            "unit": "%",
+            "value": 88.791
+          },
+          "observed_at": "2026-08-03T22:36:30+08:00",
+          "query": {
+            "backend": "unknown",
+            "command": "promql: max by (clusterId) (AliyunPolardb_cluster_iops_usage{clusterId=\"pc-j6ca6v49n1t62ft27\"}) @prometheus=rw-84b88346a7a7f5de08c5a4c57b94",
+            "signal": "AliyunPolardb_cluster_iops_usage"
+          },
+          "schema_version": "observation_atom_v1",
+          "scope": "polardb",
+          "source_refs": [
+            {
+              "ref": "brise-pool://rca/dataset/F147-polardbDiskIopsSaturation.niuun5ls0p1v9faoiu8e390bq5#reasoning.steps[2].observability[0]",
+              "role": "evidence"
+            },
+            {
+              "ref": "operations.historical-approved.v1#reasoning-step-3",
+              "role": "projection"
+            }
+          ],
+          "source_step": 3,
+          "time_range": {
+            "end": "2026-08-03T22:38:30+08:00",
+            "start": "2026-08-03T22:33:46+08:00"
+          }
+        },
+        "required": true,
+        "scoring_role": "anomaly_evidence"
+      },
+      {
+        "atom": {
+          "atom_id": "obs-6f27202094a08ce8",
+          "distribution_label": "polardb.event",
+          "entities": [
+            {
+              "entity_domain": "acs",
+              "entity_id": "96be24e0e4e57bb5347393cbbd3f768f",
+              "entity_name": "pc-j6ca6v49n1t62ft27",
+              "entity_type": "acs.polardb.cluster"
+            }
+          ],
+          "episode_id": "approved-rca-6e8f127a89556ffc",
+          "evidence_status": "checked_projection",
+          "expected": {
+            "comparator": "==",
+            "status": "OCCURRED",
+            "unit": "flag",
+            "value": 1
+          },
+          "measurements": {
+            "anchor_event_id": "record-c4d01d23b61f36b916c1",
+            "evidence": {
+              "baseline_value": 0,
+              "current_value": 1,
+              "metric_name": "alert OCCURRED",
+              "ratio": 0,
+              "timestamp": "2026-08-03T22:36:30+08:00",
+              "unit": "flag"
+            },
+            "historical_anchor_event_id": "91013f18db5143551f9b0f59ea0c4425",
+            "historical_candidate_id": "fact-bc50b89adf036f3a",
+            "historical_observed_at_basis": "explicit_observed_at",
+            "original_rc_refs": [
+              "rc1"
+            ],
+            "original_source_step": 3,
+            "rc_binding_basis": "explicit_rc_refs",
+            "target_binding_basis": "record_primary_alert"
+          },
+          "modality": "event",
+          "observation_binding": {
+            "aggregation": "",
+            "dimensions": {},
+            "event_id": "record-c4d01d23b61f36b916c1",
+            "mode": "snapshot",
+            "observed_at": "2026-08-03T22:36:30+08:00",
+            "provenance_ref": "provenance-c4d01d23b61f36b916c1",
+            "record_refs": [
+              "record-c4d01d23b61f36b916c1"
+            ],
+            "source_kind": "measured_evidence",
+            "stat": "identity",
+            "synthetic": false,
+            "time_range": {
+              "end": "2026-08-03T22:38:30+08:00",
+              "start": "2026-08-03T22:36:30+08:00"
+            },
+            "unit": "flag",
+            "value": 1
+          },
+          "observed_at": "2026-08-03T22:36:30+08:00",
+          "query": {
+            "backend": "unknown",
+            "command": "event-store: cms-event-store-rca-benchmark, rule_id=91fbf2d8-71ff-4dbe-a87b-3070b253d99d, status=OCCURRED",
+            "signal": "cms_alert_occurred"
+          },
+          "schema_version": "observation_atom_v1",
+          "scope": "polardb",
+          "source_refs": [
+            {
+              "ref": "brise-pool://rca/dataset/F147-polardbDiskIopsSaturation.niuun5ls0p1v9faoiu8e390bq5#reasoning.steps[2].observability[1]",
+              "role": "evidence"
+            },
+            {
+              "ref": "operations.historical-approved.v1#reasoning-step-4",
+              "role": "projection"
+            }
+          ],
+          "source_step": 4,
+          "time_range": {
+            "end": "2026-08-03T22:38:30+08:00",
+            "start": "2026-08-03T22:33:46+08:00"
+          }
+        },
+        "required": true,
+        "scoring_role": "anomaly_evidence"
+      },
+      {
+        "atom": {
+          "atom_id": "obs-9b2e5590381abe3e",
+          "distribution_label": "polardb.metric",
+          "entities": [
+            {
+              "entity_domain": "acs",
+              "entity_id": "96be24e0e4e57bb5347393cbbd3f768f",
+              "entity_name": "pc-j6ca6v49n1t62ft27",
+              "entity_type": "acs.polardb.cluster"
+            }
+          ],
+          "episode_id": "approved-rca-6e8f127a89556ffc",
+          "evidence_status": "checked_projection",
+          "expected": {
+            "comparator": ">=",
+            "status": "",
+            "unit": "% (baseline 0.2%, ratio 444.0x, threshold 70)",
+            "value": 88.791
+          },
+          "measurements": {
+            "evidence": {
+              "baseline_value": 0.2,
+              "current_value": 88.791,
+              "metric_name": "AliyunPolardb_cluster_iops_usage",
+              "ratio": 444.0,
+              "timestamp": "2026-08-03T22:36:30+08:00",
+              "unit": "%"
+            },
+            "historical_candidate_id": "fact-71a39a9878bcbb26",
+            "historical_observed_at_basis": "explicit_observed_at",
+            "original_rc_refs": [
+              "rc1"
+            ],
+            "original_source_step": 2,
+            "rc_binding_basis": "explicit_rc_refs",
+            "target_binding_basis": "unique_name_match"
+          },
+          "modality": "metric",
+          "observation_binding": {
+            "aggregation": "",
+            "dimensions": {},
+            "mode": "snapshot",
+            "observed_at": "2026-08-03T22:36:30+08:00",
+            "provenance_ref": "provenance-03c6b558ac9414a768a9",
+            "record_refs": [
+              "record-03c6b558ac9414a768a9"
+            ],
+            "source_kind": "measured_evidence",
+            "stat": "latest",
+            "synthetic": false,
+            "time_range": {
+              "end": "2026-08-03T22:38:30+08:00",
+              "start": "2026-08-03T22:36:30+08:00"
+            },
+            "unit": "%",
+            "value": 88.791
+          },
+          "observed_at": "2026-08-03T22:36:30+08:00",
+          "query": {
+            "backend": "unknown",
+            "command": "promql: max by (clusterId) (AliyunPolardb_cluster_iops_usage{clusterId=\"pc-j6ca6v49n1t62ft27\"}) @prometheus=rw-84b88346a7a7f5de08c5a4c57b94",
+            "signal": "AliyunPolardb_cluster_iops_usage"
+          },
+          "schema_version": "observation_atom_v1",
+          "scope": "polardb",
+          "source_refs": [
+            {
+              "ref": "brise-pool://rca/dataset/F147-polardbDiskIopsSaturation.niuun5ls0p1v9faoiu8e390bq5#reasoning.steps[1].observability[0]",
+              "role": "evidence"
+            },
+            {
+              "ref": "operations.historical-approved.v1#reasoning-step-2",
+              "role": "projection"
+            }
+          ],
+          "source_step": 2,
+          "time_range": {
+            "end": "2026-08-03T22:38:30+08:00",
+            "start": "2026-08-03T22:33:46+08:00"
+          }
+        },
+        "required": true,
+        "scoring_role": "anomaly_evidence"
+      }
+    ],
+    "schema_version": "mission_inspection_gt_v2",
+    "scoring_contract": {
+      "causal_chain_required": false,
+      "context_observations_scored": false,
+      "evidence_grounding_required": true,
+      "required_finding_recall": true,
+      "required_observation_recall": true
+    }
+  },
+  "scoring_policy": {},
+  "task_type": "mission"
+}

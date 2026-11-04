@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "harness": "Codex",
+      "version": "0.160.0",
+      "exception_absent": true,
+      "exception_type": null,
+      "agent_execution_not_started": true,
+      "agent_setup_finished": true
+    },
+    {
+      "harness": "Claude Code",
+      "version": "2.1.309",
+      "exception_absent": true,
+      "exception_type": null,
+      "agent_execution_not_started": true,
+      "agent_setup_finished": true
+    }
+  ],
+  "runner_installed_in_fresh_venv_from_pypi": true,
+  "python": "3.14",
+  "agent_runs": 0,
+  "model_calls": 0,
+  "scope": "New venv, public PyPI installation of .[agents], both custom adapters via Harbor --install-only. Uses existing Docker Engine and public image/package caches; not a fully clean operating system or a model-access test."
+}

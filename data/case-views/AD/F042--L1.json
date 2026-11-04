@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F042--L1",
+  "task": "AD",
+  "source_case_id": "F042",
+  "family_id": "F042",
+  "bundle_id": null,
+  "source_level": "IL3",
+  "level": 1,
+  "slice": "L3-S7",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F042--L1--shell_raw",
+      "instruction": "请复核 rca-benchmark 中 checkout::/oteldemo.CheckoutService/PlaceOrder 在 2026年04月28日 11:08:24 至 11:12:26（北京时间）期间的异常。判断当前窗口是否已经满足业务恢复条件，并区分运行恢复与历史订单结果。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n可使用 /scene/SCOPE-MAP.json 与 /scene/EVIDENCE-PATH.json；其中仅提供调查阶段和证据归组，不包含根因、机制答案或正确判断。\n",
+      "original_instruction_sha256": "13b79cf8d8e1c7989dd558c463af6854c29e10455a08d08175255dd47901d05c",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "1c94f916821f2b13e940c92bd3f6f1c670c8f9240fe92a4ec6f85394aa7dde6a"
+      },
+      "instruction_sha256": "13b79cf8d8e1c7989dd558c463af6854c29e10455a08d08175255dd47901d05c"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F042--L1--umodel_semantic",
+      "instruction": "请复核 rca-benchmark 中 checkout::/oteldemo.CheckoutService/PlaceOrder 在 2026年04月28日 11:08:24 至 11:12:26（北京时间）期间的异常。判断当前窗口是否已经满足业务恢复条件，并区分运行恢复与历史订单结果。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`. Public investigation guidance is available in `/scene/SCOPE-MAP.json` and `/scene/EVIDENCE-PATH.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "4877d4ef63b68f2ba1a7166317846b6069a88bfbffa528739ceb840f64392877",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "1c94f916821f2b13e940c92bd3f6f1c670c8f9240fe92a4ec6f85394aa7dde6a"
+      },
+      "instruction_sha256": "4877d4ef63b68f2ba1a7166317846b6069a88bfbffa528739ceb840f64392877"
+    },
+    "native_raw": {
+      "task_id": "AD--F042--L1--native_raw",
+      "instruction": "请复核 rca-benchmark 中 checkout::/oteldemo.CheckoutService/PlaceOrder 在 2026年04月28日 11:08:24 至 11:12:26（北京时间）期间的异常。判断当前窗口是否已经满足业务恢复条件，并区分运行恢复与历史订单结果。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method. Public investigation guidance is available in `/scene/SCOPE-MAP.json` and `/scene/EVIDENCE-PATH.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "62b54dade843537ba5235603c71d5a52dbc1530083c722fe30d1f6323ab8521e",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "1c94f916821f2b13e940c92bd3f6f1c670c8f9240fe92a4ec6f85394aa7dde6a"
+      },
+      "instruction_sha256": "62b54dade843537ba5235603c71d5a52dbc1530083c722fe30d1f6323ab8521e"
+    }
+  },
+  "analysis_cluster_id": "F042"
+}

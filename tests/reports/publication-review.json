@@ -1,0 +1,137 @@
+{
+  "status": "REVIEW_REQUIRED_NOT_RELEASE_APPROVAL",
+  "date": "2026-10-27",
+  "coverage": {
+    "repository_files": 1700,
+    "objects": 17795,
+    "object_bytes": 69658555020,
+    "object_hash_and_pattern_coverage_complete": true,
+    "LFS_data_archives": 122,
+    "LFS_image_archives": 1,
+    "archive_member_hashes_verified": true,
+    "duckdb": 322,
+    "sqlite": 284,
+    "database_logical_tables_complete": true,
+    "gzip_objects": 174,
+    "image_layers": 8,
+    "image_files": 7164,
+    "image_unchanged_by_URL_mapping": true
+  },
+  "URL_mapping": {
+    "approved_by_user": true,
+    "passed": true,
+    "hosts": 38,
+    "changed_objects_checked": 193,
+    "text_equivalence_checked": 104,
+    "database_equivalence_checked": 89,
+    "readable_case_views_checked": 1287,
+    "final_score_files_byte_identical": true,
+    "failures": [],
+    "source_mapping_distributed": false,
+    "remaining_internal_URL_matches_in_logical_database_values": 0,
+    "alias_policy": "38 random one-to-one host labels under example.invalid. Scheme, port, path, query and fragment retained. Local replay interface hosts excluded.",
+    "original_host_mapping_not_distributed": true
+  },
+  "validation": {
+    "unit_tests": 4,
+    "unit_tests_passed": true,
+    "scoring_fixtures_passed": true,
+    "scorer_and_agent_source_hashes_unchanged": true,
+    "replay_query_regression": {
+      "passed": true,
+      "checks": [
+        {
+          "task": "DR",
+          "passed": true,
+          "modalities": [
+            "event",
+            "metric",
+            "topology",
+            "trace"
+          ],
+          "entity_count": 14,
+          "scope": "Entity discovery, signal catalog, capabilities and all available example modalities; response equality after approved host substitution."
+        },
+        {
+          "task": "HA",
+          "passed": true,
+          "modalities": [
+            "event",
+            "log",
+            "metric",
+            "topology"
+          ],
+          "entity_count": 10,
+          "scope": "Entity discovery, signal catalog, capabilities and all available example modalities; response equality after approved host substitution."
+        },
+        {
+          "task": "RCA",
+          "passed": true,
+          "modalities": [
+            "event",
+            "metric",
+            "topology"
+          ],
+          "entity_count": 7,
+          "scope": "Entity discovery, signal catalog, capabilities and all available example modalities; response equality after approved host substitution."
+        }
+      ],
+      "docker_run": false,
+      "agent_runs": 0
+    },
+    "compose_definitions_checked": 3861,
+    "docker_executed": true,
+    "new_agent_runs": 0,
+    "container_startup_examples_passed": 12,
+    "container_startup_clean_host": false
+  },
+  "credential_assessment": {
+    "logical_database_finding_counts": {
+      "personal_path": 1411,
+      "email": 197040
+    },
+    "repository_findings_categories": {
+      "email": 12
+    },
+    "conclusion": "No clear cloud keys, token originals or full private keys identified by the scoped scans. This is not a proof against arbitrary encoded secrets. Image findings were previously reviewed as third-party parser/documentation examples; image bytes are unchanged.",
+    "approved_author_name": "仲言",
+    "approved_author_email": "zuoyimin.zym@alibaba-inc.com"
+  },
+  "remaining_review": [],
+  "publication": {
+    "pushed": false,
+    "merged": false,
+    "visibility_changed": false,
+    "git_history_sanitized": false,
+    "note": "Use the separate history-free candidate snapshot for future public import; old Git/LFS history is not erased by current-file changes."
+  },
+  "linux_path_context_review": {
+    "status": "reviewed_no_sensitive_file_content_identified",
+    "occurrences": 8,
+    "database_objects": 3,
+    "distinct_trace_spans": 1,
+    "context": "Same frontend HTTP request operation name stored across records.signal, payload and attributes; no AWS configuration file contents or credentials in the reviewed records.",
+    "action": "Retain observed request path. User accepted the context review.",
+    "limitation": "Request origin and intent not established."
+  },
+  "image_reference_fix": {
+    "task_package_compose_bindings_updated": 300,
+    "unique_compose_objects_changed": 53,
+    "example_compose_files_updated": 2,
+    "old_image": "original-shipping-accept-umodel-umodel:latest",
+    "release_image": "opsgauge-replay-base:2026.10.27",
+    "scope": "Compose image reference only; task requests, evidence and scorer source unchanged.",
+    "expected_compose_only_changes_verified": true,
+    "recorded_score_files_byte_identical": true
+  },
+  "installation_recipe": {
+    "supplied": true,
+    "DR_recipe_verified": true,
+    "fresh_PyPI_runner_and_both_adapter_installs_verified": true,
+    "model_calls": 0
+  },
+  "release_notes": [
+    "License terms for code and data remain unspecified.",
+    "No new full agent evaluation or reader model-account verification was performed."
+  ]
+}

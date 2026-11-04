@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F045--L1",
+  "task": "AD",
+  "source_case_id": "F045",
+  "family_id": "F045",
+  "bundle_id": null,
+  "source_level": "IL3",
+  "level": 1,
+  "slice": "L3-S2",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F045--L1--shell_raw",
+      "instruction": "请复核 rca-benchmark 中 frontend-xc::GET /api/currency 在 2026年07月24日 19:59:38 至 20:06:30（北京时间）期间的异常。定位慢调用发生在计算还是跨集群传输段，给出责任边界、实例范围和业务结果边界。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n可使用 /scene/SCOPE-MAP.json 与 /scene/EVIDENCE-PATH.json；其中仅提供调查阶段和证据归组，不包含根因、机制答案或正确判断。\n",
+      "original_instruction_sha256": "9d1a734bafe341feb127538e4a5b22c20c69eaad9ba8b439955d619b1c0f0919",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "c840f758cf2ecda5111364ca0a090b1d81c74bf6de1fb1b4f8c693a212dc4491"
+      },
+      "instruction_sha256": "9d1a734bafe341feb127538e4a5b22c20c69eaad9ba8b439955d619b1c0f0919"
+    },
+    "native_raw": {
+      "task_id": "AD--F045--L1--native_raw",
+      "instruction": "请复核 rca-benchmark 中 frontend-xc::GET /api/currency 在 2026年07月24日 19:59:38 至 20:06:30（北京时间）期间的异常。定位慢调用发生在计算还是跨集群传输段，给出责任边界、实例范围和业务结果边界。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method. Public investigation guidance is available in `/scene/SCOPE-MAP.json` and `/scene/EVIDENCE-PATH.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "bdbc5e2fac0dec78b1115ec915c588bb07b45c815c8d9e9b884a564b1d749815",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "c840f758cf2ecda5111364ca0a090b1d81c74bf6de1fb1b4f8c693a212dc4491"
+      },
+      "instruction_sha256": "bdbc5e2fac0dec78b1115ec915c588bb07b45c815c8d9e9b884a564b1d749815"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F045--L1--umodel_semantic",
+      "instruction": "请复核 rca-benchmark 中 frontend-xc::GET /api/currency 在 2026年07月24日 19:59:38 至 20:06:30（北京时间）期间的异常。定位慢调用发生在计算还是跨集群传输段，给出责任边界、实例范围和业务结果边界。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`. Public investigation guidance is available in `/scene/SCOPE-MAP.json` and `/scene/EVIDENCE-PATH.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "6f7d3c682b3b6ee4e40c221ec43fb3d8b8b59d610716a99479127bd98842f767",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "c840f758cf2ecda5111364ca0a090b1d81c74bf6de1fb1b4f8c693a212dc4491"
+      },
+      "instruction_sha256": "6f7d3c682b3b6ee4e40c221ec43fb3d8b8b59d610716a99479127bd98842f767"
+    }
+  },
+  "analysis_cluster_id": "F045"
+}

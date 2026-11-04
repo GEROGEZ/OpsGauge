@@ -1,0 +1,40 @@
+{
+  "case_id": "AD--F050--L2",
+  "task": "AD",
+  "source_case_id": "F050",
+  "family_id": "F050",
+  "bundle_id": null,
+  "source_level": "IL2",
+  "level": 2,
+  "slice": "L3-S2",
+  "access_profiles": {
+    "shell_raw": {
+      "task_id": "AD--F050--L2--shell_raw",
+      "instruction": "请复核 rca-benchmark 中 checkout 在 2026年06月18日 09:50:59 至 09:55:31（北京时间）期间的异常。判断句柄耗尽阻断的具体业务路径、是否可扩大为全部业务不可用，并说明恢复后历史失败业务边界。\n\n证据位于 /scene/evidence.jsonl.gz。按 /scene/PROTOCOL.md 与 /scene/claim-prompts.json 发布结果。不得读取 /tests。\n可使用 /scene/SCOPE-MAP.json 获取中性的调查范围信息；其中不包含因果边、根因或正确判断。\n",
+      "original_instruction_sha256": "9c16d18db8de8c7f20528629cda30aeee1daaa47b7bea694c2cfaae340fc7aec",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "8aeb1f19e64bc04aea91e2784f750a2749770d9c425c6fd57080bc533b6bbdbb"
+      },
+      "instruction_sha256": "9c16d18db8de8c7f20528629cda30aeee1daaa47b7bea694c2cfaae340fc7aec"
+    },
+    "native_raw": {
+      "task_id": "AD--F050--L2--native_raw",
+      "instruction": "请复核 rca-benchmark 中 checkout 在 2026年06月18日 09:50:59 至 09:55:31（北京时间）期间的异常。判断句柄耗尽阻断的具体业务路径、是否可扩大为全部业务不可用，并说明恢复后历史失败业务边界。\n\n# 访问接口\n\nRead-only Native API: `$NATIVE_API_URL`. Documentation: `/scene/API.md`. Metrics use PromQL inside this same Native access method. Public investigation guidance is available in `/scene/SCOPE-MAP.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "03fbb9f4aeea0b68c2fda28fd3e6bd35f80ee61bb4949994d4e5aaf8884d1c03",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "8aeb1f19e64bc04aea91e2784f750a2749770d9c425c6fd57080bc533b6bbdbb"
+      },
+      "instruction_sha256": "03fbb9f4aeea0b68c2fda28fd3e6bd35f80ee61bb4949994d4e5aaf8884d1c03"
+    },
+    "umodel_semantic": {
+      "task_id": "AD--F050--L2--umodel_semantic",
+      "instruction": "请复核 rca-benchmark 中 checkout 在 2026年06月18日 09:50:59 至 09:55:31（北京时间）期间的异常。判断句柄耗尽阻断的具体业务路径、是否可扩大为全部业务不可用，并说明恢复后历史失败业务边界。\n\n# 访问接口\n\nRead-only UModel semantic API: `$UMODEL_URL`. Documentation: `/scene/API.md`. Public investigation guidance is available in `/scene/SCOPE-MAP.json`.\n\n# 交付\n\n按 `/scene/PROTOCOL.md` 与 `/scene/claim-prompts.json` 的统一协议写入 `/logs/agent/progress.json` 和 `/logs/agent/answer.json`。不得读取 `/tests`。\n",
+      "original_instruction_sha256": "575d0c85bfe0d4706af14f37fc6609990e46e0b9df28f4c211741b302e01389e",
+      "reference_artifact_sha256": {
+        "tests/case/private/case-config.json": "8aeb1f19e64bc04aea91e2784f750a2749770d9c425c6fd57080bc533b6bbdbb"
+      },
+      "instruction_sha256": "575d0c85bfe0d4706af14f37fc6609990e46e0b9df28f4c211741b302e01389e"
+    }
+  },
+  "analysis_cluster_id": "F050"
+}

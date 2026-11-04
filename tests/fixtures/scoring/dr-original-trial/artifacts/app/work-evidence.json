@@ -1,0 +1,88 @@
+{
+  "schema_version": "l2_work_evidence_v1",
+  "candidate": {
+    "selected_period": {
+      "first_met_sample": "2026-06-02T18:54:16+08:00",
+      "last_met_sample": "2026-06-02T19:21:46+08:00"
+    },
+    "cpu_usage": {
+      "instance": "recommendation-658bc44546-9tk7l",
+      "value": 0.03274984104434451,
+      "time": "2026-06-02T19:15:46+08:00"
+    },
+    "cpu_limit_pressure": {
+      "instance": "recommendation-658bc44546-9tk7l",
+      "value": 16.37492052217225,
+      "time": "2026-06-02T19:15:46+08:00"
+    }
+  },
+  "claims": [
+    {
+      "target": "/selected_period",
+      "refs": [
+        "metric-81efe485a732391e407a406c2e5aff8c",
+        "metric-5600990cde8648893723d37589cf46ab",
+        "metric-1f3289d1fa4b1ba8ef5a67e980445d18",
+        "metric-23b485d237244aaa5dffc56456d54430",
+        "metric-695d68dfd01aca837be1ce51a9f26f8c",
+        "metric-8b6de5e1cbf0f36a76266e556cfa666a"
+      ]
+    },
+    {
+      "target": "/cpu_usage",
+      "refs": [
+        "metric-e7d85357d0e8c9668433c8a8cf9b5a4f"
+      ]
+    },
+    {
+      "target": "/cpu_limit_pressure",
+      "refs": [
+        "metric-167bf42cab7cffdfe2b80d811a56da91"
+      ]
+    },
+    {
+      "target": "/new_instances",
+      "refs": [
+        "event-78119d5895fb1ba235431d61577c2372dbe5a7a24a790cee3c1c00974b982d29",
+        "event-143c383b2cce946dc6e569e08dca09ec3580929cd5056f4049f04fb3c3449520",
+        "event-37ad8d622fba688cb2a301f1a6b73536150271d2c1e21f5991505f58d1c04e7c",
+        "event-8c58413dc52ef9349d91d532c704237055a90d1f6920338e64d880fae61b7768",
+        "event-ce7cbc9e9af9dda881e586f898b2b955e98fea4ee70d457a5055ccb4e14813da",
+        "event-490536de7f7339d526315256a4670c17541025e5a6229fc6379935a0fc8154d8"
+      ]
+    }
+  ],
+  "source_refs": [],
+  "observations": [
+    {
+      "record_ref": "metric-e7d85357d0e8c9668433c8a8cf9b5a4f",
+      "metric_name": "pod_cpu_usage_rate",
+      "entity_id": "d5d98b4507b08c584bcf03e415f6a07b",
+      "dimensions": {
+        "pod": "recommendation-658bc44546-9tk7l"
+      },
+      "unit": "%",
+      "points": [
+        {
+          "timestamp": "2026-06-02T19:15:46+08:00",
+          "value": 0.03274984104434451
+        }
+      ]
+    },
+    {
+      "record_ref": "metric-167bf42cab7cffdfe2b80d811a56da91",
+      "metric_name": "pod_cpu_usage_rate_vs_limit",
+      "entity_id": "d5d98b4507b08c584bcf03e415f6a07b",
+      "dimensions": {
+        "pod": "recommendation-658bc44546-9tk7l"
+      },
+      "unit": "%",
+      "points": [
+        {
+          "timestamp": "2026-06-02T19:15:46+08:00",
+          "value": 16.37492052217225
+        }
+      ]
+    }
+  ]
+}
