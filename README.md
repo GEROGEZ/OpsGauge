@@ -19,7 +19,7 @@ L1 supplies the most investigative information; L3 the least. Families can share
 | Goal | Host requirements | Model credentials? |
 |---|---|---|
 | Read cases or inspect recorded scores | No containers; text/JSON reader | No |
-| Restore data or score saved answers | Python 3.11+, pip/venv; Git LFS for a Git checkout | No |
+| Restore data or score saved answers | Python 3.11+, pip/venv, unzip | No |
 | Recompute paper analyses | Python 3.12 environment plus `.[analysis]` | No |
 | Run a new agent | Linux amd64, Docker Engine + Compose v2-compatible plugin, Python 3.14 runner + `.[agents]` | Yes |
 
@@ -29,7 +29,7 @@ On Ubuntu/Debian, install the basic host tools (Python must be 3.11+):
 
 ```bash
 sudo apt-get update
-sudo apt-get install -y git git-lfs curl ca-certificates python3 python3-venv
+sudo apt-get install -y git unzip curl ca-certificates python3 python3-venv
 ```
 
 Install Docker Engine and its Compose plugin using the [official Docker instructions](https://docs.docker.com/engine/install/ubuntu/), then check:
@@ -53,14 +53,17 @@ opsgauge --help
 
 ## 2. Obtain and restore evidence
 
-For a Git checkout, initialize Git LFS and fetch the archive bodies:
+Download all 55 files from the [evidence archive record on Zenodo (private review link, no login required)](https://zenodo.org/records/23959317?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjRjYTg3YjNjLThjNjYtNDM1Mi1iODEyLTU4MjM3NDAxNGFmZSIsImRhdGEiOnt9LCJyYW5kb20iOiJhZDU2N2UwODRjZmI2ZTRmZDZmNjk1ODliM2NiZWU4ZiJ9.0n30p-ZXFMHE1wwyvEVrijRHSTwAxM6Q4gnixJfW2I0FYf6wT1MOidHTnllk-r45t7qmAEDNf4r60OYBRJIwYQ) into a directory such as `/path/to/opsgauge-data`. They comprise 53 independent ZIP parts, `ARCHIVE-SHA256SUMS.txt`, and `data-release-manifest.json`. Together they contain all 122 evidence shards and the replay image, approximately 12.85 GB. If you use Zenodo's **Download all** button, extract that download into the data directory first. From the OpsGauge code directory, verify the ZIP parts, extract every part, and verify the original archives:
 
 ```bash
-git lfs install
-git lfs pull
+(cd /path/to/opsgauge-data && sha256sum -c ARCHIVE-SHA256SUMS.txt)
+for part in /path/to/opsgauge-data/OpsGauge-data-part*.zip; do
+  unzip -o "$part" -d .
+done
+sha256sum -c SHA256SUMS.txt
 ```
 
-Skip those two commands for an extracted release already containing the actual `.tar.gz` archives. The release has 122 evidence shards and one replay image, approximately 12.85 GB total. Restored evidence occupies about 65 GiB; also allow space for archives, Git LFS cache and Docker builds.
+The parts collectively supply `data/shards/`, `data/images/`, `SHA256SUMS.txt`, and `data-release-manifest.json`. All 53 parts are required for the complete dataset. Use the code ZIP from the [anonymous review repository](https://anonymous.4open.science/r/OpsGauge-5603/) together with these data files. For a Git checkout, set `GIT_LFS_SKIP_SMUDGE=1` when cloning and obtain the archive bodies from the Zenodo record above. Restored evidence occupies about 65 GiB; also allow space for the downloads, evidence archives, and Docker builds.
 
 ```bash
 opsgauge restore-data
@@ -241,4 +244,4 @@ tests/         scoring fixtures and validation reports
 docs/          detailed contracts, usage and dataset card
 ```
 
-See [dataset card](docs/DATA_CARD.md), [data handling](docs/SANITIZATION.md), and [reproducibility](docs/REPRODUCIBILITY.md). URL aliases are recorded-evidence labels, not reachable services. License terms have not yet been specified; repository access alone does not grant redistribution rights.
+See [dataset card](docs/DATA_CARD.md), [data handling](docs/SANITIZATION.md), and [reproducibility](docs/REPRODUCIBILITY.md). URL aliases are recorded-evidence labels, not reachable services. The evidence archives on Zenodo are distributed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Third-party software in the replay image retains its own licenses. No license has been specified for the remaining repository contents.

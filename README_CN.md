@@ -11,7 +11,7 @@ OpsGauge 面向支撑 Web 应用的分布式服务，评估 AIOps agent 的数�
 | 你要做什么 | 需要安装什么 | 是否需要模型账号 |
 |---|---|---|
 | 阅读案例、查看已有分数 | 文本或 JSON 阅读工具 | 否 |
-| 恢复完整数据、给已有答案评分 | Python 3.11+、pip/venv；Git 下载需 Git LFS | 否 |
+| 恢复完整数据、给已有答案评分 | Python 3.11+、pip/venv、unzip | 否 |
 | 复现论文统计和绘图 | Python 3.12 环境及 `.[analysis]` | 否 |
 | 运行自己的 agent | Linux amd64、Docker Engine、Compose 插件、Python 3.14 runner 及 `.[agents]` | 是 |
 
@@ -21,7 +21,7 @@ Ubuntu/Debian 主机可先安装基础工具，确认 Python 不低于 3.11：
 
 ```bash
 sudo apt-get update
-sudo apt-get install -y git git-lfs curl ca-certificates python3 python3-venv
+sudo apt-get install -y git unzip curl ca-certificates python3 python3-venv
 ```
 
 Docker Engine 和 Compose 插件按 [Docker 官方安装说明](https://docs.docker.com/engine/install/ubuntu/) 安装。安装后确认当前用户可以执行：
@@ -45,14 +45,17 @@ opsgauge --help
 
 ## 2. 下载并恢复数据
 
-如果通过 Git 获取仓库，需要拉取大文件本体：
+从 [Zenodo 数据记录（审稿专用私密链接，无需登录）](https://zenodo.org/records/23959317?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjRjYTg3YjNjLThjNjYtNDM1Mi1iODEyLTU4MjM3NDAxNGFmZSIsImRhdGEiOnt9LCJyYW5kb20iOiJhZDU2N2UwODRjZmI2ZTRmZDZmNjk1ODliM2NiZWU4ZiJ9.0n30p-ZXFMHE1wwyvEVrijRHSTwAxM6Q4gnixJfW2I0FYf6wT1MOidHTnllk-r45t7qmAEDNf4r60OYBRJIwYQ) 下载全部 55 个文件，放到 `/path/to/opsgauge-data` 这样的目录中。其中包括 53 个独立 ZIP 分包、`ARCHIVE-SHA256SUMS.txt` 和 `data-release-manifest.json`，共包含全部 122 个数据分片及一个回放镜像，合计约 12.85 GB。如果使用 Zenodo 的 **Download all** 按钮，先将下载的外层 ZIP 解压到该数据目录。然后在 OpsGauge 代码根目录核验分包、解压全部分包，再核验原始数据压缩包：
 
 ```bash
-git lfs install
-git lfs pull
+(cd /path/to/opsgauge-data && sha256sum -c ARCHIVE-SHA256SUMS.txt)
+for part in /path/to/opsgauge-data/OpsGauge-data-part*.zip; do
+  unzip -o "$part" -d .
+done
+sha256sum -c SHA256SUMS.txt
 ```
 
-如果解压得到的发布目录已经带有实际 `.tar.gz` 压缩包，跳过上面两条命令。122 个数据分片及一个回放镜像合计约 12.85 GB；展开后的证据约占 65 GiB，还需为压缩包、Git LFS 缓存和 Docker 构建预留空间。
+分包合起来会提供 `data/shards/`、`data/images/`、`SHA256SUMS.txt` 和 `data-release-manifest.json`；恢复完整数据集需要全部 53 个分包。审稿人可将 [匿名代码仓库](https://anonymous.4open.science/r/OpsGauge-5603/) 的代码 ZIP 与这些数据文件配合使用。通过 Git 下载代码时，在克隆命令前设置 `GIT_LFS_SKIP_SMUDGE=1`，再从上述 Zenodo 记录取得数据本体。展开后的证据约占 65 GiB，还需为下载文件、证据压缩包和 Docker 构建预留空间。
 
 ```bash
 opsgauge restore-data
@@ -233,4 +236,4 @@ tests/         评分样例和核验报告
 docs/          使用说明、评分契约和 Dataset Card
 ```
 
-范围与标注见 [Dataset Card](docs/DATA_CARD.md)，数据处理见 [SANITIZATION](docs/SANITIZATION.md)，复现边界见 [REPRODUCIBILITY](docs/REPRODUCIBILITY.md)。证据中的 URL 别名是录制内容标签，不是需要连接的真实服务。代码及数据许可证尚未指定，仓库访问权限不等于再分发授权。
+范围与标注见 [Dataset Card](docs/DATA_CARD.md)，数据处理见 [SANITIZATION](docs/SANITIZATION.md)，复现边界见 [REPRODUCIBILITY](docs/REPRODUCIBILITY.md)。证据中的 URL 别名是录制内容标签，不是需要连接的真实服务。Zenodo 中的证据压缩包按 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 发布；回放镜像中的第三方软件保留各自的许可证。仓库其余内容尚未指定许可证。
